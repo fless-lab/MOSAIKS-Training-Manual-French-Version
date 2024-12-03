@@ -126,26 +126,26 @@ Here are the most useful keyboard shortcuts for working in Colab:
 ## Mac
 | Action | Shortcut |
 |--------|----------|
-| Run current cell | ⌘+Enter |
+| Run current cell | &#8984;+Enter |
 | Run cell and move to next | Shift+Enter |
 | Run cell and insert below | Option+Enter |
-| Insert code cell above | ⌘+M A |
-| Insert code cell below | ⌘+M B |
-| Convert to text cell | ⌘+M M |
-| Convert to code cell | ⌘+M Y |
-| Delete current cell | ⌘+M D |
-| Toggle line numbers | ⌘+M L |
-| Toggle output | ⌘+M O |
-| Cut cell | ⌘+M X |
-| Copy cell | ⌘+M C |
-| Paste cell below | ⌘+M V |
+| Insert code cell above | &#8984;+M A |
+| Insert code cell below | &#8984;+M B |
+| Convert to text cell | &#8984;+M M |
+| Convert to code cell | &#8984;+M Y |
+| Delete current cell | &#8984;+M D |
+| Toggle line numbers | &#8984;+M L |
+| Toggle output | &#8984;+M O |
+| Cut cell | &#8984;+M X |
+| Copy cell | &#8984;+M C |
+| Paste cell below | &#8984;+M V |
 | Select multiple cells | Shift+Up/Down |
-| Find and replace | ⌘+F |
-| Save notebook | ⌘+S |
+| Find and replace | &#8984;+F |
+| Save notebook | &#8984;+S |
 
 :::
 
-You can view all available shortcuts in Colab by pressing Ctrl+M H (⌘+M H on Mac) or through Help > Keyboard shortcuts in the menu.
+You can view all available shortcuts in Colab by pressing Ctrl+M H (&#8984;+M H on Mac) or through Help > Keyboard shortcuts in the menu.
 
 ### Common Issues and Solutions
 

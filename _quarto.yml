@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "MOSAIKS Training Manual"
@@ -57,8 +58,22 @@ format:
     theme: 
       - flatly
       - style.scss
+    code-link: true    
+    
+    author-meta: "Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund"
+    include-in-header: "plausible.html"
+    callout-appearance: simple
+
   pdf:
-    documentclass: scrreprt
+    latex-engine: xelatex
+    pdf-engine-args: ["--shell-escape"]
+    header-includes: |
+      \usepackage{fontspec}
+      \setmainfont{DejaVu Sans}
+
+
+execute:
+  freeze: auto
 
 
 

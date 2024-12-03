@@ -8,10 +8,6 @@ This is the first ever MOSAIKS Training Course! This book will serve as a refere
 Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)
 </div>
 
-<!-- ![](images/mosaiks-in-landsat.png)
-
-[Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/) -->
-
 MOSAIKS Stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework that aims to simplify using satellite imagery and machine learning to answer questions about socioeconomic and environmental outcomes across different geographic contexts and time periods.
 
 This comprehensive two-week program is designed for academics, professionals, and policy makers interested in leveraging MOSAIKS for socioeconomic and environmental outcomes.

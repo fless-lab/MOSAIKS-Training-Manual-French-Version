@@ -1,0 +1,84 @@
+# Label Data
+
+While MOSAIKS can involve many optional steps, its effective utilization necessitates two core components: 
+
+1. Ground observations (labels)
+1. Satellite features
+
+Ensuring the spatial resolution is shared across both datasets and that they contain geographical data suitable for merging is crucial.
+
+## Ground observations
+
+The preparation of label data for MOSAIKS hinges on multiple factors, particularly spatial information such as location, extent, and resolution. If the observations in a dataset have a higher resolution than 1 km², some form of selection or aggregation is required. Label data can come in any native spatial form: raster, point, polygon, or vector. As long as there is spatial information associated with each label data observation, these data can be joined to MOSAIKS imagery features for downstream prediction.
+
+::: {.callout-note}
+
+The MOSAIKS API is designed to predict outcomes at scales of 1 km² or larger. Customizable solutions are possible for higher resolution problems.. 
+:::
+
+![Examples of label data formats that can be easily integrated into the MOSAIKS pipeline. Label data of any spatial format that can be aggregated to at least the scale of 1km2 (or larger) can be used directly in combination with MOSAIKS imagery features for downstream prediction tasks. Examples shown here are from Rolf et al. (2021) and include: forest cover, elevation, population, and nighttime lights datasets (all raster format); income data (polygon format); road length (vector format); and housing price data (point format).](images/rolf_et_al_2021-Fig_S4.png){#fig-label-agg}
+
+As with many machine learning algorithms, a large sample size often results in higher performance than low. MOSAIKS has been used and shown to be effective with a wide range of sample sizes (*N*). The sample size for model training is determined by the spatial and temporal resolution of your label data. For example, when predicting maize yields in the US using ground data from one year of farmer-level surveys in the US, *N*=3,143 if farmers are geolocated based on their county (even if far more than 3,143 farmers were interviewed, as this is the number of counties in the US). Additional time periods increase sample size for training, but also require more up-front costs, as more imagery need to be “featurized”.
+
+The original MOSAIKS publication (Rolf et al., 2021) tested performance for forest cover, income, housing price, population density, nighttime luminosity, and elevation using sample sizes ranging from 60,000 to 100,000, but showed that performance fell only modestly when N shrank to just a few hundred observations. Consistent with this finding, in recent experiments with crop yield, we see high with only around 400 observations (R2 = 0.80). It is important to note that the original crop yield dataset included interview data from thousands of farmers across the study country, and this messy data was cleaned and aggregated to the district level prior to modeling. In this case, a clean dataset with a low number of observations was preferred to a large but noisy dataset. Despite the low sample size of the aggregate data, performance was still comparable to more complex CNN models trained specifically on crop yield. 
+
+MOSAIKS accommodates both continuous (e.g., fraction of area forested) and discrete (e.g., presence/absence of water) labels, with data type influencing model development and testing. Performance metric selection is also determined by data type - for continuous variables, we typically use the coefficient of determination (R²), while for discrete variables, the area under the curve value from the receiver operator characteristic curve (ROC AUC score) is used.
+
+Currently the MOSAIKS API has a single global set of features that are precalculated and ready to download. The features were computed from satellite images from 2019 and are readily accessible to download and use. Given this, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). To use MOSAIKS for time series data is possible, just not currently with precomputed and publicly available features. The public MOSAIKS features available on the API also have the advantage of being computed from cloud free, high resolution images. 
+
+In sum, for ease of use with MOSAIKS, label data should:  
+
+- Be consistently geolocated as point, polygon, vector, or raster data  
+- Be in a format that can be aggregated to at least 1km2, or lower resolution  
+- Reflect an outcome that can feasibly be observed in daytime satellite imagery, or is the result or driver of an outcome that can feasibly be observed in daytime satellite imagery  
+- Be relatively recent, if use with current MOSAIKS imagery features is desired   
+- Be of at least size N=300, with expectations of higher performance at higher sample sizes  
+
+## Feature data
+
+::: {.callout-note}
+
+Processing satellite imagery and image featurization are covered in later chapters. 
+:::
+
+MOSAIKS relies on random convolutional features computed from satellite imagery. The random nature of the features means that they are task-agnostic. These features can be reused multiple times to model various tasks. Features are generally created over a standard grid of 0.01 by 0.01 degree cells (~1 km2, depending on latitude), although this can be customized in longer-term collaborations. The output is a feature vector of length K for every location. Depending on the spatial scale and resolution of the label data, subsampling the MOSAIKS grid may be appropriate to reduce computation time and cost. 
+
+This 1 km resolution is generally the maximum resolution the label data should be in. If the labels are in lower resolution, the satellite features can be aggregated up to larger areas to match. Typical aggregation might be to census tract, county/district, or state/province levels. The exact aggregation level is contingent on the spatial resolution of the label data. 
+
+The MOSAIKS API has 2019 Planet Labs, Inc. imagery features publicly available for download; this is the fastest and easiest way to begin using MOSAIKS. However, satellite features can be created at varying temporal scales. Publicly available satellite imagery such as Landsat and Sentinel offer a rich time series, but their use with MOSAIKS will require custom feature generation. The label data’s timestep will play an important role in determining the satellite imagery required for computing features. 
+
+Data quality can also be affected by cloud cover. This may affect your choice of satellite. For instance, if you require monthly features, the slower revisit time of Landsat may mean many months will lack coverage due to cloud cover limiting your ability to create high quality features. 
+
+Another important part of picking the best imagery is the resolution of the satellite sensor. This should be guided by intuition of what scale is necessary for the satellite to detect your labels, as well as availability of imagery. For example, tree cover may not require the same resolution of imagery to detect effectively as crop yield. 
+
+The simplest implementation uses composite satellite images that are highly processed to remove clouds and low quality pixels, and is often normalized and color balanced. This is available directly on the MOSAIKS API. 
+
+Processing satellite imagery and image featurization is covered in later chapters. 
+
+## Joining data
+
+**Note:** Add example code
+
+Before model training, label data must be joined to imagery features. The joined data should be tabular with each row containing:
+1. Geographic location - such as a MOSAIKS grid cell or larger geographic area
+1. Label - the observed value
+1. Time - an optional column useful for time series data (year, mont, or day)
+1. A column for every random satellite feature (usually about 4,000 of these)
+
+For example, a joined dataset could look like:
+
+| Observation | District  | Year | Crop Yield | Feature 1 | Feature 2 | Feature 3 | ... | Feature K |
+|-------------|-----------|------|------------|-----------|-----------|-----------|-----|-----------|
+| 1           | Chibombo  | 2016 | 1.520       | 4         | 11        | 15        | ... | 12        |
+| 2           | Kabwe     | 2016 | 1.878       | 2         | 5         | 2         | ... | 11        |
+| 3           | Mkushi    | 2016 | 2.078       | 3         | 8         | 3         | ... | 6         |
+| 4           | Mumbwa    | 2016 | 1.923       | 5         | 4         | 9         | ... | 7         |
+| 5           | Serenje   | 2016 | 1.180       | 2         | 7         | 14        | ... | 5         |
+| 6           | Chingola  | 2016 | 2.566       | 1         | 0         | 12        | ... | 12        |
+| ...         | ...       | ...  | ...        | ...       | ...       | ...       | ... | ...       |
+| N           | Kitwe     | 2022 | 2.383       | 10        | 1         | 6         | ... | 2         |
+
+In the above example, our geographic location is the district, our label is the crop yield, and our time component is the year. We then have K columns containing the features. 
+
+In this example, our features started at 1 km2 resolution and were aggregated to the district level to match the crop yield data. To join this data, we first found all of the feature locations that fall within the district boundaries using a spatial join. Then we averaged the features within each district. This allowed us to have a single feature vector for each district. The resulting tabular data is then ready for modeling.
+

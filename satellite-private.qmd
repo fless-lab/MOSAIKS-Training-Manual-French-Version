@@ -1,0 +1,6 @@
+# Private Satellites
+
+- [WorldView](https://www.maxar.com/products/satellite-imagery/worldview)
+- [Planet](https://www.planet.com/)
+    - [SkySat](https://www.planet.com/products/skysat-imagery/)
+    - [RapidEye](https://www.planet.com/products/rapideye/)

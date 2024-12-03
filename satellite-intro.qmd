@@ -1,0 +1,4 @@
+# Overview of satellite data
+
+- Spatial res
+- Temporal res

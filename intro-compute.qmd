@@ -1,0 +1,219 @@
+# Compute Setup
+
+<!-- - Laptop with internet access
+- Google account requirement
+- Google Colab setup  
+- Laptop setup  
+- Server setup  
+- GPU considerations -->
+
+This course will primarily use Google Colaboratory (Colab) for our computational needs. Colab is a free, cloud-based platform that allows you to write and execute Python code through your browser. It comes with many pre-installed libraries and provides free access to computing resources, including GPUs.
+
+## Requirements
+
+To participate in the coding portions of this course, you'll need:
+
+- A laptop or desktop computer
+- Reliable internet connection
+- A Google account (if you don't have one, create one at accounts.google.com)
+- A modern web browser (Chrome recommended)
+
+## Getting Started with Google Colab
+
+### Accessing Colab
+
+1. Go to [colab.research.google.com](https://colab.research.google.com)
+2. Sign in with your Google account
+3. Click "New Notebook" to create your first Colab notebook
+
+### Understanding the Interface
+
+The Colab interface is similar to Jupyter notebooks, with a few key components:
+
+- **Menu Bar**: Contains File, Edit, View, Insert, Runtime, Tools, and Help options
+- **Toolbar**: Quick access to common actions like adding code/text cells
+- **Cell Area**: Where you write and execute code or text
+- **Runtime Status**: Shows the state of your notebook's connection to Google's servers
+
+### Basic Operations
+
+1. **Creating Cells**:
+   - Code cells: Click "+ Code" or use Ctrl+M B
+   - Text cells: Click "+ Text" or use Ctrl+M M
+
+1. **Running Cells**:
+   - Click the play button next to the cell
+   - Use Shift+Enter
+   - Select Runtime > Run all from the menu
+
+1. **Cell Types**:
+   - Code cells: For Python code execution
+   - Text cells: For documentation (supports Markdown)
+
+### Important Features
+
+1. **Runtime Type**:
+   - Click Runtime > Change runtime type
+   - Select Python 3 as the runtime
+   - For GPU access: Change hardware accelerator to GPU when needed
+
+1. **File Management**:
+   - Files uploaded to Colab are temporary
+   - Connect to Google Drive for persistent storage:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+1. **Package Installation:**
+
+Install additional packages using:
+
+::: {.panel-tabset}
+## conda
+```python
+# add a -c conda-forge to select the conda-forge channel
+# add a -q flag to install quietly (reduced output)
+# add a -y flag to prememptively accept other changes
+!conda install package_name
+```
+## pip
+```python
+!pip install package_name
+```
+:::
+
+### Best Practices
+
+1. Save Your Work:
+   - Regularly save to Google Drive (File > Save a copy in Drive)
+   - Download important notebooks locally as backups
+   
+1. Resource Management:
+   - Close unused notebooks to free up resources
+   - Be aware of idle timeouts (notebooks disconnect after extended inactivity)
+
+1. Memory Usage:
+   - Monitor memory usage through Runtime > Resource usage
+   - Use Runtime > Factory reset runtime if you run into memory issues
+
+### Keyboard Shortcuts
+
+Here are the most useful keyboard shortcuts for working in Colab:
+
+::: {.panel-tabset}
+
+## Windows/Linux
+| Action | Shortcut |
+|--------|----------|
+| Run current cell | Ctrl+Enter |
+| Run cell and move to next | Shift+Enter |
+| Run cell and insert below | Alt+Enter |
+| Insert code cell above | Ctrl+M A |
+| Insert code cell below | Ctrl+M B |
+| Convert to text cell | Ctrl+M M |
+| Convert to code cell | Ctrl+M Y |
+| Delete current cell | Ctrl+M D |
+| Toggle line numbers | Ctrl+M L |
+| Toggle output | Ctrl+M O |
+| Cut cell | Ctrl+M X |
+| Copy cell | Ctrl+M C |
+| Paste cell below | Ctrl+M V |
+| Select multiple cells | Shift+Up/Down |
+| Find and replace | Ctrl+F |
+| Save notebook | Ctrl+S |
+
+## Mac
+| Action | Shortcut |
+|--------|----------|
+| Run current cell | ⌘+Enter |
+| Run cell and move to next | Shift+Enter |
+| Run cell and insert below | Option+Enter |
+| Insert code cell above | ⌘+M A |
+| Insert code cell below | ⌘+M B |
+| Convert to text cell | ⌘+M M |
+| Convert to code cell | ⌘+M Y |
+| Delete current cell | ⌘+M D |
+| Toggle line numbers | ⌘+M L |
+| Toggle output | ⌘+M O |
+| Cut cell | ⌘+M X |
+| Copy cell | ⌘+M C |
+| Paste cell below | ⌘+M V |
+| Select multiple cells | Shift+Up/Down |
+| Find and replace | ⌘+F |
+| Save notebook | ⌘+S |
+
+:::
+
+You can view all available shortcuts in Colab by pressing Ctrl+M H (⌘+M H on Mac) or through Help > Keyboard shortcuts in the menu.
+
+### Common Issues and Solutions
+
+1. Runtime Disconnections:
+   - Click "Reconnect" when prompted
+   - Your variables will be reset, but saved code remains
+
+1. Package Installation Issues:
+   - Restart runtime after installing new packages
+   - Use Runtime > Restart runtime
+
+1. Memory Errors:
+   - Clear unnecessary variables
+   - Restart runtime
+   - Consider using smaller data samples during development
+
+### Getting Help
+
+- Access Colab's built-in documentation: `Help > Colab Overview`
+- View keyboard shortcuts: `Help > Keyboard shortcuts`
+- Search the Help menu for specific topics
+- Use the `Help > Search Solutions` feature
+
+[Note: This would be a good place to add screenshots showing key interface elements and operations]
+
+In the next sections of this course, we'll be using Colab extensively for hands-on exercises. Make sure you're comfortable with these basics before proceeding.
+
+## Accessing Course Notebooks
+
+All course notebooks are hosted on GitHub and can be accessed directly in Google Colab. There are two ways to access the notebooks:
+
+### Method 1: Direct Links
+Each section of this book includes direct "Open in Colab" links for relevant notebooks. Simply click the badge to open the notebook:
+
+Example
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cropmosaiks/crop-modeling/blob/main/code/3_task_modeling/model_1_sensor.ipynb)
+
+### Method 2: Clone the Notebook
+To choose a notebook from the repository (Add link to demo/interactive notebooks here):
+
+1. Open Google Colab (colab.research.google.com)
+1. Click `File > Open Notebook`
+1. Select the `GitHub` tab
+1. Enter the repository URL: `https://github.com/[username]/[repo]` (UPDATE WITH REPO)
+1. Select the notebook you want to open
+
+## Saving Your Work
+
+When you open a notebook from GitHub in Colab, it creates a temporary copy. To save your work:
+
+1. Click `File > "Save a copy in Drive"`
+1. This creates your own editable copy in your Google Drive
+1. All future changes will be saved to your copy
+
+## Notebook Organization
+
+The course notebooks are organized into:  
+
+- `demos/`: Complete demonstration notebooks
+- `exercises/`: Interactive notebooks with exercises to complete
+- `solutions/`: Complete versions of exercise notebooks
+
+Each notebook includes:  
+
+- Clear instructions in markdown cells
+- Code cells with examples or exercises
+- TODO sections for exercises
+- Validation cells to check your work
+
+
+

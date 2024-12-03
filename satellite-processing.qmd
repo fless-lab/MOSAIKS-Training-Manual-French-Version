@@ -1,0 +1,3 @@
+# Processing Satellite Data
+
+- Download vs cloud processing

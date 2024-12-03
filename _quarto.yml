@@ -1,0 +1,64 @@
+project:
+  type: book
+
+book:
+  title: "MOSAIKS Training Manual"
+  author: 
+    - name: Cullen Molitor
+      affiliations: "Center for Effective Global Action (CEGA)"
+      url: https://emlab.ucsb.edu/about/our-team/cullen-molitor
+    - name:  Tamma Carleton
+      affiliations: "UC Berkeley Department of Agricultural and Resource Economics"
+      url: https://are.berkeley.edu/users/tamma-carleton
+    - name:  Esther Rolf
+      affiliations: "UC Boulder College of Engineering and Applied Science"
+      url: https://www.colorado.edu/cs/esther-rolf
+  # date: "11/25/2024"
+  chapters:
+    - index.qmd
+    - part: intro.qmd
+      chapters:
+        - intro-compute.qmd
+        - intro-mosaiks.qmd
+        - intro-api.qmd
+        - mosaiks-demo-1.qmd
+    - part: labels.qmd  
+      chapters:
+        - labels-100-maps.qmd
+        - labels-over-time.qmd
+        - labels-data-prep.qmd
+        - mosaiks-demo-2.qmd
+        - interactive-agriculture.qmd
+    - part: satellite.qmd  
+      chapters:
+        - satellite-intro.qmd
+        - satellite-public.qmd
+        - satellite-private.qmd
+        - satellite-processing.qmd
+    - part: features.qmd  
+      chapters:
+        - features-api.qmd
+        - features-computing.qmd
+    - part: model.qmd  
+      chapters:
+        - model-choice.qmd
+        - model-spatial.qmd
+        - model-temporal.qmd
+    - part: uncertainty.qmd  
+      chapters:
+        - uncertainty-intro.qmd
+        - uncertainty-ethics.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: 
+      - flatly
+      - style.scss
+  pdf:
+    documentclass: scrreprt
+
+
+

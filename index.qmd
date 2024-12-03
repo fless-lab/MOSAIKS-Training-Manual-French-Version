@@ -1,0 +1,32 @@
+# Welcome {.unnumbered}
+
+This is the first ever MOSAIKS Training Course! This book will serve as a reference for learning the ins and outs of MOSAIKS throughout the training.
+
+![](images/mosaiks-in-landsat.png){style="margin-top: 0px; margin-bottom: 0px;"}
+
+<div style="text-align: center;">
+Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)
+</div>
+
+<!-- ![](images/mosaiks-in-landsat.png)
+
+[Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/) -->
+
+MOSAIKS Stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework that aims to simplify using satellite imagery and machine learning to answer questions about socioeconomic and environmental outcomes across different geographic contexts and time periods.
+
+This comprehensive two-week program is designed for academics, professionals, and policy makers interested in leveraging MOSAIKS for socioeconomic and environmental outcomes.
+
+This course covers the fundamentals of working with MOSAIKS, from basic concepts to advanced applications. The training is particularly suited for those working in:
+
+- Remote sensing and satellite imagery analysis
+- Machine learning applications with geospatial data
+- Agricultural monitoring and assessment
+- Development research and policy making
+
+Throughout this course, you'll learn about satellite imagery processing, MOSAIKS feature extraction, uncertainty quantification, and practical applications of MOSAIKS in real-world scenarios. We'll combine theoretical knowledge with hands-on exercises, ensuring you gain both conceptual understanding and practical experience.
+
+The curriculum includes working with various data sources, processing satellite imagery, understanding Random Convolutional Features (RCFs), implementing machine learning models, interpreting results, and applying predictive models in various contexts. 
+
+You will also explore important considerations in using MOSAIKS for survey data, particularly relevant for development research applications.
+
+Whether you're new to MOSAIKS or looking to deepen your expertise, this course will provide you with the tools and knowledge needed to effectively utilize this powerful framework in your work.

@@ -237,7 +237,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, enhanced, boxrule=0pt, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -906,7 +906,7 @@ Each notebook includes:
 \hypertarget{what-is-mosaiks}{%
 \chapter{What is MOSAIKS?}\label{what-is-mosaiks}}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, rightrule=.15mm, coltitle=black, titlerule=0mm, toprule=.15mm, breakable, bottomrule=.15mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{MOSAIKS}, toptitle=1mm, colback=white, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colback=white, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, arc=.35mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{MOSAIKS}, breakable]
 
 \textbf{Multi-task Observation using SAtellite Imagery \& Kitchen Sinks}
 
@@ -937,7 +937,7 @@ applications, for people with no SIML expertise who work on normal
 desktop computers. MOSAIKS users never actually have to touch satellite
 imagery themselves and only need to have basic statistical training.
 
-\begin{tcolorbox}[enhanced jigsaw, left=2mm, rightrule=.15mm, leftrule=.75mm, arc=.35mm, opacityback=0, breakable, colback=white, toprule=.15mm, bottomrule=.15mm]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, arc=.35mm, left=2mm, leftrule=.75mm, colback=white, rightrule=.15mm, bottomrule=.15mm, toprule=.15mm, breakable]
 
 If you can run a regression, you can use MOSAIKS.
 
@@ -1059,7 +1059,7 @@ global satellite imagery.'' Nature Communications (2021).}
 \hypertarget{api-overview}{%
 \section{API Overview}\label{api-overview}}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, rightrule=.15mm, coltitle=black, titlerule=0mm, toprule=.15mm, breakable, bottomrule=.15mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{MOSAIKS API Link}, toptitle=1mm, colback=white, colframe=quarto-callout-tip-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colback=white, opacitybacktitle=0.6, colbacktitle=quarto-callout-tip-color!10!white, toprule=.15mm, arc=.35mm, toptitle=1mm, colframe=quarto-callout-tip-color-frame, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{MOSAIKS API Link}, breakable]
 
 \href{https://api.mosaiks.org/}{api.mosaiks.org}
 
@@ -1362,7 +1362,7 @@ vector. As long as there is spatial information associated with each
 label data observation, these data can be joined to MOSAIKS imagery
 features for downstream prediction.
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, rightrule=.15mm, coltitle=black, titlerule=0mm, toprule=.15mm, breakable, bottomrule=.15mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, colframe=quarto-callout-note-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colback=white, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, arc=.35mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, breakable]
 
 The MOSAIKS API is designed to predict outcomes at scales of 1 km² or
 larger. Customizable solutions are possible for higher resolution
@@ -1461,7 +1461,7 @@ In sum, for ease of use with MOSAIKS, label data should:
 
 \markright{Feature data}
 
-\begin{tcolorbox}[enhanced jigsaw, bottomtitle=1mm, rightrule=.15mm, coltitle=black, titlerule=0mm, toprule=.15mm, breakable, bottomrule=.15mm, left=2mm, leftrule=.75mm, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, opacityback=0, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, colframe=quarto-callout-note-color-frame]
+\begin{tcolorbox}[enhanced jigsaw, opacityback=0, left=2mm, leftrule=.75mm, colback=white, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, toprule=.15mm, arc=.35mm, toptitle=1mm, colframe=quarto-callout-note-color-frame, bottomrule=.15mm, coltitle=black, bottomtitle=1mm, rightrule=.15mm, titlerule=0mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, breakable]
 
 Processing satellite imagery and image featurization are covered in
 later chapters.

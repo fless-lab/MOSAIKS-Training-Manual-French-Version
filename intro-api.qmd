@@ -1,4 +1,4 @@
-# Access MOSAIKS
+# Access MOSAIKS {#sec-api}
 
 ```{r}
 #| echo: false

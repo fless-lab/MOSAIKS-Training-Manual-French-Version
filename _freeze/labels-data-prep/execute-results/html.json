@@ -1,10 +1,8 @@
 {
-  "hash": "95315d3fd8a1b67f7bda343e50faf0fd",
+  "hash": "f72d8b0afcb1aa335fdfcbfb25dc9832",
   "result": {
-    "markdown": "# Preparing labels\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Considerations for data cleaning\n- What should my data look like?",
-    "supporting": [
-      "labels-data-prep_files"
-    ],
+    "markdown": "# Preparing labels\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Considerations for data cleaning\n- What should my data look like?\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

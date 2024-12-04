@@ -1,10 +1,8 @@
 {
-  "hash": "9656a254f8d9634e29c459f30a3b01c7",
+  "hash": "ca84cd909d78274f63a7d1b8591eaba2",
   "result": {
-    "markdown": "# Demonstration of MOSAIKS\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n- Description of exercise \n- Link to Google Colab Notebook\n- Video maybe?",
-    "supporting": [
-      "mosaiks-demo-1_files"
-    ],
+    "markdown": "# Demonstration of MOSAIKS\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n- Description of exercise \n- Link to Google Colab Notebook\n- Video maybe?\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

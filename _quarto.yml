@@ -43,7 +43,6 @@ book:
         - interactive-agriculture.qmd
     - part: satellite.qmd  
       chapters:
-        - satellite-intro.qmd
         - satellite-public.qmd
         - satellite-private.qmd
         - satellite-processing.qmd

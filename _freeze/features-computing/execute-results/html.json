@@ -1,10 +1,8 @@
 {
-  "hash": "616db8ebece04ae3692333b855c7d0e7",
+  "hash": "d3b51f71f7185b3042e2095ae087a9bf",
   "result": {
-    "markdown": "# Computing Features\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
-    "supporting": [
-      "features-computing_files"
-    ],
+    "markdown": "# Computing Features {#sec-features-computing}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

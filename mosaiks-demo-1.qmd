@@ -12,3 +12,4 @@ status("draft")
 - Description of exercise 
 - Link to Google Colab Notebook
 - Video maybe?
+

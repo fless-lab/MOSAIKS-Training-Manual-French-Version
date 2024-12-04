@@ -1,5 +1,13 @@
 # Welcome {.unnumbered}
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 This is the first ever MOSAIKS Training Course! This book will serve as a reference for learning the ins and outs of MOSAIKS throughout the training.
 
 ![](images/mosaiks-in-landsat.png){style="margin-top: 0px; margin-bottom: 0px;"}
@@ -19,9 +27,9 @@ This course covers the fundamentals of working with MOSAIKS, from basic concepts
 - Agricultural monitoring and assessment
 - Development research and policy making
 
-Throughout this course, you'll learn about satellite imagery processing, MOSAIKS feature extraction, uncertainty quantification, and practical applications of MOSAIKS in real-world scenarios. We'll combine theoretical knowledge with hands-on exercises, ensuring you gain both conceptual understanding and practical experience.
+Throughout this course, you'll learn practical applications of MOSAIKS in real-world scenarios. Additionaly we will cover the basics of satellite imagery processing, MOSAIKS feature extraction, uncertainty quantification, and additional topics. We'll combine theoretical knowledge with hands-on exercises, ensuring you gain both conceptual understanding and practical experience.
 
-The curriculum includes working with various data sources, processing satellite imagery, understanding Random Convolutional Features (RCFs), implementing machine learning models, interpreting results, and applying predictive models in various contexts. 
+The curriculum includes working with various data sources, accessing the MOSAIKS API, processing satellite imagery, understanding Random Convolutional Features (RCFs), implementing machine learning models, interpreting results, and applying predictive models in various contexts. 
 
 You will also explore important considerations in using MOSAIKS for survey data, particularly relevant for development research applications.
 

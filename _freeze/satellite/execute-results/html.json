@@ -1,0 +1,16 @@
+{
+  "hash": "0f0db9374e615ed7d44cac03cd1d1c67",
+  "result": {
+    "markdown": "# Satellite Imagery\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n## Imagery for MOSAIKS\n\n\n\n",
+    "supporting": [
+      "satellite_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

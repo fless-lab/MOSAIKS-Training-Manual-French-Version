@@ -1,0 +1,16 @@
+{
+  "hash": "c3a3bb5b84071224c3acf80f4dfc00ae",
+  "result": {
+    "markdown": "# Overview of uncertainty\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [
+      "uncertainty-intro_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

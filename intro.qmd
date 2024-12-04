@@ -1,5 +1,13 @@
 # Introduction
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 ## Course structure
 
 This course is designed as an intensive two-week program that combines lectures, demonstrations, and hands-on sessions. Each day is structured as follows:
@@ -72,7 +80,7 @@ Each day concludes with a Q&A and feedback session from 4:30-5:00, providing opp
 ### Prerequisites
 There are no explcicit prerequisites, though this course does cover some advanced topics in: 
 
-- The [`Python`](https://www.python.org/) programming language  
+- The [`Python`](https://www.python.org/){target="_blank"} programming language  
 - Machine Learning   
 - Geospatial data  
 

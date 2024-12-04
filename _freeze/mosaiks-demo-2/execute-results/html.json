@@ -1,0 +1,16 @@
+{
+  "hash": "7ae74a4918bbcedf233e4dd8ff94bd3a",
+  "result": {
+    "markdown": "# Demo Number 2\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n- IDK yet",
+    "supporting": [
+      "mosaiks-demo-2_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

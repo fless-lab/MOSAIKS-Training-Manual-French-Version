@@ -1,0 +1,16 @@
+{
+  "hash": "7ff2da55b3ca502597015e25d529be07",
+  "result": {
+    "markdown": "# Model Choice\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [
+      "model-choice_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

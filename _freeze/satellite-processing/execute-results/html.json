@@ -1,0 +1,16 @@
+{
+  "hash": "501096435a0fe3869c5c796856839277",
+  "result": {
+    "markdown": "# Processing Satellite Data\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Download vs cloud processing",
+    "supporting": [
+      "satellite-processing_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,5 +1,13 @@
 # Compute Setup
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 <!-- - Laptop with internet access
 - Google account requirement
 - Google Colab setup  

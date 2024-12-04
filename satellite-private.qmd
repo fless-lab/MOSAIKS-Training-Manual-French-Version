@@ -1,5 +1,13 @@
 # Private Satellites
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 - [WorldView](https://www.maxar.com/products/satellite-imagery/worldview)
 - [Planet](https://www.planet.com/)
     - [SkySat](https://www.planet.com/products/skysat-imagery/)

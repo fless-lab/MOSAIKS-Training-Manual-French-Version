@@ -1,5 +1,13 @@
 # What is MOSAIKS?
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 ::: {.callout-tip}
 ## MOSAIKS
 

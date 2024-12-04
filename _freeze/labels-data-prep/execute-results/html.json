@@ -1,0 +1,16 @@
+{
+  "hash": "95315d3fd8a1b67f7bda343e50faf0fd",
+  "result": {
+    "markdown": "# Preparing labels\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Considerations for data cleaning\n- What should my data look like?",
+    "supporting": [
+      "labels-data-prep_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

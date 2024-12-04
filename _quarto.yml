@@ -14,7 +14,18 @@ book:
     - name:  Esther Rolf
       affiliations: "UC Boulder College of Engineering and Applied Science"
       url: https://www.colorado.edu/cs/esther-rolf
-  # date: "11/25/2024"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      MOSAIKS Training Manual
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+  site-url: https://cullen-molitor.github.io/MOSAIKS-Training-Manual/
+  repo-url: https://github.com/cullen-molitor/MOSAIKS-Training-Manual
+  repo-branch: main
+  repo-actions: [edit, issue]
+
   chapters:
     - index.qmd
     - part: intro.qmd
@@ -68,9 +79,14 @@ format:
   #     \usepackage{fontspec}
   #     \setmainfont{DejaVu Sans}
 
+filters:
+    - openlinksinnewpage
 
 execute:
   freeze: auto
+  echo: false
+  message: false
+  warning: false
 
 
 

@@ -1,0 +1,16 @@
+{
+  "hash": "616db8ebece04ae3692333b855c7d0e7",
+  "result": {
+    "markdown": "# Computing Features\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [
+      "features-computing_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

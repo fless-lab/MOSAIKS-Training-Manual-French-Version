@@ -1,4 +1,12 @@
 # Overview of satellite data
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 - Spatial res
 - Temporal res

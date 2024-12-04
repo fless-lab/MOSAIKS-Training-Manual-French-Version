@@ -1,8 +1,13 @@
 # Access MOSAIKS
 
-<!-- - make account
-- navigation
-- ordering features -->
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 
 ## API Overview
 

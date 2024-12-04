@@ -1,0 +1,16 @@
+{
+  "hash": "b628f8e13bc03b4aa72caed174eaf0b2",
+  "result": {
+    "markdown": "# Private Satellites\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- [WorldView](https://www.maxar.com/products/satellite-imagery/worldview)\n- [Planet](https://www.planet.com/)\n    - [SkySat](https://www.planet.com/products/skysat-imagery/)\n    - [RapidEye](https://www.planet.com/products/rapideye/)",
+    "supporting": [
+      "satellite-private_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

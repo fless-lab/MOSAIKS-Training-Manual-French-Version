@@ -1,0 +1,16 @@
+{
+  "hash": "ec598933f7a849aeb1c5ae43adf797e5",
+  "result": {
+    "markdown": "# Public Satellites\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- [Sentinel-1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1)\n- [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)\n- [Landsat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8)\n- [MODIS](https://modis.gsfc.nasa.gov/)\n- [VIIRS](https://www.ngdc.noaa.gov/eog/viirs/download_dnb_composites.html)\n- [ASTER](https://asterweb.jpl.nasa.gov/)",
+    "supporting": [
+      "satellite-public_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

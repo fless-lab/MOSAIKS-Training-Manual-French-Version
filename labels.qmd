@@ -1,5 +1,13 @@
 # Label Data
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 While MOSAIKS can involve many optional steps, its effective utilization necessitates two core components: 
 
 1. Ground observations (labels)

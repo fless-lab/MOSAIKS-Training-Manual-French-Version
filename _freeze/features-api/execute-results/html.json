@@ -1,0 +1,16 @@
+{
+  "hash": "fd1bd8b1765171e276c47c3509480119",
+  "result": {
+    "markdown": "# API Features\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Defaults ",
+    "supporting": [
+      "features-api_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,4 +1,12 @@
 # Preparing labels
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 - Considerations for data cleaning
 - What should my data look like?

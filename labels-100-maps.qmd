@@ -1,5 +1,13 @@
 # What labels work? 
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 ## 100 Maps
 
 - 100 Maps results  

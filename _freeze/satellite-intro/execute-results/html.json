@@ -1,0 +1,16 @@
+{
+  "hash": "954ba88ae43cd68ad596ce7dcb26d5ff",
+  "result": {
+    "markdown": "# Overview of satellite data\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Spatial res\n- Temporal res",
+    "supporting": [
+      "satellite-intro_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

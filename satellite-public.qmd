@@ -1,5 +1,13 @@
 # Public Satellites
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 - [Sentinel-1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1)
 - [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
 - [Landsat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8)

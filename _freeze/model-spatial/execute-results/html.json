@@ -1,0 +1,16 @@
+{
+  "hash": "7fa4451605770a5c49595b8a3b4bbd59",
+  "result": {
+    "markdown": "# Filling spatial data gaps\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [
+      "model-spatial_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

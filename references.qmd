@@ -1,4 +1,13 @@
 # References {.unnumbered}
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
+
 ::: {#refs}
 :::

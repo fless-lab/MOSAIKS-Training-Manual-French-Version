@@ -1,5 +1,14 @@
 # Demonstration of MOSAIKS
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
+
 - Description of exercise 
 - Link to Google Colab Notebook
 - Video maybe?

@@ -1,0 +1,16 @@
+{
+  "hash": "14022a682e1e812b309282833f4cb4da",
+  "result": {
+    "markdown": "# References {.unnumbered}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n::: {#refs}\n:::\n",
+    "supporting": [
+      "references_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

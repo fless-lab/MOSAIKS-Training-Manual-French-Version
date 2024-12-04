@@ -1,5 +1,13 @@
 # Satellite Imagery
 
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
 ## Imagery for MOSAIKS
 
 

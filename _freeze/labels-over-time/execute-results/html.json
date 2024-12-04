@@ -1,0 +1,16 @@
+{
+  "hash": "be56df166562a653102b948d80eac008",
+  "result": {
+    "markdown": "# Time series data\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\nFor time series data, the frequency of observation and rate of change should also be considered when selecting satellite imagery to create features. For instance, during a region's rainy season it may be much more difficult to obtain high quality cloud free images. This has the potential to leave large gaps in the feature data and may require imputation to fill these gaps.\n\nTake crop yield for example. The data is typically annual, but the seasonal conditions can have a massive impact on yield. To capture seasonal variation, monthly or quarterly satellite features can be used with yearly labels. This would mean that each observation has K features for each time step t (K*t features). Let's say we have 1,000 features computed monthly, then our crop yield would be predicted by 12,000 features. An important point of this data is that there are consistent locations with regular yield measurements. \n",
+    "supporting": [
+      "labels-over-time_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

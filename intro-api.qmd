@@ -37,7 +37,7 @@ If you are looking for **new data sets** that we create using MOSAIKS (not featu
 
 Visit [api.mosaiks.org](https://api.mosaiks.org/).
 
-![Landing page](images/api-home.png)
+![Login page](images/api-home.png)
 
 Select `Register` to create an account. You'll need to provide:
 
@@ -88,6 +88,8 @@ To use MOSAIKS effectively:
 2. Download matching features using either Map Query or File Query
 3. Perform a spatial merge between your labels and the features
 4. Use regression to estimate the relationship between imagery features and your outcome variable
+
+![Using MOSAIKS, a simplified workflow design.](images/mosaiks-overview.png)
 
 You can experiment with various machine learning approaches in the regression step. For beginners, we recommend starting with our example Jupyter notebook that demonstrates a simple ridge regression approach (suitable for both R and Python users).
 

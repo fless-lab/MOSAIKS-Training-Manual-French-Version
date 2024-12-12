@@ -62,5 +62,6 @@ _book
 *.csv
 *.feather
 
+notebooks/*
 notebooks/*/*
 !notebooks/*/*.ipynb

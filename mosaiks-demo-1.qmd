@@ -4,7 +4,7 @@ execute:
   echo: true
 ---
 
-# MOSAIKS Demo {#sec-mosaiks-demo-1}
+# Try MOSAIKS {#sec-mosaiks-demo-1}
 
 ```{r}
 #| eval: true
@@ -24,10 +24,19 @@ quarto convert notebooks/demo/01-MOSAIKS-Internet-example.ipynb
 #| eval: false 
 ```
 
-{{< include _01-MOSAIKS-Internet-example.qmd >}}
+:::{.callout-note}
+# Click the badge to run the demo in Google Colab!
+
+&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cullen-molitor/MOSAIKS-Training-Manual/blob/main/notebooks/demo/01-MOSAIKS-Internet-example.ipynb)  
+&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;  
+:::
+
+For instruction on how to use Google Colab, please refer to @sec-intro-compute
+
+<!-- {{< include _01-MOSAIKS-Internet-example.qmd >}} -->
 
 - Description of exercise 
-- Link to Google Colab Notebook
 - Video maybe?
 
 ## Identifying Internet Access in Togo

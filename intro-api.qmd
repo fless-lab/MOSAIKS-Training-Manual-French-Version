@@ -131,3 +131,10 @@ You can cite the API using the following Bibtex:
     year = {2022},
 }
 ```
+
+::: {.callout-note}
+# Looking forward
+
+In the next chapter we will have a chance to try MOSAIKS. 
+:::
+

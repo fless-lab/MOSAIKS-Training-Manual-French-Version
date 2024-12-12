@@ -52,3 +52,15 @@ _site/
 .quarto/
 
 /.quarto/
+
+Data*
+
+_book
+
+*.topojson
+*.geojson
+*.csv
+*.feather
+
+notebooks/*/*
+!notebooks/*/*.ipynb

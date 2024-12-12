@@ -1,10 +1,8 @@
 {
-  "hash": "24b1c94e590e2a26d85b8b0683b1cfce",
+  "hash": "4658c4d96dbdbd31a3ddffe0002a76eb",
   "result": {
-    "markdown": "# Processing Satellite Data\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Download vs cloud processing\n\n\n",
-    "supporting": [
-      "satellite-processing_files"
-    ],
+    "markdown": "# Processing Imagery\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Download vs cloud processing\n\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

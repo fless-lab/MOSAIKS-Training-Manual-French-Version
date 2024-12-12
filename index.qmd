@@ -8,25 +8,57 @@ source("_common.R")
 status("draft")
 ```
 
-This is the first ever MOSAIKS Training Course! This book will serve as a reference for learning what MOSAIKS is and what it can be used for, along with practical guidance for using it.
+This is the first iteration of the MOSAIKS Training Manual! The manual serves as a comprehensive reference for understanding MOSAIKS, its capabilities, and practical implementation guidance.
 
 ![Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png)
 
-MOSAIKS stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework that aims to simplify using satellite imagery and machine learning to answer questions about socioeconomic and environmental outcomes across different geographic contexts and time periods.
+MOSAIKS stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework designed to simplify the use of satellite imagery and machine learning for analyzing socioeconomic and environmental outcomes across different geographic contexts and time periods.
 
-This comprehensive two-week program is designed for academics, professionals, and policy makers interested in leveraging MOSAIKS to better understand socioeconomic and environmental problems.
-
-This course covers the fundamentals of working with MOSAIKS, from basic concepts to advanced applications. The training is particularly suited for those working in:
+This comprehensive two-week program is designed for academics, professionals, and policymakers interested in leveraging MOSAIKS to better understand socioeconomic and environmental challenges. The course is particularly valuable for those working in:
 
 - Remote sensing and satellite imagery analysis
-- Machine learning applications with geospatial data
+- Machine learning applications with geospatial data 
 - Agricultural monitoring and assessment
 - Development research and policy making
 
-Throughout this course, you'll learn practical applications of MOSAIKS in real-world scenarios. Additionaly we will cover the basics of satellite imagery processing, MOSAIKS feature extraction, uncertainty quantification, and additional topics. We'll combine theoretical knowledge with hands-on exercises, ensuring you gain both conceptual understanding and practical experience.
+Throughout this course, you'll learn practical applications through a combination of:
 
-The curriculum includes working with various data sources, accessing the MOSAIKS API, processing satellite imagery, understanding Random Convolutional Features (RCFs), implementing machine learning models, interpreting results, and applying predictive models in various contexts. 
+- Theoretical foundations and conceptual understanding
+- Hands-on exercises with real-world data
+- Best practices for implementation
+- Strategies for analyzing and interpreting results
 
-You will also explore important considerations in using MOSAIKS for survey data, particularly relevant for development research applications.
+The curriculum covers the complete MOSAIKS workflow:
 
-Whether you're new to MOSAIKS or looking to deepen your expertise, this course will provide you with the tools and knowledge needed to effectively utilize this powerful framework in your work.
+- Accessing and processing satellite imagery
+- Understanding MOSAIKS feature extraction
+- Working with the MOSAIKS API
+- Implementing machine learning models
+- Quantifying and communicating uncertainty
+- Applying models to various contexts
+- Working with survey data
+
+Whether you're new to MOSAIKS or looking to deepen your expertise, this course provides the tools and knowledge needed to effectively utilize this powerful framework.
+
+## Acknowledgements
+
+MOSAIKS was developed and is supported by researchers across multiple partner organizations:
+
+**Core Team:**
+
+Benjamin Recht, Esther Rolf, Tamma Carleton, Eugenio Noda, Hikari Murayama, Hannah Druckenmiller, Ian Bolliger, Jeanette Tseng, Jessica Katz, Jonathan Proctor, Luke Sherman, Miyabi Ishihara, Simon Greenhill, Solomon Hsiang, Taryn Fransen, Trinetta Chong, Vaishaal Shankar, Graeme Blair, Darin Christensen, Shopnavo Biswas, Karena Yan, Cullen Molitor, Grace Lewin, Steven Cognac, Juliet Cohen
+
+**Partner Organizations:**
+
+- Center for Effective Global Action ([CEGA](https://cega.berkeley.edu/); UCB)
+- Environmental Markets Lab ([emLab](https://emlab.ucsb.edu/); UCSB) 
+- Global Policy Lab ([GPL](https://www.globalpolicy.science/); Stanford University)
+- Harvard Data Science Initiative ([HDSI](https://datascience.harvard.edu/); Harvard University)
+- Project on Resources and Governance ([PRG](https://projectrg.org/); UCLA)
+- Master of Environmental Data Science Program ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science); UCSB)
+
+**Funding Support:**
+
+- [The Patrick J. McGovern Foundation](https://www.mcgovern.org/)
+- [The United States Agency for International Development (USAID)](https://www.usaid.gov/)
+- [United Nations Development Programme (UNDP)](https://www.undp.org/)

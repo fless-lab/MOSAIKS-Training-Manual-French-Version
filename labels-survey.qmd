@@ -1,0 +1,21 @@
+# Survey Data {#sec-labels-survey}
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+
+
+Notes:
+
+- Why survey data needs it own section
+- Types of survey data
+- How to access survey data
+- Working with survey data
+    - LSMS data
+    - DHS data
+- Remote sensing informed survey design
+

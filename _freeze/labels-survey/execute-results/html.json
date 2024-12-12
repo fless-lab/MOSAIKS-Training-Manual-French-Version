@@ -1,0 +1,14 @@
+{
+  "hash": "668e72ea19747d83d10c96b7c5514b87",
+  "result": {
+    "markdown": "# Survey Data {#sec-labels-survey}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\nNotes:\n\n- Why survey data needs it own section\n- Types of survey data\n- How to access survey data\n- Working with survey data\n    - LSMS data\n    - DHS data\n- Remote sensing informed survey design\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

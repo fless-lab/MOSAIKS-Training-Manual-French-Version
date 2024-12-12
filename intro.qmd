@@ -8,7 +8,7 @@ source("_common.R")
 status("draft")
 ```
 
-## Course structure
+## Course structure 
 
 This course is designed as an intensive two-week program that combines lectures, demonstrations, and hands-on sessions. Each day is structured as follows:
 
@@ -29,49 +29,61 @@ Each day concludes with a Q&A and feedback session from 4:30-5:00, providing opp
 
 ## Schedule overview
 
-### Week 1
-- **Monday**: Orientation and introduction to MOSAIKS
-- **Tuesday**: Ground labels and data processing fundamentals
-- **Wednesday**: Agriculture applications and MOSAIKS API
-- **Thursday**: Satellite imagery fundamentals and processing
-- **Friday**: Deep dive into Random Convolutional Features (RCFs)
+| Day | Week 1 | Week 2 |
+|-----|---------|---------|
+| Monday | Orientation and introduction to MOSAIKS | *Holiday - No Class* |
+| Tuesday | Ground labels and data processing fundamentals | Task modeling and machine learning applications |
+| Wednesday | Agriculture applications and MOSAIKS API | Understanding uncertainty in MOSAIKS |
+| Thursday | Satellite imagery fundamentals and processing | Survey data processing and design |
+| Friday | Deep dive into random convolutional features (RCFs) | Future directions and advanced applications |
 
-### Week 2
-- **Monday**: Martin Luther King Jr. Day (holiday - no class)
-- **Tuesday**: Task modeling and machine learning applications
-- **Wednesday**: Understanding uncertainty in MOSAIKS
-- **Thursday**: Survey data processing and design
-- **Friday**: Future directions and advanced applications
+: Course schedule by week {.striped .hover}
+
+Main topics covered each day:
+
+### Week 1
+- **Day 1**: MOSAIKS framework, accessing features, basic workflow
+- **Day 2**: Understanding ground truth data, data cleaning, spatial resolution
+- **Day 3**: Agricultural yield prediction, downloading features via API
+- **Day 4**: Types of satellite imagery, processing considerations, quality control
+- **Day 5**: Feature computation, theory behind RCFs, hands-on implementation
+
+### Week 2  
+- **Day 1**: *Martin Luther King Jr. Day - No Class*
+- **Day 2**: Model selection, hyperparameter tuning, cross-validation
+- **Day 3**: Error analysis, confidence intervals, reporting uncertainty
+- **Day 4**: Survey design principles, geolocation methods, sampling strategies
+- **Day 5**: Advanced topics, emerging applications, future development
 
 ## Training expectations
 
-### What you will learn 
+### What you will learn
 - Understanding of MOSAIKS framework and capabilities
-- Practical skills in satellite imagery processing
+- Practical skills in satellite imagery processing  
 - Experience with machine learning applications
 - Hands-on practice with real-world datasets
 - Knowledge of survey data integration
 - Best practices for model implementation
 
 ### Prerequisites
-There are no explcicit prerequisites, though this course does cover some advanced topics in: 
+There are no explicit prerequisites, though this course does cover some advanced topics in:
 
-- The [`Python`](https://www.python.org/){target="_blank"} programming language  
-- Machine Learning   
-- Geospatial data  
+- The [`Python`](https://www.python.org/){target="_blank"} programming language
+- Machine learning
+- Geospatial data
 
 ### Participant expectations
 - Active participation in discussions and hands-on sessions
-- Completion of assigned homework (particularly the Week 1 Friday assignment)
+- Completion of assigned homework (particularly the Week 1 Friday assignment)  
 - Engagement in Q&A sessions
 - Contribution to feedback sessions for course improvement
 
-### Computing requirements
+### Computing requirements  
 The course includes hands-on computing sessions. You will need:
 
 - A computer with access to the internet
-- A Google account
-- Acess to Google Colaboratory
+- A Google account 
+- Access to Google Colaboratory
 - Access to necessary data (details to be provided)
 
 ### Homework and presentations

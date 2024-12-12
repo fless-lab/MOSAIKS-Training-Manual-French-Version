@@ -1,4 +1,4 @@
-# Processing Satellite Data
+# Processing Imagery
 
 ```{r}
 #| echo: false

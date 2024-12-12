@@ -31,24 +31,29 @@ status <- function(type) {
     status <- switch(type,
         draft = "is in early draft form and may be incomplete",
         review = "is under review and may need revisions",
-        complete = "is complete and ready for use",
         testing = "needs testing with real users",
-        stop("Invalid `type`", call. = FALSE)
+        complete = "is complete and ready for use",
+        stop(
+            "Invalid `type`, use `draft`, `review`, `testing`, or `complete`",
+            call. = FALSE
+        )
     )
 
     class <- switch(type,
         draft = "warning",
         review = "note",
-        complete = "tip",
-        testing = "important"
+        testing = "important",
+        complete = "tip"
     )
 
-    cat(paste0(
-        "\n",
-        ":::: status\n",
-        "::: callout-", class, " \n",
-        "This chapter ", status, ".\n",
-        ":::\n",
-        "::::\n"
-    ))
+    cat(
+        paste0(
+            "\n",
+            ":::: status\n",
+            "::: callout-", class, " \n",
+            "This chapter ", status, ".\n",
+            ":::\n",
+            "::::\n"
+        )
+    )
 }

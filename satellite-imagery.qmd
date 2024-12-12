@@ -1,0 +1,83 @@
+# Choosing Imagery
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("_common.R")
+status("draft")
+```
+Based on your label resolution, a user needs to decide on:
+
+- Available time range
+- Sensor resolution
+- Spectral resolution
+- Temporal resolution
+- Sensor type
+- How to handle image quality (i.e. clouds)
+- Processing level (i.e. orthorectification, normalization)
+
+## Time range
+
+How long a satellite or satellite constellation have been operating. 
+
+![Source: [NASA](https://landsat.gsfc.nasa.gov/satellites/timeline/)](images/nasa_landsat_timeline.png)
+
+## Sensor resolution (pixel size)
+
+Another important part of picking the best imagery is the resolution of the satellite sensor. This should be guided by intuition of what scale is necessary for the satellite to detect your labels, as well as availability of imagery. For example, tree cover may not require the same resolution of imagery to detect effectively as crop yield. 
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_spatial_res.jpeg)
+
+## Spectral resolution (EM range)
+
+The avaialable electromagnetic radiation spectrum of the sensor
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_spectral_res.jpeg)
+
+## Temporal resolution (revisit rate)
+
+Single satellite revisit vs constellations
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_temporal_res.jpeg)
+
+## Cloud cover
+ 
+Data quality can also be affected by cloud cover. This may affect your choice of satellite. For instance, if you require monthly features, the slower revisit time of Landsat may mean many months will lack coverage due to cloud cover limiting your ability to create high quality features. 
+
+## Sensor Type
+
+Active vs passive sensors
+
+Visual range, NIR, etc - surface reflectance
+
+SAR, night/day clouds ok
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_active_passive.jpeg)
+
+
+## Public Satellites {#sec-satellite-public}
+
+- [Sentinel-1](https://sentinel.esa.int/web/sentinel/missions/sentinel-1)
+- [Sentinel-2](https://sentinel.esa.int/web/sentinel/missions/sentinel-2)
+- [Landsat 8](https://www.usgs.gov/land-resources/nli/landsat/landsat-8)
+- [MODIS](https://modis.gsfc.nasa.gov/)
+- [VIIRS](https://www.ngdc.noaa.gov/eog/viirs/download_dnb_composites.html)
+- [ASTER](https://asterweb.jpl.nasa.gov/)
+
+## Private Satellites {#sec-satellite-private}
+
+- [WorldView](https://www.maxar.com/products/satellite-imagery/worldview)
+- [Planet](https://www.planet.com/)
+    - [SkySat](https://www.planet.com/products/skysat-imagery/)
+    - [RapidEye](https://www.planet.com/products/rapideye/)
+
+
+
+**note**: find a place for this text, taken out of labels section from Togo doc 
+
+However, satellite features can be created at varying temporal scales. Publicly available satellite imagery such as Landsat and Sentinel offer a rich time series, but their use with MOSAIKS will require custom feature generation. The label data’s timestep will play an important role in determining the satellite imagery required for computing features. 
+
+The simplest implementation uses composite satellite images that are highly processed to remove clouds and low quality pixels, and is often normalized and color balanced. This is available directly on the MOSAIKS API. 
+
+

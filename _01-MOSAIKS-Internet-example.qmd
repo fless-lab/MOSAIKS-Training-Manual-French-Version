@@ -1,0 +1,267 @@
+---
+title: 'MOSAIKS Demonstration: Identifying Internet Access in Togo'
+jupyter: python3
+---
+
+This notebook demonstrates the application of Multi-task Observation using Satellite Imagery & Kitchen Sinks (MOSAIKS), a machine learning approach utilizing satellite imagery, to identify areas with and without internet access in Togo. This information can be crucial for understanding the digital divide and informing policies to improve connectivity.
+
+
+## Methodology
+
+The process involves the following steps:
+
+1. **Data Acquisition:** Label data on internet access is provided by the Agence Togo Digital (ATD). Pre-processed satellite imagery features are derived using the MOSAIKS framework.
+1. **Data Preprocessing:** The label and feature data are preprocessed and cleaned. This leaves a single dataset with labels and features that is ready to use.
+1. **Model Training and Evaluation:** A machine learning model, specifically Ridge Regression with isotonic calibration, is trained on the joined dataset to predict the likelihood of internet access. The model is evaluated using metrics like the Receiver Operating Characteristic Area Under the Curve (ROC AUC).
+1. **Visualization and Interpretation:** The model results are visualized using maps and plots. Important features identified by the model are analyzed to understand the patterns associated with internet access.
+
+## Setup
+
+This notebook utilizes several key Python libraries:
+
+* **Data Handling and Analysis:**  `pandas` and `numpy` provide fundamental data structures and functions for manipulating and analyzing data. `geopandas` extends these capabilities to work with geospatial data.
+* **Visualization:** `matplotlib.pyplot` and `seaborn` enable the creation of static and interactive visualizations, aiding in data exploration and result presentation.
+* **Machine Learning:** `sklearn` offers a comprehensive suite of tools for building and evaluating machine learning models, including algorithms like Ridge Regression and methods for data preprocessing.
+
+```{python}
+import shutil
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import geopandas as gpd
+import matplotlib.pyplot as plt
+
+from google.colab import drive
+from sklearn.linear_model import RidgeClassifierCV
+from sklearn.calibration import IsotonicRegression
+from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.model_selection import train_test_split, GridSearchCV
+```
+
+## Mounting Google Drive
+
+Mounting Google Drive in Colab essentially connects your Google Drive storage to the Colab environment. This allows you to access files and folders stored in your Drive directly within your Colab notebook. Think of it as creating a shortcut to your Drive within Colab.
+
+**Why is this necessary?**
+
+Colab notebooks run on temporary virtual machines. Mounting your Drive ensures that you can load and save data to your personal storage, persisting even after the Colab session ends. It also enables seamless access to larger datasets stored in your Drive, which would be impractical to upload directly to Colab.
+
+After mounting Google Drive, we then define the path to the project folder on Google Drive. This directory contains the data files needed for the analysis.
+
+```{python}
+drive.mount('/content/drive')
+```
+
+```{python}
+drive_directory = os.path.join(
+    "/",
+    "content",
+    "drive",
+    "Shareddrives",
+    "MOSAIKS Workshop",
+    "Data",
+
+)
+drive_directory
+```
+
+## Create a local directory
+
+This section creates a local directory within the Colab environment to store the project data. Data files are copied from the Google Drive directory to this local folder.
+
+**Why use a local directory?**  
+
+Accessing data locally on the Colab virtual machine (VM) significantly improves processing speed compared to reading directly from Google Drive. While copying the data initially takes a bit of time, this is outweighed by the performance gains during analysis.
+
+```{python}
+local_dir = "/content/data/"
+
+os.makedirs(local_dir, exist_ok=True)
+
+files_to_copy = os.path.join(drive_directory, "survey_data")
+
+shutil.copytree(files_to_copy, local_dir, dirs_exist_ok=True)
+```
+
+Here we take a look at the contents of the local drive to ensure we have the necessary files copied.
+
+```{python}
+!ls -lh /content/data
+```
+
+## Load in the Internet Access Label Data
+
+This section focuses on loading and preparing the data on internet access in Togo.
+
+**Initial Loading and Column Selection:** We will load the data from a file and select the relevant columns, such as internet access status and the satellite features.
+
+**Label Data Visualization:** We produce a bar plot to inspect the distribution of labels and check for any imbalances.
+
+```{python}
+data = pd.read_feather(os.path.join(local_dir, "survey_data.feather"))
+data
+```
+
+```{python}
+data.groupby('Internet').size().plot(kind='barh', color=sns.palettes.mpl_palette('Dark2'))
+plt.gca().spines[['top', 'right',]].set_visible(False)
+```
+
+## Model Training and Evaluation
+
+This section focuses on training and evaluating a machine learning model to predict internet access using the prepared data.
+
+**1. Data Preparation:**
+
+* The joined dataset is split into features (X) and the target variable (y).
+    * `X` contains the satellite imagery features, specifically the columns with names starting with 'X_'.
+    * `y` contains the internet access label (1 for internet access, 0 for no access).
+* The data is further split into training and testing sets using `train_test_split` to evaluate the model's performance on unseen data.
+
+```{python}
+feature_cols = [f"X_{i}" for i in range(4000)]
+# feature_cols
+```
+
+
+```{python}
+X = data[feature_cols].values
+y = data["Internet"].values
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=1991
+)
+```
+
+**2. Model Selection and Training:**
+
+* A Ridge Regression Classifier model is used for prediction. This model is chosen for its ability to handle high-dimensional data and its robustness to outliers.
+    * Ridge Regression is a linear model that adds a penalty term to the loss function, preventing overfitting.
+* Hyperparameter tuning is performed using `GridSearchCV` to find the best value for the regularization parameter (`alpha`) of the Ridge Regression model. This helps to optimize the model's performance.
+
+```{python}
+alphas = [0.01, 0.1, 1.0, 10.0]
+ridge = RidgeClassifierCV(alphas=alphas, cv=5, scoring='roc_auc')
+
+ridge.fit(X_train, y_train)
+```
+
+**3. Model Evaluation:**
+
+* The trained model is evaluated using the testing set, which was not used during training.
+* The primary evaluation metric is the Receiver Operating Characteristic Area Under the Curve (ROC AUC). This metric measures the model's ability to distinguish between positive (internet presence) and negative (internet absence) cases.
+* The ROC curve is visualized to provide a graphical representation of the model's performance across different thresholds.
+
+```{python}
+# Get uncalibrated predictions (decision function)
+y_pred_uncal = ridge.decision_function(X_test)
+
+# Fit isotonic calibration
+iso_reg = IsotonicRegression(out_of_bounds='clip')
+iso_reg.fit(y_pred_uncal, y_test)
+
+# Get calibrated predictions
+y_pred_cal = iso_reg.predict(y_pred_uncal)
+
+# Calculate AUC scores
+auc_uncal = roc_auc_score(y_test, y_pred_uncal)
+auc_cal = roc_auc_score(y_test, y_pred_cal)
+
+print(f"Best alpha: {ridge.alpha_}")
+print(f"AUC before calibration: {auc_uncal:.3f}")
+print(f"AUC after calibration: {auc_cal:.3f}")
+```
+
+```{python}
+# Calculate ROC curves
+fpr_uncal, tpr_uncal, _ = roc_curve(y_test, y_pred_uncal)
+fpr_cal, tpr_cal, _ = roc_curve(y_test, y_pred_cal)
+
+# Create the plot
+plt.figure(figsize=(5, 5))
+
+# Plot both curves
+plt.plot(fpr_uncal, tpr_uncal, 'b-', label=f'Uncalibrated (AUC = {auc_uncal:.3f})')
+plt.plot(fpr_cal, tpr_cal, 'r-', label=f'Calibrated (AUC = {auc_cal:.3f})')
+
+# Plot the diagonal reference line
+plt.plot([0, 1], [0, 1], 'k--', label='Random')
+
+# Customize the plot
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('ROC Curves - Before and After Calibration')
+plt.legend(loc='lower right')
+plt.grid(True, alpha=0.3)
+
+# Set the plot limits
+plt.xlim([-0.01, 1.01])
+plt.ylim([-0.01, 1.01])
+
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+import geopandas as gpd
+```
+
+```{python}
+features = pd.read_feather(os.path.join(local_dir, "TGO_API_features.feather"))
+
+features = gpd.GeoDataFrame(
+    features,
+    geometry=gpd.points_from_xy(features.Lon, features.Lat),
+    crs="EPSG:4326"
+  )
+features.geometry = features.geometry.buffer(0.005, cap_style=3)
+
+features
+```
+
+```{python}
+y_pred_full = ridge.decision_function(features[feature_cols].values)
+
+# y_pred_full_cal = iso_reg.predict(y_pred_full)
+
+features['predicted_probability'] = y_pred_full
+features
+```
+
+```{python}
+features[features.predicted_probability > 0].plot(
+    column="predicted_probability",
+    cmap="viridis",
+    legend=True,
+    legend_kwds={'label': "Predicted Probability"},
+    figsize=(10, 8)
+)
+plt.title("Prediction")
+plt.xlabel("Longitude")
+plt.ylabel("Latitude")
+plt.show()
+```
+
+## Conclusions
+This notebook demonstrated the use of MOSAIKS to predict internet access in Togo using satellite imagery features.
+
+**Key Findings:**  
+
+- The model achieved a good level of predictive performance, indicated by the ROC AUC score.
+- Satellite imagery features proved to be valuable predictors of internet access, highlighting their potential for understanding the digital divide.
+
+**Implications and Future Directions:**
+
+- The insights gained from this analysis can inform policy decisions and interventions aimed at expanding internet access in Togo.
+- Further research could explore the use of other machine learning algorithms and incorporate additional data sources to enhance predictive accuracy.
+- This approach can be extended to other regions and countries to address the global digital divide.
+
+**Limitations:**
+
+- The model's performance might vary in different geographical contexts.
+- The accuracy of the predictions depends on the quality and availability of satellite imagery and label data.
+- Further validation and ground-truthing are needed to assess the real-world applicability of the model.
+
+
+Overall, this demonstration highlights the potential of MOSAIKS and machine learning in bridging the digital divide by providing insights into internet access patterns using satellite imagery.
+

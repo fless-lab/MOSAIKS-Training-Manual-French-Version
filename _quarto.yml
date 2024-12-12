@@ -39,12 +39,12 @@ book:
         - labels-100-maps.qmd
         - labels-over-time.qmd
         - labels-data-prep.qmd
+        - labels-survey.qmd
         - mosaiks-demo-2.qmd
         - interactive-agriculture.qmd
     - part: satellite.qmd  
       chapters:
-        - satellite-public.qmd
-        - satellite-private.qmd
+        - satellite-imagery.qmd
         - satellite-processing.qmd
     - part: features.qmd  
       chapters:
@@ -83,7 +83,7 @@ filters:
 
 execute:
   freeze: auto
-  echo: false
+  echo: true
   message: false
   warning: false
 

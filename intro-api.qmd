@@ -27,6 +27,8 @@ We have worked to develop multiple ways to access MOSAIKS features:
 
 - **Recompute MOSAIKS features (Landsat & Sentinel imagery)** You can recompute MOSAIKS features yourself using Microsoft’s Planetary Computer ([Github repo](https://github.com/microsoft/PlanetaryComputerExamples/blob/main/tutorials/mosaiks.ipynb) which currently supports Gaussian random convolutional features). This approach will not provide the benefit of pre-computed features, since you will recompute features on-the-fly every time, but the massive compute power of the Planetary Computer makes this relatively fast and cheap for users. 
 
+- **Recompute MOSAIKS features (general instruction)** You can recompute MOSAIKS features yourself using instructions provided in @sec-features-computing. By following along with this chapter, you will gain in depth knowledge of how to compute customized features from any input imagery source. The process of dealing with satellite imagery and image featurization are the most challenging aspects of MOSAIKS. This section is only recommended for users with baseline knowledge of remote sensing methodologies, and ideally at least some understanding of convolutional nueral network models. 
+
 We have put together a **Resource Page** for MOSAIKS users [here](https://api.mosaiks.org/portal/resources/) (registration required), which includes example Python and R notebooks for using the pipeline.
 
 Don’t forget to see our **Tutorial Page** [here](https://www.mosaiks.org/tutorials), which has an example Python notebook that we walk through in the video.
@@ -82,16 +84,20 @@ There are two main methods to obtain features through the API:
 
 ## Using MOSAIKS features for prediction
 
-To use MOSAIKS effectively:
+::: {.callout-tip}
+This is a brief overview. Detailed instructions appear later in the manual.
+:::
 
-1. Obtain ground truth measurements ("labels") for your variable of interest
-2. Download matching features using either Map Query or File Query
-3. Perform a spatial merge between your labels and the features
-4. Use regression to estimate the relationship between imagery features and your outcome variable
+Basic workflow:
+
+1. Obtain ground truth measurements ("labels")
+2. Download matching features via Map/File Query
+3. Spatially merge labels and features
+4. Use regression to model relationship
 
 ![Using MOSAIKS, a simplified workflow design.](images/mosaiks-overview.png)
 
-You can experiment with various machine learning approaches in the regression step. For beginners, we recommend starting with our example Jupyter notebook that demonstrates a simple ridge regression approach (suitable for both R and Python users).
+You can experiment with various machine learning approaches in the regression step. For beginners, we recommend starting with our example Jupyter notebook (@sec-mosaiks-demo-1) that demonstrates a simple ridge regression approach (suitable for both R and Python users).
 
 This topic will be covered in greater depth in later chapters. In the next chapter, you will see a simple MOSAIKS workflow which starts from the point of having both features from the API and ground truth labels. 
 

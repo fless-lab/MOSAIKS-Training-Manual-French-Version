@@ -1,10 +1,8 @@
 {
-  "hash": "d4f03b90d7a47f6f016d1de56b9494bb",
+  "hash": "6952ca5c72798ecbd57c0879fe1d446a",
   "result": {
-    "markdown": "# What labels work? \n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n## 100 Maps\n\n- 100 Maps results  \n",
-    "supporting": [
-      "labels-100-maps_files"
-    ],
+    "markdown": "# What labels work? {#sec-labels-100-maps}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n## Overview\n\n![](images/copernicus-satellite-needs.png)\n\n## Original publication \n\n- Recap the original 7 outcomes\n\n## 100 maps\n\n- 100 Maps results  \n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

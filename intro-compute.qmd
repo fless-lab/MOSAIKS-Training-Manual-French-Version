@@ -1,4 +1,4 @@
-# Compute Setup
+# Compute setup
 
 ```{r}
 #| echo: false
@@ -8,64 +8,57 @@ source("_common.R")
 status("draft")
 ```
 
-<!-- - Laptop with internet access
-- Google account requirement
-- Google Colab setup  
-- Laptop setup  
-- Server setup  
-- GPU considerations -->
-
 This course will primarily use Google Colaboratory (Colab) for our computational needs. Colab is a free, cloud-based platform that allows you to write and execute Python code through your browser. It comes with many pre-installed libraries and provides free access to computing resources, including GPUs.
 
 ## Requirements
 
 To participate in the coding portions of this course, you'll need:
 
-- A laptop or desktop computer
+- A laptop or desktop computer 
 - Reliable internet connection
 - A Google account (if you don't have one, create one at accounts.google.com)
 - A modern web browser (Chrome recommended)
 
-## Getting Started with Google Colab
+## Getting started with Google Colab 
 
 ### Accessing Colab
 
 1. Go to [colab.research.google.com](https://colab.research.google.com)
-2. Sign in with your Google account
+2. Sign in with your Google account 
 3. Click "New Notebook" to create your first Colab notebook
 
-### Understanding the Interface
+### Understanding the interface
 
 The Colab interface is similar to Jupyter notebooks, with a few key components:
 
 - **Menu Bar**: Contains File, Edit, View, Insert, Runtime, Tools, and Help options
 - **Toolbar**: Quick access to common actions like adding code/text cells
-- **Cell Area**: Where you write and execute code or text
+- **Cell Area**: Where you write and execute code or text 
 - **Runtime Status**: Shows the state of your notebook's connection to Google's servers
 
-### Basic Operations
+### Basic operations
 
 1. **Creating Cells**:
    - Code cells: Click "+ Code" or use Ctrl+M B
    - Text cells: Click "+ Text" or use Ctrl+M M
 
-1. **Running Cells**:
+2. **Running Cells**:
    - Click the play button next to the cell
-   - Use Shift+Enter
+   - Use Shift+Enter 
    - Select Runtime > Run all from the menu
 
-1. **Cell Types**:
+3. **Cell Types**:
    - Code cells: For Python code execution
    - Text cells: For documentation (supports Markdown)
 
-### Important Features
+### Important features
 
 1. **Runtime Type**:
    - Click Runtime > Change runtime type
    - Select Python 3 as the runtime
    - For GPU access: Change hardware accelerator to GPU when needed
 
-1. **File Management**:
+2. **File Management**:
    - Files uploaded to Colab are temporary
    - Connect to Google Drive for persistent storage:
 
@@ -73,7 +66,8 @@ The Colab interface is similar to Jupyter notebooks, with a few key components:
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-1. **Package Installation:**
+
+3. **Package Installation:**
 
 Install additional packages using:
 
@@ -91,21 +85,21 @@ Install additional packages using:
 ```
 :::
 
-### Best Practices
+### Best practices
 
 1. Save Your Work:
    - Regularly save to Google Drive (File > Save a copy in Drive)
    - Download important notebooks locally as backups
    
-1. Resource Management:
+2. Resource Management:
    - Close unused notebooks to free up resources
    - Be aware of idle timeouts (notebooks disconnect after extended inactivity)
 
-1. Memory Usage:
+3. Memory Usage:
    - Monitor memory usage through Runtime > Resource usage
    - Use Runtime > Factory reset runtime if you run into memory issues
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
 
 Here are the most useful keyboard shortcuts for working in Colab:
 
@@ -134,81 +128,76 @@ Here are the most useful keyboard shortcuts for working in Colab:
 ## Mac
 | Action | Shortcut |
 |--------|----------|
-| Run current cell | &#8984;+Enter |
+| Run current cell | ⌘+Enter |
 | Run cell and move to next | Shift+Enter |
 | Run cell and insert below | Option+Enter |
-| Insert code cell above | &#8984;+M A |
-| Insert code cell below | &#8984;+M B |
-| Convert to text cell | &#8984;+M M |
-| Convert to code cell | &#8984;+M Y |
-| Delete current cell | &#8984;+M D |
-| Toggle line numbers | &#8984;+M L |
-| Toggle output | &#8984;+M O |
-| Cut cell | &#8984;+M X |
-| Copy cell | &#8984;+M C |
-| Paste cell below | &#8984;+M V |
+| Insert code cell above | ⌘+M A |
+| Insert code cell below | ⌘+M B |
+| Convert to text cell | ⌘+M M |
+| Convert to code cell | ⌘+M Y |
+| Delete current cell | ⌘+M D |
+| Toggle line numbers | ⌘+M L |
+| Toggle output | ⌘+M O |
+| Cut cell | ⌘+M X |
+| Copy cell | ⌘+M C |
+| Paste cell below | ⌘+M V |
 | Select multiple cells | Shift+Up/Down |
-| Find and replace | &#8984;+F |
-| Save notebook | &#8984;+S |
+| Find and replace | ⌘+F |
+| Save notebook | ⌘+S |
 
 :::
 
-You can view all available shortcuts in Colab by pressing Ctrl+M H (&#8984;+M H on Mac) or through Help > Keyboard shortcuts in the menu.
+You can view all available shortcuts in Colab by pressing Ctrl+M H (⌘+M H on Mac) or through Help > Keyboard shortcuts in the menu.
 
-### Common Issues and Solutions
+### Common issues and solutions
 
 1. Runtime Disconnections:
    - Click "Reconnect" when prompted
    - Your variables will be reset, but saved code remains
 
-1. Package Installation Issues:
+2. Package Installation Issues:
    - Restart runtime after installing new packages
    - Use Runtime > Restart runtime
 
-1. Memory Errors:
+3. Memory Errors:
    - Clear unnecessary variables
    - Restart runtime
    - Consider using smaller data samples during development
 
-### Getting Help
+### Getting help
 
 - Access Colab's built-in documentation: `Help > Colab Overview`
 - View keyboard shortcuts: `Help > Keyboard shortcuts`
 - Search the Help menu for specific topics
 - Use the `Help > Search Solutions` feature
 
-[Note: This would be a good place to add screenshots showing key interface elements and operations]
-
-In the next sections of this course, we'll be using Colab extensively for hands-on exercises. Make sure you're comfortable with these basics before proceeding.
-
-## Accessing Course Notebooks
+## Accessing course notebooks
 
 All course notebooks are hosted on GitHub and can be accessed directly in Google Colab. There are two ways to access the notebooks:
 
-### Method 1: Direct Links
+### Method 1: Direct links
 Each section of this book includes direct "Open in Colab" links for relevant notebooks. Simply click the badge to open the notebook:
 
-Example
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cropmosaiks/crop-modeling/blob/main/code/3_task_modeling/model_1_sensor.ipynb)
+Example [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/microsoft/PlanetaryComputerExamples/blob/main/tutorials/mosaiks.ipynb)
 
-### Method 2: Clone the Notebook
+### Method 2: Clone the notebook
 To choose a notebook from the repository (Add link to demo/interactive notebooks here):
 
 1. Open Google Colab (colab.research.google.com)
-1. Click `File > Open Notebook`
-1. Select the `GitHub` tab
-1. Enter the repository URL: `https://github.com/[username]/[repo]` (UPDATE WITH REPO)
-1. Select the notebook you want to open
+2. Click `File > Open Notebook`
+3. Select the `GitHub` tab
+4. Enter the repository URL: `https://github.com/[username]/[repo]` (UPDATE WITH REPO)
+5. Select the notebook you want to open
 
-## Saving Your Work
+### Saving your work
 
 When you open a notebook from GitHub in Colab, it creates a temporary copy. To save your work:
 
 1. Click `File > "Save a copy in Drive"`
-1. This creates your own editable copy in your Google Drive
-1. All future changes will be saved to your copy
+2. This creates your own editable copy in your Google Drive
+3. All future changes will be saved to your copy
 
-## Notebook Organization
+### Notebook organization
 
 The course notebooks are organized into:  
 
@@ -223,5 +212,80 @@ Each notebook includes:
 - TODO sections for exercises
 - Validation cells to check your work
 
+## Data access and management
 
+There are several ways to access data in Colab notebooks. Here are the main approaches:
+
+### Direct downloads 
+
+For data hosted on repositories like Zenodo, you can download directly using wget:
+
+```python
+# Set the data directory
+data_dir = "LSMS-ISA-data"
+
+# Download the data
+!wget https://zenodo.org/records/14040658/files/Data.zip
+
+# Unzip and organize
+!unzip Data.zip
+!mv Data {data_dir}
+!rm Data.zip
+```
+
+### Google Drive integration
+
+For data stored in Google Drive:
+
+1. First mount your Google Drive:
+
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+2. Access your data using the mounted path:
+
+```python
+drive_path = "/content/drive/MyDrive/project_folder"
+```
+
+3. For better performance, copy data to local VM storage:
+
+::: {.callout-note}
+Remember that the VM's storage is temporary - files will be deleted when the runtime disconnects. Always keep a backup of your data in Drive or another permanent storage location.
+:::
+
+```python
+import os
+import shutil
+
+# Create local directory
+local_dir = "/content/data/"
+os.makedirs(local_dir, exist_ok=True)
+
+# Copy data from Drive to VM
+drive_data = os.path.join(drive_path, "my_data") 
+shutil.copytree(drive_data, local_dir, dirs_exist_ok=True)
+```
+
+### Why copy data to the VM?
+
+When working with data in Colab, copying files from Google Drive to the virtual machine (VM) can significantly improve performance:
+
+1. **Faster Access**: Reading directly from Google Drive requires data to be transferred over the network for each operation. Local VM storage provides much faster read/write speeds.
+
+2. **Reduced Latency**: Network latency between Colab and Google Drive can slow down operations that require multiple data accesses. Local data eliminates this latency.
+
+3. **More Reliable**: Network connectivity issues or Drive access problems won't interrupt your analysis once data is copied locally.
+
+4. **Better for Iterative Processing**: If your code needs to read the same data multiple times (like in machine learning training loops), local access is much more efficient.
+
+For example, reading a 1GB dataset from Drive might take 30 seconds, while reading from local VM storage could take just a few seconds. The time spent copying data once at the start of your session can save significant time during analysis. This can be especially true in a notebook environment when a user is developing code and may need to access and reaccess the data multiple times. 
+
+::: {.callout-note}
+# Looking forward
+
+In the next chapter we will take a closer look at MOSAIKS. 
+:::
 

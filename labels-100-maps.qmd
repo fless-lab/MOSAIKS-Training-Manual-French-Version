@@ -1,4 +1,4 @@
-# What labels work? 
+# What labels work? {#sec-labels-100-maps}
 
 ```{r}
 #| echo: false
@@ -8,6 +8,14 @@ source("_common.R")
 status("draft")
 ```
 
-## 100 Maps
+## Overview
+
+![](images/copernicus-satellite-needs.png)
+
+## Original publication 
+
+- Recap the original 7 outcomes
+
+## 100 maps
 
 - 100 Maps results  

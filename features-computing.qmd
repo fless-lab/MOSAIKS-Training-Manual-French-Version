@@ -9,3 +9,4 @@ status("draft")
 ```
 
 
+Depending on the spatial scale and resolution of the label data, subsampling the MOSAIKS grid may be appropriate to reduce computation time and cost. 

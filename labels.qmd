@@ -59,7 +59,7 @@ Creating satellite image features is covered in later chapters.
 
 ### RCF brief overview 
 
-MOSAIKS relies on random convolutional features (RCFs) computed from satellite imagery. The random nature of the features means that they are task-agnostic. These features can be reused multiple times to model various tasks. Features are generally created over a standard grid of 0.01 by 0.01 degree cells (~1 km², depending on latitude). The output is a feature vector of length *K* for every grid location. Depending on the spatial scale and resolution of the label data, subsampling the MOSAIKS grid may be appropriate to reduce computation time and cost. 
+MOSAIKS relies on random convolutional features (RCFs) computed from satellite imagery. The random nature of the features means that they are task-agnostic. These features can be reused multiple times to model various tasks. Features are generally created over a standard grid of 0.01 by 0.01 degree cells (~1 km², depending on latitude). The output is a feature vector of length *K* for every grid location. 
 
 ::: {.callout-note}
 
@@ -70,7 +70,7 @@ Features can be computed at higher or lower resolutions than 1 km². This is dis
 
 The default 1 km² resolution of MOSAIKS is generally the maximum resolution the label data should be in. If the labels are in lower resolution, the satellite features can be aggregated up to larger areas to match. Typical aggregation might be to larger grid cell, census tract, county/district, or state/province levels. The exact aggregation level is contingent on the spatial resolution of the label data. 
 
-**Add feature maps figs**
+![Examples of 3 representative random convolutional features (downloaded from the MOSAIKS API) aggregated to different levels, including (A) grid cells (0.1°), (B) counties, and (C) states. The features are originally computed at 0.01° resolution (not pictured).](images/US_feature_summaries.png){#fig-feature-aggregation}
 
 ### API Features 
 
@@ -79,8 +79,6 @@ Currently the MOSAIKS API has a single global set of features that are precalcul
 Given this, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). To use MOSAIKS for time series data is possible, just not currently with precomputed and publicly available features. To access API features see @sec-api
 
 **add details** of api products available (0.1 degree and pop/area weighted etc)
-
-![Examples of 3 representative random convolutional features (downloaded from the MOSAIKS API) aggregated to different levels, including (A) grid cells (0.1°), (B) counties, and (C) states. The features are originally computed at 0.01° resolution (not pictured).](images/US_feature_summaries.png){#fig-feature-aggregation}
 
 ## Joining data
 

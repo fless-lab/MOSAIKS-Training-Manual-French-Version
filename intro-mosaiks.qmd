@@ -28,7 +28,7 @@ That’s why we developed MOSAIKS.
 
 MOSAIKS is designed to work “out of the box” for a wide array of SIML applications, for people with no SIML expertise who work on normal desktop computers. MOSAIKS users never actually have to touch satellite imagery themselves and only need to have basic statistical training. 
 
-::: {.callout}
+::: {.callout-tip}
 If you can run a regression, you can use MOSAIKS.
 :::
 

@@ -66,17 +66,12 @@ bibliography: references.bib
 format:
   html:
     theme: 
-      - flatly
-      - style.scss
+      light: flatly
+      dark: slate
+    highlight-style: atom-one
+    css: style.scss
     code-link: true    
     callout-appearance: simple
-
-  # pdf:
-  #   latex-engine: xelatex
-  #   pdf-engine-args: ["--shell-escape"]
-  #   header-includes: |
-  #     \usepackage{fontspec}
-  #     \setmainfont{DejaVu Sans}
 
 filters:
     - openlinksinnewpage

@@ -1,7 +1,7 @@
 {
-  "hash": "08fe6ba937a48f6bb393d5d3c6d6f18b",
+  "hash": "f096e00b4bdb02e0f816adb8fddb166a",
   "result": {
-    "markdown": "# API Features  {#sec-features-api}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Defaults \n\n\n",
+    "markdown": "# API Features  {#sec-features-api}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n- Defaults \n\n![Planet Labs basemap imagery (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](images/api-features.png)\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

@@ -22,6 +22,8 @@ That is why linking satellite imaging to machine learning (SIML) is incredibly p
 
 **We believe that people all over the world should be able to access SIML technologies**, but we also recognize that most people who would benefit the most from these tools don’t have the time or resources to manage enormous satellite imagery data sets and learn how to apply machine learning to them.
 
+**INSERT IMAGE HERE**
+
 ## The solution 
 
 That’s why we developed MOSAIKS.
@@ -38,7 +40,10 @@ If you’ve ever been curious about trying machine learning with satellite image
 
 And if you know a lot about machine learning and satellite imagery, MOSAIKS might still be for you, since it [performs competitively with deep learning methods](https://www.nature.com/articles/s41467-021-24638-z/figures/3) but is much simpler and cheaper to use.
 
+**INSERT IMAGE HERE**
+
 ## How MOSAIKS works
+
 The basic idea of MOSAIKS is to seperate users from the costly and difficult process of transforming imagery into inputs (called **“features”**) for a machine learning algorithm (**images → X**). We do that part, so users never have to download or manage imagery. Users then download a table of MOSAIKS features (**X**), link them to their own geocoded data on the outcome (**Y**) they are interested in (called “labels”) and run a linear regression to predict their labels using MOSAIKS features (**Y = Xβ**).  
 
 All users use the same MOSAIKS features and just match them to their labels based on location. Users can run their analysis on any statistical software they are comfortable with. For most applications, the computing demands will not require users to work with specialized machines, since desktops and laptops work.

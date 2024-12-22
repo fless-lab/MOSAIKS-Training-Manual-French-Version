@@ -164,6 +164,10 @@ You can view all available shortcuts in Colab by pressing Ctrl+M H (⌘+M H on M
    - Restart runtime
    - Consider using smaller data samples during development
 
+::: {.callout-important}
+Memory errors are common when working with large datasets or complex models on the free tier of Colab. If you encounter these issues, consider using a paid version of Colab or connecting a Google Cloud Platform vitual machine (VM).
+:::
+
 ### Getting help
 
 - Access Colab's built-in documentation: `Help > Colab Overview`
@@ -171,16 +175,60 @@ You can view all available shortcuts in Colab by pressing Ctrl+M H (⌘+M H on M
 - Search the Help menu for specific topics
 - Use the `Help > Search Solutions` feature
 
+## AI assistance in Colab
+
+Google Gemini is a powerful AI assistant that is seemlesly integrated with Google Colab. You can use it to generate code, comments, or markdown text to improve your notebooks. Gemini can be accessed in several ways in Colab to help you with your work, all start by selecting the Gemini icon in different parts of the notebook editor.
+
+::: {.callout-note}
+# Gemini icon
+
+<img src="https://lh3.googleusercontent.com/c-z7BK6NYcQIruZJd9A4KI1m8YrBauXH0VRglPudmj9Fgr5yzgJCsnaZ5W_nxZnB2hazA9hsg05uX1djFYPbMS-DsbYXp6UtVKFfdicBfF8klhVshJ8" width="50" height="50">
+
+Look for this icon to indicate where you can click to access Gemini in Colab.
+:::
+
+Here are a few ways you can use Google Gemini effectively in Colab:
+
+### Chat support
+
+Click the "Gemini" button in the top-right corner to open a chat interface where you can ask questions about your code, debug issues, or get explanations of concepts. This option is especially useful for beginners or for complex problems.
+
+### Code generation
+
+Use the "Generate code" option (the sparkle icon) above any **empty** code cell to generate new code based on your description. You can ask it to many different things including:
+
+- Loading a dataset called `my_data.csv`
+- Plot a histogram of the data
+- Build a model to predict `y` from `X`
+
+### Code explanation
+
+Use the "Explain code" option (the sparkle icon) above any **complete** code cell to open a chat interface that will automatically explain the code in the cell. This is useful for understanding code written by someone else, learning new concepts you are not familiar with, or getting a second opinion on your work.
+
+### Code completion
+
+Colab provides intelligent autocomplete as you type:
+
+- Press Tab to accept suggestions
+- Use Ctrl+Space (Cmd+Space on Mac) to manually trigger suggestions
+- Get real-time documentation and parameter hints
+
+::: {.callout-note}
+While these AI tools are helpful, always review and understand the code they suggest before using it in your work.
+:::
+
 ## Accessing course notebooks
 
 All course notebooks are hosted on GitHub and can be accessed directly in Google Colab. There are two ways to access the notebooks:
 
 ### Method 1: Direct links
+
 Each section of this book includes direct "Open in Colab" links for relevant notebooks. Simply click the badge to open the notebook:
 
 Example [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/microsoft/PlanetaryComputerExamples/blob/main/tutorials/mosaiks.ipynb)
 
 ### Method 2: Clone the notebook
+
 To choose a notebook from the repository (Add link to demo/interactive notebooks here):
 
 1. Open Google Colab (colab.research.google.com)
@@ -209,7 +257,7 @@ Each notebook includes:
 
 - Clear instructions in markdown cells
 - Code cells with examples or exercises
-- TODO sections for exercises
+- TO DO sections for exercises
 - Validation cells to check your work
 
 ## Data access and management

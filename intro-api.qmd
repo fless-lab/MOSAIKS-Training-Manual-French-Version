@@ -54,11 +54,13 @@ Once registered, you can log in to access the MOSAIKS features and begin downloa
 The MOSAIKS features are organized using a 0.01 x 0.01 degree latitude-longitude global grid, centered at .005 degree intervals.
 
 When you download features, you'll receive them in a tabular .csv format where:
+
 - Each row represents a unique grid cell
 - The first two columns contain latitude and longitude coordinates
 - The remaining columns represent K features (currently K = 4000 features)
 
 Important notes about downloads:
+
 - Files remain available for download for 15 days
 - After 15 days, files are automatically deleted from the system
 - There is a limit of 100,000 records per query

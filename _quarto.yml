@@ -33,7 +33,7 @@ book:
         - intro-compute.qmd
         - intro-mosaiks.qmd
         - intro-api.qmd
-        - mosaiks-demo-1.qmd
+        - intro-demo.qmd
     - part: labels.qmd  
       chapters:
         - labels-100-maps.qmd

@@ -19,12 +19,12 @@ Ensuring the spatial resolution is shared across both datasets and that they con
 
 ### Resolution  
 
-The preparation of label data for MOSAIKS hinges on multiple factors, particularly spatial information such as location, extent, and resolution. If the observations in a dataset have a higher resolution than 1 km², some form of selection or aggregation is required. Label data can come in any native spatial form: raster, point, polygon, or vector. As long as there is spatial information associated with each label data observation, these data can be joined to MOSAIKS imagery features for downstream prediction.
-
 ::: {.callout-note}
 
 The MOSAIKS API is designed to predict outcomes at scales of 1 km² or larger. Customizable solutions are possible for higher resolution problems. 
 :::
+
+The preparation of label data for MOSAIKS hinges on multiple factors, particularly spatial information such as location, extent, and resolution. If the observations in a dataset have a higher resolution than 1 km², some form of selection or aggregation is required. Label data can come in any native spatial form: raster, point, polygon, or vector. As long as there is spatial information associated with each label data observation, these data can be joined to MOSAIKS imagery features for downstream prediction.
 
 ![Examples of label data formats that can be easily integrated into the MOSAIKS pipeline. Label data of any spatial format that can be aggregated to at least the scale of 1km² (or larger) can be used directly in combination with MOSAIKS imagery features for downstream prediction tasks. Examples shown here are from Rolf et al. (2021) and include: forest cover, elevation, population, and nighttime lights datasets (all raster format); income data (polygon format); road length (vector format); and housing price data (point format).](images/rolf_et_al_2021-Fig_S4.png){#fig-label-agg}
 

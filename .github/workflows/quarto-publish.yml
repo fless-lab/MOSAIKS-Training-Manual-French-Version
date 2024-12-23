@@ -25,6 +25,11 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "cullen-molitor"
+          git config --global user.email "cullen.molitor@gmail.com"
+          
       # Publish to GitHub Pages
       - name: Publish to GitHub Pages
         run: quarto publish gh-pages

@@ -1,8 +1,10 @@
 {
-  "hash": "9268d5b723907f9e1008529350a002a5",
+  "hash": "4c5888d7d2257d805cb001c4a65fe299",
   "result": {
-    "markdown": "# Satellite Imagery\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n## Overview\n\nThis part of the book provides some measure of direction on how to navigate the overwhelming world of satellite imagery. The main focus is how to choose imagery and considerations for proceessing with a focus on using the data in the MOSAIKS framework. However many of the concepts covered will be broadly applicapble to geospatial information science that utilizes remote sensing technologies. \n\n## Moving past the MOSAIKS API\n\nBlurb about when to think about getting satellite imagery (i.e. when are API features no longer enough). \n\nBit of info on why EO satellites are needed, what they have been used for, and what they could be used for.\n\n## Section Outline\n\n- What considerations need to be made when choosing imagery.\n- How to process satellite imagery\n\n![](images/copernicus-satellite-needs.png)",
-    "supporting": [],
+    "markdown": "# Satellite Imagery\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n## Overview\n\nThis part of the book provides some measure of direction on how to navigate the overwhelming world of satellite imagery. The main focus is how to choose imagery and considerations for proceessing with a focus on using the data in the MOSAIKS framework. However many of the concepts covered will be broadly applicapble to geospatial information science that utilizes remote sensing technologies. \n\n## Moving past the MOSAIKS API\n\nBlurb about when to think about getting satellite imagery (i.e. when are API features no longer enough). \n\nBit of info on why EO satellites are needed, what they have been used for, and what they could be used for.\n\n## Section Outline\n\n- What considerations need to be made when choosing imagery.\n- How to process satellite imagery\n\n![](images/copernicus-satellite-needs.png)\n\n",
+    "supporting": [
+      "satellite_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

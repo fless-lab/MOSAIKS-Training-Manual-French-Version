@@ -24,3 +24,4 @@ Bit of info on why EO satellites are needed, what they have been used for, and w
 - How to process satellite imagery
 
 ![](images/copernicus-satellite-needs.png)
+

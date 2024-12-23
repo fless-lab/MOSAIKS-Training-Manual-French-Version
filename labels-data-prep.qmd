@@ -11,3 +11,45 @@ status("draft")
 - Considerations for data cleaning
 - What should my data look like?
 
+## Joining data
+
+Before model training, label data must be joined to imagery features. The joined data should be tabular with each row containing:
+
+1. **Label** - the observed value  
+1. **Geographic location** - such as a MOSAIKS grid cell or larger geographic area  
+1. **Time (optional)** - useful for time series data (year, mont, or day)  
+1. ***K* feature columns** - column for every random satellite feature (typically *k* = 4,000)  
+
+For example, a dataset with crop yeild data could look like:
+
+| Observation | District  | Year | Crop Yield | 
+|-------------|-----------|------|------------|
+| 1           | Chibombo  | 2019 | 1.520      | 
+| 2           | Kabwe     | 2019 | 1.878      | 
+| ...         | ...       | ...  | ...        | 
+| *N*         | Kitwe     | 2019 | 2.383      | 
+
+And a dataset with district level aggregate features could look like:
+
+| Observation | District  | Year | Feature 1 | Feature 2 | ... | Feature *K* |
+|-------------|-----------|------|-----------|-----------|-----|-------------|
+| 1           | Chibombo  | 2019 | 4.2       | 11.6      | ... | 12.7        |
+| 2           | Kabwe     | 2019 | 2.9       | 5.3       | ... | 11.2        |
+| ...         | ...       | ...  | ...       | ...       | ... | ...         |
+| *N*         | Kitwe     | 2019 | 10.6      | 1.1       | ... | 2.2         |
+
+Finally, the joined dataset would look like:
+
+| Observation | District  | Year | Crop Yield | Feature 1 | Feature 2 | ... | Feature *K* |
+|-------------|-----------|------|------------|-----------|-----------|-----|-------------|
+| 1           | Chibombo  | 2019 | 1.520      | 4.2       | 11.6      | ... | 12.7        |
+| 2           | Kabwe     | 2019 | 1.878      | 2.9       | 5.3       | ... | 11.2        |
+| ...         | ...       | ...  | ...        | ...       | ...       | ... | ...         |
+| *N*         | Kitwe     | 2019 | 2.383      | 10.6      | 1.1       | ... | 2.2         |
+
+In the above example, our geographic location is the district and our label is the crop yield (mt/ha). We then have *K* columns containing the features and *N* observations. 
+
+In this example, our features started at 1 km² resolution and were aggregated to the district level to match the crop yield data. To join this data, we first found all of the feature locations that fall within the district boundaries using a spatial join. Then we averaged the features within each district. This allowed us to have a single feature vector for each district. The resulting tabular data is ready for modeling.
+
+
+**Note:** Add example code for joining data

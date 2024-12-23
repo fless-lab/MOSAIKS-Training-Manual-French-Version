@@ -61,6 +61,8 @@ book:
         - uncertainty-ethics.qmd
     - references.qmd
 
+tbl-cap-location: bottom
+
 bibliography: references.bib
 
 format:

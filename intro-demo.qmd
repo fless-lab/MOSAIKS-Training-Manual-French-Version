@@ -31,7 +31,7 @@ This validation in a data-rich environment was crucial for establishing MOSAIKS 
 - Road length
 - Housing prices
 
-## Demo contents
+## Demo 
 
 The notebook demonstrates:
 
@@ -54,6 +54,17 @@ Remember to click `File -> Save a copy in Drive` to save any changes you make.
 :::
 
 For instruction on how to use Google Colab, please refer to @sec-intro-compute
+
+## Don't want to run code?
+
+Consider watching this demonstration instead!
+
+::: {#fig-demo}
+
+{{< video https://www.youtube.com/embed/ux2c-ot3Ce0?si=Oalkj-4MsJN5hNCh >}}
+
+An overview of MOSAIKS and a live demonstration of generating novel predictions using the system. Video recoreded by CIGAR Generalized Planetary Remote Sensing - 2020 Convention session. Presented by Esther Rolf and Tamma Carleton.
+:::
 
 ## What's next? 
 

@@ -10,12 +10,58 @@ status("draft")
 
 ## Overview
 
-![](images/copernicus-satellite-needs.png)
+MOSAIKS is a designed to be useful for predicting anything one might see in satellite imagery. Some things are easier to predict than others, but the system is designed to be flexible. For instance, some variables can be seen directly in the imagery itself, such as forest cover. Other outcomes can only be seen through proxy variables like income and housing price which are not directly visible in the imagery but can be estimated by looking at objects in imagery that are correlated with them, such as roads, houses, and cars. 
 
-## Original publication 
+![MOSAIKS versatility makes it the perfect tool for a wide range of applications.](images/army_knife.png){#fig-army-knife width="300px"}
 
-- Recap the original 7 outcomes
+In this chapter we will explore over 100 different outcomes that have been tested with MOSAIKS. We will discuss the results of a selection of these outcomes in detail, and provide a brief overview of the rest.
 
-## 100 maps
+## One hundred maps
 
-- 100 Maps results  
+### Original publication 
+
+The original publication tested MOSAIKS on 7 outcomes: forest cover, income, housing price, population density, nighttime luminosity, and elevation. The primary results of Rolf et al. 2021 are focused in the United States. This is an excellent starting point for understanding the capabilities of MOSAIKS as the data quality is high and the outcomes are diverse. While the results were promising and demonstrated the potential of MOSAIKS, the true test is in the application to new outcomes and new geographies. 
+
+### Going global
+
+To test the global applicability of MOSAIKS, across a diverse set of outcomes, there were 2 primary things that needed to happen:
+
+**1.** The creation of a global set of features 
+
+![Planet Labs visual basemap imagery from quarter 3 of 2019 (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](images/api-features.png){#fig-api-features}
+
+**2.** Collecting and currating a large set of outcomes with diversity in spatial structures and categories
+
+
+| **Category**           | **Number of Labels** | **Example Label**             |
+|------------------------|----------------------|-------------------------------|
+| Agricultural Assets    | 5                    | Agricultural land ownership   |
+| Agriculture            | 16                   | Maize yield                   |
+| Built Infrastructure   | 9                    | Buildings                     |
+| Demographics           | 5                    | Median age                    |
+| Education              | 10                   | Expected years of schooling   |
+| Health                 | 15                   | Malaria in children           |
+| Household Assets       | 21                   | Mobile phones                 |
+| Income                 | 9                    | Human development index       |
+| Natural Systems        | 8                    | Tree cover                    |
+| Occupation             | 17                   | Unemployment                  |
+
+: The authors selected 115 variables across 10 categories and set to work testing each in the MOSAIKS system. {#tbl-labels} 
+
+With this data in hand, we were able to devise a few simple questions to test:
+
+- Which variables can be effectively measured?
+- What are the most compelling applications?
+- What are the modes of failure?
+
+## Results
+
+![The results of the 100 maps experiment.](images/proctor_et_al_100_fig3_scatter.png){#fig-100-maps-scatter}
+
+
+![The results of the 100 maps experiment.](images/proctor_et_al_100_fig3_box.png){#fig-100-maps-box}
+
+![Where it fails](images/proctor_et_al_100_pipelines_plot.png){#fig-100-maps-pipelines-plot}
+
+![Why it fails](images/proctor_et_al_100_pipelines_img.png){#fig-100-maps-pipelines-img}
+

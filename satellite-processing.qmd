@@ -1,4 +1,4 @@
-# Processing Imagery
+# Processing Imagery {#sec-satellite-processing}
 
 ```{r}
 #| echo: false

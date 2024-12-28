@@ -12,7 +12,6 @@ status("draft")
 
 ![Planet Labs basemap imagery (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](images/api-features.png)
 
-
 ## Feature data
 
 ::: {.callout-note}

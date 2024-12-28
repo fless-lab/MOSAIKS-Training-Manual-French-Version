@@ -1,4 +1,4 @@
-# Computing Features {#sec-features-computing}
+# Computing Features {#sec-features-computing} 
 
 ```{r}
 #| echo: false

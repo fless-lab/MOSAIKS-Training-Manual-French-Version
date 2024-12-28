@@ -1,4 +1,4 @@
-# Choosing Imagery
+# Choosing Imagery {#sec-satellite-imagery}
 
 ```{r}
 #| echo: false

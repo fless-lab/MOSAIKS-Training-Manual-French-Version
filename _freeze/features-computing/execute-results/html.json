@@ -1,10 +1,9 @@
 {
-  "hash": "a03aed73a8f35efd954b2cf1762a959f",
+  "hash": "d83b53501d9e3217c5475f355f3373db",
   "result": {
-    "markdown": "# Computing Features {#sec-features-computing}\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\nDepending on the spatial scale and resolution of the label data, subsampling the MOSAIKS grid may be appropriate to reduce computation time and cost. \n",
-    "supporting": [
-      "features-computing_files"
-    ],
+    "engine": "knitr",
+    "markdown": "# Computing Features {#sec-features-computing} \n\n\n\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n\n\n\nDepending on the spatial scale and resolution of the label data, subsampling the MOSAIKS grid may be appropriate to reduce computation time and cost. \n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

@@ -1,4 +1,4 @@
-# Satellite Imagery
+# Satellite Imagery {#sec-satellite}
 
 ```{r}
 #| echo: false

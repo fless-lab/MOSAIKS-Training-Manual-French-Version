@@ -1,0 +1,15 @@
+{
+  "hash": "f307f85e20939297a583906b730e5173",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Label data demo\n\n\n\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n\n\n\n- IDK yet\n\n\n::: {.callout-note}\n# Looking forward\n\nIn the next part, we will take a look at considerations for choosing and processing satellite imagery.\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

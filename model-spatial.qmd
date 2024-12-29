@@ -1,4 +1,4 @@
-# Filling spatial data gaps
+# Modeling over space
 
 ```{r}
 #| echo: false
@@ -7,3 +7,11 @@
 source("_common.R")
 status("draft")
 ```
+
+
+
+::: {.callout-note}
+# Looking forward
+
+In the next chapter, 
+:::

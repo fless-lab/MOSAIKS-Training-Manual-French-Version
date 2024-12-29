@@ -37,11 +37,9 @@ book:
     - part: labels.qmd  
       chapters:
         - labels-100-maps.qmd
-        - labels-over-time.qmd
-        - labels-data-prep.qmd
         - labels-survey.qmd
-        - mosaiks-demo-2.qmd
-        - interactive-agriculture.qmd
+        - labels-data-prep.qmd
+        - labels-demo.qmd
     - part: satellite.qmd  
       chapters:
         - satellite-imagery.qmd

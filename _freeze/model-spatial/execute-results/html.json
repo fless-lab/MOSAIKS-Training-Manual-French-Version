@@ -1,10 +1,9 @@
 {
-  "hash": "7fa4451605770a5c49595b8a3b4bbd59",
+  "hash": "03f0179cfea00f05ddaa4cb0c13dab08",
   "result": {
-    "markdown": "# Filling spatial data gaps\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
-    "supporting": [
-      "model-spatial_files"
-    ],
+    "engine": "knitr",
+    "markdown": "# Modeling over space\n\n\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n\n\n\n::: {.callout-note}\n# Looking forward\n\nIn the next chapter, \n:::",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

@@ -124,3 +124,8 @@ As a result, MOSAIKS has little chance to identify and learn features predictive
 
 ![Why it fails - buried](images/proctor_et_al_100_pipelines_img.png){#fig-100-maps-pipelines-img}
 
+::: {.callout-note}
+# Looking forward
+
+In the next chapter, we'll explore survey label data in more detail. 
+:::

@@ -22,6 +22,9 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Install R packages
+        run: Rscript -e "install.packages(c('rmarkdown', 'knitr', 'xml2', 'downlit'))"
+
       - name: Configure Git
         run: |
           git config --global user.name "cullen-molitor"

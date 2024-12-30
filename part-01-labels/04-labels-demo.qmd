@@ -1,0 +1,19 @@
+# Label data demo
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```
+
+
+- IDK yet
+
+
+::: {.callout-note}
+# Looking forward
+
+In the next part, we will take a look at considerations for choosing and processing satellite imagery.
+:::

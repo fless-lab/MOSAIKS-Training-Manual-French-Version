@@ -1,0 +1,263 @@
+# Preparing labels
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```
+## Overview
+
+In this chapter, we'll cover the process of preparing labels for use with MOSAIKS features. Labels are the observed values that we want to predict using our model. These could be crop yields, disease incidence, or any other variable of interest. Label data can come in many forms, including point observations, polygon aggregates, or gridded rasters, but the key is that they must have a sptaial component. We take advantage of this spatial information to join the labels with the MOSAIKS features, which are also spatially explicit.
+
+## Joining data
+
+Before model training, label data must be joined to imagery features. The joined data should be tabular with each row containing:
+
+1. **Label** - the observed value  
+1. **Geographic location** - such as a MOSAIKS grid cell or larger geographic area  
+1. **Time (optional)** - useful for time series data (year, mont, or day)  
+1. ***K* feature columns** - column for every random satellite feature (typically *k* = 4,000)  
+
+For example, a dataset with crop yeild data could look like:
+
+| Observation | District  | Year | Crop Yield | 
+|-------------|-----------|------|------------|
+| 1           | Chibombo  | 2019 | 1.520      | 
+| 2           | Kabwe     | 2019 | 1.878      | 
+| ...         | ...       | ...  | ...        | 
+| *N*         | Kitwe     | 2019 | 2.383      | 
+
+And a dataset with district level aggregate features could look like:
+
+| Observation | District  | Year | Feature 1 | Feature 2 | ... | Feature *K* |
+|-------------|-----------|------|-----------|-----------|-----|-------------|
+| 1           | Chibombo  | 2019 | 4.2       | 11.6      | ... | 12.7        |
+| 2           | Kabwe     | 2019 | 2.9       | 5.3       | ... | 11.2        |
+| ...         | ...       | ...  | ...       | ...       | ... | ...         |
+| *N*         | Kitwe     | 2019 | 10.6      | 1.1       | ... | 2.2         |
+
+Finally, the joined dataset would look like:
+
+| Observation | District  | Year | Crop Yield | Feature 1 | Feature 2 | ... | Feature *K* |
+|-------------|-----------|------|------------|-----------|-----------|-----|-------------|
+| 1           | Chibombo  | 2019 | 1.520      | 4.2       | 11.6      | ... | 12.7        |
+| 2           | Kabwe     | 2019 | 1.878      | 2.9       | 5.3       | ... | 11.2        |
+| ...         | ...       | ...  | ...        | ...       | ...       | ... | ...         |
+| *N*         | Kitwe     | 2019 | 2.383      | 10.6      | 1.1       | ... | 2.2         |
+
+In the above example, our geographic location is the district and our label is the crop yield (mt/ha). We then have *K* columns containing the features and *N* observations. 
+
+In this example, our features started at 1 km² resolution and were aggregated to the district level to match the crop yield data. To join this data, we first found all of the feature locations that fall within the district boundaries using a spatial join. Then we averaged the features within each district. This allowed us to have a single feature vector for each district. The resulting tabular data is ready for modeling.
+
+## Data cleaning considerations
+
+Before joining label data with MOSAIKS features, several key preparation steps should be considered:
+
+### Geographic information
+
+- **Coordinate systems**: Ensure coordinates are in a projection consistent with the features (API uses decimal degrees - WGS84) (@fig-map-projections)
+- **Spatial units**: Convert all geographic boundaries to same format (e.g., administrative regions)
+- **Resolution matching**: Aggregate or disaggregate data to match MOSAIKS grid
+- **Duplicate checking**: Remove duplicate locations within same time period
+- **Missing coordinates**: Handle missing or invalid geographic information
+
+![[Nine small-scale map projections](https://www.researchgate.net/publication/273517879_User_preferences_for_world_map_projections)](https://www.researchgate.net/profile/Bojan-Savric/publication/273517879/figure/fig1/AS:347863067447297@1459948426262/The-nine-small-scale-map-projections-used-in-the-paired-comparison-test-arranged-by.png){#fig-map-projections}
+
+### Label quality
+
+- **Outliers**: Identify and handle extreme values
+- **Missing values**: Decide on approach for handling NA/NULL values
+- **Units**: Convert all measurements to consistent units
+- **Data types**: Ensure numeric fields are properly formatted
+- **Range checks**: Verify values fall within expected bounds
+
+### Temporal alignment 
+
+- **Time periods**: Match observation dates with feature timestamps
+- **Seasonality**: Account for seasonal patterns in data collection
+- **Aggregation**: Consider temporal aggregation needs (e.g., annual averages)
+- **Gaps**: Handle missing time periods appropriately
+
+## Data formats
+
+::: {.callout-tip}
+When working with large datasets, consider using efficient data formats like parquet, feather, GeoTIFF, or Zarr to reduce memory usage and speed up processing.
+:::
+
+MOSAIKS can work with several common spatial data formats:
+
+### Point data
+
+Common for survey locations or specific measurement sites:
+
+```python
+# Example point data format
+point_data = pd.DataFrame({
+    'longitude': [-15.416667, -15.308333, -15.200000],
+    'latitude': [28.316667, 28.441667, 28.550000],
+    'year': [2019, 2019, 2019],
+    'yield': [1.52, 1.88, 2.38]
+})
+```
+
+Point data is typically joined to the nearest grid cell centroid or aggregated to larger polygons like administrative units (districts, provinces, etc.).
+
+### Polygon data
+
+Used for administrative boundaries or management units:
+
+```python
+# Example polygon data format (GeoJSON-like)
+polygon_data = {
+    'type': 'Feature',
+    'properties': {
+        'district': 'Chibombo',
+        'year': 2019,
+        'yield': 1.52
+    },
+    'geometry': {
+        'type': 'Polygon',
+        'coordinates': [[[...coordinates...]]]
+    }
+}
+```
+
+### Raster data
+
+Common for gridded observations or model outputs:
+
+```python
+# Example raster metadata
+raster_meta = {
+    'driver': 'GTiff',
+    'dtype': 'float32',
+    'nodata': -9999,
+    'width': 1000,
+    'height': 1000,
+    'crs': 'EPSG:4326',
+    'transform': [0.01, 0, -15.5, 0, -0.01, 28.6]
+}
+```
+
+## Joining procedures
+
+The process of joining labels to features depends on your data format:
+
+### Point to grid matching
+
+For point observations that don't align perfectly with the MOSAIKS grid:
+
+```python
+def match_points_to_grid(points_df, grid_size=0.01):
+    """
+    Match point observations to MOSAIKS grid cells
+    
+    Parameters:
+    -----------
+    points_df : pandas DataFrame
+        Contains 'longitude' and 'latitude' columns
+    grid_size : float
+        Size of grid cells in degrees (default 0.01 for ~1km)
+        
+    Returns:
+    --------
+    DataFrame with points matched to grid cell centroids
+    """
+    # Round coordinates to nearest grid cell center
+    points_df['grid_lon'] = (np.floor(points_df['longitude'] / grid_size) * 
+                            grid_size + grid_size/2)
+    points_df['grid_lat'] = (np.floor(points_df['latitude'] / grid_size) * 
+                            grid_size + grid_size/2)
+    return points_df
+```
+
+### Polygon aggregation
+
+For labels defined over administrative regions or other polygons:
+
+```python
+def aggregate_features_to_polygons(features_df, polygons_gdf):
+    """
+    Aggregate grid cell features to polygon level
+    
+    Parameters:
+    -----------
+    features_df : pandas DataFrame
+        Grid cell features with 'longitude' and 'latitude'
+    polygons_gdf : geopandas GeoDataFrame
+        Polygon boundaries
+        
+    Returns:
+    --------
+    DataFrame with features averaged within each polygon
+    """
+    # Convert features to GeoDataFrame
+    features_gdf = gpd.GeoDataFrame(
+        features_df, 
+        geometry=gpd.points_from_xy(features_df.longitude, 
+                                  features_df.latitude)
+    )
+    
+    # Spatial join
+    joined = gpd.sjoin(features_gdf, polygons_gdf)
+    
+    # Average features within polygons
+    return joined.groupby('index_right').mean()
+```
+
+### Raster alignment
+
+For gridded data that needs to be aligned with MOSAIKS grid:
+
+```python
+def align_raster_to_mosaiks(raster_array, raster_transform, 
+                           target_transform):
+    """
+    Align raster data to MOSAIKS grid
+    
+    Parameters:
+    -----------
+    raster_array : numpy array
+        Source raster data
+    raster_transform : affine.Affine
+        Source raster geotransform
+    target_transform : affine.Affine
+        MOSAIKS grid geotransform
+        
+    Returns:
+    --------
+    Numpy array aligned to MOSAIKS grid
+    """
+    # Implement resampling logic here
+    # Could use rasterio.warp.reproject or similar
+    pass
+```
+
+## Final data format
+
+After joining, your data should be in a tabular format ready for modeling:
+
+```python
+# Example final format
+model_data = pd.DataFrame({
+    'id': range(n_obs),
+    'longitude': [...],  # Grid cell or polygon centroid
+    'latitude': [...],   # Grid cell or polygon centroid
+    'year': [...],       # Time period if relevant
+    'label': [...],      # Target variable
+    'feature_0': [...],  # First MOSAIKS feature
+    'feature_1': [...],  # Second MOSAIKS feature
+    # ... additional features ...
+    'feature_3999': [...] # Last MOSAIKS feature
+})
+```
+
+**Note:** Add example notebook focusing on joining data with different data type examples
+
+::: {.callout-note}
+# Looking forward
+
+In the next chapter we'll look at working specifically with survey data, which presents unique challenges for spatial joining and aggregation.
+:::

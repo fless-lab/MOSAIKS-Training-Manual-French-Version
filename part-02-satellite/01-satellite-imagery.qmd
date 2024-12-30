@@ -1,0 +1,289 @@
+# Choosing imagery
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```
+
+When selecting satellite imagery for use with MOSAIKS, several key factors need to be considered. The choice of imagery should be guided by your specific research needs, label characteristics, and practical constraints like cost and processing requirements.
+
+Based on your label resolution, a user needs to decide on:
+
+- Available time range
+- Sensor resolution
+- Spectral resolution
+- Temporal resolution
+- Sensor type
+- How to handle image quality (i.e. clouds)
+- Processing level (i.e. orthorectification, normalization)
+
+## Time range
+
+The operational lifespan of satellites is a crucial consideration when choosing imagery sources. Different satellite programs have varying launch dates and operational periods, which affects the historical depth of available data.
+
+For instance, the Landsat program offers the longest continuous space-based record of Earth's land surface, with missions dating back to 1972. In contrast, more recent satellite programs like Sentinel (launched in 2014) offer higher resolution imagery but have a shorter historical record.
+
+Key considerations for time range include:
+
+- Historical depth needed for your analysis
+- Consistency of sensor technology over time
+- Availability of calibration across different satellite generations
+- Planned mission duration and data continuity
+
+![Source: [NASA](https://landsat.gsfc.nasa.gov/satellites/timeline/)](images/nasa_landsat_timeline.png)
+
+## Sensor resolution (pixel size)
+
+Spatial resolution refers to the size of each pixel in the satellite imagery, which determines the smallest object that can be detected. The choice of spatial resolution should be guided by:
+
+- The physical size of features relevant to your labels
+- The spatial scale of your analysis
+- Storage and processing constraints
+- Cost considerations (higher resolution typically means higher cost)
+
+Common spatial resolutions:
+- Very high (< 1m): Individual trees, buildings, vehicles
+- High (1-10m): Small agricultural fields, urban infrastructure
+- Medium (10-30m): Large agricultural fields, forest stands
+- Low (> 30m): Regional land cover, climate patterns
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_spatial_res.jpeg)
+
+## Spectral resolution (EM range)
+
+Spectral resolution describes the number and width of electromagnetic wavelength bands that a sensor can detect. Different features on Earth's surface reflect or absorb radiation differently across these bands.
+
+Key spectral regions include:
+- Visible light (RGB): 0.4-0.7 μm
+- Near-infrared (NIR): 0.7-1.1 μm
+- Short-wave infrared (SWIR): 1.1-3.0 μm
+- Thermal infrared: 3.0-14 μm
+- Microwave: > 1 mm
+
+Applications by spectral band:
+- RGB: Natural color imagery, built environment
+- NIR: Vegetation health, biomass
+- SWIR: Mineral mapping, moisture content
+- Thermal: Temperature, urban heat islands
+- Microwave: Cloud penetration, soil moisture
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_spectral_res.jpeg)
+
+## Temporal resolution (revisit rate)
+
+Temporal resolution refers to how frequently a satellite revisits the same location. This can range from multiple times per day to several weeks between observations.
+
+Factors affecting temporal resolution:
+- Single satellite vs constellation systems
+- Orbital parameters
+- Sensor swath width
+- Cloud cover frequency
+- Latitude of study area
+
+Trade-offs to consider:
+- Higher temporal resolution often means lower spatial resolution
+- Cost increases with temporal frequency
+- Data storage and processing requirements grow with frequency
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_temporal_res.jpeg)
+
+## Cloud cover
+
+Cloud cover presents a significant challenge in optical satellite imagery. Several strategies exist for handling cloud contamination:
+
+- Cloud masking algorithms
+- Composite images over time periods
+- Use of radar satellites (which penetrate clouds)
+- Strategic timing of image acquisition
+- Gap-filling techniques
+
+Impact on analysis:
+- Reduced data availability
+- Temporal inconsistency
+- Need for quality control
+- Processing overhead
+
+## Sensor type
+
+Satellite sensors broadly fall into two categories:
+
+### Passive sensors
+- Detect natural radiation (reflected sunlight or emitted heat)
+- Include optical and thermal sensors
+- Limited by atmospheric conditions
+- Typically easier to interpret
+
+### Active sensors
+- Emit their own energy and measure the return signal
+- Include radar (SAR) and lidar
+- Can penetrate clouds and operate at night
+- Often require more complex processing
+
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_active_passive.jpeg)
+
+## Public satellites {#sec-satellite-public}
+
+### Optical sensors
+- **Sentinel-2**: 10-60m resolution, 5-day revisit, 13 spectral bands
+- **Landsat 8/9**: 15-100m resolution, 16-day revisit, 11 spectral bands
+- **MODIS**: 250m-1km resolution, daily revisit, 36 spectral bands
+
+### Radar sensors
+- **Sentinel-1**: C-band SAR, 5-40m resolution, 6-12 day revisit
+- **NISAR**: L-band and S-band SAR (launching 2024)
+
+### Other
+- **VIIRS**: 375m-750m resolution, daily global coverage
+- **ASTER**: 15-90m resolution, 16-day revisit, 14 spectral bands
+
+## Private satellites {#sec-satellite-private}
+
+### Very high resolution
+- **Maxar WorldView**: 31cm panchromatic, 1.24m multispectral
+- **Planet SkySat**: 50cm panchromatic, 1m multispectral
+- **Airbus Pleiades**: 50cm panchromatic, 2m multispectral
+
+### High resolution
+- **Planet PlanetScope**: 3-5m resolution, daily revisit
+- **Planet RapidEye**: 5m resolution, 5.5-day revisit
+- **SPOT**: 1.5-6m resolution, 26-day revisit
+
+### Specialized
+- **ICEYE**: X-band SAR, <1m resolution
+- **Capella Space**: X-band SAR, 50cm resolution
+- **GHGSat**: Greenhouse gas monitoring
+
+## Processing levels
+
+Satellite imagery is typically available at different processing levels. Understanding these levels is crucial for selecting appropriate data for your analysis.
+
+### Common processing levels
+
+#### Level 0: Raw data
+- Unprocessed instrument data
+- Requires extensive processing
+- Not typically used for analysis
+- Only available from some providers
+
+#### Level 1: Radiometric corrections
+- Basic radiometric calibration
+- May include systematic geometric corrections
+- Common formats:
+  - Level 1A: Raw data with radiometric calibration
+  - Level 1B: Includes geometric corrections
+  - Level 1C: Orthorectified and radiometrically calibrated
+
+#### Level 2: Surface reflectance
+- Atmospheric corrections applied
+- Converted to physical units
+- Cloud and shadow masks
+- Ready for most analyses
+
+#### Level 3: Derived products
+- Temporal composites
+- Mosaics
+- Specific indices (e.g., NDVI)
+- Gap-filled products
+
+### Key processing considerations
+
+#### Orthorectification
+- Corrects geometric distortions
+- Accounts for:
+  - Terrain effects
+  - Satellite position
+  - Earth curvature
+- Critical for accurate spatial analysis
+
+#### Atmospheric correction
+- Removes atmospheric effects
+- Accounts for:
+  - Aerosols
+  - Water vapor
+  - Atmospheric scattering
+- Important for multi-temporal analysis
+
+#### Radiometric calibration
+- Converts raw sensor values to physical units
+- Ensures consistency across:
+  - Time
+  - Different sensors
+  - Various atmospheric conditions
+
+## Choosing the right combination
+
+When selecting imagery for your application, consider these practical guidelines:
+
+### For agricultural applications
+- Resolution: 10-30m
+- Temporal frequency: Weekly or biweekly
+- Key bands: NIR, Red, SWIR
+- Recommended sensors: Sentinel-2, Landsat 8/9
+
+### For urban applications
+- Resolution: 0.5-10m
+- Temporal frequency: Monthly to annual
+- Key bands: RGB, NIR
+- Recommended sensors: WorldView, Planet, Sentinel-2
+
+### For forest monitoring
+- Resolution: 10-30m
+- Temporal frequency: Monthly to annual
+- Key bands: NIR, SWIR, Red
+- Recommended sensors: Landsat, Sentinel-2
+
+### For water resources
+- Resolution: 10-30m
+- Temporal frequency: Weekly to monthly
+- Key bands: NIR, SWIR, Blue
+- Recommended sensors: Sentinel-2, Landsat 8/9
+
+## Cost considerations
+
+::: {.callout-note}
+Remember that the most expensive or highest resolution imagery isn't always the best choice. The optimal choice balances your scientific needs with practical constraints.
+:::
+
+### Free options
+- Landsat program (30m)
+- Sentinel program (10m)
+- MODIS (250m-1km)
+- VIIRS (375m-750m)
+
+### Commercial options
+- Very high resolution (sub-meter): $15-25/km²
+- High resolution (1-5m): $5-15/km²
+- Medium resolution (5-30m): $1-5/km²
+- Subscription services: Variable pricing
+
+### Hidden costs
+- Storage requirements
+- Processing time
+- Technical expertise needed
+- Software licenses
+- Cloud computing resources
+
+## Making the final decision
+
+Consider these questions when making your final imagery selection:
+
+1. What is the minimum spatial resolution needed?
+2. How frequent do observations need to be?
+3. What spectral bands are required?
+4. What is the time period of interest?
+5. What is your budget?
+6. What processing level is needed?
+7. How will you handle clouds and data gaps?
+8. What are your storage and computing resources?
+
+The answers to these questions will guide you toward the most appropriate imagery source for your specific application.
+
+::: {.callout-note}
+# Looking forward
+
+In the next chapter, we will explore how to access and process satellite imagery for use with MOSAIKS.
+:::
+

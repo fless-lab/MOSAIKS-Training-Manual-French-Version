@@ -1,10 +1,9 @@
 {
-  "hash": "7ff2da55b3ca502597015e25d529be07",
+  "hash": "7f73a7b966f29fe0a4c493af0c1beb55",
   "result": {
-    "markdown": "# Model Choice\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
-    "supporting": [
-      "model-choice_files"
-    ],
+    "engine": "knitr",
+    "markdown": "# Model choice {#sec-model-choice}\n\n\n\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

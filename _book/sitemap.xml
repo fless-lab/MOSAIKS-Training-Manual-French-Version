@@ -5,96 +5,100 @@
     <lastmod>2024-12-28T01:53:34.604Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/intro.html</loc>
-    <lastmod>2024-12-28T01:53:34.605Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-00-intro/00-intro.html</loc>
+    <lastmod>2024-12-30T19:12:34.804Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/intro-compute.html</loc>
-    <lastmod>2024-12-28T01:53:34.605Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-00-intro/01-intro-compute.html</loc>
+    <lastmod>2024-12-30T19:16:37.133Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/intro-mosaiks.html</loc>
-    <lastmod>2024-12-28T01:53:34.605Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-00-intro/02-intro-mosaiks.html</loc>
+    <lastmod>2024-12-30T19:13:14.576Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/intro-api.html</loc>
-    <lastmod>2024-12-28T01:53:34.605Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-00-intro/03-intro-api.html</loc>
+    <lastmod>2024-12-30T19:13:09.547Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/intro-demo.html</loc>
-    <lastmod>2024-12-28T05:09:50.940Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-00-intro/04-intro-demo.html</loc>
+    <lastmod>2024-12-30T19:13:13.049Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/labels.html</loc>
-    <lastmod>2024-12-28T01:53:34.616Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-01-labels/00-labels.html</loc>
+    <lastmod>2024-12-30T19:16:52.928Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/labels-100-maps.html</loc>
-    <lastmod>2024-12-28T20:32:48.874Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-01-labels/01-labels-100-maps.html</loc>
+    <lastmod>2024-12-30T19:16:56.468Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/labels-survey.html</loc>
-    <lastmod>2024-12-28T20:34:11.460Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-01-labels/02-labels-survey.html</loc>
+    <lastmod>2024-12-30T19:17:00.969Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/labels-data-prep.html</loc>
-    <lastmod>2024-12-28T05:51:57.268Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-01-labels/03-labels-data-prep.html</loc>
+    <lastmod>2024-12-30T19:17:05.003Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/labels-demo.html</loc>
-    <lastmod>2024-12-28T21:01:29.169Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-01-labels/04-labels-demo.html</loc>
+    <lastmod>2024-12-30T19:17:10.422Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/satellite.html</loc>
-    <lastmod>2024-12-28T22:11:09.275Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-02-satellite/00-satellite.html</loc>
+    <lastmod>2024-12-30T19:22:32.639Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/satellite-imagery.html</loc>
-    <lastmod>2024-12-28T21:02:32.585Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-02-satellite/01-satellite-imagery.html</loc>
+    <lastmod>2024-12-30T19:22:37.212Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/satellite-processing.html</loc>
-    <lastmod>2024-12-28T22:12:39.450Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-02-satellite/02-satellite-processing.html</loc>
+    <lastmod>2024-12-30T19:22:41.344Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/features.html</loc>
-    <lastmod>2024-12-29T00:14:13.079Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-03-features/00-features.html</loc>
+    <lastmod>2024-12-30T19:22:45.769Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/features-api.html</loc>
-    <lastmod>2024-12-28T03:01:26.720Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-03-features/01-features-rcf.html</loc>
+    <lastmod>2024-12-30T19:22:50.225Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/features-computing.html</loc>
-    <lastmod>2024-12-28T03:05:19.374Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-03-features/02-features-api.html</loc>
+    <lastmod>2024-12-30T19:22:54.971Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/model.html</loc>
-    <lastmod>2024-12-28T01:53:34.622Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-03-features/03-features-computing.html</loc>
+    <lastmod>2024-12-30T19:22:58.923Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/model-choice.html</loc>
-    <lastmod>2024-12-28T01:53:34.616Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-04-models/00-model.html</loc>
+    <lastmod>2024-12-30T19:25:55.265Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/model-spatial.html</loc>
-    <lastmod>2024-12-28T20:35:05.078Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-04-models/01-model-choice.html</loc>
+    <lastmod>2024-12-30T19:25:54.551Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/model-temporal.html</loc>
-    <lastmod>2024-12-28T20:34:58.510Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-04-models/02-model-spatial.html</loc>
+    <lastmod>2024-12-30T19:25:53.216Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/uncertainty.html</loc>
-    <lastmod>2024-12-28T01:53:34.655Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-04-models/03-model-temporal.html</loc>
+    <lastmod>2024-12-30T19:25:51.778Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/uncertainty-intro.html</loc>
-    <lastmod>2024-12-28T01:53:34.654Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-05-uncertainty/00-uncertainty.html</loc>
+    <lastmod>2024-12-30T19:33:35.282Z</lastmod>
   </url>
   <url>
-    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/uncertainty-ethics.html</loc>
-    <lastmod>2024-12-28T01:53:34.646Z</lastmod>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-05-uncertainty/01-uncertainty-intro.html</loc>
+    <lastmod>2024-12-30T19:33:38.415Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/part-05-uncertainty/02-uncertainty-ethics.html</loc>
+    <lastmod>2024-12-30T19:33:42.602Z</lastmod>
   </url>
   <url>
     <loc>https://cullen-molitor.github.io/MOSAIKS-Training-Manual/references.html</loc>

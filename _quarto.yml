@@ -8,12 +8,15 @@ book:
     - name: Cullen Molitor
       affiliations: "Center for Effective Global Action (CEGA)"
       url: https://emlab.ucsb.edu/about/our-team/cullen-molitor
+
     - name:  Tamma Carleton
       affiliations: "UC Berkeley Department of Agricultural and Resource Economics"
       url: https://are.berkeley.edu/users/tamma-carleton
+
     - name:  Esther Rolf
       affiliations: "UC Boulder College of Engineering and Applied Science"
       url: https://www.colorado.edu/cs/esther-rolf
+
   reader-mode: true
 
   page-footer:
@@ -28,35 +31,43 @@ book:
 
   chapters:
     - index.qmd
-    - part: intro.qmd
+
+    - part: part-00-intro/00-intro.qmd
       chapters:
-        - intro-compute.qmd
-        - intro-mosaiks.qmd
-        - intro-api.qmd
-        - intro-demo.qmd
-    - part: labels.qmd  
+        - part-00-intro/01-intro-compute.qmd
+        - part-00-intro/02-intro-mosaiks.qmd
+        - part-00-intro/03-intro-api.qmd
+        - part-00-intro/04-intro-demo.qmd
+
+    - part: part-01-labels/00-labels.qmd  
       chapters:
-        - labels-100-maps.qmd
-        - labels-survey.qmd
-        - labels-data-prep.qmd
-        - labels-demo.qmd
-    - part: satellite.qmd  
+        - part-01-labels/01-labels-100-maps.qmd
+        - part-01-labels/02-labels-survey.qmd
+        - part-01-labels/03-labels-data-prep.qmd
+        - part-01-labels/04-labels-demo.qmd
+
+    - part: part-02-satellite/00-satellite.qmd  
       chapters:
-        - satellite-imagery.qmd
-        - satellite-processing.qmd
-    - part: features.qmd  
+        - part-02-satellite/01-satellite-imagery.qmd
+        - part-02-satellite/02-satellite-processing.qmd
+
+    - part: part-03-features/00-features.qmd  
       chapters:
-        - features-api.qmd
-        - features-computing.qmd
-    - part: model.qmd  
+        - part-03-features/01-features-rcf.qmd
+        - part-03-features/02-features-api.qmd
+        - part-03-features/03-features-computing.qmd
+
+    - part: part-04-models/00-model.qmd  
       chapters:
-        - model-choice.qmd
-        - model-spatial.qmd
-        - model-temporal.qmd
-    - part: uncertainty.qmd  
+        - part-04-models/01-model-choice.qmd
+        - part-04-models/02-model-spatial.qmd
+        - part-04-models/03-model-temporal.qmd
+
+    - part: part-05-uncertainty/00-uncertainty.qmd  
       chapters:
-        - uncertainty-intro.qmd
-        - uncertainty-ethics.qmd
+        - part-05-uncertainty/01-uncertainty-intro.qmd
+        - part-05-uncertainty/02-uncertainty-ethics.qmd
+
     - references.qmd
 
 tbl-cap-location: bottom
@@ -81,6 +92,5 @@ execute:
   echo: true
   message: false
   warning: false
-
 
 

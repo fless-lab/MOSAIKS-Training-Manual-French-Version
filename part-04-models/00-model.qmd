@@ -1,0 +1,9 @@
+# Task modeling {#sec-modeling}
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```

@@ -1,0 +1,15 @@
+{
+  "hash": "100feefac65d4d17e05320b00dee2548",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Model choice {#sec-model-choice}\n\n\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

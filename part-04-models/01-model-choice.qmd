@@ -1,0 +1,9 @@
+# Model choice {#sec-model-choice}
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```

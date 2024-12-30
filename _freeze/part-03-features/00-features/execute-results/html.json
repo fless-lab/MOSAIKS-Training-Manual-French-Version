@@ -1,0 +1,15 @@
+{
+  "hash": "568445d73b9c0a40d033ea7d98b69930",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Satellite features {#sec-features}\n\n\n\n\n\n:::: status\n::: callout-warning \nThis chapter is in early draft form and may be incomplete.\n:::\n::::\n\n\n\n\n## Overview\n\nThis section explores MOSAIKS features - the compressed representations of satellite imagery that enable efficient prediction across diverse tasks. While many users can rely on pre-computed API features, understanding how these features work and how to generate them provides valuable context and enables customization when needed.\n\n::: {.callout-note}\nThe technical details covered in these chapters are primarily relevant for users who need to understand or generate custom MOSAIKS features. If you plan to use the MOSAIKS API features, you can focus on @sec-features-api.\n:::\n\n## When to look beyond the API features\n\nThe MOSAIKS API provides pre-computed features derived from 2019 Planet Labs imagery. While these features enable many applications, you may need to work directly with feature generation when:\n\n- Your analysis requires data from a different time period\n- You need features at a different spatial resolution\n- You want to experiment with different feature parameters\n- You're developing new methodological approaches\n- You need to validate or compare feature types\n\n## Feature types and computation\n\nMOSAIKS features transform raw satellite imagery into a concise tabular format that captures essential patterns while dramatically reducing data volume. The system currently supports:\n\n- Random convolutional features (RCFs)\n- Gaussian random features\n- Empirical patch features\n- Hybrid approaches\n\nThese different feature types offer various tradeoffs in terms of computation time, storage requirements, and predictive performance across tasks.\n\n## Section outline\n\nThe following chapters will guide you through key aspects of MOSAIKS features:\n\n1. **API features** (@sec-features-api)\n   - Accessing pre-computed features\n   - Feature specifications\n   - Data formats and structure\n   - Usage guidelines\n\n2. **Random convolutional features** (@sec-features-rcf)\n   - Technical foundation\n   - Implementation details  \n   - Parameter choices\n   - Performance characteristics\n\n3. **Computing features** (@sec-features-computing)\n   - Processing requirements\n   - Computational workflows\n   - Storage considerations\n   - Quality control\n\nThese chapters provide both practical guidance for working with MOSAIKS features and deeper technical understanding of how the feature extraction process works.\n\n::: {.callout-note}\n# Looking forward\n\nThe next chapter will attemppt to provide some context and intuition for the random convolutional features (RCFs) that are at the core of MOSAIKS.\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

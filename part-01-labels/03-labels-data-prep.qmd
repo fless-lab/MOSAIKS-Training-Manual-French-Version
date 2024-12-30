@@ -1,4 +1,4 @@
-# Preparing labels
+# Preparing labels {#sec-labels-data-prep}
 
 ```{r}
 #| echo: false
@@ -10,6 +10,50 @@ status("draft")
 ## Overview
 
 In this chapter, we'll cover the process of preparing labels for use with MOSAIKS features. Labels are the observed values that we want to predict using our model. These could be crop yields, disease incidence, or any other variable of interest. Label data can come in many forms, including point observations, polygon aggregates, or gridded rasters, but the key is that they must have a sptaial component. We take advantage of this spatial information to join the labels with the MOSAIKS features, which are also spatially explicit.
+
+While MOSAIKS can involve many optional steps, its effective utilization necessitates two core components: 
+
+1. Ground observations (labels)
+1. Satellite features
+
+Ensuring the spatial resolution is shared across both datasets and that they contain geographical data suitable for merging is crucial.
+
+## Ground observations
+
+### Resolution  
+
+::: {.callout-note}
+
+The MOSAIKS API is designed to predict outcomes at scales of 1 km² or larger. Customizable solutions are possible for higher resolution problems. 
+:::
+
+The preparation of label data for MOSAIKS hinges on multiple factors, particularly spatial information such as location, extent, and resolution. If the observations in a dataset have a higher resolution than 1 km², some form of selection or aggregation is required. Label data can come in any native spatial form: raster, point, polygon, or vector. As long as there is spatial information associated with each label data observation, these data can be joined to MOSAIKS imagery features for downstream prediction.
+
+![Examples of label data formats that can be easily integrated into the MOSAIKS pipeline. Label data of any spatial format that can be aggregated to at least the scale of 1km² (or larger) can be used directly in combination with MOSAIKS imagery features for downstream prediction tasks. Examples shown here are from Rolf et al. (2021) and include: forest cover, elevation, population, and nighttime lights datasets (all raster format); income data (polygon format); road length (vector format); and housing price data (point format).](../images/rolf_et_al_2021-Fig_S4.png){#fig-label-agg}
+
+### Sample size  
+
+As with many machine learning algorithms, a large sample size often results in higher performance than low. MOSAIKS has been used and shown to be effective with a wide range of sample sizes (*N*). The sample size for model training is determined by the spatial and temporal resolution of your label data. For example, when predicting maize yields in the US using ground data from one year of farmer-level surveys in the US, *N*=3,143 if farmers are geolocated based on their county (even if far more than 3,143 farmers were interviewed, as this is the number of counties in the US). Additional time periods increase sample size for training, but also require more up-front costs, as more imagery need to be “featurized”.
+
+The original MOSAIKS publication (Rolf et al., 2021) tested performance for forest cover, income, housing price, population density, nighttime luminosity, and elevation using sample sizes ranging from 60,000 to 100,000, but showed that performance fell only modestly when *N* shrank to just a few hundred observations. Consistent with this finding, in recent experiments with crop yield, we see high with only around 400 observations (R² = 0.80). It is important to note that the original crop yield dataset included interview data from thousands of farmers across the study country, and this messy data was cleaned and aggregated to the district level prior to modeling. In this case, a clean dataset with a low number of observations was preferred to a large but noisy dataset. Despite the low sample size of the aggregate data, performance was still comparable to more complex CNN models trained specifically on crop yield. 
+
+::: {.callout-note}
+As a rule of thumb, we recommend a sample size of at least 300 observations for training a MOSAIKS model, though every application is unique and may require more or fewer observations.
+:::
+
+### Data types
+
+MOSAIKS accommodates both continuous (e.g., fraction of area forested) and discrete (e.g., presence/absence of water) labels, with data type influencing model development and testing. Performance metric selection is also determined by data type - for continuous variables, we typically use the coefficient of determination (R²), while for discrete variables, the area under the curve value from the receiver operator characteristic curve (ROC AUC score) is used.
+
+### Checklist
+
+For optimal use with MOSAIKS, label data should be:
+
+- [ ] **Consistently geolocated** as point, polygon, vector, or raster data
+- [ ] **Aggregatable to ≥1km²** resolution
+- [ ] **Observable** in daytime satellite imagery (directly or indirectly)
+- [ ] **Recent or slow-changing** if using current API features
+- [ ] **Sample size N≥300** (larger samples generally perform better)
 
 ## Joining data
 

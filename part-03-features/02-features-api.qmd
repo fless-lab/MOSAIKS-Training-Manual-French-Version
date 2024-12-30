@@ -10,7 +10,7 @@ status("draft")
 
 - Defaults 
 
-![Planet Labs basemap imagery (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](images/api-features.png)
+![Planet Labs basemap imagery (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](../images/api-features.png)
 
 ## Feature data
 
@@ -32,7 +32,7 @@ Features can be computed at higher or lower resolutions than 1 km². This is dis
 
 The default 1 km² resolution of MOSAIKS is generally the maximum resolution the label data should be in. If the labels are in lower resolution, the satellite features can be aggregated up to larger areas to match. Typical aggregation might be to larger grid cell, census tract, county/district, or state/province levels. The exact aggregation level is contingent on the spatial resolution of the label data. 
 
-![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](images/US_feature_summaries.png){#fig-feature-aggregation}
+![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](../images/US_feature_summaries.png){#fig-feature-aggregation}
 
 ### API Features 
 

@@ -1,4 +1,4 @@
-# Label data demo
+# Label data demo {#sec-labels-demo}
 
 ```{r}
 #| echo: false

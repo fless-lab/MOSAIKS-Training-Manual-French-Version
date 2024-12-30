@@ -39,15 +39,15 @@ If you are looking for **new data sets** that we create using MOSAIKS (not featu
 
 Visit [api.mosaiks.org](https://api.mosaiks.org/).
 
-![Login page](images/api-home.png)
+![Login page](../images/api-home.png)
 
 Select `Register` to create an account. You'll need to provide:
 
-![Registration page](images/api-register.png)
+![Registration page](../images/api-register.png)
 
 Once registered, you can log in to access the MOSAIKS features and begin downloading data.
 
-![Landing page](images/api-landing.png)
+![Landing page](../images/api-landing.png)
 
 ## Downloading features 
 
@@ -82,7 +82,7 @@ There are two main methods to obtain features through the API:
 - The output file may have a different number of rows than your input
 - Point ordering may change in the output
 
-![API Map Query (left) and File Query (right)](images/api-map-n-file.png)
+![API Map Query (left) and File Query (right)](../images/api-map-n-file.png)
 
 ## Using MOSAIKS features for prediction
 
@@ -97,7 +97,7 @@ Basic workflow:
 3. Spatially merge labels and features
 4. Use regression to model relationship
 
-![Using MOSAIKS, a simplified workflow design.](images/mosaiks-overview.png)
+![Using MOSAIKS, a simplified workflow design.](../images/mosaiks-overview.png)
 
 You can experiment with various machine learning approaches in the regression step. For beginners, we recommend starting with our example Jupyter notebook (@sec-mosaiks-demo-1) that demonstrates a simple ridge regression approach (suitable for both R and Python users).
 

@@ -41,23 +41,26 @@ These different feature types offer various tradeoffs in terms of computation ti
 
 The following chapters will guide you through key aspects of MOSAIKS features:
 
-1. **API features** (@sec-features-api)
-   - Accessing pre-computed features
-   - Feature specifications
-   - Data formats and structure
-   - Usage guidelines
+@sec-features-rcf
 
-2. **Random convolutional features** (@sec-features-rcf)
-   - Technical foundation
-   - Implementation details  
-   - Parameter choices
-   - Performance characteristics
+- Technical foundation
+- Implementation details  
+- Parameter choices
+- Performance characteristics
 
-3. **Computing features** (@sec-features-computing)
-   - Processing requirements
-   - Computational workflows
-   - Storage considerations
-   - Quality control
+@sec-features-api
+
+- Accessing pre-computed features
+- Feature specifications
+- Data formats and structure
+- Usage guidelines
+
+@sec-features-computing
+
+- Processing requirements
+- Computational workflows
+- Storage considerations
+- Quality control
 
 These chapters provide both practical guidance for working with MOSAIKS features and deeper technical understanding of how the feature extraction process works.
 

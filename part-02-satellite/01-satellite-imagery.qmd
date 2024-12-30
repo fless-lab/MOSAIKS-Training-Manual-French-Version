@@ -1,4 +1,4 @@
-# Choosing imagery
+# Choosing imagery {#sec-satellite-imagery}
 
 ```{r}
 #| echo: false
@@ -33,7 +33,7 @@ Key considerations for time range include:
 - Availability of calibration across different satellite generations
 - Planned mission duration and data continuity
 
-![Source: [NASA](https://landsat.gsfc.nasa.gov/satellites/timeline/)](images/nasa_landsat_timeline.png)
+![Source: [NASA](https://landsat.gsfc.nasa.gov/satellites/timeline/)](../images/nasa_landsat_timeline.png)
 
 ## Sensor resolution (pixel size)
 
@@ -50,7 +50,7 @@ Common spatial resolutions:
 - Medium (10-30m): Large agricultural fields, forest stands
 - Low (> 30m): Regional land cover, climate patterns
 
-![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_spatial_res.jpeg)
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](../images/radiant_earth_spatial_res.jpeg)
 
 ## Spectral resolution (EM range)
 
@@ -70,7 +70,7 @@ Applications by spectral band:
 - Thermal: Temperature, urban heat islands
 - Microwave: Cloud penetration, soil moisture
 
-![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_spectral_res.jpeg)
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](../images/radiant_earth_spectral_res.jpeg)
 
 ## Temporal resolution (revisit rate)
 
@@ -88,7 +88,7 @@ Trade-offs to consider:
 - Cost increases with temporal frequency
 - Data storage and processing requirements grow with frequency
 
-![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_temporal_res.jpeg)
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](../images/radiant_earth_temporal_res.jpeg)
 
 ## Cloud cover
 
@@ -122,7 +122,7 @@ Satellite sensors broadly fall into two categories:
 - Can penetrate clouds and operate at night
 - Often require more complex processing
 
-![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](images/radiant_earth_active_passive.jpeg)
+![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](../images/radiant_earth_active_passive.jpeg)
 
 ## Public satellites {#sec-satellite-public}
 

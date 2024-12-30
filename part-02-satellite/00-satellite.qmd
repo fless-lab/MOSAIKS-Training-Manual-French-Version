@@ -44,17 +44,19 @@ This wealth of options creates both opportunities and challenges in selecting ap
 
 The following chapters will guide you through key considerations when working with satellite imagery:
 
-1. **Choosing imagery** (@sec-satellite-imagery)
-   - Spatial, spectral, and temporal resolution
-   - Public vs commercial options
-   - Cost considerations
-   - Data quality and availability
+@sec-satellite-imagery
 
-2. **Processing satellite data** (@sec-satellite-processing)
-   - Accessing imagery
-   - Pre-processing steps
-   - Quality control
-   - Computing requirements
+- Spatial, spectral, and temporal resolution
+- Public vs commercial options
+- Cost considerations
+- Data quality and availability
+
+@sec-satellite-processing
+
+- Accessing imagery
+- Pre-processing steps
+- Quality control
+- Computing requirements
 
 These chapters provide practical guidance for incorporating satellite imagery into your MOSAIKS workflow while highlighting important technical and logistical considerations.
 

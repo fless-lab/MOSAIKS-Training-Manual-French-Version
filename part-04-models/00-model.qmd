@@ -1,4 +1,4 @@
-# Task modeling {#sec-modeling}
+# Task modeling {#sec-model}
 
 ```{r}
 #| echo: false

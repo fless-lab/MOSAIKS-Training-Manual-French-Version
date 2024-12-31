@@ -8,43 +8,39 @@ source("../_common.R")
 status("draft")
 ```
 
+## Introduction
+
+At its core, MOSAIKS requires two main inputs: satellite features and ground truth data. Our aim is to make these features as accessible as possible so that the majority of users do not have to worry about the technical details of satellite imagery processing.
+
+To this end, we have worked to develop multiple ways to access MOSAIKS features:
+
+| **Option** | **Imagery Source** | **Spatial Coverage** | **Spatial Resolution** | **Temporal Resolution** | **Link** | 
+|------------|--------------------|----------------------|------------------------|-------------------------|----------|
+| MOSAIKS API | Planet imagery| Global land areas | 0.01°, 0.1°, 1°, ADM2, ADM1, ADM0 | 2019 Q3 (static layer)| [MOSAIKS API](https://api.mosaiks.org/) | 
+| Rolf et al 2021 | Google Earth basemap | Continental United States (~100k locations) | 0.01° | 2019 (static layer) | [Code Ocean Capsule](https://codeocean.com/capsule/6456296/tree/v2) | 
+| Compute features | Any imagery source  | User-defined | User-defined | User-defined | @sec-features-computing |   |
+
+::: {.callout-tip}
+The first part of this book focuses on the MOSAIKS API and publicly available features. The second part will cover how to compute features from your own imagery.
+:::
+
+The MOSAIKS API should be considered the primary way to access features. It is a user-friendly interface that allows you to download features for any location on Earth. The API is designed to be accessible to users with a range of technical backgrounds, from beginners to experts.
 
 ## API Overview
 
 ::: {.callout-tip}
-## MOSAIKS API Link
+# MOSAIKS API Link
 
 [api.mosaiks.org](https://api.mosaiks.org/)
 :::
 
-We have worked to develop multiple ways to access MOSAIKS features:
+We have put together a [Resource Page](https://api.mosaiks.org/portal/resources/ for MOSAIKS users (registration required), which includes example Python and R notebooks for using the pipeline.
 
-- **Global Administrative Units (Planet imagery)** You can download features aggregated to country, province, or municipality (ADM0/ADM1/ADM2 boundaries), as described in [Sherman et al. (2023)](https://www.mosaiks.org/hdi).  These features are based on Planet imagery.  These files are relatively small in size and can be used at these resolutions or to downscale administrative data. To download them, register at [api.mosaiks.org](https://api.mosaiks.org/) and access them via the “[Precomputed Files](https://api.mosaiks.org/portal/precomputed/)” tab.  
+Don’t forget to see our [Tutorial Page](https://www.mosaiks.org/tutorials), which has an example Python notebook that we walk through in the video.
 
-- **USA grid from Rolf et al (Google basemap imagery)** You can download features for a set of locations across the United States, as described in [Rolf et al. (Nature Communications, 2021)](https://www.nature.com/articles/s41467-021-24638-z). These features are based on imagery from the Google Earth base map. You can download the features from the [Code Ocean Capsule](https://codeocean.com/capsule/6456296/tree/v2) associated with that manuscript (the capsule will also allow you to replicate the analysis of that paper on a remote machine). The Github repository for that analysis is [here](https://github.com/Global-Policy-Lab/mosaiks-paper). 
+If you are looking for new data sets that we create using MOSAIKS (not features), we will be posting those [here](https://www.mosaiks.org/data-sets) as they become available.
 
-- **Global 0.01 x 0.01 degree grid (Planet imagery)** You can download features for a complete and dense grid of global land areas via our [API](https://api.mosaiks.org/). These features are based on on quarterly mosaics from Planet’s Surface Reflectance Basemaps produce from 2019 Q3. Because the complete data set is large (multiple TB), you will need to request custom subsamples of the imagery. To download them, register at [api.mosaiks.org](https://api.mosaiks.org/) and access them via the “[Map Query](https://api.mosaiks.org/portal/map_query/)” tool or by uploading a list of locations via the “[File Query](https://api.mosaiks.org/portal/file_query/)” tool.
-
-- **Recompute MOSAIKS features (Landsat & Sentinel imagery)** You can recompute MOSAIKS features yourself using Microsoft’s Planetary Computer ([Github repo](https://github.com/microsoft/PlanetaryComputerExamples/blob/main/tutorials/mosaiks.ipynb) which currently supports Gaussian random convolutional features). This approach will not provide the benefit of pre-computed features, since you will recompute features on-the-fly every time, but the massive compute power of the Planetary Computer makes this relatively fast and cheap for users. 
-
-- **Recompute MOSAIKS features (general instruction)** You can recompute MOSAIKS features yourself using instructions provided in @sec-features-computing. By following along with this chapter, you will gain in depth knowledge of how to compute customized features from any input imagery source. The process of dealing with satellite imagery and image featurization are the most challenging aspects of MOSAIKS. This section is only recommended for users with baseline knowledge of remote sensing methodologies, and ideally at least some understanding of convolutional neural network models. 
-
-
-| Access Method | Description |
-|---------|------------|
-| **Global Administrative Units (Planet imagery)** | You can download features aggregated to country, province, or municipality (ADM0/ADM1/ADM2 boundaries), as described in [Sherman et al. (2023)](https://www.mosaiks.org/hdi).  These features are based on Planet imagery.  These files are relatively small in size and can be used at these resolutions or to downscale administrative data. To download them, register at [api.mosaiks.org](https://api.mosaiks.org/) and access them via the “[Precomputed Files](https://api.mosaiks.org/portal/precomputed/)” tab. |
-| **USA grid from Rolf et al (Google basemap imagery)** | You can download features for a set of locations across the United States, as described in [Rolf et al. (Nature Communications, 2021)](https://www.nature.com/articles/s41467-021-24638-z). These features are based on imagery from the Google Earth base map. You can download the features from the [Code Ocean Capsule](https://codeocean.com/capsule/6456296/tree/v2) associated with that manuscript (the capsule will also allow you to replicate the analysis of that paper on a remote machine). The Github repository for that analysis is [here](https://github.com/Global-Policy-Lab/mosaiks-paper).|
-| **Global 0.01 x 0.01 degree grid (Planet imagery)** | You can download features for a complete and dense grid of global land areas via our [API](https://api.mosaiks.org/). These features are based on on quarterly mosaics from Planet’s Surface Reflectance Basemaps produce from 2019 Q3. Because the complete data set is large (multiple TB), you will need to request custom subsamples of the imagery. To download them, register at [api.mosaiks.org](https://api.mosaiks.org/) and access them via the “[Map Query](https://api.mosaiks.org/portal/map_query/)” tool or by uploading a list of locations via the “[File Query](https://api.mosaiks.org/portal/file_query/)” tool.|
-| **Recompute MOSAIKS features (Landsat & Sentinel imagery)** | You can recompute MOSAIKS features yourself using Microsoft’s Planetary Computer ([Github repo](https://github.com/microsoft/PlanetaryComputerExamples/blob/main/tutorials/mosaiks.ipynb) which currently supports Gaussian random convolutional features). This approach will not provide the benefit of pre-computed features, since you will recompute features on-the-fly every time, but the massive compute power of the Planetary Computer makes this relatively fast and cheap for users.  |
-| **Recompute MOSAIKS features (general instruction)** | You can recompute MOSAIKS features yourself using instructions provided in @sec-features-computing. By following along with this chapter, you will gain in depth knowledge of how to compute customized features from any input imagery source. The process of dealing with satellite imagery and image featurization are the most challenging aspects of MOSAIKS. This section is only recommended for users with baseline knowledge of remote sensing methodologies, and ideally at least some understanding of convolutional neural network models.  |
-
-We have put together a **Resource Page** for MOSAIKS users [here](https://api.mosaiks.org/portal/resources/) (registration required), which includes example Python and R notebooks for using the pipeline.
-
-Don’t forget to see our **Tutorial Page** [here](https://www.mosaiks.org/tutorials), which has an example Python notebook that we walk through in the video.
-
-If you are looking for **new data sets** that we create using MOSAIKS (not features), we will be posting those [here](https://www.mosaiks.org/data-sets).
-
-## Register for an account
+### Register for an account
 
 Visit [api.mosaiks.org](https://api.mosaiks.org/).
 
@@ -58,7 +54,7 @@ Once registered, you can log in to access the MOSAIKS features and begin downloa
 
 ![Landing page](../images/api-landing.png)
 
-## Downloading features 
+### Downloading features 
 
 The MOSAIKS features are organized using a 0.01 x 0.01 degree latitude-longitude global grid, centered at .005 degree intervals.
 
@@ -74,7 +70,7 @@ Important notes about downloads:
 - After 15 days, files are automatically deleted from the system
 - There is a limit of 100,000 records per query
 
-### Ways to query features
+#### Ways to query features
 
 There are two main methods to obtain features through the API:
 
@@ -96,7 +92,7 @@ There are two main methods to obtain features through the API:
 ## Using MOSAIKS features for prediction
 
 ::: {.callout-tip}
-This is a brief overview. Detailed instructions appear later in the manual.
+This is a brief overview. Detailed instructions appear later in the manual (#sec-model-choice).
 :::
 
 Basic workflow:
@@ -106,9 +102,9 @@ Basic workflow:
 3. Spatially merge labels and features
 4. Use regression to model relationship
 
-![Using MOSAIKS, a simplified workflow design.](../images/mosaiks-overview.png)
-
 You can experiment with various machine learning approaches in the regression step. For beginners, we recommend starting with our example Jupyter notebook (@sec-mosaiks-demo-1) that demonstrates a simple ridge regression approach (suitable for both R and Python users).
+
+![Using MOSAIKS, a simplified workflow design.](../images/mosaiks-overview.png)
 
 This topic will be covered in greater depth in later chapters. In the next chapter, you will see a simple MOSAIKS workflow which starts from the point of having both features from the API and ground truth labels. 
 

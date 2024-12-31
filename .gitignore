@@ -55,7 +55,9 @@ _site/
 
 Data*
 
-_book
+# Quarto build artifacts
+_book/
+_freeze/
 
 *.topojson
 *.geojson

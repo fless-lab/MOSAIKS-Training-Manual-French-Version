@@ -1,4 +1,4 @@
-# Model uncertainty {#sec-uncertainty}
+# Model uncertainty 
 
 ```{r}
 #| echo: false
@@ -17,7 +17,7 @@ The following chapters will discuss important aspects of model uncertainty and b
 | @sec-uncertainty-intro | Error sources, confidence intervals, validation |
 | @sec-uncertainty-ethics | Responsible use, communication, limitations |
 
-: Outline of the uncertainty section {.striped .hover}
+: Outline of the uncertainty section {#tbl-section-outline .striped .hover}
 
 These chapters provide 
 

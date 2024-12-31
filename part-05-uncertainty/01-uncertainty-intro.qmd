@@ -1,4 +1,4 @@
-# Overview of uncertainty
+# Overview of uncertainty {#sec-uncertainty-intro}
 
 ```{r}
 #| echo: false

@@ -1,4 +1,4 @@
-# Welcome {.unnumbered}
+# Welcome 
 
 ```{r}
 #| echo: false
@@ -126,7 +126,7 @@ There will be a homework assignment at the end of Week 1, which participants wil
 
 ## Book structure and content
 
-This manual is organized into six main parts, each focusing on a critical aspect of working with MOSAIKS. We begin with foundational concepts and gradually progress to more advanced topics in modeling and uncertainty quantification.
+This manual is organized into six main parts, each focusing on a critical aspect of MOSAIKS. We begin with foundational concepts and gradually progress to more advanced topics in modeling and uncertainty quantification.
 
 | Part | Description |
 |------|:------------|

@@ -1,4 +1,4 @@
-# Ethical implications
+# Ethical implications {#sec-uncertainty-ethics}
 
 ```{r}
 #| echo: false

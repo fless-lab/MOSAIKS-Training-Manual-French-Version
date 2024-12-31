@@ -1,5 +1,4 @@
-# Introduction
-
+# Introduction 
 ```{r}
 #| echo: false
 #| results: "asis"
@@ -8,83 +7,51 @@ source("../_common.R")
 status("draft")
 ```
 
-## Course structure 
+## Overview
 
-This course is designed as an intensive two-week program that combines lectures, demonstrations, and hands-on sessions. Each day is structured as follows:
+This section introduces the fundamental concepts of MOSAIKS (Multi-task Observation using Satellite Imagery & Kitchen Sinks) and provides practical guidance for getting started with the system. Whether you're new to satellite imagery analysis or an experienced practitioner, understanding these foundations is crucial for effectively utilizing MOSAIKS in your work.
 
-| **Time**       | **Activity**       |
-|----------------|--------------------|
-| 9:00 - 10:30   | Morning Session 1  |
-| 10:30 - 11:00  | Break              |
-| 11:00 - 12:30  | Morning Session 2  |
-| 12:30 - 1:30   | Lunch              |
-| 1:30 - 3:00    | Afternoon Session 1|
-| 3:00 - 3:30    | Break              |
-| 3:30 - 4:30    | Afternoon Session 2|
-| 4:30 - 5:00    | Feedback and Development |
+MOSAIKS bridges the gap between the vast potential of satellite imagery and practical applications by providing:
 
-: {.striped .hover}
+- Accessible machine learning tools for non-experts
+- Computationally efficient predictions
+- Flexible applications across diverse tasks
+- Scalable solutions for global challenges
 
-Each day concludes with a Q&A and feedback session from 4:30-5:00, providing opportunities to clarify concepts and share ideas. It is expected that this first course will spur many new ideas and concepts which should be included in the future trainings. Please remember to take notes throughout each day with particular emphasis in areas you think could be explained better or that need additional topics covered. These can be areas that you struggled with or that you would anticipate could be difficult for others.
+## When to use MOSAIKS
 
-## Schedule overview
+MOSAIKS is particularly valuable when you need to:
 
-| Day | Week 1 | Week 2 |
-|-----|---------|---------|
-| Monday | Orientation and introduction to MOSAIKS | *Holiday - No Class* |
-| Tuesday | Ground labels and data processing fundamentals | Task modeling and machine learning applications |
-| Wednesday | Agriculture applications and MOSAIKS API | Understanding uncertainty in MOSAIKS |
-| Thursday | Satellite imagery fundamentals and processing | Survey data processing and design |
-| Friday | Deep dive into random convolutional features (RCFs) | Future directions and advanced applications |
+- Generate predictions across large geographic areas
+- Work with limited computational resources
+- Analyze multiple outcomes using the same imagery
+- Create predictions without deep learning expertise
+- Scale analysis from local to global applications
 
-: Course schedule by week {.striped .hover}
+However, MOSAIKS may not be the best choice when:
 
-Main topics covered each day:
+- You need predictions at sub-kilometer resolution
+- Your outcome requires specific spectral bands
+- Real-time predictions are essential
+- Your application requires interpretable features
 
-### Week 1
-- **Day 1**: MOSAIKS framework, accessing features, basic workflow
-- **Day 2**: Understanding ground truth data, data cleaning, spatial resolution
-- **Day 3**: Agricultural yield prediction, downloading features via API
-- **Day 4**: Types of satellite imagery, processing considerations, quality control
-- **Day 5**: Feature computation, theory behind RCFs, hands-on implementation
+## Section outline
 
-### Week 2  
-- **Day 1**: *Martin Luther King Jr. Day - No Class*
-- **Day 2**: Model selection, hyperparameter tuning, cross-validation
-- **Day 3**: Error analysis, confidence intervals, reporting uncertainty
-- **Day 4**: Survey design principles, geolocation methods, sampling strategies
-- **Day 5**: Advanced topics, emerging applications, future development
+The following chapters will guide you through getting started with MOSAIKS:
 
-## Training expectations
+| Chapter | Key Topics |
+|---------|:-----------|
+| @sec-intro-compute | Google Colab, data management, implementation practices |
+| @sec-intro-mosaiks | Core concepts, system architecture, capabilities |
+| @sec-intro-api | API access, data products, authentication |
+| @sec-mosaiks-demo-1 | Basic workflow, example analysis, common pitfalls |
 
-### What you will learn
-- Understanding of MOSAIKS framework and capabilities
-- Practical skills in satellite imagery processing  
-- Experience with machine learning applications
-- Hands-on practice with real-world datasets
-- Knowledge of survey data integration
-- Best practices for model implementation
+: Outline of the introduction section {#tbl-section-outline .striped .hover}
 
-### Prerequisites
-There are no explicit prerequisites, though this course does cover some advanced topics in:
+These chapters provide both theoretical understanding and practical skills needed to begin working with MOSAIKS. The focus is on making satellite-based prediction accessible while maintaining scientific rigor and computational efficiency.
 
-- The [`Python`](https://www.python.org/){target="_blank"} programming language
-- Machine learning
-- Geospatial data
+::: {.callout-note}
+# Looking forward
 
-### Participant expectations
-- Active participation in discussions and hands-on sessions
-- Completion of assigned homework (particularly the Week 1 Friday assignment)  
-- Engagement in Q&A sessions
-- Contribution to feedback sessions for course improvement
-
-### Computing requirements  
-The course includes hands-on computing sessions. You will need:
-
-- A computer with access to the internet
-- A Google account 
-- Access to Google Colaboratory
-- Access to necessary data (details to be provided)
-
-### Homework and presentations
-There will be a homework assignment at the end of Week 1, which participants will present on Tuesday of Week 2. This assignment is designed to reinforce learning and provide practical experience with MOSAIKS tools.
+In the next chapter, we'll set up our computing environment using Google Colab.
+:::

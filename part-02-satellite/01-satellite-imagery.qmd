@@ -8,7 +8,7 @@ source("../_common.R")
 status("draft")
 ```
 
-**LINK: https://eds-223-geospatial.github.io/course-materials/week6.html**
+[MEDS EDS 223 Geospatial analysis class](https://eds-223-geospatial.github.io/course-materials/week6.html)
 
 When selecting satellite imagery for use with MOSAIKS, several key factors need to be considered. The choice of imagery should be guided by your specific research needs, label characteristics, and practical constraints like cost and processing requirements.
 

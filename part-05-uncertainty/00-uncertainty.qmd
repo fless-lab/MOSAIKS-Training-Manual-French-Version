@@ -8,4 +8,21 @@ source("../_common.R")
 status("draft")
 ```
 
+## Section outline
 
+The following chapters will discuss important aspects of model uncertainty and bias, as well as the ethical considerations in the context of MOSAIKS:
+
+| Chapter | Key Topics |
+|---------|:-----------|
+| @sec-uncertainty-intro | Error sources, confidence intervals, validation |
+| @sec-uncertainty-ethics | Responsible use, communication, limitations |
+
+: Outline of the uncertainty section {.striped .hover}
+
+These chapters provide 
+
+::: {.callout-note}
+# Looking forward
+
+The next chapter will 
+:::

@@ -27,32 +27,14 @@ For optimal performance with MOSAIKS, label data should have several key charact
 
 The following chapters will guide you through key considerations for working with label data in MOSAIKS:
 
-@sec-labels-100-maps
+| Chapter | Key Topics |
+|---------|:-----------|
+| @sec-labels-100-maps | Example applications, performance analysis, validation |
+| @sec-labels-survey | Survey integration, sampling design, geographic referencing |
+| @sec-labels-data-prep | Data cleaning, spatial joining, quality control |
+| @sec-labels-demo | Hands-on example, practical workflow, troubleshooting |
 
-- Examples of successful applications
-- Understanding performance patterns
-- Limits of predictability
-
-@sec-labels-survey
-
-- Working with survey data
-- Sampling considerations
-- Privacy and ethical concerns
-- Integration challenges
-
-@sec-labels-data-prep
-
-- Data cleaning procedures
-- Spatial aggregation methods
-- Quality control steps
-- Joining with features
-
-@sec-labels-demo
-
-- Hands-on examples
-- Common pitfalls
-- Best practices
-- Performance evaluation
+: Outline of the label data section {#tbl-section-outline .striped .hover}
 
 These chapters provide both practical guidance for preparing your own label data and deeper understanding of what types of outcomes MOSAIKS can effectively predict.
 

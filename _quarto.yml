@@ -45,6 +45,7 @@ book:
         - part-01-labels/02-labels-survey.qmd
         - part-01-labels/03-labels-data-prep.qmd
         - part-01-labels/04-labels-demo.qmd
+        # - notebooks/demo/02-label-data_demo.ipynb
 
     - part: part-02-satellite/00-satellite.qmd  
       chapters:
@@ -92,5 +93,4 @@ execute:
   echo: true
   message: false
   warning: false
-
 

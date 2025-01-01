@@ -1,0 +1,56 @@
+name: mosaiks
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - cartopy
+  - contextily
+  - dask[complete]
+  - dask-geopandas
+  - dask-ml
+  - earthpy
+  # - exactextract 
+  - fiona
+  - folium
+  - geopandas
+  - geoplot
+  - geoviews
+  - geopy
+  - glum
+  - h5py
+  - ipython
+  - jupyter
+  - jupyterlab
+  - lz4
+  - matplotlib
+  - netcdf4
+  - numpy
+  - osmnx
+  - pandas
+  - pip
+  - planetary-computer
+  - pyarrow
+  - pycrs
+  - pyproj
+  - pyreadstat
+  - pysal
+  - pystac-client
+  - pystac
+  - python>=3.11
+  - pytorch
+  - rasterio
+  - rasterstats
+  - rioxarray
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - seaborn
+  - shapely
+  - stackstac
+  - statsmodels
+  - stac-vrt
+  - tqdm
+  - xarray
+  - pip:
+    - -r requirements.txt

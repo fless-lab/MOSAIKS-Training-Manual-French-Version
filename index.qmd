@@ -16,15 +16,15 @@ This is the first iteration of the MOSAIKS Training Manual! The manual serves as
 
 ## What is MOSAIKS?
 
-MOSAIKS stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework designed to simplify the use of satellite imagery and machine learning for analyzing socioeconomic and environmental outcomes across different geographic contexts and time periods.
+MOSAIKS stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework designed to simplify the use of satellite imagery and machine learning for predicting socioeconomic and environmental outcomes across different geographic contexts and time periods. MOSAIKS relis on random convolutions (developed in Rahimi and Recht (2008)) applied to satellite imagery, which extract task-agnostic features and enable researchers and practitioners to easily and flexibly predict a diversity of outcomes from raw imagery. 
 
 ## Who is this for?
 
-This comprehensive two-week program is designed for academics, professionals, and policymakers interested in leveraging MOSAIKS to better understand socioeconomic and environmental challenges. The course is particularly valuable for those working in:
+This comprehensive two-week program is designed for academics, professionals, and practitioners interested in leveraging MOSAIKS to better understand socioeconomic and environmental challenges. The course is particularly valuable for those working in:
 
 - Remote sensing and satellite imagery analysis
 - Machine learning applications with geospatial data 
-- Agricultural monitoring and assessment
+- Agricultural and environmental monitoring and assessment
 - Development research and policy making
 
 ## What will I learn?
@@ -36,7 +36,7 @@ Throughout this course, you'll learn practical applications through a combinatio
 - Best practices for implementation
 - Strategies for analyzing and interpreting results
 
-The curriculum covers the complete MOSAIKS workflow:
+The curriculum covers the complete MOSAIKS workflow, including:
 
 - Accessing and processing satellite imagery
 - Understanding MOSAIKS feature extraction
@@ -46,7 +46,7 @@ The curriculum covers the complete MOSAIKS workflow:
 - Applying models to various contexts
 - Working with survey data
 
-Whether you're new to MOSAIKS or looking to deepen your expertise, this course provides the tools and knowledge needed to effectively utilize this powerful framework.
+Whether you're new to MOSAIKS or looking to deepen your expertise, this course provides the tools and knowledge needed to effectively utilize this framework.
 
 ## Course structure 
 
@@ -66,6 +66,8 @@ This course is designed as an intensive two-week program that combines lectures,
 : Daily time divisions showing 2 morning sessions, 2 afternoon sessions, and a final time slot alloted for developing the course further. {#tbl-course-outline .striped .hover}
 
 Each day concludes with a Q&A and feedback session from 4:30-5:00, providing opportunities to clarify concepts and share ideas. It is expected that this first course will spur many new ideas and concepts which should be included in the future trainings. Please remember to take notes throughout each day with particular emphasis in areas you think could be explained better or that need additional topics covered. These can be areas that you struggled with or that you would anticipate could be difficult for others.
+
+While the in-person version of this course was designed with the schedule outlined above, other users can easily navigate throughout the course content as desired, noting that the chapter content is designed for sequential learning. 
 
 ## Course schedule
 
@@ -149,12 +151,14 @@ MOSAIKS was developed and is supported by a large team of researchers across mul
 
 Benjamin Recht, Esther Rolf, Tamma Carleton, Eugenio Noda, Hikari Murayama, Hannah Druckenmiller, Ian Bolliger, Jeanette Tseng, Jessica Katz, Jonathan Proctor, Luke Sherman, Miyabi Ishihara, Simon Greenhill, Solomon Hsiang, Taryn Fransen, Trinetta Chong, Vaishaal Shankar, Graeme Blair, Darin Christensen, Shopnavo Biswas, Karena Yan, Cullen Molitor, Grace Lewin, Steven Cognac, Juliet Cohen
 
+**MOSAIKS Training Manual Team:**
+Cullen Molitor, Tamma Carleton, Esther Rolf, Sean Luna McAdams, Heather Lahr
+
 **Partner Organizations:**
 
 - Center for Effective Global Action ([CEGA](https://cega.berkeley.edu/); UCB)
 - Environmental Markets Lab ([emLab](https://emlab.ucsb.edu/); UCSB) 
 - Global Policy Lab ([GPL](https://www.globalpolicy.science/); Stanford University)
-- Harvard Data Science Initiative ([HDSI](https://datascience.harvard.edu/); Harvard University)
 - Project on Resources and Governance ([PRG](https://projectrg.org/); UCLA)
 - Master of Environmental Data Science Program ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science); UCSB)
 

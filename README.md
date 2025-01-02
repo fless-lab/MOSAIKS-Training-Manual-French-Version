@@ -47,10 +47,10 @@ We welcome contributions to improve the manual. Before contributing, please revi
 
 ## Development team
 
-The MOSAIKS Training Manual is developed and maintained through collaboration between:
+The MOSAIKS Training Manual is developed and maintained by Cullen Molitor (CEGA; UC Berkeley) in collaboration with:
 
-- Center for Effective Global Action (CEGA; UCB)
-- Environmental Markets Lab (emLab; UCSB) 
+- Center for Effective Global Action (CEGA; UC Berkeley)
+- Environmental Markets Lab (emLab; UC Santa Barbara) 
 - Global Policy Lab (GPL; Stanford University)
 
 ## License

@@ -149,7 +149,7 @@ MOSAIKS was developed and is supported by a large team of researchers across mul
 
 **Development Team:**
 
-Benjamin Recht, Esther Rolf, Tamma Carleton, Eugenio Noda, Hikari Murayama, Hannah Druckenmiller, Ian Bolliger, Jeanette Tseng, Jessica Katz, Jonathan Proctor, Luke Sherman, Miyabi Ishihara, Simon Greenhill, Solomon Hsiang, Taryn Fransen, Trinetta Chong, Vaishaal Shankar, Graeme Blair, Darin Christensen, Shopnavo Biswas, Karena Yan, Cullen Molitor, Grace Lewin, Steven Cognac, Juliet Cohen
+Benjamin Recht, Cullen Molitor, Darin Christensen, Esther Rolf, Eugenio Noda, Grace Lewin, Graeme Blair, Hannah Druckenmiller, Hikari Murayama, Ian Bolliger, Jean Tseng, Jessica Katz, Jonathan Proctor, Juliet Cohen, Karena Yan, Luke Sherman, Miyabi Ishihara, Shopnavo Biswas, Simon Greenhill, Solomon Hsiang, Steven Cognac, Tamma Carleton, Taryn Fransen, Trinetta Chong, Vaishaal Shankar
 
 **MOSAIKS Training Manual Team:**
 Cullen Molitor, Tamma Carleton, Esther Rolf, Sean Luna McAdams, Heather Lahr
@@ -165,6 +165,7 @@ Cullen Molitor, Tamma Carleton, Esther Rolf, Sean Luna McAdams, Heather Lahr
 **Funding Support:**
 
 - [The Patrick J. McGovern Foundation](https://www.mcgovern.org/)
+- [The Fund for Innovation in Development (FID)](https://fundinnovation.dev/)
 - [The United States Agency for International Development (USAID)](https://www.usaid.gov/)
 - [United Nations Development Programme (UNDP)](https://www.undp.org/)
 

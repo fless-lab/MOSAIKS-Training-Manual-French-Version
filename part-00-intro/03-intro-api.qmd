@@ -24,7 +24,7 @@ To this end, we have worked to develop multiple ways to access MOSAIKS features:
 The first part of this book focuses on the MOSAIKS API and publicly available features. The second part will cover how to compute features from your own imagery.
 :::
 
-The MOSAIKS API should be considered the primary way to access features. It is a user-friendly interface that allows you to download features for any location on Earth. The API is designed to be accessible to users with a range of technical backgrounds, from beginners to experts.
+The MOSAIKS API should be considered the primary way to access features. It is a user-friendly interface that allows you to download features for any location on Earth. The API is designed to be accessible to users with a range of technical backgrounds, from beginners to experts. However, there are many settings where users will want or need to compute their own customized features. @sec-features-computing guides readers through this process.
 
 ## API Overview
 
@@ -34,7 +34,7 @@ The MOSAIKS API should be considered the primary way to access features. It is a
 [api.mosaiks.org](https://api.mosaiks.org/)
 :::
 
-We have put together a [Resource Page](https://api.mosaiks.org/portal/resources/ for MOSAIKS users (registration required), which includes example Python and R notebooks for using the pipeline.
+We have put together a [Resource Page](https://api.mosaiks.org/portal/resources/) for MOSAIKS users (registration required), which includes example Python and R notebooks for using the pipeline.
 
 Don’t forget to see our [Tutorial Page](https://www.mosaiks.org/tutorials), which has an example Python notebook that we walk through in the video.
 
@@ -98,9 +98,10 @@ This is a brief overview. Detailed instructions appear later in the manual (#sec
 Basic workflow:
 
 1. Obtain ground truth measurements ("labels")
-2. Download matching features via Map/File Query
+2. Download matching features via Map/File Query (or the pre-computed global-scale features at administrative boundary scale)
 3. Spatially merge labels and features
-4. Use regression to model relationship
+4. Use regression to model relationship between imagery and outcome
+5. Use regression results to predict outcome in new locations
 
 You can experiment with various machine learning approaches in the regression step. For beginners, we recommend starting with our example Jupyter notebook (@sec-mosaiks-demo-1) that demonstrates a simple ridge regression approach (suitable for both R and Python users).
 

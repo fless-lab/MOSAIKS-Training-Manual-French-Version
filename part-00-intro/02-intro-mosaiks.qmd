@@ -20,21 +20,21 @@ Right now, [numerous public satellite systems](https://www.ucsusa.org/resources/
 
 That is why linking satellite imaging to machine learning (sometimes referred to as SIML or SatML) is incredibly powerful. It enables vast amounts of unstructured image data to be transformed into structured information that can be used for planning, research, and decision-making.  
 
-**Our hope is that people all over the world can access and use SIML technologies**, but we recognize that many who would benefit from these tools don’t have the time or resources to manage enormous satellite imagery data sets and learn how to apply machine learning to them. MOSAIKS aims to lower the barriers to entry into SIML, diversifying the users of this powerful technology and the problems we solve with it.  
+**Our hope is that people all over the world can access and use SIML technologies**, but we recognize that many who would benefit from these tools don’t have the time or resources to manage enormous satellite imagery data sets and learn how to apply machine learning to them. 
 
 **INSERT IMAGE HERE**
 
 ## The solution 
 
-That’s why we developed MOSAIKS.
+That’s why we developed MOSAIKS. MOSAIKS aims to lower the barriers to entry into SIML, diversifying the users of this powerful technology and the problems we solve with it.  
 
-MOSAIKS is designed to work “out of the box” for a wide array of SIML applications, for people with no SIML expertise who work on normal desktop computers. MOSAIKS users never actually have to touch satellite imagery themselves and only need to have basic statistical training. 
+MOSAIKS is designed to work “out of the box” for a wide array of SIML applications, for people with no SIML expertise who work on normal desktop or laptop computers. For many applications, MOSAIKS users never have to touch satellite imagery themselves and only need to have basic statistical training. 
 
 ::: {.callout-tip}
-If you can run a regression, you can use MOSAIKS.
+If you can run a regression, you can use MOSAIKS!
 :::
 
-MOSAIKS empowers users to create their own new data sets from satellite imagery. We don’t control what variables users look at, and we never need to know. MOSAIKS is a system that allows users to quickly transform vast amounts of imagery into maps of new variables, using their own training data.
+MOSAIKS empowers users to create their own new datasets from satellite imagery. We don’t control what variables users look at, and we never need to know. MOSAIKS is a system that allows users to quickly transform vast amounts of imagery into maps of new variables, using their own training data.
 
 If you’ve ever been curious about trying machine learning with satellite imagery, but don’t know anything about machine learning or satellite imagery, MOSAIKS is for you.
 
@@ -44,29 +44,29 @@ And if you know a lot about machine learning and satellite imagery, MOSAIKS migh
 
 ## How MOSAIKS works
 
-The basic idea of MOSAIKS is to seperate users from the costly and difficult process of transforming imagery into inputs (called **“features”**) for a machine learning algorithm (**images → X**). We do that part, so users never have to download or manage imagery. Users then download a table of MOSAIKS features (**X**), link them to their own geocoded data on the outcome (**Y**) they are interested in (called “labels”) and run a linear regression to predict their labels using MOSAIKS features (**Y = Xβ**).  
+The basic idea of MOSAIKS is to seperate users from the costly and difficult process of transforming imagery into inputs (called **“features”**) to a downstream machine learning algorithm (**images → X**). The MOSAIKS team has computed these features globally, so in many use cases users never have to download or manage imagery themselves. Instead, users download a table of MOSAIKS features (**X**), link them to their own geocoded data on the outcome (**Y**) they are interested in predicting from satellite imagery (we call these data “labels”), and then run a linear regression (or something fancier if desired!) to predict their labels using MOSAIKS features (**Y = Xβ**). Importantly, this prediction can be performed in locations, time periods, and at spatial resolutions for which labels are not available. 
 
-All users use the same MOSAIKS features and just match them to their labels based on location. Users can run their analysis on any statistical software they are comfortable with. For most applications, the computing demands will not require users to work with specialized machines, since desktops and laptops work.
+Because MOSAIKS features synthesize information contained in raw imagery that is not tailored for any specific outcome (e.g., biodiversity, household income, land use), many users can use the same MOSAIKS features and simply match them to their own labels based on location. Users can run their analysis on any statistical software they are comfortable with. For most applications, the computing demands will not require users to work with specialized machines, since desktops and laptops work.
 
 ![[Rolf et al. 2021 Figure 1](https://www.nature.com/articles/s41467-021-24638-z/figures/1)](../images/rolf_et_al_2021-Fig_1.jpg)
 
-MOSAIKS works because MOSAIKS features capture a huge amount of information about the colors, patterns and textures that show up in satellite imagery. We don’t know what patterns/colors/textures will be important for the application that users have (since we don’t know what applications users will try), so we just try to capture all of them. The purpose of the regression step is to teach the model which patterns/colors/textures predict the labels, and then to use that understanding to make predictions in locations where users don’t have labels. In addition, MOSAIKS encodes image information in a way that allows for nonlinear relationships between labels and images, even though the regression that users implement is a linear regression.
+MOSAIKS works because MOSAIKS features capture a huge amount of information about the colors, patterns and textures that show up in satellite imagery. We don’t know what patterns/colors/textures will be important for the application that users have (since we don’t know what applications users will try), so we just try to capture all of them. The purpose of the regression step is to teach the model which patterns/colors/textures predict the labels, and then to use that understanding to make predictions in locations where users don’t have labels. In addition, MOSAIKS encodes image information in a way that allows for nonlinear relationships between labels and imagery data, even though the regression that users generally implement is a linear regression.
 
 ![Example of 4 (of 4,000) MOSAIKS feature maps (right) computed from satellite imagery (left). These features were chosen at random from what is available on the MOSAIKS API.](../images/US_features_high_res.png){#fig-us-api-features}
 
 ### Five steps to using MOSAIKS
 
-For users, the procedure for using MOSAIKS has five steps (corresponding figure from Rolf et al. is below):
+In many cases, users aiming to predict an outcome from satellite imagery can do so using pre-computed imagery features (**X**) in a simple linear regression framework. Later in this training course, we will detail more customized workflows that remain tractable but allow for more flexibility. In the standard case, however, the procedure for using MOSAIKS has five steps (corresponding figure from Rolf et al. is below):
 
-1. [Download MOSAIKS features](https://api.mosaiks.org/) (**X**) in the areas where you have labels.
+1. [Download pre-computed MOSAIKS features](https://api.mosaiks.org/) (**X**) corresponding to the locations where you have labels.
 
 1. Merge the features with your labels (**Y**) based on location (so features at position **P** are linked to labels at position **P**).
 
-1. Run a ridge regression of your labels on the MOSAIKS features (**Y = Xβ**).
+1. Run a cross-validated ridge regression of your labels on the MOSAIKS features (**Y = Xβ + e**).
 
 1. Evaluate performance.
 
-1. Use the results of the regression model (**β**) to make predictions (**Xβ**) in a new region of interest where you do not have labels, using only the MOSAIKS features that correspond with those new locations.
+1. Use the results of the regression model (**β**) to make predictions (**Xβ**) in a new region of interest where you do not have labels, using only the MOSAIKS features (**X**) that correspond with those new locations.
 
 ## What can MOSAIKS predict?
 
@@ -89,7 +89,7 @@ Importantly, all these predictions use the same set of satellite features - ther
 
 ### Building understanding
 
-If you are interested in using MOSAIKS, you can also see our [tutorial](https://youtu.be/ux2c-ot3Ce0?feature=shared) and [slide deck](https://www.dropbox.com/scl/fi/m46kn8jvnab5cra5e9ebz/NBER_MOSAIKS_2021.pdf?rlkey=xsi0fyg4dksugzwcgqslz4vu2&e=1&dl=0). And if you have a little bit of time, we recommend reading the [paper](https://www.nature.com/articles/s41467-021-24638-z) we wrote when we introduced the system. We wrote it with users in mind, so we tried to make it as clear and accessible as possible. 
+If you are interested in using MOSAIKS, you can also see a [tutorial](https://youtu.be/ux2c-ot3Ce0?feature=shared) and [slide deck](https://www.dropbox.com/scl/fi/m46kn8jvnab5cra5e9ebz/NBER_MOSAIKS_2021.pdf?rlkey=xsi0fyg4dksugzwcgqslz4vu2&e=1&dl=0). And if you have a little bit of time, we recommend reading the [paper](https://www.nature.com/articles/s41467-021-24638-z) we wrote when we introduced the system. We wrote it with users in mind, so we tried to make it as clear and accessible as possible. 
 
 If you use MOSAIKS, please reference: [Rolf et al. “A generalizable and accessible approach to machine learning with global satellite imagery.” Nature Communications (2021).](https://www.nature.com/articles/s41467-021-24638-z)
 

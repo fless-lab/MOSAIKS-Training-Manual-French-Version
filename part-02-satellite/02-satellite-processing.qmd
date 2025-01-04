@@ -11,6 +11,8 @@ status("draft")
 
 After selecting appropriate satellite imagery (as discussed in @sec-satellite-imagery), the next step is accessing and processing that imagery for use with MOSAIKS. This chapter covers key considerations and practical approaches for working with satellite data.
 
+![Source: [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/)](../images/mpc_gallery.jpg)
+
 ## Cloud vs local processing
 
 There are two main approaches to accessing and processing satellite imagery:
@@ -69,6 +71,12 @@ s2 = ee.ImageCollection('COPERNICUS/S2_SR')
 
 #### Microsoft Planetary Computer
 
+[Link to EDS 220](https://meds-eds-220.github.io/MEDS-eds-220-course/book/chapters/lesson-16-STAC.html)
+
+Microsoft Planetary Computer provides a multi-petabyte catalog of global environmental data that can easily be accessed through APIs. The MPC API is based on the [STAC (SpatioTemporal Asset Catalog)](https://stacspec.org/en) specification, which is an emerging open standard for geospatial data that aims to increase the interoperability of geospatial data, particularly satellite imagery.
+
+Use the `Client` function from the `pystac_client` package to access the catalog:
+
 ```python
 import planetary_computer as pc
 import pystac_client
@@ -78,7 +86,32 @@ catalog = pystac_client.Client.open(
     "https://planetarycomputer.microsoft.com/api/stac/v1",
     modifier=pc.sign_inplace,
 )
+
+# Define area of interest (downtown Santa Barbara, CA)
+area_of_interest = {
+    "type": "Polygon",
+    "coordinates":[
+        [
+            [-119.70608227128903, 34.426300194372274],
+            [-119.70608227128903, 34.42041139020533],
+            [-119.6967885126002, 34.42041139020533],
+            [-119.6967885126002, 34.426300194372274],
+            [-119.70608227128903, 34.426300194372274]
+        ]
+    ],
+}
+bbox = rasterio.features.bounds(area_of_interest)
+
+# Search for Sentinel-2 imagery
+search = stac.search(
+    bbox=bbox,
+    datetime="2016-01-01/2020-12-31",
+    collections=["sentinel-2-l2a"],
+    query={"eo:cloud_cover": {"lt": 25}},
+)
 ```
+For more information on using the Microsoft Planetary Computer API, see [Reading Data from the STAC API](https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/).
+
 
 ### Local downloads
 

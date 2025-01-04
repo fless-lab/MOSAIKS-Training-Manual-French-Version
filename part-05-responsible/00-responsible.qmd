@@ -1,4 +1,4 @@
-# Model uncertainty 
+# Responsible SIML
 
 ```{r}
 #| echo: false
@@ -14,8 +14,9 @@ The following chapters will discuss important aspects of model uncertainty and b
 
 | Chapter | Key Topics |
 |---------|:-----------|
-| @sec-uncertainty-intro | Error sources, confidence intervals, validation |
-| @sec-uncertainty-ethics | Responsible use, communication, limitations |
+| @sec-responsible-ethics | Responsible use, communication, limitations |
+| @sec-responsible-uncertainty | Error sources, confidence intervals, validation |
+| @sec-responsible-demo | Demonstrating how MOSAIKS can be  used to characterize uncertainty |
 
 : Outline of the uncertainty section {#tbl-section-outline .striped .hover}
 
@@ -26,3 +27,4 @@ These chapters provide
 
 The next chapter will 
 :::
+

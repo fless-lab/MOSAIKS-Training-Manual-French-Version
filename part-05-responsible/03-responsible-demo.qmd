@@ -1,0 +1,16 @@
+# Transparency (demo) {#sec-responsible-demo}
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```
+
+
+::: {.callout-note}
+# Looking forward
+
+The end! The only thing left is references.
+:::

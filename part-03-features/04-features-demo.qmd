@@ -1,0 +1,17 @@
+# Featurization demo {#sec-features-demo} 
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+source("../_common.R")
+status("draft")
+```
+
+
+
+::: {.callout-note}
+# Looking forward
+
+In the next section, we will 
+:::

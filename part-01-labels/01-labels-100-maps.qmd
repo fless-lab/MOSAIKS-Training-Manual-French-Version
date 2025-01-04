@@ -10,11 +10,11 @@ status("draft")
 
 ## Overview
 
-MOSAIKS is a designed to be useful for predicting anything one might see in satellite imagery. Some things are easier to predict than others, but the system is designed to be flexible. For instance, some variables can be seen directly in the imagery itself, such as forest cover. Other outcomes can only be seen through proxy variables like income and housing price which are not directly visible in the imagery but can be estimated by looking at objects in imagery that are correlated with them, such as roads, houses, and cars. 
+MOSAIKS is a designed to be useful for predicting anything that may be visible in satellite imagery. Some things are easier to predict than others, but the system is designed to be flexible. For instance, some variables can be seen directly in the imagery itself, such as forest cover, which clearly emits a visible green signal. Other outcomes can only be predicted through indirect relationships between imagery data and labels. For example, income and housing price are not themselves directly visible in raw imagery, but their values can be reliably estimated from objects (e.g., cars), textures (e.g., roofing material), and colors (e.g., grey road infrastructure) contained within the imagery. 
 
 ![MOSAIKS versatility makes it the perfect tool for a wide range of applications.](../images/army_knife.png){#fig-army-knife width="300px"}
 
-In this chapter we will explore over 100 different outcomes that have been tested with MOSAIKS. We will discuss the results of a selection of these outcomes in detail, and provide a brief overview of the rest.
+In this chapter we will discuss a new working paper (Proctor et al., *in prep.*) that explores the question of what can and cannot be reliably predicted from satellite imagery using MOSAIKS. This paper investigates over 100 different outcomes, reporting predictive performance for each using MOSAIKS. We will discuss the results of a selection of these outcomes in detail, and provide a brief overview of the rest. Of course, this list of outcomes is not exhaustive and reported performance can differ substantially across contexts and in particular with varying quality of ground truth data. We show these results as an initial investigation of what might be possible with SIML using MOSAIKS, but encourage users to conduct their own experiments as resulst are likely to differ in new settings. The pre-print of Proctor et al. will be posted here when publicly available. 
 
 ## One hundred maps
 
@@ -48,7 +48,7 @@ To test the global applicability of MOSAIKS, across a diverse set of outcomes, t
 
 : The authors selected 115 variables across 10 categories and set to work testing each in the MOSAIKS system. {#tbl-labels} 
 
-With this data in hand, we were able to devise a few simple questions to test:
+With this data in hand, they were able to devise a few simple questions to test:
 
 - Which variables can be effectively measured?
 - What are the most compelling applications?

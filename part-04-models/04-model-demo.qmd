@@ -1,4 +1,4 @@
-# Build, evaluate, deploy {#sec-model-choice}
+# Build a model {#sec-model-demo}
 
 ```{r}
 #| echo: false
@@ -11,5 +11,6 @@ status("draft")
 ::: {.callout-note}
 # Looking forward
 
-In the next chapter, 
+In the next chapter we will look at 
 :::
+

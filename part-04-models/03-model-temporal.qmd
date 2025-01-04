@@ -1,4 +1,4 @@
-# Modeling over time {#sec-model-time}
+# Going over time {#sec-model-time}
 
 ```{r}
 #| echo: false

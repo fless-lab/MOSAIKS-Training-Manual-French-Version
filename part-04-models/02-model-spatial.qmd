@@ -1,4 +1,4 @@
-# Modeling over space {#sec-model-space}
+# Going over space {#sec-model-space}
 
 ```{r}
 #| echo: false

@@ -51,23 +51,27 @@ book:
       chapters:
         - part-02-satellite/01-satellite-imagery.qmd
         - part-02-satellite/02-satellite-processing.qmd
+        - part-02-satellite/03-satellite-demo.qmd
 
     - part: part-03-features/00-features.qmd  
       chapters:
         - part-03-features/01-features-rcf.qmd
         - part-03-features/02-features-api.qmd
         - part-03-features/03-features-computing.qmd
+        - part-03-features/04-features-demo.qmd
 
     - part: part-04-models/00-model.qmd  
       chapters:
         - part-04-models/01-model-choice.qmd
         - part-04-models/02-model-spatial.qmd
         - part-04-models/03-model-temporal.qmd
+        - part-04-models/04-model-demo.qmd
 
-    - part: part-05-uncertainty/00-uncertainty.qmd  
+    - part: part-05-responsible/00-responsible.qmd  
       chapters:
-        - part-05-uncertainty/01-uncertainty-intro.qmd
-        - part-05-uncertainty/02-uncertainty-ethics.qmd
+        - part-05-responsible/01-responsible-ethics.qmd
+        - part-05-responsible/02-responsible-uncertainty.qmd
+        - part-05-responsible/03-responsible-demo.qmd
 
     - references.qmd
 

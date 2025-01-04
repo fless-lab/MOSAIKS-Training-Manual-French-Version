@@ -331,6 +331,22 @@ When working with data in Colab, copying files from Google Drive to the virtual 
 
 For example, reading a 1GB dataset from Drive might take 30 seconds, while reading from local VM storage could take just a few seconds. The time spent copying data once at the start of your session can save significant time during analysis. This can be especially true in a notebook environment when a user is developing code and may need to access and reaccess the data multiple times. 
 
+### Save outputs to Google Drive
+
+To save outputs or models to Google Drive:
+
+```python
+# Set the output directory
+output_dir = "/content/drive/MyDrive/project_folder/output"
+
+# Save outputs
+shutil.copytree(local_output, output_dir, dirs_exist_ok=True)
+```
+
+This will ensure that any work done in the notebook is saved to your Google Drive for future reference. If output files are not copied and they are stored in the VM, they will be lost when the runtime disconnects.
+
+---
+
 ::: {.callout-note}
 # Looking forward
 

@@ -25,6 +25,8 @@ This validation in a data-rich environment was crucial for establishing MOSAIKS 
 
 ## Demonstration code
 
+### Workflow
+
 Below is a link to a Jupyter notebook intented to demonstrate practical use of MOSAIKS with real data. In fact, this notebook uses the original input data and features from Rolf et al. 2021. The code demonstrates:
 
 1. Loading pre-computed MOSAIKS features and labels
@@ -32,6 +34,8 @@ Below is a link to a Jupyter notebook intented to demonstrate practical use of M
 3. Training a ridge regression model
 4. Evaluating predictions
 5. Visualizing results
+
+### Label data
 
 The demo showcases MOSAIKS predicting several variables, and with a subset of the data used in, the original paper. The variables include:
 
@@ -65,7 +69,11 @@ The demo showcases MOSAIKS predicting several variables, and with a subset of th
 
 A user simply needs to select which variable they would like to predict, and no other changes need to be made to the code. All data has been preprocessed and the code will download the necessary files from Zenodo.
 
+### Constraints
+
 To stay within the Colab free tier limits of memory usage, we subset the data. We take a 50% random sample of both features (*K*=4,000 instead of 8,192) and observations (*N*=50,000 instead of 100,000) compared to the original paper. Despite using this reduced dataset, the demo still achieves strong predictive performance, highlighting MOSAIKS's efficiency.
+
+## Run the code!
 
 ::: {.callout-note}
 # Click the badge to run the demonstration! 

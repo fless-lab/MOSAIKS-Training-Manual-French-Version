@@ -334,6 +334,6 @@ For example, reading a 1GB dataset from Drive might take 30 seconds, while readi
 ::: {.callout-note}
 # Looking forward
 
-In the next chapter we will take a closer look at MOSAIKS. 
+In the next chapter we will take a closer look at the MOSAIKS framework, its core concepts, and how it can be applied to solve real-world problems. 
 :::
 

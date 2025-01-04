@@ -44,7 +44,7 @@ The following chapters will guide you through getting started with MOSAIKS:
 | @sec-intro-compute | Google Colab, data management, implementation practices |
 | @sec-intro-mosaiks | Core concepts, system architecture, capabilities |
 | @sec-intro-api | API access, data products, authentication |
-| @sec-mosaiks-demo-1 | Basic workflow, example analysis, common pitfalls |
+| @sec-intro-demo| Basic workflow, example analysis, common pitfalls |
 
 : Outline of the introduction section {#tbl-section-outline .striped .hover}
 
@@ -53,5 +53,5 @@ These chapters provide both theoretical understanding and practical skills neede
 ::: {.callout-note}
 # Looking forward
 
-In the next chapter, we'll set up our computing environment using Google Colab.
+In the next chapter, we'll set up our computing environment using Google Colab. This course uses Colab to demonstrate various ascpects of MOSAIKS, in a free and accessible environment.
 :::

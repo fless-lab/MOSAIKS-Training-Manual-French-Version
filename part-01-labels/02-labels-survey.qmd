@@ -207,5 +207,5 @@ This integration of MOSAIKS with survey data represents a powerful approach for 
 ::: {.callout-note}
 # Looking forward
 
-In the next chapter, we'll look at practical guidance for preparing label data for use with MOSAIKS, including data cleaning, agregation, and joining to satellite features.
+In the next chapter, we'll look at practical guidance for preparing label data for use with MOSAIKS, including data cleaning, aggregation, and joining to satellite features.
 :::

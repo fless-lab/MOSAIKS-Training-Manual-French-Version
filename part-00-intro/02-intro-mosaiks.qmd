@@ -43,16 +43,16 @@ And if you know a lot about machine learning and satellite imagery, MOSAIKS migh
 ## How MOSAIKS works
 
 ::: {.callout-tip}
-# Recomended reading
+# Recommended reading
 
 [A generalizable and accessible approach to machine learning with global satellite imagery (Rolf et al.  2021)](https://www.nature.com/articles/s41467-021-24638-z)
 :::
 
 ### Separating users from imagery
 
-The basic idea of MOSAIKS is to seperate users from the costly and difficult process of transforming imagery into inputs (called **“features”**) to a downstream machine learning algorithm (**images → X**). The MOSAIKS team has computed these features globally, so in many use cases users never have to download or manage imagery themselves. Instead, users download a table of MOSAIKS features (**X**), link them to their own geocoded data on the outcome (**Y**) they are interested in predicting from satellite imagery (we call these data “labels”), and then run a linear regression (or something fancier if desired!) to predict their labels using MOSAIKS features (**Y = Xβ**). Importantly, this prediction can be performed in locations, time periods, and at spatial resolutions for which labels are not available. 
+The basic idea of MOSAIKS is to separate users from the costly and difficult process of transforming imagery into inputs (called **“features”**) to a downstream machine learning algorithm (**images → X**). The MOSAIKS team has computed these features globally, so in many use cases users never have to download or manage imagery themselves. Instead, users download a table of MOSAIKS features (**X**), link them to their own geocoded data on the outcome (**Y**) they are interested in predicting from satellite imagery (we call these data “labels”), and then run a linear regression (or something fancier if desired!) to predict their labels using MOSAIKS features (**Y = Xβ**). Importantly, this prediction can be performed in locations, time periods, and at spatial resolutions for which labels are not available. 
 
-### Generalizablity of MOSAIKS
+### Generalizability of MOSAIKS
 
 Because MOSAIKS features synthesize information contained in raw imagery that is not tailored for any specific outcome (e.g., biodiversity, household income, land use), many users can use the same MOSAIKS features and simply match them to their own labels based on location. Users can run their analysis on any statistical software they are comfortable with. For most applications, the computing demands will not require users to work with specialized machines, since desktops and laptops work.
 
@@ -101,7 +101,7 @@ The figure below is from the original MOSAIKS publication (Rolf et al. 2021). Th
 
 ![(100,000 daytime images were each converted to 8,192 features and stored. Seven tasks were then selected based on coverage and diversity. Predictions were generated for each task using the same procedure. **Left maps:** 80,000 observations used for training and validation, aggregated up to 20 km × 20 km cells for display. **Right maps:** concatenated validation set estimates from 5-fold cross-validation for the same 80,000 grid cells (observations are never used to generate their own prediction), identically aggregated for display. **Scatters:** Validation set estimates (vertical axis) vs. ground truth (horizontal axis); each point is a ~1 km × 1 km grid cell. Black line is at 45∘. Test-set and validation set performance are essentially identical; validation set values are shown for display purposes only, as there are more observations. The tasks in the top three rows are uniformly sampled across space, the tasks in the bottom four rows are sampled using population weights; grey areas were not sampled in the experiment. Source: [Rolf et al. 2021 Figure 2](https://www.nature.com/articles/s41467-021-24638-z/figures/2))](../images/rolf_et_al_2021-Fig_2.png){#fig-mosaiks-predictions}
 
-Importantly, all these predictions use the same set of satellite features - there's no need to reprocess the imagery for different tasks. MOSAIKS achieves accuracy comparable to more complex deep learning methods, but at a fraction of the computational cost. This is the power of MOSAIKS, it removes the need for repreocessing the imagery after the initial encoding.
+Importantly, all these predictions use the same set of satellite features - there's no need to reprocess the imagery for different tasks. MOSAIKS achieves accuracy comparable to more complex deep learning methods, but at a fraction of the computational cost. This is the power of MOSAIKS, it removes the need for reprocessing the imagery after the initial encoding.
 
 ## Summary
 

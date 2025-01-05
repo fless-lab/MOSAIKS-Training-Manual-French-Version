@@ -71,7 +71,7 @@ Several satellite providers offer pre-processed data products specifically desig
 - Global coverage at 250m-1km resolution since 2000
 - Ideal for monitoring seasonal vegetation dynamics
 
-#### Planet basemaps
+#### Planet Basemap
 - Quarterly visual composites from multiple PlanetScope satellites
 - Cloud-free mosaics using best available pixels
 - Color-balanced and radiometrically calibrated

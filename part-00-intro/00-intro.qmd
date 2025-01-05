@@ -35,6 +35,10 @@ However, MOSAIKS may not be the best choice when:
 - Real-time predictions are essential
 - Your application requires interpretable features
 
+::: {.callout-tip}
+There may be an [existing tool](https://github.com/satellite-image-deep-learning) that meets your needs. MOSAIKS is not the best choice for every application.
+:::
+
 ## Section outline
 
 The following chapters will guide you through getting started with MOSAIKS:
@@ -53,5 +57,5 @@ These chapters provide both theoretical understanding and practical skills neede
 ::: {.callout-note}
 # Looking forward
 
-In the next chapter, we'll set up our computing environment using Google Colab. This course uses Colab to demonstrate various ascpects of MOSAIKS, in a free and accessible environment.
+In the next chapter, we'll set up our computing environment using Google Colab. This course uses Colab to demonstrate various aspects of MOSAIKS, in a free and accessible environment.
 :::

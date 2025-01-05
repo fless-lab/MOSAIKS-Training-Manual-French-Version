@@ -28,7 +28,7 @@ MOSAIKS relies on random convolutional features (RCFs) computed from satellite i
 Features can be computed at higher or lower resolutions than 1 km². This is discussed in @sec-features-computing. 
 :::
 
-### Feature aggrgegation
+### Feature aggregation
 
 The default 1 km² resolution of MOSAIKS is generally the maximum resolution the label data should be in. If the labels are in lower resolution, the satellite features can be aggregated up to larger areas to match. Typical aggregation might be to larger grid cell, census tract, county/district, or state/province levels. The exact aggregation level is contingent on the spatial resolution of the label data. 
 
@@ -36,7 +36,7 @@ The default 1 km² resolution of MOSAIKS is generally the maximum resolution the
 
 ### API Features 
 
-Currently the MOSAIKS API has a single set of global features ready to download. The features are publicly available for download; this is the fastest and easiest way to begin using MOSAIKS. They come from Planet Labs, Inc. [Basemaps](https://developers.planet.com/docs/basemaps/) product Global Quarterly 2019 (qaurter 3) which has a native resolution of 4.77 m in the red, green, and blue bands of the visual spectrum. Given this, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). To use MOSAIKS for time series data is possible, just not currently with precomputed and publicly available features. To access API features see @sec-api
+Currently the MOSAIKS API has a single set of global features ready to download. The features are publicly available for download; this is the fastest and easiest way to begin using MOSAIKS. They come from Planet Labs, Inc. [Visual Basemap](https://developers.planet.com/docs/basemaps/) product Global Quarterly 2019 (quarter 3) which has a native resolution of 4.77 m in the red, green, and blue bands of the visual spectrum. Given this, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). To use MOSAIKS for time series data is possible, just not currently with precomputed and publicly available features. To access API features see @sec-api
 
 | Resolution | Time Period | Weighting         | Download      |
 |------------|-------------|-------------------|---------------|

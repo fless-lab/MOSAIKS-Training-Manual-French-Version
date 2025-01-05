@@ -76,7 +76,7 @@ Install additional packages using:
 ```python
 # add a -c conda-forge to select the conda-forge channel
 # add a -q flag to install quietly (reduced output)
-# add a -y flag to prememptively accept other changes
+# add a -y flag to preemptively accept other changes
 !conda install package_name
 ```
 ## pip
@@ -165,7 +165,7 @@ You can view all available shortcuts in Colab by pressing Ctrl+M H (⌘+M H on M
    - Consider using smaller data samples during development
 
 ::: {.callout-important}
-Memory errors are common when working with large datasets or complex models on the free tier of Colab. If you encounter these issues, consider using a paid version of Colab or connecting a Google Cloud Platform vitual machine (VM).
+Memory errors are common when working with large datasets or complex models on the free tier of Colab. If you encounter these issues, consider using a paid version of Colab or connecting a Google Cloud Platform virtual machine (VM).
 :::
 
 ### Getting help
@@ -177,7 +177,7 @@ Memory errors are common when working with large datasets or complex models on t
 
 ## AI assistance in Colab
 
-Google Gemini is a powerful AI assistant that is seemlesly integrated with Google Colab. You can use it to generate code, comments, or markdown text to improve your notebooks. Gemini can be accessed in several ways in Colab to help you with your work, all start by selecting the Gemini icon in different parts of the notebook editor.
+Google Gemini is a powerful AI assistant that is seamlessly integrated with Google Colab. You can use it to generate code, comments, or markdown text to improve your notebooks. Gemini can be accessed in several ways in Colab to help you with your work, all start by selecting the Gemini icon in different parts of the notebook editor.
 
 ::: {.callout-note}
 # Gemini icon
@@ -329,7 +329,7 @@ When working with data in Colab, copying files from Google Drive to the virtual 
 
 4. **Better for Iterative Processing**: If your code needs to read the same data multiple times (like in machine learning training loops), local access is much more efficient.
 
-For example, reading a 1GB dataset from Drive might take 30 seconds, while reading from local VM storage could take just a few seconds. The time spent copying data once at the start of your session can save significant time during analysis. This can be especially true in a notebook environment when a user is developing code and may need to access and reaccess the data multiple times. 
+For example, reading a 1GB dataset from Drive might take 30 seconds, while reading from local VM storage could take just a few seconds. The time spent copying data once at the start of your session can save significant time during analysis. This can be especially true in a notebook environment when a user is developing code and may need to access and re-access the data multiple times. 
 
 ### Save outputs to Google Drive
 

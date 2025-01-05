@@ -61,7 +61,7 @@ Once registered, you can log in to access the MOSAIKS features and begin downloa
 From the landing page, you can read additional information about MOSAIKS and access resources to help you get started. 
 
 ::: {.callout-note}
-This book is developed to proivide you with all the information you need to use MOSAIKS.
+This book is developed to provide you with all the information you need to use MOSAIKS.
 :::
 
 The API contains the following pages:
@@ -83,7 +83,7 @@ The API contains the following pages:
 
 Currently the MOSAIKS API has a single set of global features (with several aggregation levels). The features are freely available to the public for download; this is the fastest and easiest way to begin using MOSAIKS. 
 
-The API features use input imagery from Planet Labs, Inc. [Visual Basemaps](https://developers.planet.com/docs/basemaps/) Global Quarterly 2019 (qaurter 3) product. Image quality, and therfore  feature quality, may be affected by local conditions. For example, an area undergoing a rainy season in the third quarter (July to September), is liklely to contain image artifacts from cloud cover. This will in turn effect the feature calculations. For more details on the input imagery @sec-satellite-imagery.
+The API features use input imagery from Planet Labs, Inc. [Visual Basemap](https://developers.planet.com/docs/basemaps/) Global Quarterly 2019 (quarter 3) product. Image quality, and therefore  feature quality, may be affected by local conditions. For example, an area undergoing a rainy season in the third quarter (July to September), is likely to contain image artifacts from cloud cover. This will in turn effect the feature calculations. For more details on the input imagery @sec-satellite-imagery.
 
 Given the static nature of the API, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). To use MOSAIKS for time series data is possible, just not currently with precomputed and publicly available features. For more information on the API features see @sec-features-api
 
@@ -124,11 +124,11 @@ The file query and map query are the two methods to obtain the high resolution (
 
 ![API Map Query (left) and File Query (right)](../images/api-map-n-file.png){#fig-api-queries}
 
-#### Agreggated feature files
+#### Aggregated feature files
 
-Many users may find it easier to work with features aggregated to some level. The MOSAIKS API offers pre-aggregated features to accomodate these users need. Features come at several levels, including larger grid cells (0.1 and 1 degree) or summarized to administrative boundaries (ADM0, ADM1, andd ADM2). These files are available for download as either single or chunked files depending on the resolution.
+Many users may find it easier to work with features aggregated to some level. The MOSAIKS API offers pre-aggregated features to accommodate these users need. Features come at several levels, including larger grid cells (0.1 and 1 degree) or summarized to administrative boundaries (ADM0, ADM1, and ADM2). These files are available for download as either single or chunked files depending on the resolution.
 
-These pre-aggregated features are particulalry useful for users in a few scenarios:
+These pre-aggregated features are particularly useful for users in a few scenarios:
 
 1. You have data at a scale larger than the 0.01 degree grid cells. Many datasets come at the country, state, or county level. 
 

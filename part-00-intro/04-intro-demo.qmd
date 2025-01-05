@@ -27,7 +27,7 @@ This validation in a data-rich environment was crucial for establishing MOSAIKS 
 
 ### Workflow
 
-Below is a link to a Jupyter notebook intented to demonstrate practical use of MOSAIKS with real data. In fact, this notebook uses the original input data and features from Rolf et al. 2021. The code demonstrates:
+Below is a link to a Jupyter notebook intended to demonstrate practical use of MOSAIKS with real data. In fact, this notebook uses the original input data and features from Rolf et al. 2021. The code demonstrates:
 
 1. Loading pre-computed MOSAIKS features and labels
 2. Merging the features and labels
@@ -55,7 +55,7 @@ The demo showcases MOSAIKS predicting several variables, and with a subset of th
 
 ## Nighttime Lights
 
-![Nighttime lights luminosity input data generated from nighttime satellite imagery, which is provided by the Earth Observations Group at the National Oceanic and Atmospheric Administration (NOAA) and the National Geogphysical Data Center (NGDC). These data can be accessed [here](https://eogdata.mines.edu/products/vnl/).](../images/f2_night_lights.jpg){#fig-night-lights}
+![Nighttime lights luminosity input data generated from nighttime satellite imagery, which is provided by the Earth Observations Group at the National Oceanic and Atmospheric Administration (NOAA) and the National Geophysical Data Center (NGDC). These data can be accessed [here](https://eogdata.mines.edu/products/vnl/).](../images/f2_night_lights.jpg){#fig-night-lights}
 
 ## Income
 
@@ -97,7 +97,7 @@ Consider watching this demonstration instead!
 
 {{< video https://www.youtube.com/embed/ux2c-ot3Ce0?si=Oalkj-4MsJN5hNCh >}}
 
-An overview of MOSAIKS and a live demonstration of generating novel predictions using the system. Video recoreded by CIGAR Generalized Planetary Remote Sensing - 2020 Convention session. Presented by Esther Rolf and Tamma Carleton.
+An overview of MOSAIKS and a live demonstration of generating novel predictions using the system. Video recorded by CIGAR Generalized Planetary Remote Sensing - 2020 Convention session. Presented by Esther Rolf and Tamma Carleton.
 :::
 
 ## What's next? 

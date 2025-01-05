@@ -189,6 +189,8 @@ Continuous variables take numeric values along a spectrum, such as:
 
 For continuous variables, MOSAIKS typically uses regression approaches and evaluates performance using metrics like R² (coefficient of determination) or RMSE (root mean square error). The R² values reported throughout this chapter indicate the proportion of variance in the outcome that is explained by the MOSAIKS predictions.
 
+![Continuous variable example showing the breeding bird species diversity over the continental United States](../images/proctor_et_al_100_breeding_birds_plot.png){#fig-100-maps-birds-plot}
+
 ### Categorical variables
 
 Categorical variables group observations into distinct classes or categories, such as:
@@ -207,6 +209,8 @@ For categorical variables, MOSAIKS can be used in two ways:
    - Use a one-vs-all approach, treating each category as a separate binary classification problem
    - Output probabilities for each possible category that sum to 1
    - Convert categories to numeric values if they have a natural ordering
+
+![Classifier example showing Ecoregions of the world.](../images/proctor_et_al_100_ecoregions_comparison.jpg){#fig-ecoregions-comparison}
 
 ### Choosing appropriate metrics
 

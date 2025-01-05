@@ -26,7 +26,7 @@ To this end, we have worked to develop multiple ways to access MOSAIKS features:
 | [Rolf et al 2021](https://codeocean.com/capsule/6456296/tree/v2) | [Google Static Maps](https://developers.google.com/maps/documentation/maps-static/start) | Continental United States (~100k locations) | 0.01° | 2019 | unweighted | 
 | @sec-features-computing | Any - see @sec-satellite-imagery  | User-defined | User-defined | User-defined | User-defined | 
 
-: Summary of MOSAIKS feature sources {#tbl-features-options}
+: Summary of MOSAIKS feature sources. The weighting column indicates that the features were generated at 0.01 degree resolution and are weighted when they are aggregated up to lower resolutions. The available weighting schemes are based on area of the aggregation polygon, or by the population of the the aggregation polygon. {#tbl-features-options}
 
 The MOSAIKS API should be considered the primary way to access features. It is a user-friendly interface that allows you to download features for any location on Earth. The API is designed to be accessible to users with a range of technical backgrounds, from beginners to experts. For more details on what features are available on the API, see @sec-features-api.
 
@@ -128,6 +128,8 @@ The file query and map query are the two methods to obtain the high resolution (
 
 Many users may find it easier to work with features aggregated to some level. The MOSAIKS API offers pre-aggregated features to accommodate these users need. Features come at several levels, including larger grid cells (0.1 and 1 degree) or summarized to administrative boundaries (ADM0, ADM1, and ADM2). These files are available for download as either single or chunked files depending on the resolution.
 
+At each level of aggregation, we offer area weighted features and population weighted features. Population weighted features use weights from the Gridded Population of the World ([GPWv4](https://earthdata.nasa.gov/data/projects/gpw)) population density dataset. The area weighting scheme is based on the area of the aggregation polygon.
+
 These pre-aggregated features are particularly useful for users in a few scenarios:
 
 1. You have data at a scale larger than the 0.01 degree grid cells. Many datasets come at the country, state, or county level. 
@@ -137,7 +139,7 @@ These pre-aggregated features are particularly useful for users in a few scenari
 1. You want to do global analysis and don't have the computational resources to work with the full 0.01 degree grid cells.
 
 ::: {.callout-tip}
-If you want to make high resolution predictions, with low resolution label data, you can build your model with aggregated features and use the high resolution features to make predictions. 
+If you want to make high resolution predictions, with low resolution label data, you can build your model with aggregated features and use the high resolution features to make predictions. This will be covered in @sec-model-space. 
 :::
 
 In all cases using the pre-aggregated features can save you time and computational resources. 
@@ -145,6 +147,7 @@ In all cases using the pre-aggregated features can save you time and computation
 > **Scenario:** You are working with a Living Standards Measurement Study - Integrated Surveys on Agriculture ([LSMS-ISA](https://www.worldbank.org/en/programs/lsms/initiatives/lsms-ISA)). This dataset has survey data with geographic coordinates at the household level. To protect, the privacy of the respondents, the data is jittered within a 5 km radius but it always remains within local administrative boundaries. You can therefore summarize your labels to the administrative units and build a model with the aggregated features. 
 
 ![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](../images/US_feature_summaries.png){#fig-api-aggregated}
+
 
 ## Using MOSAIKS features for prediction
 

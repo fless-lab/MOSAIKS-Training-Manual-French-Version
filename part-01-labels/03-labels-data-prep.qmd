@@ -73,6 +73,8 @@ For example, a dataset with crop yield data could look like:
 | ...         | ...       | ...  | ...        | 
 | *N*         | Kitwe     | 2019 | 2.383      | 
 
+: Fictional crop yield data for three districts in Zambia. Each observation includes the district name, year, and crop yield in metric tons per hectare (mt/ha). {#tbl-crop-yield}
+
 And a dataset with district level aggregate features could look like:
 
 | Observation | District  | Year | Feature 1 | Feature 2 | ... | Feature *K* |
@@ -82,6 +84,8 @@ And a dataset with district level aggregate features could look like:
 | ...         | ...       | ...  | ...       | ...       | ... | ...         |
 | *N*         | Kitwe     | 2019 | 10.6      | 1.1       | ... | 2.2         |
 
+: Fictional feature data for three districts in Zambia. Each observation includes the district name, year, and *K* features. {#tbl-features}
+
 Finally, the joined dataset would look like:
 
 | Observation | District  | Year | Crop Yield | Feature 1 | Feature 2 | ... | Feature *K* |
@@ -90,6 +94,8 @@ Finally, the joined dataset would look like:
 | 2           | Kabwe     | 2019 | 1.878      | 2.9       | 5.3       | ... | 11.2        |
 | ...         | ...       | ...  | ...        | ...       | ...       | ... | ...         |
 | *N*         | Kitwe     | 2019 | 2.383      | 10.6      | 1.1       | ... | 2.2         |
+
+: Joined dataset with crop yield and feature data for three districts in Zambia. Each observation includes the district name, year, crop yield, and *K* features. {#tbl-joined-data}
 
 In the above example, our geographic location is the district and our label is the crop yield (mt/ha). We then have *K* columns containing the features and *N* observations. 
 

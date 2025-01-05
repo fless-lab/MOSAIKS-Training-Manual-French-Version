@@ -10,10 +10,6 @@ status("draft")
 
 ## Introduction
 
-::: {.callout-tip}
-Chapters @sec-intro-compute through @sec-labels-demo will focus on publicly available features and label data. Chapters @sec-satellite-imagery through @sec-features-demo will cover how to compute features from imagery.
-:::
-
 At its core, MOSAIKS requires two main inputs: satellite features and ground truth data. Our aim is to make these features as accessible as possible so that the majority of users do not have to worry about the technical details of satellite imagery processing.
 
 To this end, we have worked to develop multiple ways to access MOSAIKS features:
@@ -28,11 +24,16 @@ To this end, we have worked to develop multiple ways to access MOSAIKS features:
 
 : Summary of MOSAIKS feature sources. The weighting column indicates that the features were generated at 0.01 degree resolution and are weighted when they are aggregated up to lower resolutions. The available weighting schemes are based on area of the aggregation polygon, or by the population of the the aggregation polygon. {#tbl-features-options}
 
+::: {.callout}
+- Chapters -@sec-intro-compute through -@sec-labels-demo focus on publicly available features 
+- Chapters -@sec-satellite-imagery through -@sec-features-demo cover computing custom features from imagery
+:::
+
 The MOSAIKS API should be considered the primary way to access features. It is a user-friendly interface that allows you to download features for any location on Earth. The API is designed to be accessible to users with a range of technical backgrounds, from beginners to experts. For more details on what features are available on the API, see @sec-features-api.
 
 However, there are many settings where users will want or need to compute their own customized features. @sec-features-computing guides readers through this process.
 
-## API Overview
+## MOSAIKS API
 
 ::: {.callout-tip}
 # MOSAIKS API Link
@@ -48,11 +49,11 @@ Visit [api.mosaiks.org](https://api.mosaiks.org/).
 
 ![Login page for the MOSAIKS API.](../images/api-home.png){#fig-api-login}
 
-Select `Register` to create an account. You'll need to provide:
+Select `Register` to create an account. You will need to provide a username, an email, and a password.
 
-![Registration page for the MOSAIKS API. Users will need to provide a username, an email, and a password.](../images/api-register.png){#fig-api-register}
+![Registration page for the MOSAIKS API.](../images/api-register.png){#fig-api-register}
 
-Once registered, you can log in to access the MOSAIKS features and begin downloading data.
+Once registered, you can log in to begin downloading MOSAIKS features.
 
 ![MOSAIKS API landing page.](../images/api-landing.png){#fig-api-landing}
 
@@ -79,58 +80,72 @@ The API contains the following pages:
 
 : MOSAIKS API pages and descriptions. {#tbl-api-pages}
 
-### API Features 
+### API features 
 
 Currently the MOSAIKS API has a single set of global features (with several aggregation levels). The features are freely available to the public for download; this is the fastest and easiest way to begin using MOSAIKS. 
 
 The API features use input imagery from Planet Labs, Inc. [Visual Basemap](https://developers.planet.com/docs/basemaps/) Global Quarterly 2019 (quarter 3) product. Image quality, and therefore  feature quality, may be affected by local conditions. For example, an area undergoing a rainy season in the third quarter (July to September), is likely to contain image artifacts from cloud cover. This will in turn effect the feature calculations. For more details on the input imagery @sec-satellite-imagery.
 
-Given the static nature of the API, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). To use MOSAIKS for time series data is possible, just not currently with precomputed and publicly available features. For more information on the API features see @sec-features-api
+Given the static nature of the API, the easiest way to get started with MOSAIKS is to have label data for a recent time period (ideally from 2019 for fast changing labels, or a close year for more steady labels). 
 
 ![Planet Labs basemap imagery (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](../images/api-features.png){#fig-api-features}
 
-### Downloading features 
+::: {.callout-note}
+Using MOSAIKS for time series data is possible and can work well, however this currently requires computing your own custom features. See @sec-features-computing and @sec-model-time for more information.
+:::
 
-The MOSAIKS features are organized using a 0.01 x 0.01 degree latitude-longitude global grid. For simplicity, we store these features in a tabular format with latitude and longitude coordinates. These coordinates are the center of each grid cell.
+The MOSAIKS features are created using a 0.01 x 0.01 degree latitude-longitude global land grid. These are the native features available for download from the API, but it also offers pre-aggregated features at 0.1 and 1 degree resolution, as well as administrative boundaries (ADM0, ADM1, and ADM2).
 
-When you download features, you'll receive them in a tabular .csv format where:
+<!-- ### Downloading API features  -->
 
-- Each row represents a unique grid cell
-- The first two columns contain latitude and longitude coordinates
+### High resolution features
+
+The file query and map query are the two methods to obtain the high resolution (0.01 degree) features through the API. For simplicity, we store these features in a tabular format with latitude and longitude coordinates. These coordinates are the center of each grid cell.
+
+When you download the high resolution features (0.01 degree), you will receive them in a tabular .csv format where:
+
+- Each row (*N*) represents a unique grid cell
+- The first two columns contain latitude and longitude coordinates (grid centroids)
 - The remaining columns represent *K* features (currently *K* = 4000 features)
 
-Important notes about downloads:
+> **Note:** There is a limit of *N* = 100,000 records per query
 
-- Files remain available for download for 15 days
-- After 15 days, files are automatically deleted from the system
-- There is a limit of *N* = 100,000 records per query
+#### Map query
 
-#### Feature query
-
-The file query and map query are the two methods to obtain the high resolution (0.01 degree) features through the API.
-
-1. **Map Query**
 - Create rectangular boxes by specifying latitude and longitude coordinates
 - Multiple boxes can be created
 - The system displays an estimated number of records for each box
 - Note that estimates are based on box area and may not reflect actual record numbers, especially for areas containing seas and oceans
 
-2. **File Query** 
+![MOSAIKS API Map Query page.](../images/api-map-query.png){#fig-api-map}
+
+::: {.callout-tip}
+Use [geojson.io](https://geojson.io/#new&map=2/0/20) to find the bounding box coordinates for your area of interest.
+:::
+
+#### File query 
+
 - Submit a file with custom latitude and longitude coordinates
 - The API returns features for grid cells closest to your input coordinates
 - Points are allocated to the nearest grid point if they don't exactly match
 - The output file may have a different number of rows than your input
 - Point ordering may change in the output
 
-![API Map Query (left) and File Query (right)](../images/api-map-n-file.png){#fig-api-queries}
+![API File Query](../images/api-file-query.png){#fig-api-queries}
 
-#### Aggregated feature files
+### Aggregated features
 
-Many users may find it easier to work with features aggregated to some level. The MOSAIKS API offers pre-aggregated features to accommodate these users need. Features come at several levels, including larger grid cells (0.1 and 1 degree) or summarized to administrative boundaries (ADM0, ADM1, and ADM2). These files are available for download as either single or chunked files depending on the resolution.
+Many users may find it easier to work with features aggregated to some level. The MOSAIKS API offers pre-aggregated features to accommodate these needs. The API offers several levels, including larger grid cells (0.1 and 1 degree) or summarized to administrative boundaries (ADM0, ADM1, and ADM2). These files are available for download as either single or chunked files depending on the resolution.
 
-At each level of aggregation, we offer area weighted features and population weighted features. Population weighted features use weights from the Gridded Population of the World ([GPWv4](https://earthdata.nasa.gov/data/projects/gpw)) population density dataset. The area weighting scheme is based on the area of the aggregation polygon.
+![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](../images/US_feature_summaries.png){#fig-api-aggregated}
 
-These pre-aggregated features are particularly useful for users in a few scenarios:
+#### Weighting schemes
+
+At each level of aggregation, we offer area weighted features and population weighted features. Population weights are from the Gridded Population of the World ([GPWv4](https://earthdata.nasa.gov/data/projects/gpw)) population density dataset. The area weighting scheme is based on the area of the high resolution grid cells.
+
+#### When to use aggregated features
+
+The aggregated features are particularly useful in a few scenarios:
 
 1. You have data at a scale larger than the 0.01 degree grid cells. Many datasets come at the country, state, or county level. 
 
@@ -138,16 +153,13 @@ These pre-aggregated features are particularly useful for users in a few scenari
 
 1. You want to do global analysis and don't have the computational resources to work with the full 0.01 degree grid cells.
 
-::: {.callout-tip}
-If you want to make high resolution predictions, with low resolution label data, you can build your model with aggregated features and use the high resolution features to make predictions. This will be covered in @sec-model-space. 
-:::
-
 In all cases using the pre-aggregated features can save you time and computational resources. 
 
 > **Scenario:** You are working with a Living Standards Measurement Study - Integrated Surveys on Agriculture ([LSMS-ISA](https://www.worldbank.org/en/programs/lsms/initiatives/lsms-ISA)). This dataset has survey data with geographic coordinates at the household level. To protect, the privacy of the respondents, the data is jittered within a 5 km radius but it always remains within local administrative boundaries. You can therefore summarize your labels to the administrative units and build a model with the aggregated features. 
 
-![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](../images/US_feature_summaries.png){#fig-api-aggregated}
-
+::: {.callout-tip}
+If you want to make high resolution predictions, with low resolution label data, you can build your model with aggregated features and use the high resolution features to make predictions. This will be covered in @sec-model-space. 
+:::
 
 ## Using MOSAIKS features for prediction
 
@@ -158,7 +170,7 @@ This is a brief overview. Detailed instructions appear later in the manual (@sec
 Basic workflow:
 
 1. Obtain ground truth measurements ("labels"; see @sec-labels-100-maps)
-2. Download matching features via Map Query, File Query, or one the pre-aggregated layers administrative boundary scale (see @sec-features-api for more details).
+2. Download matching features (see @sec-features-api for more details).
 3. Spatially merge labels and features (see @sec-labels-data-prep)
 4. Use regression to model relationship between imagery and outcome (see @sec-model-choice)
 5. Use regression results to predict outcome in new locations (see @sec-model-choice)
@@ -167,11 +179,11 @@ You can experiment with various machine learning approaches in the regression st
 
 ![Using MOSAIKS, a simplified workflow design.](../images/mosaiks-overview.png){#fig-mosaiks-flow}
 
-This topic will be covered in greater depth in later chapters. In the next chapter, you will see a simple MOSAIKS workflow which starts from the point of having both features from the API and ground truth labels. 
+This topic will be covered in greater depth in later chapters (see @sec-model-choice). In the next chapter, you will see a simple MOSAIKS workflow which replicates the results of Rolf et al. 2021. 
 
 ## Citation requirements
 
-When referring to the MOSAIKS methodology or when generating MOSAIKS features, please reference [Rolf et al. “A generalizable and accessible approach to machine learning with global satellite imagery.” Nature Communications (2021).](https://www.nature.com/articles/s41467-021-24638-z)
+When referring to the MOSAIKS methodology or when generating MOSAIKS features, please reference: [Rolf et al. “A generalizable and accessible approach to machine learning with global satellite imagery.” Nature Communications (2021).](https://www.nature.com/articles/s41467-021-24638-z)
 
 You can use the following Bibtex:
 ```bibtex
@@ -187,7 +199,7 @@ You can use the following Bibtex:
 }
 ```
 
-If using features downloaded from this website, please reference, in addition to the publication above, the MOSAIKS API.
+If using features downloaded from the API, please reference, in addition to the publication above, the MOSAIKS API.
 
 You can cite the API using the following Bibtex:
 ```bibtex

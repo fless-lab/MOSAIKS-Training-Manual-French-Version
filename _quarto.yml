@@ -24,6 +24,7 @@ book:
       MOSAIKS Training Manual
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
+  favicon: "images/sat_earth.svg"
   site-url: https://cullen-molitor.github.io/MOSAIKS-Training-Manual/
   repo-url: https://github.com/cullen-molitor/MOSAIKS-Training-Manual
   repo-branch: main

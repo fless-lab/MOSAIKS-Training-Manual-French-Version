@@ -69,3 +69,5 @@ notebooks/*.png
 
 notebooks/*/*
 !notebooks/*/*.ipynb
+
+.DS_Store

@@ -45,6 +45,8 @@ The MOSAIKS API is designed to predict outcomes at scales of 1 km² or larger. C
 
 The MOSAIKS grid is defined in degrees, therefore the area of a given cell varies with latitude. Near the equator, each cell is approximately 1 km², while at higher latitudes the area decreases as the distance between meridians (longitude lines) converges. 
 
+![The area of a grid cell at different latitudes.](../images/global_1_degree_grid_wgs84_area.png){#fig-grid-area}
+
 ### Choosing your resolution
 
 We know from @sec-intro-api that the MOSAIKS API offers features at 0.01°, 0.1°, 1°, ADM2, ADM1, and ADM0 resolutions. In all cases, features are computed at 0.01° resolution and then aggregated to the desired resolution. If you plan on using the API to download features, you need to make sure your labels are at the same resolution as the features you plan to download.

@@ -103,6 +103,8 @@ Several strategies exist for handling cloud contamination include:
 - Strategic timing of image acquisition
 - Gap-filling techniques
 
+![Source: [NASA Earth Observatory](https://earthobservatory.nasa.gov/features/ColorImage)](../images/cloud_cover_nasa.jpg)
+
 ## Sensor type
 
 Satellite sensors broadly fall into two categories:

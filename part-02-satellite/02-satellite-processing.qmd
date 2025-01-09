@@ -1,4 +1,5 @@
 # Processing imagery {#sec-satellite-processing}
+
 ```{r}
 #| echo: false
 #| results: "asis"

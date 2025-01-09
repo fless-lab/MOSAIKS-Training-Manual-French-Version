@@ -17,6 +17,7 @@ dependencies:
   - geoplot
   - geoviews
   - geopy
+  - gettext
   - glum
   - h5py
   - ipython
@@ -51,6 +52,7 @@ dependencies:
   - statsmodels
   - stac-vrt
   - tqdm
+  - wget
   - xarray
   - pip:
     - -r requirements.txt

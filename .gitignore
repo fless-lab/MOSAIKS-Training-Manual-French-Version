@@ -63,6 +63,9 @@ _freeze/
 *.geojson
 *.csv
 *.feather
+*.tif
+*.zip
+*.json
 
 notebooks/*.ipynb
 notebooks/*.png
@@ -71,3 +74,5 @@ notebooks/*/*
 !notebooks/*/*.ipynb
 
 .DS_Store
+
+nicfi_key.py

@@ -5,7 +5,7 @@
 #| results: "asis"
 
 source("../_common.R")
-status("draft")
+status("review")
 ```
 
 This course will primarily use Google Colaboratory (Colab) for our computational needs. Colab is a free, cloud-based platform that allows you to write and execute Python code through your browser. It comes with many pre-installed libraries and provides free access to computing resources, including GPUs.

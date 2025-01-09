@@ -163,7 +163,7 @@ Satellite sensors can generally be characterized as passive or active instrument
 
 **Active sensors** emit their own energy and record the backscatter signal. Radar systems (e.g., SAR) and LiDAR instruments fall under this category. They can penetrate clouds, operate at night, and measure surface characteristics such as roughness or elevation. On the downside, the data are often more complex to process and interpret, requiring specialized expertise and software. 
 
-![Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](../images/radiant_earth_active_passive.jpg)
+![Graphic depicting the difference between active and passive sensors. Source: [Radiant Earth](https://medium.com/radiant-earth-insights/observing-the-earth-fueling-global-development-solutions-1c69fd5632bc)](../images/radiant_earth_active_passive.jpg){#fig-radiant-earth-active-passive}
 
 Below is a simple comparison of these sensor types:
 

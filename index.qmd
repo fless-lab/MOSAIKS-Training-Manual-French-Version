@@ -12,7 +12,7 @@ status("review")
 
 This is the first iteration of the MOSAIKS Training Manual! The manual serves as a comprehensive reference for understanding MOSAIKS, its capabilities, and practical implementation guidance.
 
-![Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png)
+![MOSAIKS spelled out with imagery from the Landsat Satellite Constellation data catalog. Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png){#fig-mosaiks-in-landsat}
 
 ## What is MOSAIKS?
 

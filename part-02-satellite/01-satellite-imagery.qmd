@@ -209,6 +209,8 @@ Additional processes often applied during or after these levels include:
 - **Atmospheric correction**: Adjustment for atmospheric effects (aerosols, water vapor) to standardize reflectance values across different times or sensors.
 - **Radiometric calibration**: Conversion of raw sensor counts to physical units like reflectance or brightness temperature, enabling consistent comparisons among images from different sensors and acquisition dates.
 
+![NICFI satellite imagery raw pixel values showing each band (R, G, B, NIR) for each statistic (min, max, mean, median). These data come with atmospheric correction, cloud correction, and normalized pixel values. After Products created after April 2022 also apply a sharpening filter to the images.](../images/nicfi_pixel_histograms.png){#fig-nicfi-pixel-histograms}
+
 Knowing which processing steps your data provider already performs helps you avoid redundant work and ensures you acquire data that meet your accuracy requirements. For instance, if you need consistent multi-temporal comparisons, opt for Level 2 or higher to minimize atmospheric variations. Conversely, if you prefer to perform your own corrections and calibrations, Level 1 might offer greater flexibility at the cost of added complexity.
 
 ---

@@ -144,6 +144,10 @@ In temporal aggregation, you compute features at a higher frequency but then sum
 
 This method captures general trends and reduces noise from cloud cover or other transient factors. However, important temporal nuances (like specific short-lived events) might be lost in the aggregation.
 
+## Demeaning 
+
+Evaluation over time
+
 ### Sequential modeling
 
 For phenomena where temporal order is crucial and frequent observations exist, sequential modeling can be more powerful:

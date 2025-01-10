@@ -60,12 +60,22 @@ The MOSAIKS team performed a **single featurization pass** over the Planet Labs 
 
 ---
 
-## Derived Aggregations
+## Derived aggregations
 
 Although the API stores and provides these features at 0.01° resolution, it also offers **pre-aggregated** versions:
 
-- **0.1° and 1° Grids**: Summing or averaging the 0.01° cells.  
-- **Administrative Boundaries**: ADM0 (country), ADM1 (state/province), and ADM2 (county/district) levels.  
+| Resolution | Description | Weighting | Download | Access |
+|------------|-------------|-----------|----------|---------|
+| 0.01° | Native resolution (~1km²) | Unweighted | Map or File Query | [API Portal](https://api.mosaiks.org/portal/file_query/) |
+| 0.1° | Aggregated grid (~10km²) | Area or population | Chunked files | [Global Grids](https://api.mosaiks.org/portal/global_grids/) |
+| 1° | Aggregated grid (~100km²) | Area or population | Single file | [Global Grids](https://api.mosaiks.org/portal/global_grids/) |
+| ADM2 | County or district level | Area or population | Single file | [Precomputed Files](https://api.mosaiks.org/portal/precomputed/) |
+| ADM1 | State or province level | Area or population | Single file | [Precomputed Files](https://api.mosaiks.org/portal/precomputed/) |
+| ADM0 | Country level | Area or population | Single file | [Precomputed Files](https://api.mosaiks.org/portal/precomputed/) |
+
+: The MOSAIKS API offers features derived from Planet Labs imagery (2019 Q3) at various resolutions for the entire globe. All features share the same 4,000 feature columns, with the only difference being the resolution/aggregation level. At each aggregation level above the native resolution, we offer both area-weighted and population-weighted versions. Population weights come from the [Gridded Population of the World (GPWv4)](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4) population density dataset. {#tbl-api-options}
+
+It is nice to have options, but sometimes it is hard to visualize what these aggregations mean. @fig-feature-aggregation shows how these features might look when aggregated to different levels. 
 
 ![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](../images/US_feature_summaries.png){#fig-feature-aggregation}
 
@@ -79,7 +89,7 @@ Each aggregated level comes in two weighting flavors:
 
 ---
 
-## When to Use These Features
+## When to use these features
 
 1. **Readily Available**: If your labels are from ~2019 or a period that hasn’t changed drastically since 2019, start with these API features—they’re the **fastest and easiest** to incorporate into your analyses.
 
@@ -93,7 +103,7 @@ Each aggregated level comes in two weighting flavors:
 
 ---
 
-## Key Takeaways
+## Key takeaways
 
 1. **Single Source Imagery**  
    - **Planet Labs Visual Basemap (2019 Q3)**  
@@ -120,6 +130,10 @@ Each aggregated level comes in two weighting flavors:
    - Ideal for tasks with label data from the same (or close) time period (2019 or neighboring years)  
    - Quick, straightforward integration into machine learning models  
    - Global scale analysis or smaller local/regional analysis
+
+---
+
+## Future directions
 
 ::: {.callout-note}
 # Looking forward
@@ -161,11 +175,11 @@ Currently the MOSAIKS API has a single set of global features ready to download.
 | Resolution | Time Period | Weighting         | Download      |
 |------------|-------------|-------------------|---------------|
 | 0.01°      | 2019 Q3     | Unweighted        | Query         |
-| 0.1°       | 2019 Q3     | Area & population | Chunked files |
-| 1°         | 2019 Q3     | Area & population | Single file   |
-| ADM2       | 2019 Q3     | Area & population | Single file   |
-| ADM1       | 2019 Q3     | Area & population | Single file   |
-| ADM0       | 2019 Q3     | Area & population | Single file   |
+| 0.1°       | 2019 Q3     | Area or population | Chunked files |
+| 1°         | 2019 Q3     | Area or population | Single file   |
+| ADM2       | 2019 Q3     | Area or population | Single file   |
+| ADM1       | 2019 Q3     | Area or population | Single file   |
+| ADM0       | 2019 Q3     | Area or population | Single file   |
 
 : The MOSAIKS API offers features at 0.01°, 0.1°, and 1° resolution for the entire globe. Additionally, we provide features aggregated to the ADM0 (country), ADM1 (state/province), and ADM2 (county/municipality) levels. All features share the same 4,000 feature columns, and are all created from the same Planet Labs imagery, the only difference is the resolution/aggregation level. At each level of aggregation, we offer area weighted features and population weighted features. Population weighted features use weights from the [Gridded Population of the World (GPWv4)](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4) population density dataset. {#tbl-api-options}
 -->

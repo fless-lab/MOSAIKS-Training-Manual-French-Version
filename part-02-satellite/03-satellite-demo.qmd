@@ -12,6 +12,14 @@ status("draft")
 
 This demonstration will show you a few key concepts about satellite data and how it can be prepared for featurization (featurization covered in @sec-features-computing). 
 
+## Demonstration data
+
+For this demonstration, we will use satellite imagery from the NICFI Basemaps. The NICFI Basemaps are a collection of high-resolution satellite images that are freely available for research purposes. These data come with atmospheric correction, cloud correction, and normalized pixel values. After Products created after April 2022 also apply a sharpening filter to the images. 
+
+More details about NICFI Basemap processing can be found [here](https://assets.planet.com/docs/NICFI_Basemap_Spec_Addendum.pdf).
+
+To learn how to access NICFI Basemaps, follow the [sign up instructions here](https://www.planet.com/nicfi/).
+
 ## Demonstration code
 
 Below is a link to a Jupyter notebook intended to demonstrate practical preparation of satellite data for use in MOSAIKS. The notebook will guide you through the process of preparing imagery, including:

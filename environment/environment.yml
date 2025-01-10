@@ -52,6 +52,7 @@ dependencies:
   - statsmodels
   - stac-vrt
   - tqdm
+  - torchvision
   - wget
   - xarray
   - pip:

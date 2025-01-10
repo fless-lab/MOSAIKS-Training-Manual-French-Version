@@ -58,79 +58,27 @@ Consider these factors when choosing:
 
 ### Cloud platforms
 
+[NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/)
+
 #### Google Earth Engine
 
-```python
-import ee
-ee.Initialize()
-
-# Get Sentinel-2 imagery
-s2 = ee.ImageCollection('COPERNICUS/S2_SR')
-  .filterDate('2019-01-01', '2019-12-31')
-  .filterBounds(region)
-```
+Google Earth Engine provides a vast catalog of satellite imagery and geospatial datasets that can be accessed through a Python API. The GEE API is based on the [Earth Engine Python API](https://developers.google.com/earth-engine/guides/python_install), which allows you to interact with the Earth Engine servers and run geospatial analyses in the cloud.
 
 #### Microsoft Planetary Computer
 
-[Link to EDS 220](https://meds-eds-220.github.io/MEDS-eds-220-course/book/chapters/lesson-16-STAC.html)
-
 Microsoft Planetary Computer provides a multi-petabyte catalog of global environmental data that can easily be accessed through APIs. The MPC API is based on the [STAC (SpatioTemporal Asset Catalog)](https://stacspec.org/en) specification, which is an emerging open standard for geospatial data that aims to increase the interoperability of geospatial data, particularly satellite imagery.
 
-Use the `Client` function from the `pystac_client` package to access the catalog:
-
-```python
-import planetary_computer as pc
-import pystac_client
-
-# Access STAC API
-catalog = pystac_client.Client.open(
-    "https://planetarycomputer.microsoft.com/api/stac/v1",
-    modifier=pc.sign_inplace,
-)
-
-# Define area of interest (downtown Santa Barbara, CA)
-area_of_interest = {
-    "type": "Polygon",
-    "coordinates":[
-        [
-            [-119.70608227128903, 34.426300194372274],
-            [-119.70608227128903, 34.42041139020533],
-            [-119.6967885126002, 34.42041139020533],
-            [-119.6967885126002, 34.426300194372274],
-            [-119.70608227128903, 34.426300194372274]
-        ]
-    ],
-}
-bbox = rasterio.features.bounds(area_of_interest)
-
-# Search for Sentinel-2 imagery
-search = stac.search(
-    bbox=bbox,
-    datetime="2016-01-01/2020-12-31",
-    collections=["sentinel-2-l2a"],
-    query={"eo:cloud_cover": {"lt": 25}},
-)
-```
 For more information on using the Microsoft Planetary Computer API, see [Reading Data from the STAC API](https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/).
 
+::: {.callout-tip}
+For practical guidance on accessing the Microsoft Planetary Computer Data Catalog through their API,see the Master of Environmental Data Science (MEDS) course EDS 220 section on the [STAC specification](https://meds-eds-220.github.io/MEDS-eds-220-course/book/chapters/lesson-16-STAC.html)
+:::
 
 ### Local downloads
 
-#### Sentinel-2
+#### Sentinelsat python API
 
-```python
-from sentinelsat import SentinelAPI
 
-# Connect to Copernicus Open Access Hub
-api = SentinelAPI('user', 'password')
-
-# Search and download
-products = api.query(
-    area,
-    date=('20190101', '20191231'),
-    platformname='Sentinel-2'
-)
-```
 
 #### Landsat
 

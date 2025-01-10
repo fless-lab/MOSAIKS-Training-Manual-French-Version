@@ -8,7 +8,127 @@ source("../_common.R")
 status("draft")
 ```
 
-- Defaults 
+## Overview
+
+In this chapter, we focus on the **publicly available MOSAIKS features** that can be accessed via the [MOSAIKS API](https://api.mosaiks.org/). These features offer a quick and straightforward way to incorporate satellite-based predictors into your analyses without having to manually process satellite imagery.
+
+::: {.callout-note}
+Accessing features on the API is covered in @sec-intro-api. This chapter provides additional details on the features and how they were generated. To generate your own features, see @sec-features-computing.
+:::
+
+---
+
+## Input imagery
+
+- **Source**  
+  [Planet Labs Visual Basemap (Global Quarterly 2019, Q3)](https://developers.planet.com/docs/data/visual-basemaps/).
+- **Temporal Coverage**  
+  Predominantly images captured between July and September 2019 (Q3), though exact capture dates vary by region.
+- **Spatial Coverage**  
+  Global land areas, excluding most large water bodies.
+- **Potential Artifacts**  
+  Cloud cover, haze, or shadows may affect the quality of imagery in regions with significant cloud coverage during Q3 2019.
+
+![Planet Labs Basemap imagery thumbnail image.](https://cdn.sanity.io/images/hvd5n54p/production/f7ebef7923c4cc9c8990836980a30d004a5eef64-1920x1114.jpg?w=1200&auto=format){#fig-planet-basemap}
+
+## Deeper Look: How the API Features Were Generated
+
+The MOSAIKS team performed a **single featurization pass** over the Planet Labs 2019 Q3 Visual Basemap images. The process is similar to the [Random Convolutional Features (RCFs)](#sec-features-rcf) method described earlier, but here are the specific parameters:
+
+1. **Patch Collection**  
+   - Random patches (filters) were drawn from real satellite images (Planet Labs 2019 Q3).  
+   - Each patch was **whitened**: the raw pixel values were mean-centered and decorrelated so that each filter highlights distinct visual patterns.
+
+2. **Kernel Sizes**  
+   - **2,000 features** from a 4×4 patch shape  
+   - **2,000 features** from a 6×6 patch shape  
+   - All patches maintain **3 color channels** (R, G, B).
+
+3. **Bias & Activation**  
+   - A **bias** of –1 is added to each filter’s convolution output, allowing more nuanced activation levels.  
+   - A **ReLU** activation (`max(0, x)`) is then applied to keep the model non-linear and remove negative values.
+
+4. **Pooling**  
+   - After convolution + ReLU, the response is **average-pooled** over each 0.01° patch (i.e., the local 256×256 pixel area, if we approximate each degree of latitude or longitude as ~100 km—though the exact pixel count can vary by latitude).  
+   - This results in a **single numeric value per filter**.
+
+5. **Final Feature Vector**  
+   - Combining all filters yields a **4,000-dimensional** vector at each 0.01° grid cell.  
+   - This entire process was run **once**, creating a global 0.01° “feature layer.”
+
+![Three randomly generated feature activation maps plotted from the [Planet Labs Basemap](https://www.planet.com/products/basemap/) thumbnail image.](../images/RCF_patch_sampling_activation_maps_world.png){#fig-rcf-world-simple}
+
+---
+
+## Derived Aggregations
+
+Although the API stores and provides these features at 0.01° resolution, it also offers **pre-aggregated** versions:
+
+- **0.1° and 1° Grids**: Summing or averaging the 0.01° cells.  
+- **Administrative Boundaries**: ADM0 (country), ADM1 (state/province), and ADM2 (county/district) levels.  
+
+![Example showing of 3 representative random convolutional features (rows). Features are downloaded from the MOSAIKS API at 0.01° resolution (the native resolution) and aggregated to 3 levels, including (A) larger grid cells (0.1°), (B) counties, and (C) states.](../images/US_feature_summaries.png){#fig-feature-aggregation}
+
+### Area vs. Population Weighting
+
+Each aggregated level comes in two weighting flavors:
+- **Area Weighting**: Larger grid cells or polygons with more land area receive more weight in the aggregation.  
+- **Population Weighting**: Uses population density ([GPWv4](https://earthdata.nasa.gov/data/projects/gpw)) to weight cells more heavily where more people live.
+
+**note** maybe a population map here
+
+---
+
+## When to Use These Features
+
+1. **Readily Available**: If your labels are from ~2019 or a period that hasn’t changed drastically since 2019, start with these API features—they’re the **fastest and easiest** to incorporate into your analyses.
+
+2. **Coarse-Resolution or Aggregated Labels**: If your data is aggregated (e.g., a country-level statistic), consider **downloading the aggregated features** to match your label resolution.
+
+3. **Resource Constraints**: If you’re **storage- or compute-limited**, using the API’s pre-aggregated files can save time and processing overhead.
+
+4. **High-Resolution or Household Data**: For fine-grained tasks (e.g., household surveys), you may still benefit from the 0.01° resolution features—especially if you want to capture local variation. Or you can aggregate to match your label geometry and then **use high-resolution features for prediction** later (see [@sec-model-space]).
+
+![Global Human Development Index (HDI) data at the first sub-national level of administrative division (ADM1). Source: [Smits & Permanyer 2019](https://www.nature.com/articles/sdata201938).](../images/smits_and_permanyer_2019_HDI.png){#fig-hdi}
+
+---
+
+## Key Takeaways
+
+1. **Single Source Imagery**  
+   - **Planet Labs Visual Basemap (2019 Q3)**  
+   - Global coverage of land areas at approximately 0.01° (~1 km) resolution  
+   - Three color channels (Red, Green, Blue)
+
+2. **Single Featurization Pass**  
+   - All features are computed **once** at the native 0.01° resolution.  
+   - Any **aggregated features** (e.g., 0.1°, 1°, administrative boundaries) are **derivative** and use exactly the same underlying 0.01° features.
+
+3. **Random Convolutional Features (RCFs)**  
+   - **4,000 total features**  
+   - **Kernel sizes**: 2,000 features from a 4×4 kernel, and 2,000 features from a 6×6 kernel  
+   - **Empirical patch whitening**: random patches are drawn from the image set and then whitened (mean-centered, decorrelated)  
+   - **Bias**: –1 (applied to each filter output before activation)  
+   - **Activation**: ReLU (Rectified Linear Unit)  
+   - **3 color channels** from the original RGB imagery
+
+4. **Flexible Resolutions**  
+   - **High resolution (0.01°)**: Download via File Query or Map Query  
+   - **Aggregations**: 0.1°, 1°, and ADM0/ADM1/ADM2 boundaries, available as precomputed downloads
+
+5. **Use Cases**  
+   - Ideal for tasks with label data from the same (or close) time period (2019 or neighboring years)  
+   - Quick, straightforward integration into machine learning models  
+   - Global scale analysis or smaller local/regional analysis
+
+::: {.callout-note}
+# Looking forward
+
+In the next section, we will 
+::: 
+
+
+<!-- - Default parameters
 
 ![Planet Labs basemap imagery (left) and 4 of 4,000 MOSAIKS features downloaded from the API (right).](../images/api-features.png)
 
@@ -48,10 +168,4 @@ Currently the MOSAIKS API has a single set of global features ready to download.
 | ADM0       | 2019 Q3     | Area & population | Single file   |
 
 : The MOSAIKS API offers features at 0.01°, 0.1°, and 1° resolution for the entire globe. Additionally, we provide features aggregated to the ADM0 (country), ADM1 (state/province), and ADM2 (county/municipality) levels. All features share the same 4,000 feature columns, and are all created from the same Planet Labs imagery, the only difference is the resolution/aggregation level. At each level of aggregation, we offer area weighted features and population weighted features. Population weighted features use weights from the [Gridded Population of the World (GPWv4)](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4) population density dataset. {#tbl-api-options}
-
-
-::: {.callout-note}
-# Looking forward
-
-In the next section, we will 
-:::
+-->

@@ -8,5 +8,254 @@ source("../_common.R")
 status("draft")
 ```
 
+## Overview
 
-Depending on the spatial scale and resolution of the label data, subsampling the MOSAIKS grid may be appropriate to reduce computation time and cost. 
+While the MOSAIKS API provides pre-computed features for many applications, some use cases require computing custom features. This chapter covers the technical details of generating MOSAIKS features from satellite imagery.
+
+## Requirements 
+
+To compute MOSAIKS features, you'll need:
+
+- Satellite imagery (see @sec-satellite-processing)
+- GPU-enabled computing environment (recommended)
+- Python with deep learning libraries (pytorch recommended)
+- Sufficient storage for features
+
+
+## Implementation options
+
+There are several ways to implement MOSAIKS feature extraction:
+
+### PyTorch implementation 
+
+The [torchgeo](https://torchgeo.readthedocs.io/en/stable/) library provides a PyTorch implementation of random convolutional features:
+
+```python
+import torch
+import torch.nn as nn
+from torchgeo.models import RCF
+
+# Define model parameters
+patch_size = 3  # Size of random patches
+num_filters = 4000  # Number of features to generate
+in_channels = 3  # Number of input image channels (RGB=3)
+
+# Initialize RCF model
+model = RCF(
+    in_channels=in_channels,
+    num_filters=num_filters,
+    patch_size=patch_size,
+    bias=True,
+    padding="same"
+)
+
+# Move model to GPU if available
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = model.to(device)
+
+# Generate features for a batch of images
+def extract_features(images):
+    """
+    Extract RCF features from a batch of images
+    
+    Parameters
+    ----------
+    images : torch.Tensor
+        Batch of images with shape (B, C, H, W)
+        
+    Returns
+    -------
+    torch.Tensor
+        Features with shape (B, num_filters)
+    """
+    with torch.no_grad():
+        features = model(images)
+    return features
+```
+
+### TensorFlow implementation
+
+For users preferring TensorFlow, here's an equivalent implementation:
+
+```python
+import tensorflow as tf
+
+class RCF(tf.keras.Model):
+    def __init__(self, num_filters=4000, patch_size=3):
+        super(RCF, self).__init__()
+        self.conv = tf.keras.layers.Conv2D(
+            filters=num_filters,
+            kernel_size=patch_size,
+            padding='same',
+            use_bias=True
+        )
+        self.relu = tf.keras.layers.ReLU()
+        self.pool = tf.keras.layers.GlobalAveragePooling2D()
+        
+    def call(self, x):
+        x = self.conv(x)
+        x = self.relu(x)
+        x = self.pool(x)
+        return x
+```
+
+## Feature parameters
+
+Several key parameters influence feature extraction:
+
+### Number of features (K)
+
+- Controls feature vector dimensionality
+- More features capture more information
+- Increases computation and storage needs
+- Typical range: 1,000-8,192
+- Diminishing returns above ~4,000
+
+### Patch size
+
+- Determines spatial context captured
+- Larger patches see more context
+- But increase computation
+- Typical size: 3x3 or 5x5 pixels
+- Match to imagery resolution
+
+### Input channels
+
+- Depends on available spectral bands
+- RGB = 3 channels
+- Can use additional bands
+- More bands = richer spectral info
+- But increases computation
+
+## Practical considerations
+
+### Memory management
+
+When processing large imagery datasets:
+
+```python
+def batch_process(image_paths, batch_size=32):
+    """
+    Process images in batches to manage memory
+    
+    Parameters
+    ----------
+    image_paths : list
+        Paths to image files
+    batch_size : int
+        Number of images to process at once
+        
+    Returns
+    -------
+    np.ndarray
+        Features for all images
+    """
+    features = []
+    
+    for i in range(0, len(image_paths), batch_size):
+        batch_paths = image_paths[i:i + batch_size]
+        batch = load_images(batch_paths)
+        batch_features = extract_features(batch)
+        features.append(batch_features)
+        
+    return np.concatenate(features)
+```
+
+### Storage formats
+
+Efficient formats for large feature matrices:
+
+```python
+import h5py
+import zarr
+
+# HDF5 storage
+def save_features_hdf5(features, filename):
+    with h5py.File(filename, 'w') as f:
+        f.create_dataset('features', data=features)
+        
+# Zarr storage
+def save_features_zarr(features, filename):
+    store = zarr.DirectoryStore(filename)
+    z = zarr.creation.array(
+        store, 
+        features, 
+        chunks=(1000, None)
+    )
+```
+
+### Parallel processing
+
+For large-scale feature extraction:
+
+```python
+from concurrent.futures import ProcessPoolExecutor
+
+def parallel_extract(image_paths, num_workers=4):
+    """
+    Extract features using multiple processes
+    
+    Parameters
+    ----------
+    image_paths : list
+        Paths to image files
+    num_workers : int
+        Number of parallel processes
+        
+    Returns
+    -------
+    np.ndarray
+        Features for all images
+    """
+    with ProcessPoolExecutor(max_workers=num_workers) as executor:
+        features = list(executor.map(extract_features, image_paths))
+    return np.concatenate(features)
+```
+
+## Quality control
+
+Important checks during feature extraction:
+
+1. **Input validation**
+   - Image dimensions
+   - Value ranges
+   - Missing data
+   - Band ordering
+
+2. **Feature statistics**
+   - Distribution checks
+   - Zero/missing values
+   - Correlation analysis
+   - Feature importance
+
+3. **Performance monitoring**
+   - Memory usage
+   - Processing speed
+   - GPU utilization
+   - Storage efficiency
+
+## Best practices
+
+1. **Documentation**
+   - Record all parameters
+   - Track data sources
+   - Document processing steps
+   - Note any issues
+
+2. **Testing**
+   - Unit tests for functions
+   - Integration tests
+   - Performance benchmarks
+   - Validation checks
+
+3. **Version control**
+   - Code versioning
+   - Feature versioning
+   - Parameter tracking
+   - Result logging
+
+::: {.callout-note}
+# Looking forward
+
+In the next chapter, we'll work through a complete example of computing custom MOSAIKS features.
+:::

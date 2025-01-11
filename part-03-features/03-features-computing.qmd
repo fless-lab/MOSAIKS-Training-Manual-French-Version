@@ -22,81 +22,41 @@ To compute MOSAIKS features, you'll need:
 - Sufficient storage for features
 
 
-## Implementation options
+## Implementation 
 
 There are several ways to implement MOSAIKS feature extraction:
 
-### PyTorch implementation 
+### `torchgeo` implementation 
 
 The [torchgeo](https://torchgeo.readthedocs.io/en/stable/) library provides a PyTorch implementation of random convolutional features:
 
 ```python
 import torch
-import torch.nn as nn
 from torchgeo.models import RCF
 
 # Define model parameters
 patch_size = 3  # Size of random patches
+in_channels = 4  # Number of input image channels
 num_filters = 4000  # Number of features to generate
-in_channels = 3  # Number of input image channels (RGB=3)
+
+# When empirical, supply a custom pytorch dataset class that returns 
+# a dictionary with 'image' key. This samples the dataset for model 
+# weights. If gaussian do not supply a dataset class.
 
 # Initialize RCF model
 model = RCF(
-    in_channels=in_channels,
-    num_filters=num_filters,
-    patch_size=patch_size,
-    bias=True,
-    padding="same"
+    in_channels=in_channels, 
+    features=num_filters, 
+    kernel_size=3, 
+    bias=-1.0, 
+    seed=42, 
+    mode='empirical',
+    dataset=CustomDataset,
 )
 
 # Move model to GPU if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
-
-# Generate features for a batch of images
-def extract_features(images):
-    """
-    Extract RCF features from a batch of images
-    
-    Parameters
-    ----------
-    images : torch.Tensor
-        Batch of images with shape (B, C, H, W)
-        
-    Returns
-    -------
-    torch.Tensor
-        Features with shape (B, num_filters)
-    """
-    with torch.no_grad():
-        features = model(images)
-    return features
-```
-
-### TensorFlow implementation
-
-For users preferring TensorFlow, here's an equivalent implementation:
-
-```python
-import tensorflow as tf
-
-class RCF(tf.keras.Model):
-    def __init__(self, num_filters=4000, patch_size=3):
-        super(RCF, self).__init__()
-        self.conv = tf.keras.layers.Conv2D(
-            filters=num_filters,
-            kernel_size=patch_size,
-            padding='same',
-            use_bias=True
-        )
-        self.relu = tf.keras.layers.ReLU()
-        self.pool = tf.keras.layers.GlobalAveragePooling2D()
-        
-    def call(self, x):
-        x = self.conv(x)
-        x = self.relu(x)
-        x = self.pool(x)
-        return x
 ```
 
 ## Feature parameters
@@ -133,84 +93,14 @@ Several key parameters influence feature extraction:
 
 When processing large imagery datasets:
 
-```python
-def batch_process(image_paths, batch_size=32):
-    """
-    Process images in batches to manage memory
-    
-    Parameters
-    ----------
-    image_paths : list
-        Paths to image files
-    batch_size : int
-        Number of images to process at once
-        
-    Returns
-    -------
-    np.ndarray
-        Features for all images
-    """
-    features = []
-    
-    for i in range(0, len(image_paths), batch_size):
-        batch_paths = image_paths[i:i + batch_size]
-        batch = load_images(batch_paths)
-        batch_features = extract_features(batch)
-        features.append(batch_features)
-        
-    return np.concatenate(features)
-```
 
 ### Storage formats
 
 Efficient formats for large feature matrices:
 
-```python
-import h5py
-import zarr
-
-# HDF5 storage
-def save_features_hdf5(features, filename):
-    with h5py.File(filename, 'w') as f:
-        f.create_dataset('features', data=features)
-        
-# Zarr storage
-def save_features_zarr(features, filename):
-    store = zarr.DirectoryStore(filename)
-    z = zarr.creation.array(
-        store, 
-        features, 
-        chunks=(1000, None)
-    )
-```
-
 ### Parallel processing
 
 For large-scale feature extraction:
-
-```python
-from concurrent.futures import ProcessPoolExecutor
-
-def parallel_extract(image_paths, num_workers=4):
-    """
-    Extract features using multiple processes
-    
-    Parameters
-    ----------
-    image_paths : list
-        Paths to image files
-    num_workers : int
-        Number of parallel processes
-        
-    Returns
-    -------
-    np.ndarray
-        Features for all images
-    """
-    with ProcessPoolExecutor(max_workers=num_workers) as executor:
-        features = list(executor.map(extract_features, image_paths))
-    return np.concatenate(features)
-```
 
 ## Quality control
 

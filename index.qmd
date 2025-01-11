@@ -1,22 +1,18 @@
 # Welcome {.unnumbered}
 
-```{r}
-#| echo: false
-#| results: "asis"
+<!-- ## Where am I? -->
 
-source("_common.R")
-status("review")
-```
+This is the first edition of the MOSAIKS Training Manual! The manual serves as a comprehensive reference for understanding MOSAIKS, its capabilities, and guidance on practical implementation. You will learn what MOSAIKS is, what can be done with it, and how to use it effectively in a variety of applications.
 
-## Where am I?
+The skills and knowledge you gain from this manual will enable you to leverage satellite imagery and machine learning to address complex socioeconomic and environmental challenges. This can be a self taught manual or used in conjunction with a training course. 
 
-This is the first iteration of the MOSAIKS Training Manual! The manual serves as a comprehensive reference for understanding MOSAIKS, its capabilities, and practical implementation guidance.
-
-![MOSAIKS spelled out with imagery from the Landsat Satellite Constellation data catalog. Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png){#fig-mosaiks-in-landsat}
+Many of the concepts and examples are broadly applicable to the world of remote sensing and machine learning, so even if you are not using MOSAIKS, you may find the content useful.
 
 ## What is MOSAIKS?
 
 MOSAIKS stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework designed to simplify the use of satellite imagery and machine learning for predicting socioeconomic and environmental outcomes across different geographic contexts and time periods. MOSAIKS relis on random convolutions (developed in Rahimi and Recht (2008)) applied to satellite imagery, which extract task-agnostic features and enable researchers and practitioners to easily and flexibly predict a diversity of outcomes from raw imagery. 
+
+![MOSAIKS spelled out with imagery from the Landsat Satellite Constellation data catalog. Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png){#fig-mosaiks-in-landsat}
 
 ## Who is this for?
 

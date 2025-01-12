@@ -155,7 +155,7 @@ Choosing an appropriate spectral resolution involves balancing the number and wi
 
 ---
 
-## Sensor type
+## Sensor type 
 
 Satellite sensors can generally be characterized as passive or active instruments. Both categories have distinct advantages and limitations that influence their suitability for particular applications.
 
@@ -169,10 +169,10 @@ Below is a simple comparison of these sensor types:
 
 | Sensor Type | Examples  | Operating Principle | Pros | Cons |
 |:------------|:----------|:--------------------|:-----|:-----|
-| Passive | Optical, Thermal | Measures naturally available energy (sunlight or emitted heat) | Easier to interpret; often intuitive (e.g., RGB images) | Limited by cloud cover and daylight |
+| Passive | Optical, Thermal | Measures naturally available reflected energy (sunlight or emitted heat) | Easier to interpret; often intuitive (e.g., RGB images) | Limited by cloud cover and sensitive to atmospheric  conditions |
 | Active | Radar (SAR), LiDAR | Emits energy and measures return signals | Can penetrate clouds, capture data day or night | Data may require more complex processing |
 
-: Sensor types and their key characteristics. {#tbl-sensor-types}
+: Sensor types and their key characteristics. {#tbl-sensor-types tbl-colwidths="[12.5, 12.5, 25, 25, 25]"}
 
 Understanding which sensor type best aligns with your research needs is crucial. For instance, if your study area is frequently cloudy, a radar-based approach can offer more reliable coverage. Alternatively, optical sensors might be sufficient for regions with seasonal cloud-free windows or for general land-cover classification when consistent sunlight is available.
 

@@ -30,7 +30,23 @@ In this book, the terms *random convolutional features*, *RCFs*, *features*, *sa
 
 ---
 
-## Random convolutional features (RCFs)
+## Turning images into features
+
+--- 
+
+![A collection of satellite images. Source: [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/)](../images/mpc_gallery.jpg){#fig-mpc-gallery}
+
+---
+
+### Overview
+
+The MOSAIKS featurization process produces a *fixed-length* feature representation for each patch of satellite imagery. Practically, this means we end up with a numerical vector for each image. Because MOSAIKS uses satellite image, you can substitute the word image for location which means we end up with a numerical representation for each location.
+
+![A closer look at the RCF processing. Illustration of the one-time unsupervised computation of random convolutional features. *K* patches are randomly sampled from across the *N* images. Each patch is convolved over each image, generating a nonlinear activation map for each patch. Activation maps are averaged over pixels to generate a single K-dimensional feature vector for each image. Source: [Rolf et al. 2021 Figure 1 C](https://www.nature.com/articles/s41467-021-24638-z/figures/1)](../images/rolf_et_al_2021-Fig_1-c.jpg){#fig-Rolf-et-al-2021-Fig-1-C}
+
+The featurization process has three main steps: **convolution**,  **activation**, and **average pooling**. 
+
+In the coming sub-sections, we will illustrate these steps. In our example, our input imagery will have the dimensions $3 x 256 x 256$, where $3$ is the number of color channels (red, green, and blue) and $256 x 256$ is the image size (width x height) in pixels.
 
 ### Understanding convolutions
 
@@ -44,39 +60,69 @@ MOSAIKS, on the other hand, uses a *single* convolutional layer. These layer wei
 There are many great resources for visualizing convolutions, including [Convolutional Neural Networks (CNNs) explained](https://poloclub.github.io/cnn-explainer/).
 :::
 
-### Turning an image into a feature vector
+#### Initializing filters
 
-#### Overview
+For the convolution step, we need to initialize a set of filters. Each filter is a 3-dimensional tensor with the same number of color channels as the images and a width and height size specified by a kernel size parameter. We can initialize these filters in two ways:
 
-The MOSAIKS featurization process produces a *fixed-length* feature representation for each patch of satellite imagery. Practically, this means we end up with a numerical vector for each image. The process has three main steps:
+1. **Gaussian initialization**: We draw the filter weights from a normal distribution.
 
-1. **Convolution**  
-2. **Activation**  
-3. **Average pooling**  
+1. **Empirical patches**: We randomly sample patches from the image dataset and use these as filters.
 
-Let’s illustrate these steps with a simple example. Imagine we have 10,000 satellite images, each in the visual spectrum (red, green, and blue channels). Each image is a 3-dimensional tensor of shape (3, 256, 256)—representing the *color channels* (3) by *height* (256) by *width* (256).
+Either way, each *filter* has the same number of color channels as the original images and a specified kernel size (e.g., 3×3). So if our kernel size is 3, each filter might have shape (3, 3, 3). The number of filters is a hyperparameter that you can set when you define your model.
 
-![A collection of satellite images. Source: [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/)](../images/mpc_gallery.jpg){#fig-mpc-gallery}
-
-#### Convolution
-
-1. **Initialize convolutional weights.**  
-   We can draw these weights from a normal (Gaussian) distribution or from random patches of our image dataset. Either way, each *filter* has the same number of color channels as the original images and a specified kernel size (e.g., 3×3). So if our kernel size is 3, each filter might have shape (3, 3, 3).
-
-2. **Perform the convolution.**  
-   We compute the dot product of each filter with *every* portion of the image as the filter slides across it. The result is a new image (a “feature map”) that highlights regions similar to that filter’s pattern.
+To perform the convolution, we compute the dot product of each filter with **every** portion of the image as the filter slides across it. The result is a new image (a convolution output map) that highlights regions similar to that filter’s pattern.
 
 ::: {.callout-tip}   
 We use pytorch’s [torch.nn.functional.conv2d](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html) function to perform this operation.
 :::
 
-#### Activation
+#### Whitening filters
 
-Next, we apply a non-linear activation function—[ReLU (Rectified Linear Unit)](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html)—to the feature map. ReLU outputs `max(0, x)`, meaning it zeroes out negative values. This step helps capture non-linearities in the data.
+If you decide to use empirical patches in the convolution step, it is best practice to whiten the patches. We use a process called [Zero-phase Component Analysis (ZCA) whitening](https://www.sciencedirect.com/science/article/pii/S1350449519301525?casa_token=1QqV5jxSCLEAAAAA:7C72wrCbcsHnW8BSKDAJh-30CTf4Cv3l-kUHQQsTaELpgnviOjyl4XQ9npeBwMnQAf4eiNppCA), which preserves the spatial structure of the data while removing correlations among pixels. 
 
-![Three randomly generated feature activation maps plotted from the [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/catalog) Landsat Collection thumbnail image.](../images/RCF_patch_sampling_activation_maps.png){#fig-RCF-patch-sampling-activation-maps}
+The key steps are:
 
-#### Average pooling
+1. Subtract the mean of each feature from the data.
+2. Compute the covariance matrix $\Sigma$ and perform its eigendecomposition.
+3. Use the eigenvectors $U$ and eigenvalues $D$, along with a small constant $\varepsilon$, to form the ZCA transform $W$.
+4. Multiply the original data by $W$ to obtain the whitened data $\widetilde{X}$.
+
+Mathematically, assuming $X$ is your zero-mean data matrix of shape $(N \times d)$:
+
+$$
+\Sigma = \frac{1}{N} X^\top X 
+\quad\quad\text{and}\quad\quad
+\Sigma = U \, D \, U^\top,
+$$
+
+$$
+W = U \Bigl(D + \varepsilon I\Bigr)^{-\tfrac{1}{2}} U^\top,
+$$
+
+$$
+\widetilde{X} = X \, W.
+$$
+
+::: {.callout-tip}
+See the [ZCA whitening implementation in `torchgeo`](https://github.com/microsoft/torchgeo/blob/68e0cfebcd18edb6605008eeeaba96388e63eca7/torchgeo/models/rcf.py#L124-L172) for more details.
+:::
+
+### Activation
+
+Next, we apply a non-linear activation function—[ReLU (Rectified Linear Unit)](https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html)—to the convolution output map. ReLU outputs `max(0, x)`, meaning it zeroes out negative values. This step helps capture non-linearities in the data.
+
+**The 2-for-1 activation special**
+
+When we define our model, one of the parameters that needs to be specified is the number of features. This number needs to be a positive value because we generate 2 features for each filter. 
+
+We do this by applying the activation function twice:
+
+1. **Feature A** – ReLU activation on the convolution output.  
+2. **Feature B** – ReLU activation on the *inverted* convolution output (i.e., multiplication by –1, or “negative” of the same filter output).
+
+So if you specify 200 features, you are actually drawing 100 weights and getting 200 features back. This improves computational efficiency and ensures that each filter has the potential to capture both positive and negative cues.
+
+### Average pooling
 
 We then apply an adaptive average pooling layer to each activation map, collapsing the 2D spatial grid into a single number per filter. Essentially, this “global average” is a single summary value for how strongly that filter responded to the image. 
 
@@ -84,26 +130,15 @@ We then apply an adaptive average pooling layer to each activation map, collapsi
 We use pytorch’s [torch.nn.functional.adaptive_avg_pool2d](https://pytorch.org/docs/stable/generated/torch.nn.AdaptiveAvgPool2d.html) function to perform this operation.
 :::
 
-#### Putting it all together
+### Putting it all together
 
-We repeat this for all filters. If we have *K* filters, we end up with a *K*-dimensional feature vector.
+We repeat the 3 steps (convolution, activation, and pooling) for all filters. If we have *K* filters, we end up with a *K*-dimensional feature vector.
 
-![A closer look at the RCF processing. Illustration of the one-time unsupervised computation of random convolutional features. *K* patches are randomly sampled from across the *N* images. Each patch is convolved over each image, generating a nonlinear activation map for each patch. Activation maps are averaged over pixels to generate a single K-dimensional feature vector for each image. Source: [Rolf et al. 2021 Figure 1 C](https://www.nature.com/articles/s41467-021-24638-z/figures/1)](../images/rolf_et_al_2021-Fig_1-c.jpg){#fig-Rolf-et-al-2021-Fig-1-C}
-
-#### The 2-for-1 feature special
-
-When we define our model, one of the parameters that needs to be specified is the number of features. This number needs to be positive because we actually generate 2 features for each filter. 
-
-For each filter, we create two features:
-
-1. **Feature A** – ReLU activation on the convolution output.  
-2. **Feature B** – ReLU activation on the *inverted* convolution output (i.e., multiplication by –1, or “negative” of the same filter output).
-
-We then average-pool both maps, producing two features per filter. So if you specify 200 filters, you are actually drawing 100 weights and getting 200 features. This improves computational efficiency and ensures that each filter captures both positive and negative cues.
+![Input image, selected patches, whitened patches, convolution output, and activation maps](../images/RCF_patch_sampling_convolution_activation_maps.png){#fig-RCF-patches-activation-maps}
 
 ---
 
-### Intuition for RCFs
+## Intuition for RCFs
 
 Below is a cartoon that illustrates what a random convolutional feature vector might be looking for. Suppose we randomly draw three 3×3 patches from different parts of an image: a *forest* patch, a *road* patch, and a *river* patch.
 
@@ -111,11 +146,11 @@ Below is a cartoon that illustrates what a random convolutional feature vector m
 
 When we convolve the forest patch across the entire image, the resulting map “lights up” places that look like forest. Likewise, the road patch lights up roads, and the river patch lights up the river. After the ReLU and average-pooling steps, we get a set of summary values—one for each filter.
 
-![Two cartoon images with the same patches used in the convolution step. We see that we have several labels for each image and that we can model each outcome with the same set of features.](../images/cartoon_features.mp4){#fig-cartoon-label-video autoplay="true"}
+![Two cartoon images with the same patches used in the convolution step. We see that we have several labels for each image and that we can model each outcome with the same set of features.](../images/cartoon_features.gif){#fig-cartoon-label-gif}
 
 If Image 1 has more trees than Image 2, the “forest” feature’s value is higher in Image 1. If Image 2 has more roads, its “road” feature will be higher. Because these features each capture a different (random) spatial pattern, we can then combine them for many downstream prediction tasks—whether it’s predicting tree cover, paved roads, or even something else that correlates with these visual patterns.
 
-![A cartoon image projected into random feature space. If we look at just 2 dimensions, how grey on the x-axis and how green on the y-axis, we can find the vector through this feature space which represents our outcome.](../images/cartoon_vectors.mp4){#fig-cartoon-vect-video autoplay="true"}
+![A cartoon image projected into random feature space. If we look at just 2 dimensions, how grey on the x-axis and how green on the y-axis, we can find the vector through this feature space which represents our outcome.](../images/cartoon_vectors.gif){#fig-cartoon-vect-video}
 
 ---
 

@@ -78,7 +78,7 @@ The API contains the following pages:
 | [My Files](https://api.mosaiks.org/portal/my_files/) | Files you have queried from the API, available to download |
 | [Resources](https://api.mosaiks.org/portal/resources/) | Example Python and R notebooks for using the MOSAIKS framework |
 
-: MOSAIKS API pages and descriptions. {#tbl-api-pages}
+: MOSAIKS API pages and descriptions. {#tbl-api-pages tbl-colwidths="[25,75]"}
 
 ### API features 
 

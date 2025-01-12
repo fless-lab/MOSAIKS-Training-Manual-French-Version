@@ -53,6 +53,7 @@ dependencies:
   - stac-vrt
   - tqdm
   - torchvision
+  - torchgeo
   - wget
   - xarray
   - pip:

@@ -8,8 +8,133 @@ source("../_common.R")
 status("draft")
 ```
 
-::: {.callout-note}
-# Looking forward
+## Overview
 
-In the next chapter, 
+When using MOSAIKS (Multi-task Observation using SAtellite Imagery & Kitchen Sinks), model selection largely depends on your label data type. While more complex methods are certainly possible, experience shows that **linear models** often perform remarkably well. This is because the random convolutional features in MOSAIKS already capture and encode non-linear information from the underlying satellite imagery. This chapter will outline modeling approaches for different types of label data, and offer guidance on best practices for model evaluation.
+
+Before jumping into the details, it is important to emphasize that **all modeling tasks** benefit from a systematic approach to training, validation, and testing:
+
+- **Train/validation split** (80% of the data)  
+- **Test split** (20% of the data)
+
+This ensures that you have separate, unbiased datasets for both model tuning and final performance evaluation.  
+
+## Continuous labels
+
+Many MOSAIKS applications involve predicting continuous outcomes such as forest cover percentage, population density, average income, crop yields, or building height. In these cases, **penalized linear regression** approaches (especially **ridge regression**) work well. These methods offer simplicity, computational efficiency, and interpretability, while mitigating overfitting through the use of regularization.
+
+### Ridge regression
+
+**Ridge regression** (L2 regularization) is often the default choice in MOSAIKS applications because it effectively handles the large number of potentially correlated features produced by the random convolution process. It achieves this via an L2 penalty on the regression coefficients, which shrinks coefficients towards zero and reduces variance, thereby improving generalization.
+
+The ridge regression objective function:
+
+$$
+\min_{\beta} \|y - X\beta\|^2_2 + \lambda\|\beta\|^2_2
+$$
+
+Where:
+
+- $\lambda$ controls the strength of the regularization,
+- $\beta$ are the regression coefficients,
+- $y$ is the vector of observed labels,
+- $X$ is the feature matrix produced by the MOSAIKS pipeline.
+
+### Lasso regression
+
+**Lasso regression** (L1 regularization) is an alternative that shrinks some coefficients to zero, effectively performing feature selection. The L1 penalty helps enforce sparsity, which can be valuable when interpretability or identification of key features is a priority.
+
+The lasso objective function:
+
+$$
+\min_{\beta} \|y - X\beta\|^2_2 + \lambda\|\beta\|_1
+$$
+
+Where:
+
+- $\lambda$ again controls the strength of the penalty,  
+- The $\|\beta\|_1$ term encourages some coefficients to be exactly zero.
+
+### Why linear models work well
+
+Though the models themselves are linear, **the features are not**. MOSAIKS uses random convolutions, non-linear activation functions (ReLU), and average pooling to transform raw satellite imagery into highly expressive features. Because these transformations capture a broad range of non-linear spatial patterns, traditional linear methods can then perform well with minimal additional complexity.
+
+### Evaluation metrics
+
+For continuous outcomes, key evaluation metrics include:
+
+- **R² (coefficient of determination)**: Measures the proportion of variance in the label data explained by the model.  
+- **RMSE (root mean squared error)**: Quantifies the average magnitude of the prediction errors.  
+- **MAE (mean absolute error)**: Focuses on the absolute value of prediction errors, less sensitive to large outliers than RMSE.
+
+## Binary classification
+
+In some MOSAIKS applications, your labels may be binary (e.g., building presence vs. absence, land use change vs. no change). Here, **logistic regression** often serves as a straightforward choice.
+
+### Logistic regression
+
+Logistic regression models the probability that a given example belongs to the “positive” class:
+
+$$
+\text{logit}(p) = \beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n
+$$
+
+where $p$ is the probability of belonging to the positive class. Despite its simplicity, logistic regression provides robust and interpretable performance for many binary classification tasks with MOSAIKS features.
+
+### Evaluation metrics
+
+For binary classification, common metrics include:
+
+- **AUC-ROC**: The area under the ROC curve, assessing the trade-off between true positive rate and false positive rate across different threshold settings.  
+- **Accuracy**: The proportion of correct predictions.  
+- **Precision**: Of the positive predictions made, how many were correct?  
+- **Recall**: Of the actual positives in the dataset, how many did we correctly identify?  
+- **F1 score**: The harmonic mean of precision and recall, often used in imbalanced classification settings.
+
+## Multi-class classification
+
+Some applications require predicting multiple categories (e.g., land cover types, crop variety, building categories). These are **multi-class** classification problems. Several approaches are possible:
+
+1. **One-vs-Rest**: Train a binary classifier for each class; each classifier distinguishes one class from “all others.”  
+2. **Multinomial (softmax) regression**: A single model to predict probabilities across all classes simultaneously.  
+3. **Ordinal regression**: For predicting ordered categories (e.g., mild, moderate, severe damage).
+
+### Evaluation metrics
+
+For multi-class problems, consider:
+
+- **Overall accuracy**: Percentage of examples correctly classified.  
+- **Per-class accuracy**: Accuracy within each class, useful if class sizes are imbalanced.  
+- **Confusion matrix**: Provides a detailed breakdown of predictions vs. actual classes.  
+- **Weighted F1 score**: Averages F1 across classes, weighting by class frequency.  
+- **Cohen’s kappa**: Measures agreement between predicted and actual labels, adjusting for chance agreement.
+
+## Model selection workflow
+
+1. **Identify label type**  
+   - Continuous → Ridge or Lasso regression  
+   - Binary → Logistic regression  
+   - Multi-class → One-vs-Rest or Multinomial
+
+2. **Cross-validation**  
+   - Split data into train, validation, and test sets, respecting spatial structure where possible (e.g., leave-cluster-out).  
+   - Select appropriate evaluation metrics (e.g., R² for continuous, ROC-AUC for binary).  
+   - Tune hyperparameters ($\lambda$ in ridge/lasso, regularization in logistic) using the validation set.
+
+3. **Model deployment**  
+   - Retrain on the entire training set using the chosen hyperparameters.  
+   - Generate predictions on the test set (or new data).  
+   - Quantify uncertainty (e.g., confidence intervals, out-of-sample error estimates).
+
+## Summary
+
+- **Start with simple linear models**: Let MOSAIKS features do the heavy lifting of extracting non-linear patterns.  
+- **Match the metric to the task**: R² or RMSE for continuous labels, AUC-ROC or F1 score for classification, etc.  
+- **Use cross-validation**: Always separate training and testing to maintain unbiased estimates of model performance.  
+- **Consider spatial structure**: When dealing with spatial data, standard random splits may lead to overly optimistic estimates of performance.
+
+::: {.callout-note}
+## Looking forward
+
+In the next chapter, we’ll discuss strategies for accounting for spatial dependencies in your modeling workflow, including methods for spatially stratified cross-validation, spatial interpolation, and spatial extrapolation.
 :::

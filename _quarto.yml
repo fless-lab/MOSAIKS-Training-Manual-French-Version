@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: _book
+  resources:
+    - slides/MOSAIKS_Intro_TrainingDay1.pdf
 
 book:
   title: "MOSAIKS Training Manual"

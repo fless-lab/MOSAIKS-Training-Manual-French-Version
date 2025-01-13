@@ -14,7 +14,108 @@ After selecting appropriate satellite imagery (as discussed in @sec-satellite-im
 
 ![Source: [Microsoft Planetary Computer](https://planetarycomputer.microsoft.com/)](../images/mpc_gallery.jpg)
 
-## Cloud vs local processing
+## Accessing satellite imagery
+
+### Cloud vs local
+
+There are several cloud-based platforms that provide access to a wide range of satellite imagery and geospatial datasets. These platforms offer scalable computing resources, pre-configured environments, and often include common datasets. Some popular cloud platforms for satellite imagery processing include:
+
+These platforms offer several advantages, including:
+
+- No need to download raw imagery
+- Scalable computing resources
+- Pre-configured environments
+- Often include common datasets
+- Can download to local or cloud storage
+
+[NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/)
+
+#### Google Earth Engine
+
+Google Earth Engine provides a vast catalog of satellite imagery and geospatial datasets that can be accessed through a Python API. The GEE API is based on the [Earth Engine Python API](https://developers.google.com/earth-engine/guides/python_install), which allows you to interact with the Earth Engine servers and run geospatial analyses in the cloud.
+
+#### Microsoft Planetary Computer
+
+Microsoft Planetary Computer provides a multi-petabyte catalog of global environmental data that can easily be accessed through APIs. The MPC API is based on the [STAC (SpatioTemporal Asset Catalog)](https://stacspec.org/en) specification, which is an emerging open standard for geospatial data that aims to increase the interoperability of geospatial data, particularly satellite imagery.
+
+For more information on using the Microsoft Planetary Computer API, see [Reading Data from the STAC API](https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/).
+
+::: {.callout-tip}
+For practical guidance on accessing the Microsoft Planetary Computer Data Catalog through their API,see the Master of Environmental Data Science (MEDS) course EDS 220 section on the [STAC specification](https://meds-eds-220.github.io/MEDS-eds-220-course/book/chapters/lesson-16-STAC.html)
+:::
+
+### Planet API
+
+- NICFI is free
+  - Sign up at [NICFI](https://www.planet.com/nicfi/)
+  - Access to Visual (RGB) and Analytic (RGB+NIR) basemaps
+- Planet is paid
+  - Sign up at [Planet](https://www.planet.com/)
+  - API access to PlanetScope, RapidEye, SkySat, Dove, and basemap imagery
+  - Institutional licensing available
+
+#### Sentinel Hub
+
+Sentinel Hub is a cloud-based platform that provides access to a wide range of satellite imagery, including data from the Sentinel-1, Sentinel-2, and Landsat missions. The Sentinel Hub API allows you to access and process satellite imagery using a simple Python interface.
+
+### `Sentinelsat` python API
+
+The `sentinelsat` Python API allows you to search and download satellite imagery from the Copernicus Open Access Hub. The API provides a simple interface for searching and downloading Sentinel-1 and Sentinel-2 imagery, as well as other Copernicus data products.
+
+## Understanding the data
+
+Once you have decided how to acquire satellite imagery, the next step is to make sure that you **understand the data** so you can make sure to process it correctly. Often the best resource is to consult the data provider's documentation. Aside from that, the best way to understand the data is to open it up and explore it.
+
+::: {.callout-tip}
+For hands on experience with satellite imagery, skip to the next chapter where you can access NICFI imagery in a Google Colab notebook (@sec-satellite-demo).
+:::
+
+### Storage formats
+
+Satellite imagery can be stored in various formats, including:
+
+- GeoTIFF
+- NetCDF
+- HDF5
+- Zarr
+
+There are several python libraries that can be used to read and write these formats, such as `rasterio`, `xarray`, `rioxarray`, and `h5py`.
+
+### Metadata
+
+- Data types (INT8, UINT16, FLOAT32)
+- Coordinate reference system (CRS)
+- Spectral bands (Red, Green, Blue, Near-Infrared, etc.)
+- Spatial resolution (scene size, pixel size)
+- Acquisition date (single or multiple dates)
+- Cloud cover
+- Data quality
+
+### Visualization
+
+There are many considerations for visualizing satellite imagery. We will cover some of the most common ones here.
+
+#### Normalization
+
+
+#### True color
+
+
+#### False color
+
+
+#### Sharpening
+
+
+### Calculate Indices
+
+Depending on your application, a good place to start is calculating vegetation or other indices. There are many to choose from and it takes some domain knowledge to know if one would be useful for your application. In agriculture, there are several indices that are commonly used to monitor crop health, such as the Normalized Difference Vegetation Index (NDVI), the Enhanced Vegetation Index (EVI), and the Soil Adjusted Vegetation Index (SAVI).
+
+Normalized Difference Vegetation Index (NDVI) is a simple and common vegetation index that uses the difference between near-infrared (NIR) and red bands to quantify vegetation health.
+
+![NDVI values animated over Africa. [Made](https://github.com/cropmosaiks/images/blob/main/NDVI_Africa_Gif.ipynb) with Google Earth Engine Python API.](https://github.com/cropmosaiks/images/blob/main/animations/ndvi.gif?raw=true){#fig-ndvi-gif}
+
+## Processing satellite imagery
 
 There are two main approaches to accessing and processing satellite imagery:
 
@@ -54,157 +155,43 @@ Consider these factors when choosing:
 - Time requirements
 - Security needs
 
-## Accessing imagery
-
-### Cloud platforms
-
-[NASA Earthdata Cloud Cookbook](https://nasa-openscapes.github.io/earthdata-cloud-cookbook/)
-
-#### Google Earth Engine
-
-Google Earth Engine provides a vast catalog of satellite imagery and geospatial datasets that can be accessed through a Python API. The GEE API is based on the [Earth Engine Python API](https://developers.google.com/earth-engine/guides/python_install), which allows you to interact with the Earth Engine servers and run geospatial analyses in the cloud.
-
-#### Microsoft Planetary Computer
-
-Microsoft Planetary Computer provides a multi-petabyte catalog of global environmental data that can easily be accessed through APIs. The MPC API is based on the [STAC (SpatioTemporal Asset Catalog)](https://stacspec.org/en) specification, which is an emerging open standard for geospatial data that aims to increase the interoperability of geospatial data, particularly satellite imagery.
-
-For more information on using the Microsoft Planetary Computer API, see [Reading Data from the STAC API](https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/).
-
-::: {.callout-tip}
-For practical guidance on accessing the Microsoft Planetary Computer Data Catalog through their API,see the Master of Environmental Data Science (MEDS) course EDS 220 section on the [STAC specification](https://meds-eds-220.github.io/MEDS-eds-220-course/book/chapters/lesson-16-STAC.html)
-:::
-
-### Local downloads
-
-#### Sentinelsat python API
 
 
-
-#### Landsat
-
-```python
-import landsatxplore.api
-
-# Initialize API
-api = landsatxplore.api.API('user', 'password')
-
-# Search scenes
-scenes = api.search(
-    dataset='landsat_ot_c2_l2',
-    bbox=bbox,
-    start_date='2019-01-01',
-    end_date='2019-12-31'
-)
-```
 
 ## Processing steps
 
-### 1. Quality assessment
+### Quality assessment
 
 - Cloud detection
 - Shadow masking
 - Bad pixel identification
 - Sensor artifacts removal
 
-### 2. Atmospheric correction
+### Atmospheric correction
 
 - Convert to surface reflectance
 - Account for atmospheric effects
 - Standardize across images
 
-### 3. Geometric correction
+### Geometric correction
 
 - Orthorectification
 - Co-registration
 - Projection alignment
 
-### 4. Mosaicking
+### Mosaicking
 
 - Image stitching
 - Feathering/blending
 - Gap filling
 - Color balancing
 
-### 5. Temporal compositing
+### Temporal compositing
 
 - Best-pixel selection
 - Weighted averaging
 - Gap filling
 - Smoothing
-
-## Processing workflows
-
-### Example cloud-based workflow
-
-```python
-def process_sentinel2(aoi, start_date, end_date):
-    """
-    Process Sentinel-2 imagery on Google Earth Engine
-    
-    Parameters:
-    -----------
-    aoi : ee.Geometry
-        Area of interest
-    start_date : str
-        Start date (YYYY-MM-DD)
-    end_date : str
-        End date (YYYY-MM-DD)
-        
-    Returns:
-    --------
-    ee.Image
-        Processed composite image
-    """
-    s2 = ee.ImageCollection('COPERNICUS/S2_SR') \
-        .filterBounds(aoi) \
-        .filterDate(start_date, end_date)
-    
-    # Cloud masking
-    def mask_clouds(img):
-        clouds = img.select('QA60').bitwiseAnd(1 << 10)
-        return img.updateMask(clouds.Not())
-    
-    # Apply cloud mask
-    s2_masked = s2.map(mask_clouds)
-    
-    # Create median composite
-    composite = s2_masked.median()
-    
-    return composite
-```
-
-### Example local workflow
-
-```python
-def process_local_images(image_dir):
-    """
-    Process downloaded satellite imagery
-    
-    Parameters:
-    -----------
-    image_dir : str
-        Directory containing images
-        
-    Returns:
-    --------
-    numpy.ndarray
-        Processed image array
-    """
-    import rasterio
-    from rasterio.merge import merge
-    
-    # List images
-    images = []
-    for file in os.listdir(image_dir):
-        if file.endswith('.tif'):
-            with rasterio.open(os.path.join(image_dir, file)) as src:
-                images.append(src)
-    
-    # Merge images
-    mosaic, transform = merge(images)
-    
-    return mosaic
-```
 
 ## Best practices
 
@@ -275,5 +262,5 @@ As you develop your processing pipeline, consider:
 ::: {.callout-note}
 # Looking forward
 
-In the next section, we will explore how to extract MOSAIKS features from processed imagery.
+In the next section, we will load, visualize, and explore NICFI satellite imagery in Google Colab. 
 :::

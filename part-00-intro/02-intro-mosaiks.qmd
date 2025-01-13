@@ -1,18 +1,16 @@
 # What is MOSAIKS? {#sec-intro-mosaiks}
 
-```{r}
-#| echo: false
-#| results: "asis"
+::: {.callout-tip}
+# MOSAIKS
 
-source("../_common.R")
-status("review")
-```
+**<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**
+:::
 
 ## The challenge
 
 Right now, [numerous public satellite systems](https://www.ucsusa.org/resources/satellite-database#.VF_jIlPF8Wg) collect huge amounts of data about the world every day. But there is so much imagery (terabytes per day) that it’s overwhelming to sort through by hand; and it’s too complex and unstructured to be usable in its raw form for most applications.
 
-![Visual representation of satellites orbiting earth.](../images/every-single-satellite-1.jpg){#fig-satellites}
+![Visual representation of satellites orbiting earth.](../images/every-single-satellite-1.jpg){#fig-satellites width=75%}
 
 That is why linking satellite imaging to machine learning (sometimes referred to as SIML or SatML) is incredibly powerful. It enables vast amounts of unstructured image data to be transformed into structured information that can be used for planning, research, and decision-making.  
 
@@ -21,12 +19,6 @@ That is why linking satellite imaging to machine learning (sometimes referred to
 ## The solution 
 
 That’s why we developed MOSAIKS. MOSAIKS aims to lower the barriers to entry into SIML, diversifying the users of this powerful technology and the problems we solve with it.  
-
-::: {.callout-tip}
-# MOSAIKS
-
-**<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**
-:::
 
 MOSAIKS is designed to work “out of the box” for a wide array of SIML applications, for people with no SIML expertise who work on normal desktop or laptop computers. For many applications, MOSAIKS users never have to touch satellite imagery themselves and only need to have basic statistical training. 
 
@@ -117,12 +109,20 @@ Importantly, all these predictions use the same set of satellite features - ther
 
 ## Is MOSAIKS always the best choice?
 
-No! MOSAIKS is a powerful tool, but it is not always the best choice for every application. We recommend that users first start by searching for existing methods that have been developed for their specific application. An excellent place to begin this search is at [
-satellite-image-deep-learning](https://github.com/satellite-image-deep-learning) where you can find a list of deep learning methods that have been developed for satellite imagery, as well as existing datasets, tools and tutorials. 
+**No!** MOSAIKS is a powerful tool, but it is not always the best choice for every application. In fact, it is usually not the "best" choice for any application. We aim to be competitive with leading models, so the true benefit of MOSAIKS is in its simplicity, accessibility, and scalability for the average user.
+
+We recommend that you start by searching for existing methods developed for your application, before investing time and resources into MOSAIKS. An excellent place to begin this search is at [
+satellite-image-deep-learning](https://github.com/satellite-image-deep-learning) where you can find a list of deep learning methods that have been developed for satellite imagery, as well as existing datasets, tools, and tutorials. 
 
 The world of SIML is vast and rapidly evolving. This means there is a good choice you do not have to make global scale predictions yourself. Instead, you might be able to use or build off the hard work of many others in the field.
 
-If you have a specific context where you want tailored information or a variable/outcome no one else has predicted before, then you want MOSAIKS. Not only will MOSAIKS allow you to make predictions in a new context, but it will also allow you to do so quickly and with minimal computational resources.
+If you have a specific context where you want tailored information or a variable/outcome no one else has predicted before, *then* you want MOSAIKS. Not only will MOSAIKS allow you to make predictions in a new context, but it will also allow you to do so quickly and with minimal computational resources.
+
+## Lecture materials
+
+**TODO:** Add recorded lecture here. 
+
+[Lecture slides.](../slides/MOSAIKS_Intro_TrainingDay1.pdf)
 
 ## Summary
 

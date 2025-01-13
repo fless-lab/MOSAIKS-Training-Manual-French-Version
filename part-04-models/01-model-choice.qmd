@@ -12,12 +12,16 @@ status("draft")
 
 When using MOSAIKS (Multi-task Observation using SAtellite Imagery & Kitchen Sinks), model selection largely depends on your label data type. While more complex methods are certainly possible, experience shows that **linear models** often perform remarkably well. This is because the random convolutional features in MOSAIKS already capture and encode non-linear information from the underlying satellite imagery. This chapter will outline modeling approaches for different types of label data, and offer guidance on best practices for model evaluation.
 
+## Train/validation and test splits
+
 Before jumping into the details, it is important to emphasize that **all modeling tasks** benefit from a systematic approach to training, validation, and testing:
 
 - **Train/validation split** (80% of the data)  
 - **Test split** (20% of the data)
 
 This ensures that you have separate, unbiased datasets for both model tuning and final performance evaluation.  
+
+![Train/validation and test splits shown for a standard 5-fold cross validation procedure.](../images/kfold_cv_split.png){#fig-train-val-test-splits}
 
 ## Continuous labels
 

@@ -173,9 +173,9 @@ In lieu of time series MOSAIKS features, we will instead demonstrate similar exa
 :::{.callout-note}
 # Click the badge to run the demo in Google Colab!
 
-&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;    
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cullen-molitor/MOSAIKS-Training-Manual/blob/main/notebooks/demo/01-Rolf_et_al_2021_demo.ipynb)  
-&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;    
+&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;&darr;  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cullen-molitor/MOSAIKS-Training-Manual/blob/main/notebooks/demo/08-model_fews_net_demo.ipynb)  
+<!-- &uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;&uarr;   -->
 
 Remember to click `File -> Save a copy in Drive` to save any changes you make.
 :::

@@ -129,6 +129,38 @@ For multi-class problems, consider:
 - **Weighted F1 score**: Averages F1 across classes, weighting by class frequency.  
 - **Cohen’s kappa**: Measures agreement between predicted and actual labels, adjusting for chance agreement.
 
+## Applying the model to make predictions
+
+Once you have selected a model and tuned it (e.g., via cross-validation), you can **apply the model to new, unseen data**. This step is often referred to as “inference” or “scoring”:
+
+1. **Prepare features**: The features for the new areas or times should be extracted using the same RCF model that was used to extract the original features. This means that a model made with custom made could not be able to features on the API. The features may be randomly created, but after the model is initialized, the weights are fixed. 
+
+1. **Load the trained model**: Ensure the model (along with any hyperparameters and preprocessing steps) is loaded exactly as it was trained. This consistency is critical for maintaining predictive accuracy.
+
+1. **Predict**: Pass the new feature matrix (`X_new`) into the trained model’s `predict` method to obtain predictions. For example, using scikit-learn:
+   ```python
+   y_pred = ridge.predict(X_new)
+   ```
+If your task is classification, use `predict_proba` to get predicted probabilities:
+   ```python
+   p_pred = logistic_regression.predict_proba(X_new)
+   ```
+
+1. **Interpret and store results**: Save the predictions in a structured format (e.g., CSV, GeoTIFF) for downstream analysis. Consider including metadata about the date and version of your model, the MOSAIKS feature extraction process, and any relevant notes on data quality.
+
+By following these steps, you ensure that your MOSAIKS models are deployed effectively and consistently. From here, you can visualize the predictions, integrate them into downstream analyses, or inform policy and decision-making based on the model’s output.
+
+### Addressing domain shift 
+
+When applying your model to new geographic regions or under different conditions, be aware that the underlying data distribution (satellite imagery patterns, socioeconomic factors, land-use/land-cover types) may differ from your training set. This “domain shift” can lead to reduced predictive performance if the model has not been exposed to similar examples during training. To mitigate this, consider collecting additional representative training data from these new regions, adopting transfer learning or domain adaptation techniques, and quantifying predictive uncertainty so you can flag areas where the model may perform poorly. Periodic performance audits and retraining—especially when new data becomes available—help ensure robust generalization across diverse geographies.
+
+Predicting at higher resolution than the labels
+
+
+
+## Quantifying uncertainty
+
+
 ## Model selection workflow
 
 1. **Identify label type**  

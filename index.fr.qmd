@@ -1,0 +1,88 @@
+# Bienvenue {.unnumbered}
+
+Bienvenue dans la première édition du Manuel de Formation MOSAIKS ! Ce manuel constitue une référence complète pour comprendre MOSAIKS, ses capacités et son application pratique. Vous découvrirez ce qu'est MOSAIKS, ses possibilités et comment l'utiliser efficacement dans diverses applications.
+
+Les compétences et connaissances acquises grâce à ce manuel vous permettront d'exploiter l'imagerie satellite et l'apprentissage automatique pour répondre à des défis socio-économiques et environnementaux complexes. Ce manuel peut être utilisé en auto-formation ou dans le cadre d'une formation encadrée.
+
+De nombreux concepts et exemples s'appliquent largement au domaine de la télédétection et de l'apprentissage automatique. Ainsi, même si vous n'utilisez pas MOSAIKS, vous trouverez certainement ce contenu utile.
+
+## Qu'est-ce que MOSAIKS ?
+
+MOSAIKS signifie **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. C'est un cadre conçu pour simplifier l'utilisation de l'imagerie satellite et de l'apprentissage automatique dans la prédiction de résultats socio-économiques et environnementaux à travers différents contextes géographiques et périodes. MOSAIKS s'appuie sur des convolutions aléatoires (développées par Rahimi et Recht (2008)) appliquées à l'imagerie satellite, qui extraient des caractéristiques indépendantes des tâches et permettent aux chercheurs et praticiens de prédire facilement et de manière flexible divers résultats à partir d'images brutes.
+
+![MOSAIKS écrit avec des images du catalogue de données de la constellation de satellites Landsat. Créé avec : [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png){#fig-mosaiks-in-landsat}
+
+## À qui s'adresse cette formation ?
+
+Ce programme complet de deux semaines est conçu pour les universitaires, les professionnels et les praticiens souhaitant utiliser MOSAIKS pour mieux comprendre les enjeux socio-économiques et environnementaux. La formation est particulièrement pertinente pour les personnes travaillant dans :
+
+- La télédétection et l'analyse d'images satellites
+- Les applications d'apprentissage automatique avec des données géospatiales
+- Le suivi et l'évaluation agricole et environnementale
+- La recherche en développement et l'élaboration de politiques
+
+## Que vais-je apprendre ?
+
+Tout au long de cette formation, vous apprendrez des applications pratiques à travers :
+
+- Les fondements théoriques et la compréhension conceptuelle
+- Des exercices pratiques avec des données réelles
+- Les meilleures pratiques de mise en œuvre
+- Les stratégies d'analyse et d'interprétation des résultats
+
+Le programme couvre l'ensemble du flux de travail MOSAIKS, notamment :
+
+- L'accès et le traitement des images satellites
+- La compréhension de l'extraction des caractéristiques MOSAIKS
+- L'utilisation de l'API MOSAIKS
+- L'implémentation des modèles d'apprentissage automatique
+- La quantification et la communication de l'incertitude
+- L'application des modèles dans différents contextes
+- Le travail avec les données d'enquête
+
+Que vous débutiez avec MOSAIKS ou que vous souhaitiez approfondir votre expertise, cette formation vous fournit les outils et les connaissances nécessaires pour utiliser efficacement ce cadre.
+
+## Structure du cours
+
+Cette formation est conçue comme un programme intensif de deux semaines combinant cours magistraux, démonstrations et sessions pratiques. Chaque journée est structurée comme suit :
+
+| **Horaire**     | **Activité**           |
+|-----------------|:-----------------------|
+| 9h00 - 10h30    | Session matinale 1     |
+| 10h30 - 11h00   | Pause                  |
+| 11h00 - 12h30   | Session matinale 2     |
+| 12h30 - 13h30   | Déjeuner               |
+| 13h30 - 15h00   | Session après-midi 1   |
+| 15h00 - 15h30   | Pause                  |
+| 15h30 - 16h30   | Session après-midi 2   |
+| 16h30 - 17h00   | Retour d'expérience    |
+
+: Planning quotidien montrant 2 sessions le matin, 2 sessions l'après-midi, et un créneau final dédié au développement du cours. {#tbl-course-outline .striped .hover}
+
+Chaque journée se termine par une session de questions-réponses et de retours d'expérience de 16h30 à 17h00, offrant l'opportunité de clarifier les concepts et de partager des idées. Cette première édition du cours devrait faire émerger de nombreuses nouvelles idées et concepts à inclure dans les futures formations. N'oubliez pas de prendre des notes tout au long de la journée, en particulier sur les points qui pourraient être mieux expliqués ou qui nécessiteraient des sujets supplémentaires. Cela peut concerner des aspects que vous avez trouvés difficiles ou que vous pensez pouvoir être complexes pour d'autres.
+
+Bien que la version présentielle de ce cours soit conçue selon le planning ci-dessus, les utilisateurs en auto-formation peuvent parcourir le contenu à leur rythme, en notant que les chapitres sont conçus pour un apprentissage séquentiel.
+
+## Programme du cours
+
+### Semaine 1
+
+- **Jour 1** : Cadre MOSAIKS, accès aux caractéristiques, flux de travail de base
+- **Jour 2** : Compréhension des données de terrain, nettoyage des données, résolution spatiale
+- **Jour 3** : Prédiction des rendements agricoles, téléchargement des caractéristiques via l'API
+- **Jour 4** : Types d'imagerie satellite, considérations de traitement, contrôle qualité
+- **Jour 5** : Calcul des caractéristiques, théorie des RCF, mise en œuvre pratique
+
+### Semaine 2
+
+- **Jour 1** : Sélection de modèles, réglage des hyperparamètres, validation croisée
+- **Jour 2** : Évaluation des performances, analyse des erreurs, interprétation des résultats
+- **Jour 3** : Applications avancées, études de cas, projets pratiques
+- **Jour 4** : Optimisation des modèles, déploiement, bonnes pratiques
+- **Jour 5** : Présentations des projets, discussions, perspectives futures
+
+::: {.callout-note}
+## Objectifs d'apprentissage
+
+Dans la première partie de ce manuel, nous aborderons les bases de MOSAIKS, notamment son cadre, ses capacités et ses applications pratiques. Cette section se concentre sur l'exploration de la publication originale de MOSAIKS (Rolf et al. 2021) et la compréhension des concepts fondamentaux du cadre.
+:::

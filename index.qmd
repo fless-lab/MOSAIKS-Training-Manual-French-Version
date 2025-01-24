@@ -1,174 +1,175 @@
-# Welcome {.unnumbered}
+# Bienvenue {.unnumbered}
 
-<!-- ## Where am I? -->
+Bienvenue dans la première édition du Manuel de Formation MOSAIKS ! Ce manuel constitue une référence complète pour comprendre MOSAIKS, ses capacités et son application pratique. Vous découvrirez ce qu'est MOSAIKS, ses possibilités et comment l'utiliser efficacement dans diverses applications.
 
-This is the first edition of the MOSAIKS Training Manual! The manual serves as a comprehensive reference for understanding MOSAIKS, its capabilities, and guidance on practical implementation. You will learn what MOSAIKS is, what can be done with it, and how to use it effectively in a variety of applications.
+Les compétences et connaissances acquises grâce à ce manuel vous permettront d'exploiter l'imagerie satellite et l'apprentissage automatique pour répondre à des défis socio-économiques et environnementaux complexes. Ce manuel peut être utilisé en auto-formation ou dans le cadre d'une formation encadrée.
 
-The skills and knowledge you gain from this manual will enable you to leverage satellite imagery and machine learning to address complex socioeconomic and environmental challenges. This can be a self taught manual or used in conjunction with a training course. 
+De nombreux concepts et exemples s'appliquent largement au domaine de la télédétection et de l'apprentissage automatique. Ainsi, même si vous n'utilisez pas MOSAIKS, vous trouverez certainement ce contenu utile.
 
-Many of the concepts and examples are broadly applicable to the world of remote sensing and machine learning, so even if you are not using MOSAIKS, you may find the content useful.
+## Qu'est-ce que MOSAIKS ?
 
-## What is MOSAIKS?
+MOSAIKS signifie **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. C'est un cadre conçu pour simplifier l'utilisation de l'imagerie satellite et de l'apprentissage automatique dans la prédiction de résultats socio-économiques et environnementaux à travers différents contextes géographiques et périodes. MOSAIKS s'appuie sur des convolutions aléatoires (développées par Rahimi et Recht (2008)) appliquées à l'imagerie satellite, qui extraient des caractéristiques indépendantes des tâches et permettent aux chercheurs et praticiens de prédire facilement et de manière flexible divers résultats à partir d'images brutes.
 
-MOSAIKS stands for **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks**. It is a framework designed to simplify the use of satellite imagery and machine learning for predicting socioeconomic and environmental outcomes across different geographic contexts and time periods. MOSAIKS relis on random convolutions (developed in Rahimi and Recht (2008)) applied to satellite imagery, which extract task-agnostic features and enable researchers and practitioners to easily and flexibly predict a diversity of outcomes from raw imagery. 
+![MOSAIKS écrit avec des images du catalogue de données de la constellation de satellites Landsat. Créé avec : [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png){#fig-mosaiks-in-landsat}
 
-![MOSAIKS spelled out with imagery from the Landsat Satellite Constellation data catalog. Made with: [Your Name in Landsat](https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/)](images/mosaiks-in-landsat.png){#fig-mosaiks-in-landsat}
+## À qui s'adresse cette formation ?
 
-## Who is this for?
+Ce programme complet de deux semaines est conçu pour les universitaires, les professionnels et les praticiens souhaitant utiliser MOSAIKS pour mieux comprendre les enjeux socio-économiques et environnementaux. La formation est particulièrement pertinente pour les personnes travaillant dans :
 
-This comprehensive two-week program is designed for academics, professionals, and practitioners interested in leveraging MOSAIKS to better understand socioeconomic and environmental challenges. The course is particularly valuable for those working in:
+- La télédétection et l'analyse d'images satellites
+- Les applications d'apprentissage automatique avec des données géospatiales
+- Le suivi et l'évaluation agricole et environnementale
+- La recherche en développement et l'élaboration de politiques
 
-- Remote sensing and satellite imagery analysis
-- Machine learning applications with geospatial data 
-- Agricultural and environmental monitoring and assessment
-- Development research and policy making
+## Que vais-je apprendre ?
 
-## What will I learn?
+Tout au long de cette formation, vous apprendrez des applications pratiques à travers :
 
-Throughout this course, you'll learn practical applications through a combination of:
+- Les fondements théoriques et la compréhension conceptuelle
+- Des exercices pratiques avec des données réelles
+- Les meilleures pratiques de mise en œuvre
+- Les stratégies d'analyse et d'interprétation des résultats
 
-- Theoretical foundations and conceptual understanding
-- Hands-on exercises with real-world data
-- Best practices for implementation
-- Strategies for analyzing and interpreting results
+Le programme couvre l'ensemble du flux de travail MOSAIKS, notamment :
 
-The curriculum covers the complete MOSAIKS workflow, including:
+- L'accès et le traitement des images satellites
+- La compréhension de l'extraction des caractéristiques MOSAIKS
+- L'utilisation de l'API MOSAIKS
+- L'implémentation des modèles d'apprentissage automatique
+- La quantification et la communication de l'incertitude
+- L'application des modèles dans différents contextes
+- Le travail avec les données d'enquête
 
-- Accessing and processing satellite imagery
-- Understanding MOSAIKS feature extraction
-- Working with the MOSAIKS API
-- Implementing machine learning models
-- Quantifying and communicating uncertainty
-- Applying models to various contexts
-- Working with survey data
+Que vous débutiez avec MOSAIKS ou que vous souhaitiez approfondir votre expertise, cette formation vous fournit les outils et les connaissances nécessaires pour utiliser efficacement ce cadre.
 
-Whether you're new to MOSAIKS or looking to deepen your expertise, this course provides the tools and knowledge needed to effectively utilize this framework.
+## Structure du cours
 
-## Course structure 
+Cette formation est conçue comme un programme intensif de deux semaines combinant cours magistraux, démonstrations et sessions pratiques. Chaque journée est structurée comme suit :
 
-This course is designed as an intensive two-week program that combines lectures, demonstrations, and hands-on sessions. Each day is structured as follows:
+| **Horaire**     | **Activité**           |
+|-----------------|:-----------------------|
+| 9h00 - 10h30    | Session matinale 1     |
+| 10h30 - 11h00   | Pause                  |
+| 11h00 - 12h30   | Session matinale 2     |
+| 12h30 - 13h30   | Déjeuner               |
+| 13h30 - 15h00   | Session après-midi 1   |
+| 15h00 - 15h30   | Pause                  |
+| 15h30 - 16h30   | Session après-midi 2   |
+| 16h30 - 17h00   | Retour d'expérience    |
 
-| **Time**       | **Activity**       |
-|----------------|:-------------------|
-| 9:00 - 10:30   | Morning Session 1  |
-| 10:30 - 11:00  | Break              |
-| 11:00 - 12:30  | Morning Session 2  |
-| 12:30 - 1:30   | Lunch              |
-| 1:30 - 3:00    | Afternoon Session 1|
-| 3:00 - 3:30    | Break              |
-| 3:30 - 4:30    | Afternoon Session 2|
-| 4:30 - 5:00    | Feedback and Development |
+: Planning quotidien montrant 2 sessions le matin, 2 sessions l'après-midi, et un créneau final dédié au développement du cours. {#tbl-course-outline .striped .hover}
 
-: Daily time divisions showing 2 morning sessions, 2 afternoon sessions, and a final time slot alloted for developing the course further. {#tbl-course-outline .striped .hover}
+Chaque journée se termine par une session de questions-réponses et de retours d'expérience de 16h30 à 17h00, offrant l'opportunité de clarifier les concepts et de partager des idées. Cette première édition du cours devrait faire émerger de nombreuses nouvelles idées et concepts à inclure dans les futures formations. N'oubliez pas de prendre des notes tout au long de la journée, en particulier sur les points qui pourraient être mieux expliqués ou qui nécessiteraient des sujets supplémentaires.
 
-Each day concludes with a Q&A and feedback session from 4:30-5:00, providing opportunities to clarify concepts and share ideas. It is expected that this first course will spur many new ideas and concepts which should be included in the future trainings. Please remember to take notes throughout each day with particular emphasis in areas you think could be explained better or that need additional topics covered. These can be areas that you struggled with or that you would anticipate could be difficult for others.
+Bien que la version présentielle de ce cours soit conçue selon le planning ci-dessus, les utilisateurs en auto-formation peuvent parcourir le contenu à leur rythme, en notant que les chapitres sont conçus pour un apprentissage séquentiel.
 
-While the in-person version of this course was designed with the schedule outlined above, other users can easily navigate throughout the course content as desired, noting that the chapter content is designed for sequential learning. 
+## Programme du cours
 
-## Course schedule
+### Semaine 1
 
-### Week 1
+- **Jour 1** : Cadre MOSAIKS, accès aux caractéristiques, flux de travail de base
+- **Jour 2** : Compréhension des données de terrain, nettoyage des données, résolution spatiale
+- **Jour 3** : Prédiction des rendements agricoles, téléchargement des caractéristiques via l'API
+- **Jour 4** : Types d'imagerie satellite, considérations de traitement, contrôle qualité
+- **Jour 5** : Calcul des caractéristiques, théorie des RCF, mise en œuvre pratique
 
-- **Day 1**: MOSAIKS framework, accessing features, basic workflow
-- **Day 2**: Understanding ground truth data, data cleaning, spatial resolution
-- **Day 3**: Agricultural yield prediction, downloading features via API
-- **Day 4**: Types of satellite imagery, processing considerations, quality control
-- **Day 5**: Feature computation, theory behind RCFs, hands-on implementation
+### Semaine 2
 
-### Week 2  
+- **Jour 1** : Sélection de modèles, réglage des hyperparamètres, validation croisée
+- **Jour 2** : Analyse des erreurs, intervalles de confiance, communication de l'incertitude
+- **Jour 3** : Principes de conception d'enquêtes, méthodes de géolocalisation, stratégies d'échantillonnage
+- **Jour 4** : Sujets avancés, applications émergentes, développements futurs
+- **Jour 5** : Présentations des projets et perspectives
 
-- **Day 1**: *Martin Luther King Jr. Day - No Class*
-- **Day 2**: Model selection, hyperparameter tuning, cross-validation
-- **Day 3**: Error analysis, confidence intervals, reporting uncertainty
-- **Day 4**: Survey design principles, geolocation methods, sampling strategies
-- **Day 5**: Advanced topics, emerging applications, future development
+## Attentes de la formation
 
-## Training expectations
+### Ce que vous apprendrez
 
-### What you will learn
+- Compréhension du cadre et des capacités de MOSAIKS
+- Compétences pratiques en traitement d'images satellites
+- Expérience avec les applications d'apprentissage automatique
+- Pratique avec des jeux de données réels
+- Connaissance de l'intégration des données d'enquête
+- Meilleures pratiques pour l'implémentation des modèles
 
-- Understanding of MOSAIKS framework and capabilities
-- Practical skills in satellite imagery processing  
-- Experience with machine learning applications
-- Hands-on practice with real-world datasets
-- Knowledge of survey data integration
-- Best practices for model implementation
+### Prérequis
 
-### Prerequisites
+Il n'y a pas de prérequis explicites, bien que ce cours couvre des sujets avancés en :
 
-There are no explicit prerequisites, though this course does cover some advanced topics in:
+- Langage de programmation [`Python`](https://www.python.org/){target="_blank"}
+- Apprentissage automatique
+- Données géospatiales
 
-- The [`Python`](https://www.python.org/){target="_blank"} programming language
-- Machine learning
-- Geospatial data
+### Attentes des participants
 
-### Participant expectations
+- Participation active aux discussions et sessions pratiques
+- Réalisation des devoirs assignés (particulièrement le devoir du vendredi de la semaine 1)
+- Engagement dans les sessions de questions-réponses
+- Contribution aux sessions de retour d'expérience pour l'amélioration du cours
 
-- Active participation in discussions and hands-on sessions
-- Completion of assigned homework (particularly the Week 1 Friday assignment)  
-- Engagement in Q&A sessions
-- Contribution to feedback sessions for course improvement
+### Exigences informatiques
 
-### Computing requirements  
+Le cours comprend des sessions pratiques. Vous aurez besoin de :
 
-The course includes hands-on computing sessions. You will need:
+- Un ordinateur avec accès à Internet
+- Un compte Google
+- Accès à Google Colaboratory
+- Accès aux données nécessaires (détails fournis ultérieurement)
 
-- A computer with access to the internet
-- A Google account 
-- Access to Google Colaboratory
-- Access to necessary data (details to be provided)
+### Devoirs et présentations
 
-### Homework and presentations
+Il y aura un devoir à la fin de la semaine 1, que les participants présenteront le mardi de la semaine 2. Ce devoir est conçu pour renforcer l'apprentissage et fournir une expérience pratique avec les outils MOSAIKS.
 
-There will be a homework assignment at the end of Week 1, which participants will present on Tuesday of Week 2. This assignment is designed to reinforce learning and provide practical experience with MOSAIKS tools.
+## Structure et contenu du manuel
 
-## Book structure and content
+Ce manuel est organisé en six parties principales, chacune se concentrant sur un aspect critique de MOSAIKS. Nous commençons par les concepts fondamentaux et progressons graduellement vers des sujets plus avancés en modélisation et quantification de l'incertitude.
 
-This manual is organized into six main parts, each focusing on a critical aspect of MOSAIKS. We begin with foundational concepts and gradually progress to more advanced topics in modeling and uncertainty quantification.
+| Partie | Description |
+|--------|:------------|
+| Introduction | Configuration informatique, aperçu de MOSAIKS, accès API, démonstration initiale |
+| Données d'étiquettes | Compréhension des étiquettes appropriées, intégration d'enquêtes, préparation des données |
+| Imagerie satellite | Sélection d'images appropriées, considérations de traitement |
+| Caractéristiques | Caractéristiques convolutives aléatoires, accès API, calcul des caractéristiques |
+| Modélisation | Sélection de modèles, analyse spatiale, considérations temporelles |
+| Incertitude | Quantification de l'incertitude, considérations éthiques |
 
-| Part | Description |
-|------|:------------|
-| Introduction | Computing setup, MOSAIKS overview, API access, initial demonstration |
-| Label data | Understanding suitable labels, survey integration, data preparation |
-| Satellite imagery | Selecting appropriate imagery, processing considerations |
-| Features | Random convolutional features, API access, feature computation |
-| Task modeling | Model selection, spatial analysis, temporal considerations |
-| Model uncertainty | Uncertainty quantification, ethical considerations |
+: Aperçu du contenu du Manuel de Formation MOSAIKS {#tbl-part-outline .striped .hover}
 
-: Overview of the MOSAIKS Training Manual contents {#tbl-part-outline .striped .hover}
+Le contenu est conçu pour être à la fois complet et pratique, chaque partie s'appuyant sur les concepts précédents tout en restant relativement autonome. Cette structure permet aux lecteurs soit de progresser séquentiellement à travers le manuel, soit de se concentrer sur des sujets spécifiques d'intérêt.
 
-The content is designed to be both comprehensive and practical, with each part building upon previous concepts while remaining relatively self-contained. This structure allows readers to either progress through the manual sequentially or focus on specific topics of interest. Throughout each section, we provide practical examples, code demonstrations, and best practices drawn from real-world applications.
+## Remerciements
 
-## Acknowledgements
+MOSAIKS a été développé et est soutenu par une grande équipe de chercheurs à travers plusieurs organisations partenaires :
 
-MOSAIKS was developed and is supported by a large team of researchers across multiple partner organizations:
-
-**Development Team:**
+**Équipe de développement :**
 
 Benjamin Recht, Cullen Molitor, Darin Christensen, Esther Rolf, Eugenio Noda, Grace Lewin, Graeme Blair, Hannah Druckenmiller, Hikari Murayama, Ian Bolliger, Jean Tseng, Jessica Katz, Jonathan Proctor, Juliet Cohen, Karena Yan, Luke Sherman, Miyabi Ishihara, Shopnavo Biswas, Simon Greenhill, Solomon Hsiang, Steven Cognac, Tamma Carleton, Taryn Fransen, Trinetta Chong, Vaishaal Shankar
 
-**MOSAIKS Training Manual Team:**
+**Équipe du Manuel de Formation MOSAIKS :**
 Cullen Molitor, Tamma Carleton, Esther Rolf, Sean Luna McAdams, Heather Lahr
 
-**Partner Organizations:**
+**Version française :**
+Abdou-Raouf ATARMLA
+
+**Organisations partenaires :**
 
 - Center for Effective Global Action ([CEGA](https://cega.berkeley.edu/); UCB)
-- Environmental Markets Lab ([emLab](https://emlab.ucsb.edu/); UCSB) 
+- Environmental Markets Lab ([emLab](https://emlab.ucsb.edu/); UCSB)
 - Global Policy Lab ([GPL](https://www.globalpolicy.science/); Stanford University)
 - Project on Resources and Governance ([PRG](https://projectrg.org/); UCLA)
 - Master of Environmental Data Science Program ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science); UCSB)
 
-**Funding Support:**
+**Soutien financier :**
 
 - [The Patrick J. McGovern Foundation](https://www.mcgovern.org/)
 - [The Fund for Innovation in Development (FID)](https://fundinnovation.dev/)
 - [The United States Agency for International Development (USAID)](https://www.usaid.gov/)
 - [United Nations Development Programme (UNDP)](https://www.undp.org/)
 
-We are grateful for the support and contributions of all team members and partner organizations in making MOSAIKS a reality. We hope to continue expanding the framework and its applications to address pressing global challenges.
+Nous sommes reconnaissants du soutien et des contributions de tous les membres de l'équipe et des organisations partenaires qui ont fait de MOSAIKS une réalité. Nous espérons continuer à développer le cadre et ses applications pour répondre aux défis mondiaux pressants.
 
 ::: {.callout-note}
-# Looking forward
+# Perspectives
 
-In the first part of this book, we will cover the basics of MOSAIKS, including its framework, capabilities, and practical applications. This section is focused on exploring the original MOSAIKS publication (Rolf et al. 2021) and understanding the core concepts behind the framework.
+Dans la première partie de ce manuel, nous aborderons les bases de MOSAIKS, notamment son cadre, ses capacités et ses applications pratiques. Cette section se concentre sur l'exploration de la publication originale de MOSAIKS (Rolf et al. 2021) et la compréhension des concepts fondamentaux du cadre.
 :::

@@ -47,12 +47,25 @@ Le manuel est construit avec [Quarto](https://quarto.org/) et comprend :
 
 ## Comment contribuer
 
-Nous encourageons la communauté francophone à contribuer à l'amélioration de ce manuel. Avant de contribuer, veuillez consulter notre [Code de Conduite](CODE_OF_CONDUCT.md).
+Il existe deux façons de contribuer à ce projet :
 
-Pour contribuer :
-1. Créez un fork du dépôt
-2. Créez une branche pour vos modifications
-3. Soumettez une pull request avec une description claire de vos changements
+### 1. Contribuer au projet MOSAIKS original
+
+Si vous souhaitez contribuer au développement du framework MOSAIKS lui-même ou à la version originale du manuel, veuillez visiter le [dépôt original](https://github.com/cullen-molitor/MOSAIKS-Training-Manual) et suivre leurs directives de contribution.
+
+### 2. Contribuer à la traduction française
+
+Si vous souhaitez améliorer la traduction française ou suggérer des adaptations spécifiques au contexte francophone :
+
+1. Créez un fork de ce dépôt (version française)
+2. Créez une branche pour vos modifications (`git checkout -b amelioration-traduction`)
+3. Committez vos changements (`git commit -m 'Amélioration de la traduction de...'`)
+4. Poussez vers la branche (`git push origin amelioration-traduction`)
+5. Ouvrez une Pull Request
+
+Avant de contribuer, veuillez consulter notre [Code de Conduite](CODE_OF_CONDUCT.md).
+
+Note : Cette version est une traduction/adaptation indépendante. Les modifications apportées ici ne seront pas automatiquement intégrées dans le manuel original.
 
 ## Équipe
 

@@ -1,4 +1,4 @@
-# MOSAIKS Training Manual
+# Manuel de Formation MOSAIKS (Version Française)
 
 <!-- badges: start -->
 
@@ -6,59 +6,86 @@
 
 <!-- badges: end -->
 
-## About this manual
+> Ce manuel est une traduction et adaptation en français du [Manuel de Formation MOSAIKS original](https://github.com/cullen-molitor/MOSAIKS-Training-Manual) créé par Cullen Molitor et son équipe. Cette version française est maintenue indépendamment pour mieux servir la communauté francophone.
 
-**<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks** (MOSAIKS) is a project that aims to make satellite imagery more accessible to researchers and practitioners. Learn more about the project [here](https://mosaiks.org/), or get started by accessing the training manual [here](https://cullen-molitor.github.io/MOSAIKS-Training-Manual/).
+## À propos de ce manuel
 
-This repository contains the source code for the [MOSAIKS Training Manual](https://cullen-molitor.github.io/MOSAIKS-Training-Manual/), a comprehensive guide designed to help researchers and practitioners effectively utilize MOSAIKS (Multi-task Observation using Satellite Imagery & Kitchen Sinks).
+**<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks** (MOSAIKS) est un projet qui vise à rendre l'imagerie satellite plus accessible aux chercheurs et aux professionnels. Pour en savoir plus sur le projet original, visitez [mosaiks.org](https://mosaiks.org/).
 
-The manual serves as both a reference guide and a practical tutorial, covering:
+Ce dépôt contient la version française du Manuel de Formation MOSAIKS, adaptée et enrichie pour le public francophone. Le manuel est accessible en ligne à [cette adresse](https://raoufat.github.io/MOSAIKS-Training-Manual-French-Version/).
 
-- Theoretical foundations of MOSAIKS
-- Accessing and processing satellite imagery
-- Working with the MOSAIKS API
-- Implementing machine learning models
-- Understanding uncertainty
-- Best practices for implementation
-- Survey data integration
+## Contenu du manuel
 
-## Target audience
+Le manuel couvre :
 
-This manual is particularly valuable for:
+- Les fondements théoriques de MOSAIKS
+- L'accès et le traitement des images satellite
+- L'utilisation de l'API MOSAIKS
+- L'implémentation des modèles d'apprentissage automatique
+- La quantification et la communication de l'incertitude
+- Les bonnes pratiques de mise en œuvre
+- L'intégration des données d'enquête
 
-- Academics and researchers
-- Development practitioners
-- Environmental scientists
-- Policy analysts
-- Anyone interested in leveraging satellite imagery for socioeconomic and environmental analysis
+## Public cible
 
-## Technical details
+Ce manuel est particulièrement utile pour :
 
-The book is built using [Quarto](https://quarto.org/) and includes:
+- Les universitaires et chercheurs
+- Les professionnels du développement
+- Les scientifiques de l'environnement
+- Les analystes politiques
+- Toute personne intéressée par l'utilisation de l'imagerie satellite pour l'analyse socio-économique et environnementale
 
-- Interactive code examples
-- Practical exercises
-- Real-world applications
-- Comprehensive documentation
+## Détails techniques
 
-## Contributing
+Le manuel est construit avec [Quarto](https://quarto.org/) et comprend :
 
-We welcome contributions to improve the manual. Before contributing, please review our [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). 
+- Des exemples de code interactifs
+- Des exercices pratiques
+- Des applications concrètes
+- Une documentation complète
 
-## Development team
+## Comment contribuer
 
-The MOSAIKS Training Manual is developed and maintained by Cullen Molitor (CEGA; UC Berkeley) in collaboration with:
+Nous encourageons la communauté francophone à contribuer à l'amélioration de ce manuel. Avant de contribuer, veuillez consulter notre [Code de Conduite](CODE_OF_CONDUCT.md).
 
-- Center for Effective Global Action (CEGA; UC Berkeley)
-- Environmental Markets Lab (emLab; UC Santa Barbara) 
-- Global Policy Lab (GPL; Stanford University)
+Pour contribuer :
+1. Créez un fork du dépôt
+2. Créez une branche pour vos modifications
+3. Soumettez une pull request avec une description claire de vos changements
 
-## License
+## Équipe
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Traduction et Adaptation Française
+- **Abdou-Raouf ATARMLA** - Agence Togo Digital / Université de Lomé
+
+### Auteurs Originaux
+- **Cullen Molitor** - Center for Effective Global Action (CEGA)
+- **Tamma Carleton** - UC Berkeley Department of Agricultural and Resource Economics
+- **Esther Rolf** - UC Boulder College of Engineering and Applied Science
+
+## Licence
+
+Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ## Citation
 
-If you use MOSAIKS in your research, please cite:
+Pour citer la version française de ce manuel :
+```bibtex
+@manual{mosaiks-manual-fr,
+  title        = {Manuel de Formation MOSAIKS (Version Française)},
+  author       = {ATARMLA, Abdou-Raouf},
+  year         = {2024},
+  url          = {https://github.com/raoufat/MOSAIKS-Training-Manual-French-Version}
+}
+```
 
-Rolf et al. "A generalizable and accessible approach to machine learning with global satellite imagery." Nature Communications (2021). https://doi.org/10.1038/s41467-021-24638-z
+Pour citer le projet MOSAIKS original :
+```bibtex
+@article{rolf2021mosaiks,
+  title        = {A generalizable and accessible approach to machine learning with global satellite imagery},
+  author       = {Rolf, Esther and Proctor, Jonathan and Carleton, Tamma and others},
+  journal      = {Nature Communications},
+  year         = {2021},
+  url          = {https://doi.org/10.1038/s41467-021-24638-z}
+}

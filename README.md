@@ -71,21 +71,9 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 ## Citation
 
 Pour citer la version française de ce manuel :
-```bibtex
-@manual{mosaiks-manual-fr,
-  title        = {Manuel de Formation MOSAIKS (Version Française)},
-  author       = {ATARMLA, Abdou-Raouf},
-  year         = {2024},
-  url          = {https://github.com/raoufat/MOSAIKS-Training-Manual-French-Version}
-}
-```
+
+ATARMLA, Abdou-Raouf. "Manuel de Formation MOSAIKS (Version Française)." GitHub (2024). https://github.com/raoufat/MOSAIKS-Training-Manual-French-Version
 
 Pour citer le projet MOSAIKS original :
-```bibtex
-@article{rolf2021mosaiks,
-  title        = {A generalizable and accessible approach to machine learning with global satellite imagery},
-  author       = {Rolf, Esther and Proctor, Jonathan and Carleton, Tamma and others},
-  journal      = {Nature Communications},
-  year         = {2021},
-  url          = {https://doi.org/10.1038/s41467-021-24638-z}
-}
+
+Rolf et al. "A generalizable and accessible approach to machine learning with global satellite imagery." Nature Communications (2021). https://doi.org/10.1038/s41467-021-24638-z

@@ -72,7 +72,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 
 Pour citer la version française de ce manuel :
 
-ATARMLA, Abdou-Raouf. "Manuel de Formation MOSAIKS (Version Française)." GitHub (2024). https://github.com/raoufat/MOSAIKS-Training-Manual-French-Version
+ATARMLA, Abdou-Raouf. "Manuel de Formation MOSAIKS (Version Française)." GitHub (2024). https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version
 
 Pour citer le projet MOSAIKS original :
 

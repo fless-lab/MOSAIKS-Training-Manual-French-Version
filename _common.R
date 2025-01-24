@@ -26,15 +26,15 @@ options(
 ggplot2::theme_set(ggplot2::theme_gray(12))
 
 # use results: "asis" when setting a status for a chapter
-# Status function for chapter completion states
+# Fonction de statut pour l'état d'avancement des chapitres
 status <- function(type) {
     status <- switch(type,
-        draft = "is in early draft form and may be incomplete",
-        review = "is under review and may need revisions",
-        testing = "needs testing with real users",
-        complete = "is complete and ready for use",
+        draft = "est en version préliminaire et peut être incomplet",
+        review = "est en cours de révision et peut nécessiter des modifications",
+        testing = "nécessite des tests avec des utilisateurs réels",
+        complete = "est complet et prêt à l'emploi",
         stop(
-            "Invalid `type`, use `draft`, `review`, `testing`, or `complete`",
+            "Type invalide, utilisez `draft`, `review`, `testing`, ou `complete`",
             call. = FALSE
         )
     )
@@ -51,7 +51,7 @@ status <- function(type) {
             "\n",
             ":::: status\n",
             "::: callout-", class, " \n",
-            "This chapter ", status, ".\n",
+            "Ce chapitre ", status, ".\n",
             ":::\n",
             "::::\n"
         )

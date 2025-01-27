@@ -27,12 +27,10 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "cullen-molitor"
-          git config --global user.email "cullen.molitor@gmail.com"
+          git config --global user.name "Abdou-Raouf ATARMLA"
+          git config --global user.email "achilleatarmla@gmail.com"
           
       - name: Publish to GitHub Pages
         run: quarto publish gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
-

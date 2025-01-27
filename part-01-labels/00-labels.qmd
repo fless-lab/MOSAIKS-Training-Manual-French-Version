@@ -1,4 +1,4 @@
-# Label data {#sec-labels}
+# Données d'étiquettes {#sec-labels}
 ```{r}
 #| echo: false
 #| results: "asis"
@@ -7,40 +7,39 @@ source("../_common.R")
 status("review")
 ```
 
-## Overview
+## Vue d'ensemble
 
-This section explores the ground truth data (labels) that can be used to train a predictive model with MOSAIKS. While the system is designed to be flexible with respect to the types of outcomes it can predict, understanding what makes good label data and how to prepare it properly is crucial for success.
+Cette section explore les données de vérité terrain (étiquettes) qui peuvent être utilisées pour entraîner un modèle prédictif avec MOSAIKS. Bien que le système soit conçu pour être flexible en ce qui concerne les types de résultats qu'il peut prédire, comprendre ce qui fait de bonnes données d'étiquettes et comment les préparer correctement est crucial pour la réussite.
 
-Label data represents the "truth" that MOSAIKS attempts to predict - whether that's crop yields, population density, economic indicators, or any other variable that might be visible (directly or indirectly) in satellite imagery. The quality and characteristics of this label data significantly influence model performance.
+Les données d'étiquettes représentent la "vérité" que MOSAIKS tente de prédire - qu'il s'agisse de rendements agricoles, de densité de population, d'indicateurs économiques ou de toute autre variable qui pourrait être visible (directement ou indirectement) dans l'imagerie satellitaire. La qualité et les caractéristiques de ces données d'étiquettes influencent significativement les performances du modèle.
 
-## What makes good label data?
+## Qu'est-ce qui fait de bonnes données d'étiquettes ?
 
-For optimal performance with MOSAIKS, label data should have several key characteristics:
+Pour des performances optimales avec MOSAIKS, les données d'étiquettes doivent avoir plusieurs caractéristiques clés :
 
-- Accurate geographic location information
-- Appropriate spatial resolution (typically ≥1km²)
-- Reasonable temporal alignment with imagery features
-- Sufficient sample size (generally ≥300 observations)
-- Observable connection to surface features
+- Des informations précises sur la localisation géographique
+- Une résolution spatiale appropriée (typiquement ≥1km²)
+- Un alignement temporel raisonnable avec les caractéristiques de l'imagerie
+- Une taille d'échantillon suffisante (généralement ≥300 observations)
+- Une connexion observable avec les caractéristiques de surface
 
-## Section outline
+## Plan de la section
 
-The following chapters will guide you through key considerations for working with label data in MOSAIKS:
+Les chapitres suivants vous guideront à travers les considérations clés pour travailler avec les données d'étiquettes dans MOSAIKS :
 
-| Chapter | Key Topics |
+| Chapitre | Sujets clés |
 |---------|:-----------|
-| @sec-labels-100-maps | Example applications, performance analysis, validation |
-| @sec-labels-survey | Survey integration, sampling design, geographic referencing |
-| @sec-labels-data-prep | Data cleaning, spatial joining, quality control |
-| @sec-labels-demo | Hands-on example, practical workflow, troubleshooting |
+| @sec-labels-100-maps | Applications exemples, analyse des performances, validation |
+| @sec-labels-survey | Intégration d'enquêtes, conception d'échantillonnage, référencement géographique |
+| @sec-labels-data-prep | Nettoyage des données, jointure spatiale, contrôle qualité |
+| @sec-labels-demo | Exemple pratique, flux de travail pratique, dépannage |
 
-: Outline of the label data section {#tbl-section-outline .striped .hover}
+: Plan de la section sur les données d'étiquettes {#tbl-section-outline .striped .hover}
 
-These chapters provide both practical guidance for preparing your own label data and deeper understanding of what types of outcomes MOSAIKS can effectively predict.
+Ces chapitres fournissent à la fois des conseils pratiques pour préparer vos propres données d'étiquettes et une compréhension plus approfondie des types de résultats que MOSAIKS peut efficacement prédire.
 
 ::: {.callout-note}
-# Looking forward
+# Perspectives
 
-In the next chapter, we'll explore over 100 different outcomes that have been tested with MOSAIKS, examining what works well and what doesn't.
+Dans le prochain chapitre, nous explorerons plus de 100 résultats différents qui ont été testés avec MOSAIKS, en examinant ce qui fonctionne bien et ce qui ne fonctionne pas.
 :::
-

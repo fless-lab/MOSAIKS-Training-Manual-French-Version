@@ -1,7 +1,5 @@
 # Accès à MOSAIKS {#sec-intro-api}
 
-# Access MOSAIKS {#sec-intro-api}
-
 ```{r}
 #| echo: false
 #| results: "asis"

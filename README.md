@@ -12,7 +12,7 @@
 
 **<ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery & <ins>K</ins>itchen <ins>S</ins>inks** (MOSAIKS) est un projet qui vise à rendre l'imagerie satellite plus accessible aux chercheurs et aux professionnels. Pour en savoir plus sur le projet original, visitez [mosaiks.org](https://mosaiks.org/).
 
-Ce dépôt contient la version française du Manuel de Formation MOSAIKS, adaptée et enrichie pour le public francophone. Le manuel est accessible en ligne à [cette adresse](https://raoufat.github.io/MOSAIKS-Training-Manual-French-Version/).
+Ce dépôt contient la version française du Manuel de Formation MOSAIKS, adaptée et enrichie pour le public francophone. Le manuel est accessible en ligne à [cette adresse](https://fless-lab.github.io/MOSAIKS-Training-Manual-French-Version/).
 
 ## Contenu du manuel
 

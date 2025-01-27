@@ -20,7 +20,7 @@ C'est pourquoi l'association de l'imagerie satellite au machine learning (parfoi
 
 C'est pourquoi nous avons développé MOSAIKS. MOSAIKS vise à réduire les barrières à l'entrée dans le SIML, en diversifiant les utilisateurs de cette technologie puissante et les problèmes que nous résolvons avec elle.
 
-MOSAIKS est conçu pour fonctionner "hors de la boîte" pour une large gamme d'applications SIML, pour les personnes sans expertise en SIML qui travaillent sur des ordinateurs de bureau ou des ordinateurs portables normaux. Pour de nombreuses applications, les utilisateurs de MOSAIKS n'ont jamais besoin de toucher à l'imagerie satellite eux-mêmes et n'ont besoin que d'une formation statistique de base.
+MOSAIKS est conçu pour fonctionner "prêt à l'emploi" pour une large gamme d'applications SIML, pour les personnes sans expertise en SIML qui travaillent sur des ordinateurs de bureau ou des ordinateurs portables normaux. Pour de nombreuses applications, les utilisateurs de MOSAIKS n'ont jamais besoin de toucher à l'imagerie satellite eux-mêmes et n'ont besoin que d'une formation statistique de base.
 
 > **Si vous pouvez exécuter une régression, vous pouvez utiliser MOSAIKS !**
 

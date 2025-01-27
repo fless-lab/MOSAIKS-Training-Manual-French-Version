@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Manuel de Formation MOSAIKS - 3&nbsp; Accès à MOSAIKS</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part-00-intro/04-intro-demo.html" rel="next">
+<link href="../part-00-intro/02-intro-mosaiks.html" rel="prev">
+<link href="../images/sat_earth.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../style.scss">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part-00-intro/00-intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="../part-00-intro/03-intro-api.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Accès à MOSAIKS</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Manuel de Formation MOSAIKS</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-00-intro/00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/01-intro-compute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Configuration informatique</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/02-intro-mosaiks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Qu’est-ce que MOSAIKS ?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/03-intro-api.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Accès à MOSAIKS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/04-intro-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Essayez MOSAIKS</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-01-labels/00-labels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Label data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/01-labels-100-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What labels work?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/02-labels-survey.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Survey data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/03-labels-data-prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Preparing labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/04-labels-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Label data demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-02-satellite/00-satellite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite imagery</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-02-satellite/01-satellite-imagery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Choosing imagery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-02-satellite/02-satellite-processing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Processing imagery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-02-satellite/03-satellite-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Imagery demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-03-features/00-features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite features</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/01-features-rcf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Understanding features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/02-features-api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">API features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/03-features-computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Computing features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/04-features-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Featurization demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-04-models/00-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Task modeling</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/01-model-choice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Build, evaluate, deploy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/02-model-spatial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Going over space</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/03-model-temporal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Going over time</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/04-model-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Build a model</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-05-responsible/00-responsible.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Responsible SIML</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-05-responsible/01-responsible-ethics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Bias, equity, &amp; ethics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-05-responsible/02-responsible-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Quantifying uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-05-responsible/03-responsible-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Transparency (demo)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">3.1</span> Introduction</a></li>
+  <li><a href="#api-mosaiks" id="toc-api-mosaiks" class="nav-link" data-scroll-target="#api-mosaiks"><span class="header-section-number">3.2</span> API MOSAIKS</a>
+  <ul class="collapse">
+  <li><a href="#créer-un-compte" id="toc-créer-un-compte" class="nav-link" data-scroll-target="#créer-un-compte"><span class="header-section-number">3.2.1</span> Créer un compte</a></li>
+  <li><a href="#ressources-de-lapi" id="toc-ressources-de-lapi" class="nav-link" data-scroll-target="#ressources-de-lapi"><span class="header-section-number">3.2.2</span> Ressources de l’API</a></li>
+  <li><a href="#caractéristiques-de-lapi" id="toc-caractéristiques-de-lapi" class="nav-link" data-scroll-target="#caractéristiques-de-lapi"><span class="header-section-number">3.2.3</span> Caractéristiques de l’API</a></li>
+  <li><a href="#caractéristiques-haute-résolution" id="toc-caractéristiques-haute-résolution" class="nav-link" data-scroll-target="#caractéristiques-haute-résolution"><span class="header-section-number">3.2.4</span> Caractéristiques haute résolution</a></li>
+  <li><a href="#caractéristiques-agrégées" id="toc-caractéristiques-agrégées" class="nav-link" data-scroll-target="#caractéristiques-agrégées"><span class="header-section-number">3.2.5</span> Caractéristiques agrégées</a></li>
+  </ul></li>
+  <li><a href="#utilisation-des-fonctionnalités-mosaiks-pour-la-prédiction" id="toc-utilisation-des-fonctionnalités-mosaiks-pour-la-prédiction" class="nav-link" data-scroll-target="#utilisation-des-fonctionnalités-mosaiks-pour-la-prédiction"><span class="header-section-number">3.3</span> Utilisation des fonctionnalités MOSAIKS pour la prédiction</a></li>
+  <li><a href="#exigences-de-citation" id="toc-exigences-de-citation" class="nav-link" data-scroll-target="#exigences-de-citation"><span class="header-section-number">3.4</span> Exigences de citation</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/edit/main/part-00-intro/03-intro-api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part-00-intro/00-intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="../part-00-intro/03-intro-api.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Accès à MOSAIKS</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-intro-api" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Accès à MOSAIKS</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="status">
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Ce chapitre est en cours de révision et peut nécessiter des modifications.</p>
+</div>
+</div>
+</div>
+</div>
+<section id="introduction" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
+<p>Au cœur de MOSAIKS, deux entrées principales sont requises : les caractéristiques satellites et les données de vérité terrain. Notre objectif est de rendre ces caractéristiques aussi accessibles que possible pour que la majorité des utilisateurs n’ait pas à se soucier des détails techniques du traitement d’imagerie satellite.</p>
+<p>Pour cela, nous avons développé plusieurs moyens d’accéder aux caractéristiques MOSAIKS :</p>
+<div id="tbl-features-options" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-features-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Source d’imagerie</th>
+<th>Couverture spatiale</th>
+<th>Résolution spatiale</th>
+<th>Résolution temporelle</th>
+<th>Pondération</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://api.mosaiks.org/" target="_blank">API MOSAIKS</a></td>
+<td><a href="https://developers.planet.com/docs/data/visual-basemaps/" target="_blank">Planet Labs Visual Basemap</a></td>
+<td>Zones terrestres globales</td>
+<td>0.01°</td>
+<td>2019 Q3</td>
+<td>Non pondéré</td>
+</tr>
+<tr class="even">
+<td><a href="https://api.mosaiks.org/portal/global_grids/" target="_blank">API MOSAIKS</a></td>
+<td><a href="https://developers.planet.com/docs/data/visual-basemaps/" target="_blank">Planet Labs Visual Basemap</a></td>
+<td>Zones terrestres globales</td>
+<td>0.1°, 1°</td>
+<td>2019 Q3</td>
+<td>Surface &amp; population</td>
+</tr>
+<tr class="odd">
+<td><a href="https://api.mosaiks.org/portal/precomputed/" target="_blank">API MOSAIKS</a></td>
+<td><a href="https://developers.planet.com/docs/data/visual-basemaps/" target="_blank">Planet Labs Visual Basemap</a></td>
+<td>Zones terrestres globales</td>
+<td>ADM0, ADM1, ADM2</td>
+<td>2019 Q3</td>
+<td>Surface &amp; population</td>
+</tr>
+<tr class="even">
+<td><a href="https://codeocean.com/capsule/6456296/tree/v2" target="_blank">Rolf et al 2021</a></td>
+<td><a href="https://developers.google.com/maps/documentation/maps-static/start" target="_blank">Google Static Maps</a></td>
+<td>États-Unis continentaux (~100k localisations)</td>
+<td>0.01°</td>
+<td>2019</td>
+<td>Non pondéré</td>
+</tr>
+<tr class="odd">
+<td><a href="../part-03-features/03-features-computing.html" class="quarto-xref"><span>Chapter 14</span></a></td>
+<td>Toute source - voir <a href="../part-02-satellite/01-satellite-imagery.html" class="quarto-xref"><span>Chapter 9</span></a></td>
+<td>Défini par l’utilisateur</td>
+<td>Défini par l’utilisateur</td>
+<td>Défini par l’utilisateur</td>
+<td>Défini par l’utilisateur</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-features-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.1: Résumé des sources de caractéristiques MOSAIKS. La colonne de pondération indique que les caractéristiques ont été générées à une résolution de 0.01 degré et sont pondérées lors de leur agrégation à des résolutions inférieures. Les schémas de pondération disponibles sont basés sur la surface du polygone d’agrégation ou sur la population du polygone d’agrégation.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li>Les chapitres -<a href="01-intro-compute.html" class="quarto-xref"><span>Chapter 1</span></a> à -<a href="../part-01-labels/04-labels-demo.html" class="quarto-xref"><span>Chapter 8</span></a> se concentrent sur les caractéristiques publiquement disponibles</li>
+<li>Les chapitres -<a href="../part-02-satellite/01-satellite-imagery.html" class="quarto-xref"><span>Chapter 9</span></a> à -<a href="../part-03-features/04-features-demo.html" class="quarto-xref"><span>Chapter 15</span></a> couvrent le calcul de caractéristiques personnalisées à partir d’imagerie</li>
+</ul>
+</div>
+</div>
+</div>
+<p>L’API MOSAIKS doit être considérée comme le moyen principal d’accéder aux caractéristiques. C’est une interface conviviale qui permet de télécharger des caractéristiques pour n’importe quel endroit sur Terre. L’API est conçue pour être accessible aux utilisateurs de différents niveaux techniques, des débutants aux experts. Pour plus de détails sur les caractéristiques disponibles sur l’API, voir <a href="../part-03-features/02-features-api.html" class="quarto-xref"><span>Chapter 13</span></a>.</p>
+<p>Cependant, dans de nombreux cas, les utilisateurs voudront ou devront calculer leurs propres caractéristiques personnalisées. <a href="../part-03-features/03-features-computing.html" class="quarto-xref"><span>Chapter 14</span></a> guide les lecteurs à travers ce processus.</p>
+</section>
+<section id="api-mosaiks" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="api-mosaiks"><span class="header-section-number">3.2</span> API MOSAIKS</h2>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lien API MOSAIKS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://api.mosaiks.org/" target="_blank">api.mosaiks.org</a></p>
+</div>
+</div>
+<p>L’API MOSAIKS est une interface conviviale qui permet de télécharger des caractéristiques pour n’importe quelle localisation terrestre sur Terre. L’API est conçue pour être accessible aux utilisateurs de différents niveaux techniques, des débutants aux experts. Pour profiter de l’API, vous devrez créer un compte.</p>
+<section id="créer-un-compte" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="créer-un-compte"><span class="header-section-number">3.2.1</span> Créer un compte</h3>
+<p>Visitez <a href="https://api.mosaiks.org/" target="_blank">api.mosaiks.org</a>.</p>
+<div id="fig-api-login" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-login-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/api-home.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-login-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Page de connexion de l’API MOSAIKS.
+</figcaption>
+</figure>
+</div>
+<p>Sélectionnez <code>Register</code> pour créer un compte. Vous devrez fournir un nom d’utilisateur, un email et un mot de passe.</p>
+<div id="fig-api-register" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/api-register.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-register-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Page d’inscription de l’API MOSAIKS.
+</figcaption>
+</figure>
+</div>
+<p>Une fois inscrit, vous pouvez vous connecter pour commencer à télécharger les caractéristiques MOSAIKS.</p>
+<div id="fig-api-landing" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-landing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/api-landing.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-landing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: Page d’accueil de l’API MOSAIKS.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="ressources-de-lapi" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="ressources-de-lapi"><span class="header-section-number">3.2.2</span> Ressources de l’API</h3>
+<p>Depuis la page d’accueil, vous pouvez lire des informations supplémentaires sur MOSAIKS et accéder aux ressources pour vous aider à démarrer.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Ce livre est développé pour vous fournir toutes les informations nécessaires pour utiliser MOSAIKS.</p>
+</div>
+</div>
+</div>
+<p>L’API contient les pages suivantes :</p>
+<div id="tbl-api-pages" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-api-pages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Page</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://api.mosaiks.org/" target="_blank">Accueil</a></td>
+<td style="text-align: left;">Page d’accueil de l’API. Contient des informations générales sur l’utilisation de MOSAIKS et l’API</td>
+</tr>
+<tr class="even">
+<td><a href="https://api.mosaiks.org/portal/precomputed/" target="_blank">Fichiers précalculés</a></td>
+<td style="text-align: left;">Caractéristiques précalculées aux échelles des limites administratives</td>
+</tr>
+<tr class="odd">
+<td><a href="https://api.mosaiks.org/portal/hdi/" target="_blank">HDI</a></td>
+<td style="text-align: left;">Estimations globales de l’Indice de Développement Humain (IDH) aux niveaux municipalité et grille</td>
+</tr>
+<tr class="even">
+<td><a href="https://api.mosaiks.org/portal/global_grids/" target="_blank">Grilles globales</a></td>
+<td style="text-align: left;">Caractéristiques précalculées et pondérées par surface ou population à résolution 0.1° et 1°</td>
+</tr>
+<tr class="odd">
+<td><a href="https://api.mosaiks.org/portal/map_query/" target="_blank">Requête carte</a></td>
+<td style="text-align: left;">Caractéristiques précalculées à résolution 0.01 degré, l’utilisateur définit une zone d’intérêt</td>
+</tr>
+<tr class="even">
+<td><a href="https://api.mosaiks.org/portal/file_query/" target="_blank">Requête fichier</a></td>
+<td style="text-align: left;">Caractéristiques précalculées à résolution 0.01 degré, l’utilisateur télécharge un fichier avec coordonnées</td>
+</tr>
+<tr class="odd">
+<td><a href="https://api.mosaiks.org/portal/my_files/" target="_blank">Mes fichiers</a></td>
+<td style="text-align: left;">Fichiers que vous avez demandés à l’API, disponibles au téléchargement</td>
+</tr>
+<tr class="even">
+<td><a href="https://api.mosaiks.org/portal/resources/" target="_blank">Ressources</a></td>
+<td style="text-align: left;">Exemples de notebooks Python et R pour utiliser le framework MOSAIKS</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-api-pages-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3.2: Pages et descriptions de l’API MOSAIKS.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="caractéristiques-de-lapi" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="caractéristiques-de-lapi"><span class="header-section-number">3.2.3</span> Caractéristiques de l’API</h3>
+<p>Actuellement, l’API MOSAIKS dispose d’un seul ensemble de caractéristiques globales (avec plusieurs niveaux d’agrégation). Les caractéristiques sont disponibles gratuitement au public pour le téléchargement ; c’est la façon la plus rapide et la plus facile de commencer à utiliser MOSAIKS.</p>
+<p>Les caractéristiques de l’API utilisent des images d’entrée de Planet Labs, Inc.&nbsp;<a href="https://developers.planet.com/docs/basemaps/" target="_blank">Visual Basemap</a> Global Quarterly 2019 (trimestre 3). La qualité des images, et donc la qualité des caractéristiques, peut être affectée par les conditions locales. Par exemple, une zone en saison des pluies au troisième trimestre (juillet à septembre) est susceptible de contenir des artefacts d’image dus à la couverture nuageuse. Cela affectera à son tour les calculs des caractéristiques. Pour plus de détails sur l’imagerie d’entrée <a href="../part-02-satellite/01-satellite-imagery.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
+<p>Étant donné la nature statique de l’API, la façon la plus simple de commencer avec MOSAIKS est d’avoir des données d’étiquettes pour une période récente (idéalement de 2019 pour les étiquettes changeant rapidement, ou une année proche pour les étiquettes plus stables).</p>
+<div id="fig-api-features" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-features-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/api-features.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-features-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: Imagerie de base Planet Labs (gauche) et 4 des 4 000 caractéristiques MOSAIKS téléchargées depuis l’API (droite).
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>L’utilisation de MOSAIKS pour les données temporelles est possible et peut bien fonctionner, cependant cela nécessite actuellement de calculer vos propres caractéristiques personnalisées. Voir <a href="../part-03-features/03-features-computing.html" class="quarto-xref"><span>Chapter 14</span></a> et <a href="../part-04-models/03-model-temporal.html" class="quarto-xref"><span>Chapter 18</span></a> pour plus d’informations.</p>
+</div>
+</div>
+</div>
+<p>Les caractéristiques MOSAIKS sont créées en utilisant une grille terrestre globale de 0.01 x 0.01 degré de latitude-longitude. Ce sont les caractéristiques natives disponibles au téléchargement depuis l’API, mais elle offre également des caractéristiques pré-agrégées à résolution 0.1 et 1 degré, ainsi que des limites administratives (ADM0, ADM1 et ADM2).</p>
+</section>
+<section id="caractéristiques-haute-résolution" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="caractéristiques-haute-résolution"><span class="header-section-number">3.2.4</span> Caractéristiques haute résolution</h3>
+<p>La requête fichier et la requête carte sont les deux méthodes pour obtenir les caractéristiques haute résolution (0.01 degré) via l’API. Pour plus de simplicité, nous stockons ces caractéristiques dans un format tabulaire avec des coordonnées de latitude et longitude. Ces coordonnées sont le centre de chaque cellule de la grille.</p>
+<p>Lorsque vous téléchargez les caractéristiques haute résolution (0.01 degré), vous les recevrez dans un format tabulaire .csv où :</p>
+<ul>
+<li>Chaque ligne (<em>N</em>) représente une cellule de grille unique</li>
+<li>Les deux premières colonnes contiennent les coordonnées de latitude et longitude (centroïdes de la grille)</li>
+<li>Les colonnes restantes représentent <em>K</em> caractéristiques (actuellement <em>K</em> = 4000 caractéristiques)</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Note :</strong> Il y a une limite de <em>N</em> = 100 000 enregistrements par requête</p>
+</blockquote>
+<section id="requête-carte" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="requête-carte"><span class="header-section-number">3.2.4.1</span> Requête carte</h4>
+<ul>
+<li>Créez des boîtes rectangulaires en spécifiant les coordonnées de latitude et longitude</li>
+<li>Plusieurs boîtes peuvent être créées</li>
+<li>Le système affiche un nombre estimé d’enregistrements pour chaque boîte</li>
+<li>Notez que les estimations sont basées sur la surface de la boîte et peuvent ne pas refléter les nombres réels d’enregistrements, en particulier pour les zones contenant des mers et des océans</li>
+</ul>
+<div id="fig-api-map" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/api-map-query.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.5: Page de requête carte de l’API MOSAIKS.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Utilisez <a href="https://geojson.io/#new&amp;map=2/0/20" target="_blank">geojson.io</a> pour trouver les coordonnées de la boîte englobante pour votre zone d’intérêt.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="requête-fichier" class="level4" data-number="3.2.4.2">
+<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="requête-fichier"><span class="header-section-number">3.2.4.2</span> Requête fichier</h4>
+<ul>
+<li>Soumettez un fichier avec des coordonnées de latitude et longitude personnalisées</li>
+<li>L’API renvoie les caractéristiques pour les cellules de grille les plus proches de vos coordonnées d’entrée</li>
+<li>Les points sont alloués au point de grille le plus proche s’ils ne correspondent pas exactement</li>
+<li>Le fichier de sortie peut avoir un nombre de lignes différent de votre entrée</li>
+<li>L’ordre des points peut changer dans la sortie</li>
+</ul>
+<div id="fig-api-queries" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-queries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/api-file-query.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-queries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.6: Requête fichier API
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="caractéristiques-agrégées" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="caractéristiques-agrégées"><span class="header-section-number">3.2.5</span> Caractéristiques agrégées</h3>
+<p>De nombreux utilisateurs peuvent trouver plus facile de travailler avec des caractéristiques agrégées à un certain niveau. L’API MOSAIKS offre des caractéristiques pré-agrégées pour répondre à ces besoins. L’API propose plusieurs niveaux, incluant des cellules de grille plus grandes (0.1 et 1 degré) ou résumées aux limites administratives (ADM0, ADM1 et ADM2). Ces fichiers sont disponibles au téléchargement en fichiers uniques ou fractionnés selon la résolution.</p>
+<div id="fig-api-aggregated" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-api-aggregated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/US_feature_summaries.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-api-aggregated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.7: Exemple montrant 3 caractéristiques convolutives aléatoires représentatives (lignes). Les caractéristiques sont téléchargées depuis l’API MOSAIKS à résolution 0.01° (la résolution native) et agrégées à 3 niveaux, incluant (A) des cellules de grille plus grandes (0.1°), (B) comtés, et (C) états.
+</figcaption>
+</figure>
+</div>
+<section id="schémas-de-pondération" class="level4" data-number="3.2.5.1">
+<h4 data-number="3.2.5.1" class="anchored" data-anchor-id="schémas-de-pondération"><span class="header-section-number">3.2.5.1</span> Schémas de pondération</h4>
+<p>À chaque niveau d’agrégation, nous proposons des caractéristiques pondérées par surface et par population. Les poids de population proviennent du jeu de données de densité de population Gridded Population of the World (<a href="https://earthdata.nasa.gov/data/projects/gpw" target="_blank">GPWv4</a>). Le schéma de pondération par surface est basé sur la surface des cellules de grille haute résolution.</p>
+</section>
+<section id="quand-utiliser-les-caractéristiques-agrégées" class="level4" data-number="3.2.5.2">
+<h4 data-number="3.2.5.2" class="anchored" data-anchor-id="quand-utiliser-les-caractéristiques-agrégées"><span class="header-section-number">3.2.5.2</span> Quand utiliser les caractéristiques agrégées</h4>
+<p>Les caractéristiques agrégées sont particulièrement utiles dans quelques scénarios :</p>
+<ol type="1">
+<li><p>Vous avez des données à une échelle plus grande que les cellules de grille de 0.01 degré. De nombreux jeux de données sont au niveau pays, état ou comté.</p></li>
+<li><p>Vos données ont beaucoup de bruit qui peut être lissé en agrégeant à une échelle plus grande. Un exemple courant pourrait être des données d’enquête ménage qui sont bruyantes au niveau individuel mais se lissent lorsqu’agrégées au niveau village ou district.</p></li>
+<li><p>Vous voulez faire une analyse globale et n’avez pas les ressources informatiques pour travailler avec toutes les cellules de grille à 0.01 degré.</p></li>
+</ol>
+<p>Dans tous les cas, l’utilisation des caractéristiques pré-agrégées peut vous faire gagner du temps et des ressources informatiques.</p>
+<blockquote class="blockquote">
+<p><strong>Scénario :</strong> Vous travaillez avec une Étude sur la Mesure des Niveaux de Vie - Enquêtes Intégrées sur l’Agriculture (<a href="https://www.worldbank.org/en/programs/lsms/initiatives/lsms-ISA" target="_blank">LSMS-ISA</a>). Ce jeu de données contient des données d’enquête avec des coordonnées géographiques au niveau du ménage. Pour protéger la confidentialité des répondants, les données sont perturbées dans un rayon de 5 km mais restent toujours dans les limites administratives locales. Vous pouvez donc résumer vos étiquettes aux unités administratives et construire un modèle avec les caractéristiques agrégées.</p>
+</blockquote>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Si vous voulez faire des prédictions haute résolution, avec des données d’étiquettes basse résolution, vous pouvez construire votre modèle avec des caractéristiques agrégées et utiliser les caractéristiques haute résolution pour faire des prédictions. Cela sera couvert dans <a href="../part-04-models/02-model-spatial.html" class="quarto-xref"><span>Chapter 17</span></a>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="utilisation-des-fonctionnalités-mosaiks-pour-la-prédiction" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="utilisation-des-fonctionnalités-mosaiks-pour-la-prédiction"><span class="header-section-number">3.3</span> Utilisation des fonctionnalités MOSAIKS pour la prédiction</h2>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Ceci est un aperçu rapide. Des instructions détaillées sont disponibles ultérieurement dans le manuel (<a href="../part-04-models/01-model-choice.html" class="quarto-xref"><span>Chapter 16</span></a>).</p>
+</div>
+</div>
+</div>
+<p>Flux de travail de base :</p>
+<ol type="1">
+<li>Obtenir les mesures de référence (“labels” ; voir <a href="../part-01-labels/01-labels-100-maps.html" class="quarto-xref"><span>Chapter 5</span></a>)<br>
+</li>
+<li>Télécharger les caractéristiques correspondantes (voir <a href="../part-03-features/02-features-api.html" class="quarto-xref"><span>Chapter 13</span></a> pour plus de détails).<br>
+</li>
+<li>Fusionner spatialement les labels et les caractéristiques (voir <a href="../part-01-labels/03-labels-data-prep.html" class="quarto-xref"><span>Chapter 7</span></a>)<br>
+</li>
+<li>Utiliser la régression pour modéliser la relation entre les images satellitaires et les résultats (voir <a href="../part-04-models/01-model-choice.html" class="quarto-xref"><span>Chapter 16</span></a>)<br>
+</li>
+<li>Exploiter les résultats de la régression pour prédire les résultats dans de nouveaux emplacements (voir <a href="../part-04-models/01-model-choice.html" class="quarto-xref"><span>Chapter 16</span></a>)</li>
+</ol>
+<p>Vous pouvez expérimenter différentes approches d’apprentissage automatique lors de l’étape de régression. Pour les débutants, nous recommandons de commencer par notre notebook Jupyter d’exemple (<a href="04-intro-demo.html" class="quarto-xref"><span>Chapter 4</span></a>), qui illustre une approche simple de régression ridge (convient aux utilisateurs de R et Python).</p>
+<div id="fig-mosaiks-flow" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mosaiks-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/mosaiks-overview.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mosaiks-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.8: Utilisation de MOSAIKS, un schéma simplifié du flux de travail.
+</figcaption>
+</figure>
+</div>
+<p>Ce sujet sera exploré plus en détail dans les chapitres suivants (voir <a href="../part-04-models/01-model-choice.html" class="quarto-xref"><span>Chapter 16</span></a>). Dans le prochain chapitre, vous découvrirez un flux de travail MOSAIKS simple qui reproduit les résultats de Rolf et al.&nbsp;2021.</p>
+</section>
+<section id="exigences-de-citation" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="exigences-de-citation"><span class="header-section-number">3.4</span> Exigences de citation</h2>
+<p>Lors de la référence à la méthodologie MOSAIKS ou lors de la génération de caractéristiques MOSAIKS, veuillez citer : <a href="https://www.nature.com/articles/s41467-021-24638-z" target="_blank">Rolf et al.&nbsp;“A generalizable and accessible approach to machine learning with global satellite imagery.” Nature Communications (2021).</a></p>
+<p>Vous pouvez utiliser la citation BibTeX suivante :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">article</span>,  </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {Rolf, Esther and Proctor, Jonathan et Carleton, Tamma et Bolliger, Ian et Shankar, Vaishaal et Ishihara, Miyabi et Recht, Benjamin et Hsiang, Solomon},  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span> = {2021},  </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">month</span> = {07},  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pages</span> = {},  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> = {A generalizable and accessible approach to machine learning with global satellite imagery},  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">volume</span> = {12},  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">journal</span> = {Nature Communications},  </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">doi</span> = {10.1038/s41467-021-24638-z}  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}<span class="co">  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Si vous utilisez des caractéristiques téléchargées depuis l’API, veuillez citer, en plus de la publication ci-dessus, l’API MOSAIKS.</p>
+<p>Vous pouvez citer l’API en utilisant la référence BibTeX suivante :</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"> </span><span class="va">@misc</span>{<span class="ot">MOSAIKS</span> <span class="ot">API</span>,  </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {{Carleton, Tamma et Chong, Trinetta et Druckenmiller, Hannah et Noda, Eugenio et Proctor, Jonathan et Rolf, Esther et Hsiang, Solomon}},  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> = {{Multi-Task Observation Using Satellite Imagery and Kitchen Sinks (MOSAIKS) API}},  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">howpublished</span> = "<span class="ch">\url</span><span class="st">{ https://api.mosaiks.org }</span>",  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">version</span> = {1.0},  </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span> = {2022},  </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}<span class="co">  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+À venir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans le prochain chapitre, vous aurez l’opportunité de tester MOSAIKS sur Google Colab avec les données de Rolf et al.&nbsp;2021.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part-00-intro/02-intro-mosaiks.html" class="pagination-link  aria-label=" &lt;span="" que="" mosaiks="" ?&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Qu’est-ce que MOSAIKS ?</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part-00-intro/04-intro-demo.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Essayez MOSAIKS</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Essayez MOSAIKS</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Manuel de Formation MOSAIKS</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/edit/main/part-00-intro/03-intro-api.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Ce livre a été créé avec <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

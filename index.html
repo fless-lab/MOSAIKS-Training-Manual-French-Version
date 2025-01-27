@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Cullen Molitor">
+<meta name="author" content="Tamma Carleton">
+<meta name="author" content="Esther Rolf">
+<meta name="author" content="Abdou-Raouf ATARMLA">
+
+<title>Manuel de Formation MOSAIKS</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./part-00-intro/00-intro.html" rel="next">
+<link href="./images/sat_earth.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="style.scss">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Bienvenue</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Manuel de Formation MOSAIKS</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-00-intro/00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-00-intro/01-intro-compute.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Configuration informatique</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-00-intro/02-intro-mosaiks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Qu’est-ce que MOSAIKS ?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-00-intro/03-intro-api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Accès à MOSAIKS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-00-intro/04-intro-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Essayez MOSAIKS</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-01-labels/00-labels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Label data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-01-labels/01-labels-100-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What labels work?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-01-labels/02-labels-survey.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Survey data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-01-labels/03-labels-data-prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Preparing labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-01-labels/04-labels-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Label data demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-02-satellite/00-satellite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite imagery</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-02-satellite/01-satellite-imagery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Choosing imagery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-02-satellite/02-satellite-processing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Processing imagery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-02-satellite/03-satellite-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Imagery demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-03-features/00-features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite features</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-03-features/01-features-rcf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Understanding features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-03-features/02-features-api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">API features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-03-features/03-features-computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Computing features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-03-features/04-features-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Featurization demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-04-models/00-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Task modeling</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-04-models/01-model-choice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Build, evaluate, deploy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-04-models/02-model-spatial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Going over space</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-04-models/03-model-temporal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Going over time</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-04-models/04-model-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Build a model</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./part-05-responsible/00-responsible.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Responsible SIML</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-05-responsible/01-responsible-ethics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Bias, equity, &amp; ethics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-05-responsible/02-responsible-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Quantifying uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./part-05-responsible/03-responsible-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Transparency (demo)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a>
+  <ul class="collapse">
+  <li><a href="#quest-ce-que-mosaiks" id="toc-quest-ce-que-mosaiks" class="nav-link" data-scroll-target="#quest-ce-que-mosaiks">Qu’est-ce que MOSAIKS ?</a></li>
+  <li><a href="#à-qui-sadresse-cette-formation" id="toc-à-qui-sadresse-cette-formation" class="nav-link" data-scroll-target="#à-qui-sadresse-cette-formation">À qui s’adresse cette formation ?</a></li>
+  <li><a href="#que-vais-je-apprendre" id="toc-que-vais-je-apprendre" class="nav-link" data-scroll-target="#que-vais-je-apprendre">Que vais-je apprendre ?</a></li>
+  <li><a href="#structure-du-cours" id="toc-structure-du-cours" class="nav-link" data-scroll-target="#structure-du-cours">Structure du cours</a></li>
+  <li><a href="#programme-du-cours" id="toc-programme-du-cours" class="nav-link" data-scroll-target="#programme-du-cours">Programme du cours</a>
+  <ul class="collapse">
+  <li><a href="#semaine-1" id="toc-semaine-1" class="nav-link" data-scroll-target="#semaine-1">Semaine 1</a></li>
+  <li><a href="#semaine-2" id="toc-semaine-2" class="nav-link" data-scroll-target="#semaine-2">Semaine 2</a></li>
+  </ul></li>
+  <li><a href="#attentes-de-la-formation" id="toc-attentes-de-la-formation" class="nav-link" data-scroll-target="#attentes-de-la-formation">Attentes de la formation</a>
+  <ul class="collapse">
+  <li><a href="#ce-que-vous-apprendrez" id="toc-ce-que-vous-apprendrez" class="nav-link" data-scroll-target="#ce-que-vous-apprendrez">Ce que vous apprendrez</a></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis">Prérequis</a></li>
+  <li><a href="#attentes-des-participants" id="toc-attentes-des-participants" class="nav-link" data-scroll-target="#attentes-des-participants">Attentes des participants</a></li>
+  <li><a href="#exigences-informatiques" id="toc-exigences-informatiques" class="nav-link" data-scroll-target="#exigences-informatiques">Exigences informatiques</a></li>
+  <li><a href="#devoirs-et-présentations" id="toc-devoirs-et-présentations" class="nav-link" data-scroll-target="#devoirs-et-présentations">Devoirs et présentations</a></li>
+  </ul></li>
+  <li><a href="#structure-et-contenu-du-manuel" id="toc-structure-et-contenu-du-manuel" class="nav-link" data-scroll-target="#structure-et-contenu-du-manuel">Structure et contenu du manuel</a></li>
+  <li><a href="#remerciements" id="toc-remerciements" class="nav-link" data-scroll-target="#remerciements">Remerciements</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Manuel de Formation MOSAIKS</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://emlab.ucsb.edu/about/our-team/cullen-molitor">Cullen Molitor</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Center for Effective Global Action (CEGA)
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://are.berkeley.edu/users/tamma-carleton">Tamma Carleton</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UC Berkeley Department of Agricultural and Resource Economics
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://www.colorado.edu/cs/esther-rolf">Esther Rolf</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            UC Boulder College of Engineering and Applied Science
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://github.com/raoufat">Abdou-Raouf ATARMLA</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Agence Togo Digital / Université de Lomé
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<section id="bienvenue" class="level1 unnumbered">
+<h1 class="unnumbered">Bienvenue</h1><p><img src="images/sat_earth.png" title="Manuel de Formation MOSAIKS" class="quarto-cover-image img-fluid"></p>
+<p>Bienvenue dans la première édition du Manuel de Formation MOSAIKS ! Ce manuel constitue une référence complète pour comprendre MOSAIKS, ses capacités et son application pratique. Vous découvrirez ce qu’est MOSAIKS, ses possibilités et comment l’utiliser efficacement dans diverses applications.</p>
+<p>Les compétences et connaissances acquises grâce à ce manuel vous permettront d’exploiter l’imagerie satellite et l’apprentissage automatique pour répondre à des défis socio-économiques et environnementaux complexes. Ce manuel peut être utilisé en auto-formation ou dans le cadre d’une formation encadrée.</p>
+<p>De nombreux concepts et exemples s’appliquent largement au domaine de la télédétection et de l’apprentissage automatique. Ainsi, même si vous n’utilisez pas MOSAIKS, vous trouverez certainement ce contenu utile.</p>
+<section id="quest-ce-que-mosaiks" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-que-mosaiks">Qu’est-ce que MOSAIKS ?</h2>
+<p>MOSAIKS signifie <strong><ins>M</ins>ulti-task <ins>O</ins>bservation using <ins>SA</ins>tellite <ins>I</ins>magery &amp; <ins>K</ins>itchen <ins>S</ins>inks</strong>. C’est un cadre conçu pour simplifier l’utilisation de l’imagerie satellite et de l’apprentissage automatique dans la prédiction de résultats socio-économiques et environnementaux à travers différents contextes géographiques et périodes. MOSAIKS s’appuie sur des convolutions aléatoires (développées par Rahimi et Recht (2008)) appliquées à l’imagerie satellite, qui extraient des caractéristiques indépendantes des tâches et permettent aux chercheurs et praticiens de prédire facilement et de manière flexible divers résultats à partir d’images brutes.</p>
+<div id="fig-mosaiks-in-landsat" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mosaiks-in-landsat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mosaiks-in-landsat.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mosaiks-in-landsat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: MOSAIKS écrit avec des images du catalogue de données de la constellation de satellites Landsat. Créé avec : <a href="https://landsat.gsfc.nasa.gov/apps/YourNameInLandsat-main/" target="_blank">Your Name in Landsat</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="à-qui-sadresse-cette-formation" class="level2">
+<h2 class="anchored" data-anchor-id="à-qui-sadresse-cette-formation">À qui s’adresse cette formation ?</h2>
+<p>Ce programme complet de deux semaines est conçu pour les universitaires, les professionnels et les praticiens souhaitant utiliser MOSAIKS pour mieux comprendre les enjeux socio-économiques et environnementaux. La formation est particulièrement pertinente pour les personnes travaillant dans :</p>
+<ul>
+<li>La télédétection et l’analyse d’images satellites</li>
+<li>Les applications d’apprentissage automatique avec des données géospatiales</li>
+<li>Le suivi et l’évaluation agricole et environnementale</li>
+<li>La recherche en développement et l’élaboration de politiques</li>
+</ul>
+</section>
+<section id="que-vais-je-apprendre" class="level2">
+<h2 class="anchored" data-anchor-id="que-vais-je-apprendre">Que vais-je apprendre ?</h2>
+<p>Tout au long de cette formation, vous apprendrez des applications pratiques à travers :</p>
+<ul>
+<li>Les fondements théoriques et la compréhension conceptuelle</li>
+<li>Des exercices pratiques avec des données réelles</li>
+<li>Les meilleures pratiques de mise en œuvre</li>
+<li>Les stratégies d’analyse et d’interprétation des résultats</li>
+</ul>
+<p>Le programme couvre l’ensemble du flux de travail MOSAIKS, notamment :</p>
+<ul>
+<li>L’accès et le traitement des images satellites</li>
+<li>La compréhension de l’extraction des caractéristiques MOSAIKS</li>
+<li>L’utilisation de l’API MOSAIKS</li>
+<li>L’implémentation des modèles d’apprentissage automatique</li>
+<li>La quantification et la communication de l’incertitude</li>
+<li>L’application des modèles dans différents contextes</li>
+<li>Le travail avec les données d’enquête</li>
+</ul>
+<p>Que vous débutiez avec MOSAIKS ou que vous souhaitiez approfondir votre expertise, cette formation vous fournit les outils et les connaissances nécessaires pour utiliser efficacement ce cadre.</p>
+</section>
+<section id="structure-du-cours" class="level2">
+<h2 class="anchored" data-anchor-id="structure-du-cours">Structure du cours</h2>
+<p>Cette formation est conçue comme un programme intensif de deux semaines combinant cours magistraux, démonstrations et sessions pratiques. Chaque journée est structurée comme suit :</p>
+<div id="tbl-course-outline" class="striped hover quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-course-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover table">
+<thead>
+<tr class="header">
+<th><strong>Horaire</strong></th>
+<th style="text-align: left;"><strong>Activité</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9h00 - 10h30</td>
+<td style="text-align: left;">Session matinale 1</td>
+</tr>
+<tr class="even">
+<td>10h30 - 11h00</td>
+<td style="text-align: left;">Pause</td>
+</tr>
+<tr class="odd">
+<td>11h00 - 12h30</td>
+<td style="text-align: left;">Session matinale 2</td>
+</tr>
+<tr class="even">
+<td>12h30 - 13h30</td>
+<td style="text-align: left;">Déjeuner</td>
+</tr>
+<tr class="odd">
+<td>13h30 - 15h00</td>
+<td style="text-align: left;">Session après-midi 1</td>
+</tr>
+<tr class="even">
+<td>15h00 - 15h30</td>
+<td style="text-align: left;">Pause</td>
+</tr>
+<tr class="odd">
+<td>15h30 - 16h30</td>
+<td style="text-align: left;">Session après-midi 2</td>
+</tr>
+<tr class="even">
+<td>16h30 - 17h00</td>
+<td style="text-align: left;">Retour d’expérience</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-course-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Planning quotidien montrant 2 sessions le matin, 2 sessions l’après-midi, et un créneau final dédié au développement du cours.
+</figcaption>
+</figure>
+</div>
+<p>Chaque journée se termine par une session de questions-réponses et de retours d’expérience de 16h30 à 17h00, offrant l’opportunité de clarifier les concepts et de partager des idées. Cette première édition du cours devrait faire émerger de nombreuses nouvelles idées et concepts à inclure dans les futures formations. N’oubliez pas de prendre des notes tout au long de la journée, en particulier sur les points qui pourraient être mieux expliqués ou qui nécessiteraient des sujets supplémentaires.</p>
+<p>Bien que la version présentielle de ce cours soit conçue selon le planning ci-dessus, les utilisateurs en auto-formation peuvent parcourir le contenu à leur rythme, en notant que les chapitres sont conçus pour un apprentissage séquentiel.</p>
+</section>
+<section id="programme-du-cours" class="level2">
+<h2 class="anchored" data-anchor-id="programme-du-cours">Programme du cours</h2>
+<section id="semaine-1" class="level3">
+<h3 class="anchored" data-anchor-id="semaine-1">Semaine 1</h3>
+<ul>
+<li><strong>Jour 1</strong> : Cadre MOSAIKS, accès aux caractéristiques, flux de travail de base</li>
+<li><strong>Jour 2</strong> : Compréhension des données de terrain, nettoyage des données, résolution spatiale</li>
+<li><strong>Jour 3</strong> : Prédiction des rendements agricoles, téléchargement des caractéristiques via l’API</li>
+<li><strong>Jour 4</strong> : Types d’imagerie satellite, considérations de traitement, contrôle qualité</li>
+<li><strong>Jour 5</strong> : Calcul des caractéristiques, théorie des RCF, mise en œuvre pratique</li>
+</ul>
+</section>
+<section id="semaine-2" class="level3">
+<h3 class="anchored" data-anchor-id="semaine-2">Semaine 2</h3>
+<ul>
+<li><strong>Jour 1</strong> : Sélection de modèles, réglage des hyperparamètres, validation croisée</li>
+<li><strong>Jour 2</strong> : Analyse des erreurs, intervalles de confiance, communication de l’incertitude</li>
+<li><strong>Jour 3</strong> : Principes de conception d’enquêtes, méthodes de géolocalisation, stratégies d’échantillonnage</li>
+<li><strong>Jour 4</strong> : Sujets avancés, applications émergentes, développements futurs</li>
+<li><strong>Jour 5</strong> : Présentations des projets et perspectives</li>
+</ul>
+</section>
+</section>
+<section id="attentes-de-la-formation" class="level2">
+<h2 class="anchored" data-anchor-id="attentes-de-la-formation">Attentes de la formation</h2>
+<section id="ce-que-vous-apprendrez" class="level3">
+<h3 class="anchored" data-anchor-id="ce-que-vous-apprendrez">Ce que vous apprendrez</h3>
+<ul>
+<li>Compréhension du cadre et des capacités de MOSAIKS</li>
+<li>Compétences pratiques en traitement d’images satellites</li>
+<li>Expérience avec les applications d’apprentissage automatique</li>
+<li>Pratique avec des jeux de données réels</li>
+<li>Connaissance de l’intégration des données d’enquête</li>
+<li>Meilleures pratiques pour l’implémentation des modèles</li>
+</ul>
+</section>
+<section id="prérequis" class="level3">
+<h3 class="anchored" data-anchor-id="prérequis">Prérequis</h3>
+<p>Il n’y a pas de prérequis explicites, bien que ce cours couvre des sujets avancés en :</p>
+<ul>
+<li>Langage de programmation <a href="https://www.python.org/" target="_blank"><code>Python</code></a></li>
+<li>Apprentissage automatique</li>
+<li>Données géospatiales</li>
+</ul>
+</section>
+<section id="attentes-des-participants" class="level3">
+<h3 class="anchored" data-anchor-id="attentes-des-participants">Attentes des participants</h3>
+<ul>
+<li>Participation active aux discussions et sessions pratiques</li>
+<li>Réalisation des devoirs assignés (particulièrement le devoir du vendredi de la semaine 1)</li>
+<li>Engagement dans les sessions de questions-réponses</li>
+<li>Contribution aux sessions de retour d’expérience pour l’amélioration du cours</li>
+</ul>
+</section>
+<section id="exigences-informatiques" class="level3">
+<h3 class="anchored" data-anchor-id="exigences-informatiques">Exigences informatiques</h3>
+<p>Le cours comprend des sessions pratiques. Vous aurez besoin de :</p>
+<ul>
+<li>Un ordinateur avec accès à Internet</li>
+<li>Un compte Google</li>
+<li>Accès à Google Colaboratory</li>
+<li>Accès aux données nécessaires (détails fournis ultérieurement)</li>
+</ul>
+</section>
+<section id="devoirs-et-présentations" class="level3">
+<h3 class="anchored" data-anchor-id="devoirs-et-présentations">Devoirs et présentations</h3>
+<p>Il y aura un devoir à la fin de la semaine 1, que les participants présenteront le mardi de la semaine 2. Ce devoir est conçu pour renforcer l’apprentissage et fournir une expérience pratique avec les outils MOSAIKS.</p>
+</section>
+</section>
+<section id="structure-et-contenu-du-manuel" class="level2">
+<h2 class="anchored" data-anchor-id="structure-et-contenu-du-manuel">Structure et contenu du manuel</h2>
+<p>Ce manuel est organisé en six parties principales, chacune se concentrant sur un aspect critique de MOSAIKS. Nous commençons par les concepts fondamentaux et progressons graduellement vers des sujets plus avancés en modélisation et quantification de l’incertitude.</p>
+<div id="tbl-part-outline" class="striped hover quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-part-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Partie</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Introduction</td>
+<td style="text-align: left;">Configuration informatique, aperçu de MOSAIKS, accès API, démonstration initiale</td>
+</tr>
+<tr class="even">
+<td>Données d’étiquettes</td>
+<td style="text-align: left;">Compréhension des étiquettes appropriées, intégration d’enquêtes, préparation des données</td>
+</tr>
+<tr class="odd">
+<td>Imagerie satellite</td>
+<td style="text-align: left;">Sélection d’images appropriées, considérations de traitement</td>
+</tr>
+<tr class="even">
+<td>Caractéristiques</td>
+<td style="text-align: left;">Caractéristiques convolutives aléatoires, accès API, calcul des caractéristiques</td>
+</tr>
+<tr class="odd">
+<td>Modélisation</td>
+<td style="text-align: left;">Sélection de modèles, analyse spatiale, considérations temporelles</td>
+</tr>
+<tr class="even">
+<td>Incertitude</td>
+<td style="text-align: left;">Quantification de l’incertitude, considérations éthiques</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-part-outline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Aperçu du contenu du Manuel de Formation MOSAIKS
+</figcaption>
+</figure>
+</div>
+<p>Le contenu est conçu pour être à la fois complet et pratique, chaque partie s’appuyant sur les concepts précédents tout en restant relativement autonome. Cette structure permet aux lecteurs soit de progresser séquentiellement à travers le manuel, soit de se concentrer sur des sujets spécifiques d’intérêt.</p>
+</section>
+<section id="remerciements" class="level2">
+<h2 class="anchored" data-anchor-id="remerciements">Remerciements</h2>
+<p>MOSAIKS a été développé et est soutenu par une grande équipe de chercheurs à travers plusieurs organisations partenaires :</p>
+<p><strong>Équipe de développement :</strong></p>
+<p>Benjamin Recht, Cullen Molitor, Darin Christensen, Esther Rolf, Eugenio Noda, Grace Lewin, Graeme Blair, Hannah Druckenmiller, Hikari Murayama, Ian Bolliger, Jean Tseng, Jessica Katz, Jonathan Proctor, Juliet Cohen, Karena Yan, Luke Sherman, Miyabi Ishihara, Shopnavo Biswas, Simon Greenhill, Solomon Hsiang, Steven Cognac, Tamma Carleton, Taryn Fransen, Trinetta Chong, Vaishaal Shankar</p>
+<p><strong>Équipe du Manuel de Formation MOSAIKS :</strong> Cullen Molitor, Tamma Carleton, Esther Rolf, Sean Luna McAdams, Heather Lahr</p>
+<p><strong>Version française :</strong> Abdou-Raouf ATARMLA</p>
+<p><strong>Organisations partenaires :</strong></p>
+<ul>
+<li>Center for Effective Global Action (<a href="https://cega.berkeley.edu/" target="_blank">CEGA</a>; UCB)</li>
+<li>Environmental Markets Lab (<a href="https://emlab.ucsb.edu/" target="_blank">emLab</a>; UCSB)</li>
+<li>Global Policy Lab (<a href="https://www.globalpolicy.science/" target="_blank">GPL</a>; Stanford University)</li>
+<li>Project on Resources and Governance (<a href="https://projectrg.org/" target="_blank">PRG</a>; UCLA)</li>
+<li>Master of Environmental Data Science Program (<a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science" target="_blank">MEDS</a>; UCSB)</li>
+</ul>
+<p><strong>Soutien financier :</strong></p>
+<ul>
+<li><a href="https://www.mcgovern.org/" target="_blank">The Patrick J. McGovern Foundation</a></li>
+<li><a href="https://fundinnovation.dev/" target="_blank">The Fund for Innovation in Development (FID)</a></li>
+<li><a href="https://www.usaid.gov/" target="_blank">The United States Agency for International Development (USAID)</a></li>
+<li><a href="https://www.undp.org/" target="_blank">United Nations Development Programme (UNDP)</a></li>
+</ul>
+<p>Nous sommes reconnaissants du soutien et des contributions de tous les membres de l’équipe et des organisations partenaires qui ont fait de MOSAIKS une réalité. Nous espérons continuer à développer le cadre et ses applications pour répondre aux défis mondiaux pressants.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Perspectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans la première partie de ce manuel, nous aborderons les bases de MOSAIKS, notamment son cadre, ses capacités et ses applications pratiques. Cette section se concentre sur l’exploration de la publication originale de MOSAIKS (Rolf et al.&nbsp;2021) et la compréhension des concepts fondamentaux du cadre.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./part-00-intro/00-intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Manuel de Formation MOSAIKS</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Ce livre a été créé avec <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

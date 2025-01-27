@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Manuel de Formation MOSAIKS - 1&nbsp; Configuration informatique</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../part-00-intro/02-intro-mosaiks.html" rel="next">
+<link href="../part-00-intro/00-intro.html" rel="prev">
+<link href="../images/sat_earth.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../style.scss">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part-00-intro/00-intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="../part-00-intro/01-intro-compute.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Configuration informatique</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Manuel de Formation MOSAIKS</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenue</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-00-intro/00-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/01-intro-compute.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Configuration informatique</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/02-intro-mosaiks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Qu’est-ce que MOSAIKS ?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/03-intro-api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Accès à MOSAIKS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-00-intro/04-intro-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Essayez MOSAIKS</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-01-labels/00-labels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Label data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/01-labels-100-maps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">What labels work?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/02-labels-survey.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Survey data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/03-labels-data-prep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Preparing labels</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-01-labels/04-labels-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Label data demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-02-satellite/00-satellite.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite imagery</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-02-satellite/01-satellite-imagery.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Choosing imagery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-02-satellite/02-satellite-processing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Processing imagery</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-02-satellite/03-satellite-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Imagery demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-03-features/00-features.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Satellite features</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/01-features-rcf.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Understanding features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/02-features-api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">API features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/03-features-computing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Computing features</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-03-features/04-features-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Featurization demo</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-04-models/00-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Task modeling</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/01-model-choice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Build, evaluate, deploy</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/02-model-spatial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Going over space</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/03-model-temporal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Going over time</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-04-models/04-model-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Build a model</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../part-05-responsible/00-responsible.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Responsible SIML</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-05-responsible/01-responsible-ethics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Bias, equity, &amp; ethics</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-05-responsible/02-responsible-uncertainty.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Quantifying uncertainty</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../part-05-responsible/03-responsible-demo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Transparency (demo)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#vue-densemble" id="toc-vue-densemble" class="nav-link active" data-scroll-target="#vue-densemble"><span class="header-section-number">1.1</span> Vue d’ensemble</a></li>
+  <li><a href="#prérequis" id="toc-prérequis" class="nav-link" data-scroll-target="#prérequis"><span class="header-section-number">1.2</span> Prérequis</a></li>
+  <li><a href="#débuter-avec-google-colab" id="toc-débuter-avec-google-colab" class="nav-link" data-scroll-target="#débuter-avec-google-colab"><span class="header-section-number">1.3</span> Débuter avec Google Colab</a>
+  <ul class="collapse">
+  <li><a href="#accéder-à-colab" id="toc-accéder-à-colab" class="nav-link" data-scroll-target="#accéder-à-colab"><span class="header-section-number">1.3.1</span> Accéder à Colab</a></li>
+  <li><a href="#comprendre-linterface" id="toc-comprendre-linterface" class="nav-link" data-scroll-target="#comprendre-linterface"><span class="header-section-number">1.3.2</span> Comprendre l’interface</a></li>
+  <li><a href="#opérations-de-base" id="toc-opérations-de-base" class="nav-link" data-scroll-target="#opérations-de-base"><span class="header-section-number">1.3.3</span> Opérations de base</a></li>
+  <li><a href="#fonctionnalités-importantes" id="toc-fonctionnalités-importantes" class="nav-link" data-scroll-target="#fonctionnalités-importantes"><span class="header-section-number">1.3.4</span> Fonctionnalités importantes</a></li>
+  <li><a href="#bonnes-pratiques" id="toc-bonnes-pratiques" class="nav-link" data-scroll-target="#bonnes-pratiques"><span class="header-section-number">1.3.5</span> Bonnes pratiques</a></li>
+  <li><a href="#raccourcis-clavier" id="toc-raccourcis-clavier" class="nav-link" data-scroll-target="#raccourcis-clavier"><span class="header-section-number">1.3.6</span> Raccourcis clavier</a></li>
+  <li><a href="#problèmes-courants-et-solutions" id="toc-problèmes-courants-et-solutions" class="nav-link" data-scroll-target="#problèmes-courants-et-solutions"><span class="header-section-number">1.3.7</span> Problèmes courants et solutions</a></li>
+  <li><a href="#obtenir-de-laide" id="toc-obtenir-de-laide" class="nav-link" data-scroll-target="#obtenir-de-laide"><span class="header-section-number">1.3.8</span> Obtenir de l’aide</a></li>
+  </ul></li>
+  <li><a href="#assistance-ia-dans-colab" id="toc-assistance-ia-dans-colab" class="nav-link" data-scroll-target="#assistance-ia-dans-colab"><span class="header-section-number">1.4</span> Assistance IA dans Colab</a>
+  <ul class="collapse">
+  <li><a href="#support-par-chat" id="toc-support-par-chat" class="nav-link" data-scroll-target="#support-par-chat"><span class="header-section-number">1.4.1</span> Support par chat</a></li>
+  <li><a href="#génération-de-code" id="toc-génération-de-code" class="nav-link" data-scroll-target="#génération-de-code"><span class="header-section-number">1.4.2</span> Génération de code</a></li>
+  <li><a href="#explication-de-code" id="toc-explication-de-code" class="nav-link" data-scroll-target="#explication-de-code"><span class="header-section-number">1.4.3</span> Explication de code</a></li>
+  <li><a href="#complétion-de-code" id="toc-complétion-de-code" class="nav-link" data-scroll-target="#complétion-de-code"><span class="header-section-number">1.4.4</span> Complétion de code</a></li>
+  </ul></li>
+  <li><a href="#accéder-aux-notebooks-du-cours" id="toc-accéder-aux-notebooks-du-cours" class="nav-link" data-scroll-target="#accéder-aux-notebooks-du-cours"><span class="header-section-number">1.5</span> Accéder aux notebooks du cours</a>
+  <ul class="collapse">
+  <li><a href="#méthode-1-liens-directs" id="toc-méthode-1-liens-directs" class="nav-link" data-scroll-target="#méthode-1-liens-directs"><span class="header-section-number">1.5.1</span> Méthode 1 : Liens directs</a></li>
+  <li><a href="#méthode-2-cloner-le-notebook" id="toc-méthode-2-cloner-le-notebook" class="nav-link" data-scroll-target="#méthode-2-cloner-le-notebook"><span class="header-section-number">1.5.2</span> Méthode 2 : Cloner le notebook</a></li>
+  <li><a href="#sauvegarder-votre-travail" id="toc-sauvegarder-votre-travail" class="nav-link" data-scroll-target="#sauvegarder-votre-travail"><span class="header-section-number">1.5.3</span> Sauvegarder votre travail</a></li>
+  <li><a href="#organisation-des-notebooks" id="toc-organisation-des-notebooks" class="nav-link" data-scroll-target="#organisation-des-notebooks"><span class="header-section-number">1.5.4</span> Organisation des notebooks</a></li>
+  </ul></li>
+  <li><a href="#accès-et-gestion-des-données" id="toc-accès-et-gestion-des-données" class="nav-link" data-scroll-target="#accès-et-gestion-des-données"><span class="header-section-number">1.6</span> Accès et gestion des données</a>
+  <ul class="collapse">
+  <li><a href="#téléchargements-directs" id="toc-téléchargements-directs" class="nav-link" data-scroll-target="#téléchargements-directs"><span class="header-section-number">1.6.1</span> Téléchargements directs</a></li>
+  <li><a href="#intégration-google-drive" id="toc-intégration-google-drive" class="nav-link" data-scroll-target="#intégration-google-drive"><span class="header-section-number">1.6.2</span> Intégration Google Drive</a></li>
+  </ul></li>
+  <li><a href="#configuration-de-lenvironnement-local" id="toc-configuration-de-lenvironnement-local" class="nav-link" data-scroll-target="#configuration-de-lenvironnement-local"><span class="header-section-number">1.7</span> Configuration de l’environnement local</a>
+  <ul class="collapse">
+  <li><a href="#télécharger-et-installer-miniconda" id="toc-télécharger-et-installer-miniconda" class="nav-link" data-scroll-target="#télécharger-et-installer-miniconda"><span class="header-section-number">1.7.1</span> Télécharger et installer Miniconda</a></li>
+  <li><a href="#ajouter-conda-à-votre-path" id="toc-ajouter-conda-à-votre-path" class="nav-link" data-scroll-target="#ajouter-conda-à-votre-path"><span class="header-section-number">1.7.2</span> Ajouter conda à votre PATH</a></li>
+  <li><a href="#créer-un-environnement-local-depuis-environment.yml" id="toc-créer-un-environnement-local-depuis-environment.yml" class="nav-link" data-scroll-target="#créer-un-environnement-local-depuis-environment.yml"><span class="header-section-number">1.7.3</span> Créer un environnement local depuis <code>environment.yml</code></a></li>
+  <li><a href="#utiliser-le-nouvel-environnement-dans-vs-code" id="toc-utiliser-le-nouvel-environnement-dans-vs-code" class="nav-link" data-scroll-target="#utiliser-le-nouvel-environnement-dans-vs-code"><span class="header-section-number">1.7.4</span> Utiliser le nouvel environnement dans VS Code</a></li>
+  <li><a href="#autres-gestionnaires-denvironnement" id="toc-autres-gestionnaires-denvironnement" class="nav-link" data-scroll-target="#autres-gestionnaires-denvironnement"><span class="header-section-number">1.7.5</span> Autres gestionnaires d’environnement</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/edit/main/part-00-intro/01-intro-compute.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../part-00-intro/00-intro.html">Introduction</a></li><li class="breadcrumb-item"><a href="../part-00-intro/01-intro-compute.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Configuration informatique</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-intro-compute" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Configuration informatique</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="vue-densemble" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="vue-densemble"><span class="header-section-number">1.1</span> Vue d’ensemble</h2>
+<p>Ce cours utilise principalement Google Colaboratory (<a href="https://colab.research.google.com/" target="_blank">Colab</a>) pour nos besoins en calcul. Colab est une plateforme gratuite basée sur le cloud qui permet d’écrire et d’exécuter du code Python via votre navigateur. Il est livré avec de nombreuses bibliothèques préinstallées et offre un accès gratuit aux ressources de calcul, y compris les GPUs.</p>
+<hr>
+</section>
+<section id="prérequis" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="prérequis"><span class="header-section-number">1.2</span> Prérequis</h2>
+<p>Pour participer aux parties de programmation de ce cours, vous aurez besoin de :</p>
+<ul>
+<li>Un ordinateur portable ou de bureau</li>
+<li>Une connexion Internet fiable</li>
+<li>Un compte Google (si vous n’en avez pas, créez-en un sur <a href="https://accounts.google.com" target="_blank">accounts.google.com</a>)</li>
+<li>Un navigateur web (navigateurs basés sur <a href="https://en.wikipedia.org/wiki/Chromium_(web_browser)" target="_blank">Chromium</a> recommandés)</li>
+</ul>
+<hr>
+</section>
+<section id="débuter-avec-google-colab" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="débuter-avec-google-colab"><span class="header-section-number">1.3</span> Débuter avec Google Colab</h2>
+<section id="accéder-à-colab" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="accéder-à-colab"><span class="header-section-number">1.3.1</span> Accéder à Colab</h3>
+<ol type="1">
+<li>Allez sur <a href="https://colab.research.google.com" target="_blank">colab.research.google.com</a></li>
+<li>Connectez-vous avec votre compte Google</li>
+<li>Cliquez sur <strong>“Nouveau Notebook”</strong> pour créer votre premier notebook Colab</li>
+</ol>
+</section>
+<section id="comprendre-linterface" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="comprendre-linterface"><span class="header-section-number">1.3.2</span> Comprendre l’interface</h3>
+<p>L’interface Colab est similaire aux notebooks Jupyter, avec quelques éléments clés :</p>
+<ul>
+<li><strong>Barre de menu</strong> : Contient les options <code>Fichier</code>, <code>Édition</code>, <code>Affichage</code>, <code>Insertion</code>, <code>Runtime</code>, <code>Outils</code> et <code>Aide</code>.</li>
+<li><strong>Barre d’outils</strong> : Accès rapide aux actions courantes comme l’ajout de cellules de code/texte.</li>
+<li><strong>Zone des cellules</strong> : Où vous écrivez et exécutez le code ou le texte.</li>
+<li><strong>État du runtime</strong> : Montre l’état de la connexion de votre notebook aux serveurs Google.</li>
+</ul>
+</section>
+<section id="opérations-de-base" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="opérations-de-base"><span class="header-section-number">1.3.3</span> Opérations de base</h3>
+<ol type="1">
+<li><strong>Créer des cellules</strong> :
+<ul>
+<li>Cellules de code : Cliquez sur <code>+ Code</code>. Supporte Python ou R selon le runtime sélectionné</li>
+<li>Cellules de texte : Cliquez sur <code>+ Texte</code>. Supporte Markdown et les balises HTML pour la documentation</li>
+</ul></li>
+<li><strong>Exécuter des cellules</strong> :
+<ul>
+<li>Cliquez sur le bouton lecture à côté de la cellule ou utilisez <code>Shift</code>+<code>Enter</code></li>
+<li>Vous pouvez aussi sélectionner <code>Runtime</code> &gt; <code>Exécuter la cellule sélectionnée</code> dans le menu</li>
+</ul></li>
+</ol>
+</section>
+<section id="fonctionnalités-importantes" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="fonctionnalités-importantes"><span class="header-section-number">1.3.4</span> Fonctionnalités importantes</h3>
+<ol type="1">
+<li><strong>Type de Runtime</strong> :
+<ul>
+<li>Cliquez sur <code>Runtime</code> &gt; <code>Modifier le type de runtime</code></li>
+<li>Sélectionnez <code>Python 3</code> comme runtime</li>
+<li>Pour l’accès GPU : Changez l’accélérateur matériel pour un des types <code>GPU</code> proposés si nécessaire</li>
+</ul></li>
+<li><strong>Gestion des fichiers</strong> :
+<ul>
+<li><p>Les fichiers téléchargés sur Colab sont temporaires et seront perdus à la déconnexion du runtime</p></li>
+<li><p>Connectez-vous à Google Drive et sauvegardez les sorties pour un stockage permanent :</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+<li><strong>Installation des packages :</strong></li>
+</ol>
+<p>Installez des packages supplémentaires en utilisant :</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">conda</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">pip</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Attention : utiliser "!conda install" n'est pas recommandé. </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># En règle générale, utilisez la commande magique "%conda install"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>conda install <span class="op">&lt;</span>nom_package<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Attention : utiliser "!pip install" n'est pas recommandé. </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># En règle générale, utilisez la commande magique "%pip install"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install <span class="op">&lt;</span>nom_package<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bonnes-pratiques" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="bonnes-pratiques"><span class="header-section-number">1.3.5</span> Bonnes pratiques</h3>
+<ol type="1">
+<li><strong>Sauvegardez votre travail</strong> :
+<ul>
+<li>Les liens dans ce livre créeront une nouvelle copie d’un notebook tel qu’il est sauvegardé sur GitHub</li>
+<li>Pour sauvegarder vos modifications, cliquez sur <code>Fichier</code> &gt; <code>Enregistrer une copie dans Drive</code></li>
+<li>Téléchargez localement les notebooks importants comme sauvegardes</li>
+</ul></li>
+<li><strong>Gestion des ressources</strong> :
+<ul>
+<li>Fermez les notebooks inutilisés pour libérer des ressources</li>
+<li>Soyez conscient des délais d’inactivité (les notebooks se déconnectent après une période d’inactivité)</li>
+</ul></li>
+<li><strong>Utilisation de la mémoire</strong> :
+<ul>
+<li>Surveillez l’utilisation de la mémoire via <code>Runtime</code> &gt; <code>Voir les ressources</code></li>
+<li>La version gratuite de Colab fournit une mémoire très limitée (12GB) qui peut être insuffisante pour les grands jeux de données ou les modèles complexes</li>
+</ul></li>
+</ol>
+</section>
+<section id="raccourcis-clavier" class="level3" data-number="1.3.6">
+<h3 data-number="1.3.6" class="anchored" data-anchor-id="raccourcis-clavier"><span class="header-section-number">1.3.6</span> Raccourcis clavier</h3>
+<p>Voici quelques raccourcis clavier utiles pour travailler dans Colab :</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows/Linux</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="tbl-windows-linux" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-windows-linux-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Raccourci</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ctrl+M H</td>
+<td style="text-align: left;">Voir les raccourcis clavier</td>
+</tr>
+<tr class="even">
+<td>Ctrl+Enter</td>
+<td style="text-align: left;">Exécuter la cellule courante</td>
+</tr>
+<tr class="odd">
+<td>Shift+Enter</td>
+<td style="text-align: left;">Exécuter et passer à la suivante</td>
+</tr>
+<tr class="even">
+<td>Alt+Enter</td>
+<td style="text-align: left;">Exécuter et insérer dessous</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+M A</td>
+<td style="text-align: left;">Insérer cellule code au-dessus</td>
+</tr>
+<tr class="even">
+<td>Ctrl+M B</td>
+<td style="text-align: left;">Insérer cellule code en-dessous</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+M M</td>
+<td style="text-align: left;">Convertir en cellule texte</td>
+</tr>
+<tr class="even">
+<td>Ctrl+M Y</td>
+<td style="text-align: left;">Convertir en cellule code</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+M D</td>
+<td style="text-align: left;">Supprimer la cellule courante</td>
+</tr>
+<tr class="even">
+<td>Ctrl+M L</td>
+<td style="text-align: left;">Afficher numéros de ligne</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+M O</td>
+<td style="text-align: left;">Afficher/masquer sortie</td>
+</tr>
+<tr class="even">
+<td>Ctrl+M X</td>
+<td style="text-align: left;">Couper la cellule</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+M C</td>
+<td style="text-align: left;">Copier la cellule</td>
+</tr>
+<tr class="even">
+<td>Ctrl+M V</td>
+<td style="text-align: left;">Coller la cellule en-dessous</td>
+</tr>
+<tr class="odd">
+<td>Shift+Up/Down</td>
+<td style="text-align: left;">Sélectionner plusieurs cellules</td>
+</tr>
+<tr class="even">
+<td>Ctrl+F</td>
+<td style="text-align: left;">Rechercher et remplacer</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+S</td>
+<td style="text-align: left;">Sauvegarder le notebook</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-windows-linux-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.1: Raccourcis Windows/Linux
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tbl-mac" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-mac-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Raccourci</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">⌘+M H</td>
+<td style="text-align: left;">Voir les raccourcis clavier</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+Enter</td>
+<td style="text-align: left;">Exécuter la cellule courante</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Shift+Enter</td>
+<td style="text-align: left;">Exécuter et passer à la suivante</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Option+Enter</td>
+<td style="text-align: left;">Exécuter et insérer dessous</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">⌘+M A</td>
+<td style="text-align: left;">Insérer cellule code au-dessus</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+M B</td>
+<td style="text-align: left;">Insérer cellule code en-dessous</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">⌘+M M</td>
+<td style="text-align: left;">Convertir en cellule texte</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+M Y</td>
+<td style="text-align: left;">Convertir en cellule code</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">⌘+M D</td>
+<td style="text-align: left;">Supprimer la cellule courante</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+M L</td>
+<td style="text-align: left;">Afficher numéros de ligne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">⌘+M O</td>
+<td style="text-align: left;">Afficher/masquer sortie</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+M X</td>
+<td style="text-align: left;">Couper la cellule</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">⌘+M C</td>
+<td style="text-align: left;">Copier la cellule</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+M V</td>
+<td style="text-align: left;">Coller la cellule en-dessous</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Shift+Up/Down</td>
+<td style="text-align: left;">Sélectionner plusieurs cellules</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">⌘+F</td>
+<td style="text-align: left;">Rechercher et remplacer</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">⌘+S</td>
+<td style="text-align: left;">Sauvegarder le notebook</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-mac-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.2: Raccourcis Mac
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="problèmes-courants-et-solutions" class="level3" data-number="1.3.7">
+<h3 data-number="1.3.7" class="anchored" data-anchor-id="problèmes-courants-et-solutions"><span class="header-section-number">1.3.7</span> Problèmes courants et solutions</h3>
+<ol type="1">
+<li><strong>Déconnexions du Runtime</strong> :
+<ul>
+<li>Cliquez sur <strong>“Reconnecter”</strong> quand demandé</li>
+<li>Vos variables seront réinitialisées, mais le code sauvegardé reste</li>
+</ul></li>
+<li><strong>Problèmes d’installation de packages</strong> :
+<ul>
+<li>Redémarrez le runtime après l’installation de nouveaux packages</li>
+<li>Utilisez <code>Runtime</code> &gt; <code>Redémarrer le runtime</code></li>
+</ul></li>
+<li><strong>Erreurs de mémoire</strong> :
+<ul>
+<li>Effacez les variables inutiles au fur et à mesure</li>
+<li>Envisagez d’utiliser des échantillons de données plus petits pendant le développement</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Les erreurs de mémoire sont fréquentes lors du travail avec de grands jeux de données ou des modèles complexes sur la version gratuite de Colab. Si vous rencontrez ces problèmes, envisagez d’utiliser une version payante de Colab ou de connecter une machine virtuelle Google Cloud Platform (VM).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="obtenir-de-laide" class="level3" data-number="1.3.8">
+<h3 data-number="1.3.8" class="anchored" data-anchor-id="obtenir-de-laide"><span class="header-section-number">1.3.8</span> Obtenir de l’aide</h3>
+<ul>
+<li>Accédez à la documentation Colab : <code>Aide</code> &gt; <code>Questions fréquemment posées</code></li>
+<li>Essayez d’utiliser Google Gemini pour l’assistance IA.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="assistance-ia-dans-colab" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="assistance-ia-dans-colab"><span class="header-section-number">1.4</span> Assistance IA dans Colab</h2>
+<p>Google Gemini est un puissant assistant IA intégré à Google Colab. Vous pouvez l’utiliser pour générer du code, des commentaires ou du texte markdown pour améliorer vos notebooks. Gemini est accessible de plusieurs façons dans Colab, toutes commençant par la sélection de l’icône Gemini dans différentes parties de l’éditeur de notebook.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Icône Gemini
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><img src="https://lh3.googleusercontent.com/c-z7BK6NYcQIruZJd9A4KI1m8YrBauXH0VRglPudmj9Fgr5yzgJCsnaZ5W_nxZnB2hazA9hsg05uX1djFYPbMS-DsbYXp6UtVKFfdicBfF8klhVshJ8" width="50" height="50"></p>
+<p>Cherchez cette icône pour indiquer où vous pouvez cliquer pour accéder à Gemini dans Colab.</p>
+</div>
+</div>
+<p>Voici quelques façons d’utiliser Google Gemini efficacement dans Colab :</p>
+<section id="support-par-chat" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="support-par-chat"><span class="header-section-number">1.4.1</span> Support par chat</h3>
+<p>Cliquez sur le bouton <strong>Gemini</strong> en haut à droite pour ouvrir une interface de chat où vous pouvez poser des questions sur votre code, déboguer des problèmes ou obtenir des explications sur des concepts. Cette option est particulièrement utile pour les débutants ou pour résoudre des problèmes complexes.</p>
+</section>
+<section id="génération-de-code" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="génération-de-code"><span class="header-section-number">1.4.2</span> Génération de code</h3>
+<p>Utilisez l’option <strong>“Générer du code”</strong> (l’icône étincelle) au-dessus de toute cellule de code <strong>vide</strong> pour générer du nouveau code basé sur votre description. Vous pouvez lui demander de faire différentes choses comme :</p>
+<ul>
+<li>Charger un jeu de données appelé <code>my_data.csv</code></li>
+<li>Tracer un histogramme des données</li>
+<li>Construire un modèle pour prédire <code>y</code> à partir de <code>X</code></li>
+</ul>
+</section>
+<section id="explication-de-code" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="explication-de-code"><span class="header-section-number">1.4.3</span> Explication de code</h3>
+<p>Utilisez l’option <strong>“Expliquer le code”</strong> (l’icône étincelle) au-dessus de toute cellule de code <strong>complète</strong> pour ouvrir une interface de chat qui expliquera automatiquement le code dans la cellule. C’est utile pour comprendre le code écrit par quelqu’un d’autre, apprendre de nouveaux concepts ou obtenir un second avis sur votre travail.</p>
+</section>
+<section id="complétion-de-code" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="complétion-de-code"><span class="header-section-number">1.4.4</span> Complétion de code</h3>
+<p>Colab fournit une autocomplétion intelligente pendant la saisie :</p>
+<ul>
+<li>Appuyez sur <strong>Tab</strong> pour accepter les suggestions</li>
+<li>Utilisez <strong>Ctrl+Espace</strong> (Cmd+Espace sur Mac) pour déclencher manuellement les suggestions</li>
+<li>Obtenez la documentation et les conseils de paramètres en temps réel</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Bien que ces outils d’IA soient utiles, vérifiez et comprenez toujours le code qu’ils suggèrent avant de l’utiliser dans votre travail.</p>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="accéder-aux-notebooks-du-cours" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="accéder-aux-notebooks-du-cours"><span class="header-section-number">1.5</span> Accéder aux notebooks du cours</h2>
+<p>Tous les notebooks du cours sont hébergés sur GitHub et peuvent être accédés directement dans Google Colab. Il y a deux façons de les ouvrir :</p>
+<section id="méthode-1-liens-directs" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="méthode-1-liens-directs"><span class="header-section-number">1.5.1</span> Méthode 1 : Liens directs</h3>
+<p>Chaque section de ce livre inclut des liens directs <strong>“Ouvrir dans Colab”</strong> pour les notebooks pertinents. Cliquez simplement sur le badge pour ouvrir le notebook :</p>
+<p>Exemple <a href="https://colab.research.google.com/github/microsoft/PlanetaryComputerExamples/blob/main/tutorials/mosaiks.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Open In Colab"></a></p>
+<p>Cette méthode ouvrira une nouvelle copie du notebook tel qu’il est sauvegardé sur GitHub. Si vous avez déjà cliqué sur le badge une fois, fait des modifications et sauvegardé votre notebook, vous devrez naviguer vers votre dossier Drive où il est sauvegardé pour accéder à ces modifications.</p>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Cliquer sur le badge dans ce livre ouvrira toujours une nouvelle copie.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="méthode-2-cloner-le-notebook" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="méthode-2-cloner-le-notebook"><span class="header-section-number">1.5.2</span> Méthode 2 : Cloner le notebook</h3>
+<p>Pour sélectionner un notebook du dépôt <a href="https://github.com/cullen-molitor/MOSAIKS-Training-Manual/tree/main/notebooks/demo" target="_blank">Dépôt de notebooks</a> :</p>
+<ol type="1">
+<li>Ouvrez Google Colab (<a href="https://colab.research.google.com" target="_blank">colab.research.google.com</a>)</li>
+<li>Cliquez sur <code>Fichier</code> &gt; <code>Ouvrir un notebook</code></li>
+<li>Sélectionnez l’onglet <strong>GitHub</strong></li>
+<li>Entrez l’URL du dépôt : <code>https://github.com/[username]/[repo]</code> (À METTRE À JOUR AVEC LE DÉPÔT)</li>
+<li>Sélectionnez le notebook que vous voulez ouvrir</li>
+</ol>
+</section>
+<section id="sauvegarder-votre-travail" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="sauvegarder-votre-travail"><span class="header-section-number">1.5.3</span> Sauvegarder votre travail</h3>
+<p>Quand vous ouvrez un notebook depuis GitHub dans Colab, il crée une copie temporaire. Pour sauvegarder votre travail :</p>
+<ol type="1">
+<li>Cliquez sur <code>Fichier</code> &gt; <code>Enregistrer une copie dans Drive</code></li>
+<li>Cela crée votre propre copie modifiable dans votre Google Drive</li>
+<li>Toutes les modifications futures seront sauvegardées dans votre copie</li>
+</ol>
+</section>
+<section id="organisation-des-notebooks" class="level3" data-number="1.5.4">
+<h3 data-number="1.5.4" class="anchored" data-anchor-id="organisation-des-notebooks"><span class="header-section-number">1.5.4</span> Organisation des notebooks</h3>
+<p>Les notebooks du cours sont organisés en :</p>
+<ul>
+<li><code>demos/</code> : Notebooks de démonstration complets</li>
+<li><code>exercises/</code> : Notebooks interactifs avec exercices à compléter</li>
+<li><code>solutions/</code> : Versions complètes des notebooks d’exercices</li>
+</ul>
+<p>Chaque notebook inclut :</p>
+<ul>
+<li>Instructions claires et explications en cellules markdown</li>
+<li>Cellules de code avec exemples ou exercices</li>
+<li>Sections À FAIRE pour les exercices</li>
+<li>Cellules de validation pour vérifier votre travail</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="accès-et-gestion-des-données" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="accès-et-gestion-des-données"><span class="header-section-number">1.6</span> Accès et gestion des données</h2>
+<p>Il existe plusieurs façons d’accéder aux données dans les notebooks Colab. Voici les principales approches :</p>
+<section id="téléchargements-directs" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="téléchargements-directs"><span class="header-section-number">1.6.1</span> Téléchargements directs</h3>
+<p>Pour les données hébergées sur des dépôts comme Zenodo, vous pouvez télécharger directement en utilisant <code>wget</code> :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Télécharger les données</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>zenodo.org<span class="op">/</span>records<span class="op">/</span><span class="dv">14040658</span><span class="op">/</span>files<span class="op">/</span>Data.<span class="bu">zip</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Décompresser les données</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>unzip Data.<span class="bu">zip</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="intégration-google-drive" class="level3" data-number="1.6.2">
+<h3 data-number="1.6.2" class="anchored" data-anchor-id="intégration-google-drive"><span class="header-section-number">1.6.2</span> Intégration Google Drive</h3>
+<section id="monter-google-drive" class="level4" data-number="1.6.2.1">
+<h4 data-number="1.6.2.1" class="anchored" data-anchor-id="monter-google-drive"><span class="header-section-number">1.6.2.1</span> Monter Google Drive</h4>
+<p>Pour les données stockées dans Google Drive :</p>
+<ol type="1">
+<li><p>D’abord, montez votre Google Drive :</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">'/content/drive'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Accédez à vos données en utilisant le chemin monté :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>drive_path <span class="op">=</span> <span class="st">"/content/drive/MyDrive/&lt;dossier_projet&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="copier-les-données-vers-la-vm-optionnel" class="level4" data-number="1.6.2.2">
+<h4 data-number="1.6.2.2" class="anchored" data-anchor-id="copier-les-données-vers-la-vm-optionnel"><span class="header-section-number">1.6.2.2</span> Copier les données vers la VM (optionnel)</h4>
+<p>Pour de meilleures performances, faites des copies locales des données sur la machine virtuelle (VM) :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Créer un répertoire local</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>local_dir <span class="op">=</span> <span class="st">"/content/data/"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>os.makedirs(local_dir, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Copier les données de Drive vers la VM</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>drive_data <span class="op">=</span> os.path.join(drive_path, <span class="st">"my_data"</span>) </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>shutil.copytree(drive_data, local_dir, dirs_exist_ok<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>N’oubliez pas que le stockage de la VM est temporaire - les fichiers seront supprimés à la déconnexion du runtime. Gardez toujours une sauvegarde de vos données dans Drive ou un autre emplacement de stockage permanent.</p>
+</div>
+</div>
+</div>
+<section id="pourquoi-copier-les-données-vers-la-vm" class="level5" data-number="1.6.2.2.1">
+<h5 data-number="1.6.2.2.1" class="anchored" data-anchor-id="pourquoi-copier-les-données-vers-la-vm"><span class="header-section-number">1.6.2.2.1</span> Pourquoi copier les données vers la VM ?</h5>
+<p>Lors du travail avec des données dans Colab, copier les fichiers de Google Drive vers la machine virtuelle (VM) peut améliorer significativement les performances :</p>
+<ol type="1">
+<li><strong>Accès plus rapide</strong> : La lecture directe depuis Google Drive nécessite un transfert de données sur le réseau pour chaque opération. Le stockage local de la VM offre des vitesses de lecture/écriture beaucoup plus rapides.</li>
+<li><strong>Latence réduite</strong> : La latence réseau entre Colab et Google Drive peut ralentir les opérations nécessitant plusieurs accès aux données. Les données locales éliminent cette latence.</li>
+<li><strong>Plus fiable</strong> : Les problèmes de connectivité réseau ou d’accès à Drive n’interrompront pas votre analyse une fois les données copiées localement.</li>
+<li><strong>Meilleur pour le traitement itératif</strong> : Si votre code doit lire les mêmes données plusieurs fois (comme dans les boucles d’entraînement d’apprentissage automatique), l’accès local est beaucoup plus efficace.</li>
+</ol>
+<p>Par exemple, lire un jeu de données de 1 Go depuis Drive peut prendre 30 secondes, tandis que la lecture depuis le stockage local de la VM pourrait prendre quelques secondes. Le temps passé à copier les données une fois au début de votre session peut économiser un temps significatif pendant l’analyse. C’est particulièrement vrai dans un environnement notebook où un utilisateur peut développer du code qui accède répétitivement aux mêmes fichiers de données, mais ne peut pas tout stocker en mémoire (par exemple, de nombreux fichiers images).</p>
+</section>
+</section>
+<section id="sauvegarder-les-sorties-vers-google-drive" class="level4" data-number="1.6.2.3">
+<h4 data-number="1.6.2.3" class="anchored" data-anchor-id="sauvegarder-les-sorties-vers-google-drive"><span class="header-section-number">1.6.2.3</span> Sauvegarder les sorties vers Google Drive</h4>
+<p>Pour sauvegarder les sorties ou les modèles vers Google Drive :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Définir le répertoire de sortie</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> <span class="st">"/content/drive/MyDrive/project_folder/output"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarder les sorties</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>shutil.copytree(local_output, output_dir, dirs_exist_ok<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Cela garantit que tout travail effectué dans le notebook est sauvegardé dans votre Google Drive pour référence future. Si les fichiers de sortie ne sont pas copiés et restent dans la VM, ils seront perdus à la déconnexion du runtime.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="configuration-de-lenvironnement-local" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="configuration-de-lenvironnement-local"><span class="header-section-number">1.7</span> Configuration de l’environnement local</h2>
+<p>Bien que l’approche principale de ce livre soit d’utiliser Google Colab, certains apprenants peuvent préférer ou avoir besoin d’exécuter le code localement. Le livre est largement configuré pour cela, bien que l’utilisateur doive gérer son propre environnement informatique. Pour cela, nous fournissons un fichier <code>environment.yml</code> (situé dans le répertoire <code>environment</code> de ce livre). Voici les étapes pour vous installer Miniconda et créer un environnement local.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Bien que les environnements locaux puissent offrir plus de contrôle, nous recommandons fortement Google Colab pour la cohérence et les ressources cloud gratuites. Cette configuration locale est purement optionnelle et pourrait être plus adaptée pour ceux ayant des dépendances particulières ou des configurations avancées.</p>
+</div>
+</div>
+</div>
+<section id="télécharger-et-installer-miniconda" class="level3" data-number="1.7.1">
+<h3 data-number="1.7.1" class="anchored" data-anchor-id="télécharger-et-installer-miniconda"><span class="header-section-number">1.7.1</span> Télécharger et installer Miniconda</h3>
+<p>Miniconda est un installateur minimal pour conda. Choisissez l’installateur pour votre système d’exploitation parmi les liens ci-dessous et suivez les invites.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">macOS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ol type="1">
+<li>Allez sur l’<a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links" target="_blank">Installateur Windows Miniconda</a>.</li>
+<li>Téléchargez l’installateur <code>.exe</code> pour votre système Windows (64-bit recommandé).</li>
+<li>Double-cliquez sur l’installateur et suivez les instructions à l’écran.</li>
+<li>Quand demandé, cochez l’option <strong>Ajouter Miniconda au PATH</strong> ou sélectionnez “Installer pour tous les utilisateurs” qui ajoute généralement conda au PATH automatiquement.</li>
+</ol>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<ol type="1">
+<li>Allez sur l’<a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links" target="_blank">Installateur macOS Miniconda</a>.</li>
+<li>Téléchargez l’installateur <code>.pkg</code> (ou <code>.sh</code> si vous préférez) pour macOS (64-bit).</li>
+<li>Double-cliquez sur l’installateur et suivez les instructions à l’écran.</li>
+<li>Quand demandé, cochez l’option <strong>Ajouter Miniconda au PATH</strong> ou ajoutez manuellement les lignes de chemin appropriées à votre fichier <code>~/.zshrc</code> ou <code>~/.bash_profile</code>.</li>
+</ol>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<ol type="1">
+<li>Allez sur l’<a href="https://docs.conda.io/en/latest/miniconda.html#latest-miniconda-installer-links" target="_blank">Installateur Linux Miniconda</a>.</li>
+<li>Téléchargez l’installateur <code>.sh</code> pour votre distribution Linux (64-bit recommandé).</li>
+<li>Ouvrez un terminal et exécutez <code>bash Miniconda3-latest-Linux-x86_64.sh</code>.</li>
+<li>Suivez les invites ; envisagez de permettre à l’installateur d’initialiser Miniconda pour votre shell (ajoutant conda à votre PATH).</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="ajouter-conda-à-votre-path" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="ajouter-conda-à-votre-path"><span class="header-section-number">1.7.2</span> Ajouter conda à votre PATH</h3>
+<p>Si vous n’avez pas ajouté conda à votre PATH pendant l’installation, vous pouvez le faire manuellement en ajoutant une ligne à votre fichier de configuration shell (<code>~/.bashrc</code>, <code>~/.zshrc</code>, ou similaire) :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple pour les utilisateurs Linux/macOS</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PATH</span><span class="op">=</span><span class="st">"</span><span class="va">$HOME</span><span class="st">/miniconda3/bin:</span><span class="va">$PATH</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Pour Windows, assurez-vous d’avoir sélectionné l’option d’ajouter conda au PATH pendant l’installation, ou exécutez l’<strong>Invite Anaconda</strong> (qui a automatiquement conda disponible) pour gérer votre environnement.</p>
+</section>
+<section id="créer-un-environnement-local-depuis-environment.yml" class="level3" data-number="1.7.3">
+<h3 data-number="1.7.3" class="anchored" data-anchor-id="créer-un-environnement-local-depuis-environment.yml"><span class="header-section-number">1.7.3</span> Créer un environnement local depuis <code>environment.yml</code></h3>
+<p>Dans le répertoire <code>environment</code> du dépôt du cours, vous trouverez un fichier nommé <code>environment.yml</code>. Ce fichier liste tous les packages nécessaires pour la configuration locale.</p>
+<ol type="1">
+<li><p><strong>Clonez ou téléchargez</strong> le dépôt du livre sur votre machine locale.</p></li>
+<li><p><strong>Ouvrez un terminal</strong> (ou <strong>Invite Anaconda</strong> sur Windows).</p></li>
+<li><p><strong>Naviguez</strong> vers le dossier contenant <code>environment.yml</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> chemin/vers/MOSAIKS-Training-Manual/environment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Créez</strong> l’environnement :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p><strong>Activez</strong> l’environnement :</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate <span class="op">&lt;</span>nom_environnement<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Où <code>&lt;nom_environnement&gt;</code> est le nom spécifié dans <code>environment.yml</code> (vérifiez le champ <code>name:</code> dans le fichier). Dans ce cas, le nom est <code>mosaiks</code>.</p></li>
+</ol>
+</section>
+<section id="utiliser-le-nouvel-environnement-dans-vs-code" class="level3" data-number="1.7.4">
+<h3 data-number="1.7.4" class="anchored" data-anchor-id="utiliser-le-nouvel-environnement-dans-vs-code"><span class="header-section-number">1.7.4</span> Utiliser le nouvel environnement dans VS Code</h3>
+<p>Visual Studio Code (VS Code) peut détecter et utiliser votre nouvel environnement conda pour le développement Python.</p>
+<ol type="1">
+<li><strong>Ouvrez VS Code</strong>.</li>
+<li>Installez l’<strong>extension Python</strong> (si pas déjà installée).</li>
+<li>Appuyez sur <strong>Ctrl+Shift+P</strong> (ou <strong>Cmd+Shift+P</strong> sur macOS) et tapez <strong>“Python : Sélectionner l’interpréteur”</strong>.</li>
+<li>Sélectionnez l’interpréteur associé à votre environnement nouvellement créé (il devrait être listé par nom ou chemin).</li>
+<li>Ouvrez ou créez un nouveau fichier Python ou notebook, et vérifiez que VS Code utilise le bon environnement (vous pouvez voir l’environnement choisi en bas à droite de VS Code).</li>
+</ol>
+</section>
+<section id="autres-gestionnaires-denvironnement" class="level3" data-number="1.7.5">
+<h3 data-number="1.7.5" class="anchored" data-anchor-id="autres-gestionnaires-denvironnement"><span class="header-section-number">1.7.5</span> Autres gestionnaires d’environnement</h3>
+<p>Bien que conda soit un outil commun pour gérer les environnements Python, il existe d’autres options populaires comme :</p>
+<ul>
+<li><a href="https://python-poetry.org/" target="_blank">Poetry</a><br>
+</li>
+<li><a href="https://pipenv.pypa.io/en/latest/" target="_blank">pipenv</a><br>
+</li>
+<li><a href="https://virtualenv.pypa.io/en/latest/" target="_blank">virtualenv</a></li>
+</ul>
+<p>Chacun a ses propres fichiers de configuration et instructions d’installation. Si vous préférez ces outils ou les utilisez déjà, vous pouvez généralement reproduire les packages listés dans <code>environment.yml</code>. Consultez la documentation respective de l’outil pour des instructions spécifiques sur la façon de traduire les dépendances.</p>
+<hr>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Perspectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans le prochain chapitre, nous examinerons de plus près le framework MOSAIKS, ses concepts fondamentaux et comment il peut être appliqué pour résoudre des problèmes du monde réel.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../part-00-intro/00-intro.html" class="pagination-link  aria-label=" introduction"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../part-00-intro/02-intro-mosaiks.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Qu'est-ce que MOSAIKS ?</span>">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Qu’est-ce que MOSAIKS ?</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Manuel de Formation MOSAIKS</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/edit/main/part-00-intro/01-intro-compute.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/fless-lab/MOSAIKS-Training-Manual-French-Version/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Ce livre a été créé avec <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

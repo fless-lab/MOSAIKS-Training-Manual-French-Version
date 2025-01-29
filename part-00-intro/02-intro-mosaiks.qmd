@@ -82,7 +82,7 @@ Dans de nombreux cas, les utilisateurs qui visent à prédire un résultat à pa
 
 1. Fusionner les fonctionnalités avec vos étiquettes (**Y**) en fonction de l'emplacement (de sorte que les fonctionnalités à la position **P** soient liées aux étiquettes à la position **P**) (@sec-labels-data-prep).
 
-1. Exécuter une régression linéaire avec validation croisée de vos étiquettes sur les fonctionnalités MOSAIKS (**Y = Xβ + e** ; ou tout autre modèle que vous choisissez ! Voir @sec-sec-model-choice).
+1. Exécuter une régression linéaire avec validation croisée de vos étiquettes sur les fonctionnalités MOSAIKS (**Y = Xβ + e** ; ou tout autre modèle que vous choisissez ! Voir @sec-model-choice).
 
 1. Évaluer les performances.
 
